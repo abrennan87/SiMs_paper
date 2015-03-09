@@ -1,0 +1,82 @@
+\documentclass[a4paper,11pt]{article}
+\pdfoutput=1 % if your are submitting a pdflatex (i.e. if you have
+             % images in pdf, png or jpg format)
+
+\usepackage{jheppub} % for details on the use of the package, please
+                     % see the JHEP-author-manual
+
+\usepackage[T1]{fontenc} % if needed
+%\usepackage[utf8]{inputenc}
+
+
+\title{\boldmath A title}
+
+
+%% %simple case: 2 authors, same institution
+%% \author{A. Uthor}
+%% \author{and A. Nother Author}
+%% \affiliation{Institution,\\Address, Country}
+
+% more complex case: 4 authors, 3 institutions, 2 footnotes
+\author[a,1]{Amelia J. Brennan,\note{Corresponding author.}}
+\author[b]{Johanna Gramling,}
+\author[b]{Thomas Jacques,}
+\author[a]{and Millie McDonald}
+
+% The "\note" macro will give a warning: "Ignoring empty anchor..."
+% you can safely ignore it.
+
+\affiliation[a]{The University of Melbourne, Parkville 3010, Australia}
+\affiliation[b]{Universit\'{e} de Gen\`{e}ve, Quai E. Ansermet 24, 1211 Gen\`{e}ve 4, Switzerland}
+
+% e-mail addresses: one for each author, in the same order as the authors
+\emailAdd{a.brennan@student.unimelb.edu.au}
+\emailAdd{johanna.gramling@cern.ch}
+\emailAdd{thomas.jacques@unige.ch}
+\emailAdd{m.mcdonald2@student.unimelb.edu.au}
+
+
+
+
+\abstract{Abstract...}
+
+
+
+\begin{document} 
+\maketitle
+\flushbottom
+
+% Keep this section clean - create a new input tex file in sections/ if a new section is required, and add it here.
+\section{Checking some latex commands}
+\label{sec:intro}
+\input{sections/test.tex}
+
+\section{New section} 
+\label{sec:sec2}
+%\input{sections/nextsection.tex}
+
+
+\begin{thebibliography}{99}
+
+\bibitem{a}
+Author, \emph{Title}, \emph{J. Abbrev.} {\bf vol} (year) pg.
+
+\bibitem{b}
+Author, \emph{Title},
+arxiv:1234.5678.
+
+\bibitem{c}
+Author, \emph{Title},
+Publisher (year).
+
+
+% Please avoid comments such as "For a review'', "For some examples",
+% "and references therein" or move them in the text. In general,
+% please leave only references in the bibliography and move all
+% accessory text in footnotes.
+
+% Also, please have only one work for each \bibitem.
+
+
+\end{thebibliography}
+\end{document}
