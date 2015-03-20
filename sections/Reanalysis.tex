@@ -1,4 +1,165 @@
 \begin{flushleft}
+The mono-X + $E_{T}^{miss}$ signal is a popular signal in the search for new physics. It is predicted by an assorted collection of new physics models, including unparticle physics models \cite{CMS-PAS-EXO-12-048} and the Arkani-Hamed, Dimopoulos, and Dvali (ADD) model of large extra spatial dimensions \cite{ATLAS-CONF-2012-147}. For the $s$-channel simplified models discussed in Section \ref{sec:sec2} the SM particle, X, originates from one of a pair of intial-state quarks (shown in Figure \ref{Signal_phen_a} and \ref{Signal_phen_b}). The case where X is radiated from the mediator - a process known as virtual internal Bremsstrahlung - is only possible if the SM-dark matter interaction occurs via the $t$-channel (as shown in Figure \ref{Signal_phen_c}). In both cases, the parton, W and Z bosons are the SM particles most likely to be emitted \cite{Kumar:2013iva}. Hence, this paper will focus on three detection channels: monojet, mono-Z and mono-W.
+
+\begin{figure}[ht!]
+\begin{subfigure}[b]{0.4\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[fermion] (-1.5,1.5)node[left]{$q$} --(-0.75,0.75);
+\draw[dashed] (-0.75,0.75) -- (0,1.5)node[right]{X};
+\draw[fermion] (-0.75,0.75) -- (0,0);
+\draw[fermion] (-1.5,-1.5)node[left]{$\bar{q}$} --(0,0);
+\draw[fill] (0,0) circle [radius=0.05]node[left]{$g_{q}\mbox{ }$};
+\draw[photon] (0,0) --node[above]{$\xi$} (2,0);
+\draw[fermion] (2,0) -- (3.5,1.5)node[right]{$\chi$};
+\draw[fermion] (2,0) --(3.5,-1.5)node[right]{$\bar{\chi}$};
+\draw[fill] (2,0) circle [radius=0.05]node[right]{$\mbox{ }g_{\chi}$};
+\end{tikzpicture}
+\caption{}
+\label{Signal_phen_a}
+\end{subfigure} \hspace{0.2cm}
+\begin{subfigure}[b]{0.5\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[fermion] (-1.5,1.5)node[left]{$q$} --(-0.75,0.75);
+\draw[dashed] (-0.75,0.75) -- (0,1.5)node[right]{X};
+\draw[fermion] (-0.75,0.75) -- (0,0);
+\draw[fermion] (-1.5,-1.5)node[left]{$\bar{q}$} --(0,0);
+\draw[fill] (0,0) circle [radius=0.05]node[left]{$g_{q}\mbox{ }$};
+\draw[dashed] (0,0) --node[above]{$\eta$} (2,0);
+\draw[fermion] (2,0) -- (3.5,1.5)node[right]{$\chi$};
+\draw[fermion] (2,0) --(3.5,-1.5)node[right]{$\bar{\chi}$};
+\draw[fill] (2,0) circle [radius=0.05]node[right]{$\mbox{ }g_{\chi}$};
+\end{tikzpicture}
+\caption{}
+\label{Signal_phen_b}
+\end{subfigure}\vspace{0.2cm}
+\centering
+\begin{subfigure}[b]{0.5\textwidth}
+\centering
+\begin{tikzpicture}
+\draw[fermion] (-2,1.5)node[left]{$q$} --(0,1.5);
+\draw[fermion] (-2,-1)node[left]{$\bar{q}$} --(0,-1);
+\draw[fill] (0,1.5) circle [radius=0.05]node[above]{$g_{q}$};
+\draw[photon] (0,1.5) -- node[left]{$\eta'$}(0,0.25);
+\draw[dashed] (0,0.25) -- (2, 0.25)node[right]{X};
+\draw[photon] (0,0.25) -- node[left]{$\eta'$}(0,-1);
+\draw[fermion] (0,1.5) -- (2,1.5)node[right]{$\chi$};
+\draw[fermion] (0,-1) --(2,-1)node[right]{$\bar{\chi}$};
+\draw[fill] (0,-1) circle [radius=0.05]node[below]{$g_{\chi}$};
+\end{tikzpicture}
+\caption{}
+\label{Signal_phen_c}
+\end{subfigure}
+\caption{Dark matter pair-production processes with a SM particle, X, in the final state for the $s$-channel (a) vector/axial-vector mediator and (b) scalar mediator simplified models and for (c) the $t$-channel scalar mediator model. \textcolor{red}{Do we need to include this?}}
+\end{figure}
+
+\hspace{1cm}The monojet contraints are derived from a Supersymmetry search conducted by the ATLAS Collaboration (see Section \ref{monojet_constraints}). Similarly, the mono-Z constraints are derived from a dark matter search originally optimised for the D1, D5 and D9 effective operators (see Section \ref{monoZ_constraints}). \textcolor{magenta}{Lastly, the mono-W constraints are derived from...}
+
+\hspace{1cm}For each channel, signal production was modelled with MADGRAPH5$\_$aMC 2.2.2 (with 0, 1 and 2 jets included in the matrix element calculation for the monojet channel). Showering and hadronisation was then performed by PYTHIA 8.201 using the \textcolor{magenta}{ATLAS UE Tune AU2-MSTW2008LO}. Again, for the monojet channel, the matching between MADGRAPH and PYTHIA was done using the MLM scheme with a matching scale of $m_{\chi}/4$. Samples were produced for a representative set of of dark matter and mediator masses, shown in Table \ref{Mass_coup_points}. \textcolor{magenta}{Note that for now the coupling strength, $f$, is set to a value of 1.} Note that rows one to three of Table \ref{Mass_coup_points} cover the case where the dark matter
+mass is small and the mediator has either a mass that is degenerate, low or sufficiently large so as to be in the EFT regime of validity\footnote{A recent study by Alves et al. found that EFT results do not apply to mediators with a mass less than 2.5 TeV at the LHC during Run I \cite{Alves:2011wf}.}. Rows four and five cover the case where the dark matter particle has a medium mass and the mediator is either near-degenerate or larger. Rows six and seven (eight and nine) cover the case where the dark matter particle is a few GeV (TeV) and the mediator is either near-degenerate or again sufficiently large so as to be in the EFT regime of validity.
+\bigskip
+
+THIS IS WHERE I'M UP TO!
+
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{l|l|l}
+\hline
+\hline
+ \rule{0pt}{2.2ex}Column & $m_{\chi}$ [GeV] & $M$ [GeV]\\
+\hline
+ \rule{0pt}{2.2ex}1 & 10 & 10\\
+ 2 & 10 & 200\\
+ 3 & 10 & 25000\\
+ 4 & 100 & 200\\
+ 5 & 100 & 2000\\
+ 6 & 500 & 600\\
+ 7 & 500 & 25000\\
+ 8 & 1000 & 2000\\
+ 9 & 1000 & 25000\\
+ \hline
+ \hline
+\end{tabular}
+\caption{Mass points chosen for the analysis of simplified dark matter models. The masspoints are primarily representative of three regimes: (near-)degenerate ($M\approx m_{\chi}$), kinematically allowed ($M \geq 2m_{\chi}$), and EFT-like ($\sqrt{\hat{s}} << M$).}
+\label{Mass_coup_points}
+\end{table}
+\end{flushleft}
+
+\subsection{Monojet Constraints}
+\label{monojet_constraints}
+\begin{flushleft}
+A monojet-like signal is predicted by R-parity conserving Supersymmetry models for the process $pp\rightarrow j\tilde{t}(\rightarrow c+\tilde{\chi}^{0})\tilde{t}(\rightarrow c+\tilde{\chi}^{0})$ where $\tilde{t}$ is the top squark (stop), $\tilde{\chi}^{0}$ is the lightest neutralino and $j$ is a final-state jet. In this scenario, $\tilde{\chi}^{0}$ is assumed to be the lightest supersymmetric particle. A recent search for this process was conducted by the ATLAS Supersymmetry group \cite{SUSY_official_paper}, providing an excellent opportunity for constraining simplified models.
+
+\hspace{1cm}In the Supersymmetry analysis, the stop and LSP masses are assumed to be nearly degenerate. Jets from the charm-quark fragmentation are then too soft to be detected or identified. In this case, the stops decay essentially invisibly and the final state is trivially comparable to that of the dark matter pair production process $pp\rightarrow j + \chi\bar{\chi}$. The two processes are of course topologically dissimilar but since the Supersymmetry analysis simply looks for an initial-state jet recoiling against missing energy it seemed possible that the results of the Supersymmetry analysis optimised for a $\tilde{t}$ (and $\tilde{\chi}^{0}$) search might be directly transferable to $\chi$. This was confirmed via a two-fold check of the distributions of key kinematic variables - namely $E_{T}^{miss}$, the jet multiplicity and the $p_{T}$ and $\eta$ of the leading jet - associated with both the dark matter and Supersymmetry signal processes.
+\bigskip
+
+THIS IS WHERE I'M UP TO!
+
+\end{flushleft}
+%\subsection*{MC for monojet}
+%\begin{flushleft}
+%For the SUSY monojet-like analysis events are selected with the goal to gain sensitivity in the region of parameter space where $\tilde{t}$ and $\tilde{\chi}^{0}$ are nearly degenerate in mass. With this in mind, event selection is divided into two categories: preselection and signal selection. For the first catgeory, events are required to have a reconstructed primary vertex (interaction point) with at least five tracks attached to it. This vertex must align with the nominal (designed) interaction point and should there be more than one primary vertex, the vertex with the highest summed $p_{T}^{2}$ of the attached tracks is selected. This is the normal procedure for selecting hard-scatter interactions.
+%\end{flushleft}
+%\begin{flushleft}
+%Next events are required to have $E_{T}^{miss}>150\,\mbox{GeV}$ in accordance with the performance of the $E_{T}^{miss}$ trigger, which is close to 100\% efficient for $E_{T}^{miss}>150\,\mbox{GeV}$ \cite{Aad:1363019}. In addition to this, events must have a minimum of one jet with $p_{T}>150\,\mbox{GeV}$ and $|\eta|<2.8$. This ensures that candidate jets originate from a hard-scattering process which has the correct jet + $E_{T}^{miss}$ topology. These requirements also omit much of the QCD multijet background.
+%\end{flushleft}
+%\begin{flushleft}
+%In order to distinguish hard-scatter jets from fake jets and non-collision jets, 'jet quality' requirements are imposed. First an event is vetoed if it contains any jet with $p_{T}>20\,\mbox{GeV}$ and $|\eta|<4.5$ that presents an anomalous charged fraction defined by:
+%\begin{equation}
+%f_{ch} = \frac{\Sigma p_{T}^{track, jet}}{p_{T}^{jet}}
+%\end{equation}
+%where $\Sigma p_{T}^{track, jet}$ is the scalar sum of the transverse momenta
+%of tracks associated with the primary vertex within a cone of radius $\Delta R = 0.4$ around the jet axis. Additionally, if any jet has an electromagnetic fraction or timing inconsistent with a proton-proton origin then the event is vetoed. These latter requirements ensure that noise produced by the calorimeters, which might potentially fake a jet, is omitted.
+%\end{flushleft}
+%\begin{flushleft}
+%Finally, events are vetoed if they contain at least one identified electron with $p_{T}>20\,\mbox{GeV}$ or one muon with $p_{T}>10\,\mbox{GeV}$. These cuts remove non-signal $E_{T}^{miss}$ events with leptons in the signal region, for example W ($\rightarrow\Pe/\Pmu\Pneutrino$) + jets events and semileptonic top decays. 
+%\end{flushleft}
+%\begin{flushleft}
+%For the signal selection, a maximum of three \textit{good} jets with $p_{T}>30\,\mbox{GeV}$ and $|\eta|<2.8$ are allowed\footnote{It is this particular cut that permits us to ignore the differences between the $\eta$ distributions of the SUSY and simplified models. Requiring a jet with $p_{T}>30\,\mbox{GeV}$ to fall within the range -2.8 $<$ $\eta$ $<$ 2.8 is designed to omit background jets whilst preserving a maximal number of signal jets. Looking at the top left plot in Figure \ref{SUSY_DM_kinematics} we see that, regardless of the difference in shape, a maximal number of signal jets sit within $|\eta|<2.8$ for both classes of models. Specifically, 93.73\% of signal jets are within $|\eta|<2.8$ for the SUSY model compared with $\sim$98\% for the simplified models.}. This cut comes from examination of the jet mulitplicity associated with the radiated parton in the stop pair-production process (see Figure \ref{SUSY_kinematics}), which peaks at about 1. This cut is also designed to preserve any potentially detectable jets resulting from the decay of the charm quark. To reduce the multijet background when $E_{T}^{miss}$ is constructed from jet(s) with mis-measured $p_{T}$, each good jet must be azimuthally separated from $E_{T}^{miss}$ by no less than 0.4. Note that for the stop pair-production process, the parton and the two stop-quarks are emitted back-to-back. When the parton fragments into two or more jets however, the jet with the higher $p_{T}$ is not expected to satisfy $\Delta\phi(jet,\,E_{T}^{miss})=\pi$. Since the parton is likely to be boosted, requiring the lead jet to satisfy $\Delta\phi(jet,\,E_{T}^{miss})>0.4$ is reasonable. Lastly, three separate signal regions are defined with increasing lower thresholds on the leading jet $p_{T}$ and $E_{T}^{miss}$. These regions - denoted M1, M2 and M3 - result from an optimization performed across the stop-neutralino mass plane with increasing $m_{\tilde{t}}$ and $m_{\tilde{\chi}^{0}}$ as discussed in Ref. \cite{Abdallah:1636856}. For convenience, the event selection criteria are summarised in Table \ref{Cutflow}.
+%
+%\begin{table}[!htbp]
+%\centering
+%\begin{tabular}{l|c|c|c}
+% \hline
+% \hline
+% \multicolumn{4}{c}{Preselection}\\
+% \hline
+% \multicolumn{4}{l}{Primary vertex}\\
+% \multicolumn{1}{l}{$E_{T}^{miss} > 150\,\mbox{GeV}$}\\
+% \multicolumn{1}{l}{At least one jet with $p_{T}>150\,\mbox{GeV}$ and $|\eta|<2.8$}\\
+% \multicolumn{1}{l}{Jet quality requirements}\\
+% \multicolumn{1}{l}{Lepton veto}\\
+% \hline
+% \multicolumn{4}{c}{Monojet-like selection}\\
+% \hline
+% \multicolumn{1}{l}{At most three jets wth $p_{T}>30\,\mbox{GeV}$ and $|\eta|<2.8$}\\
+% \multicolumn{1}{l}{$\Delta\phi(jet\,E_{T}^{miss})>0.4$}\\
+% \hline
+% Signal Region: & M1 & M2 & M3\\
+% \hline
+% Minimum leading jet $p_{T}$ [GeV] & 280 & 340 & 450\\
+% Minimum $E_{T}^{miss}$ [GeV] & 220 & 340 & 450\\
+% \hline
+% \hline
+%\end{tabular}
+%\caption{Event selection criteria for the monojet-like analysis. Adapted from Ref. \cite{SUSY_official_paper}.}
+%\label{Cutflow}
+%\end{table}
+%
+%It is important to note that the control regions used in the SUSY monojet-like analysis also abide the preselection criteria discussed above but sans the lepton veto. The idea is that leptons are now used to identify and select background events in order to assess background contributions in the signal regions. Specifically, muon selection is used to constrain events from background processes involving a muon (W$\rightarrow \Pmu\Pneutrino$, Z$\rightarrow \Pmuon\APmuon$) or neutrino (Z$\rightarrow \Pneutrino\APneutrino$). In the same way, electrons are used to constrain background contributions from processes involving electrons or hadronic taus.
+%\end{flushleft}
+
+%Note that we are interested in the behaviour of only high pT jets so we
+%remove jets with pT < 30 GeV. 
+
+\subsection{Mono-Z Constraints}
+\label{monoZ_constraints}
+\begin{flushleft}
+
+\end{flushleft}
+\subsection{Mono-W Constraints}
+\begin{flushleft}
 \textcolor{magenta}{This section should include:}
 \begin{enumerate}
 \item \textcolor{magenta}{A description of the general process employed to reinterpret monojet, mono-W and mono-Z limits. This should cover MC signal generation, the cuts used in each mono-X channel and validation of the procedure(s) used to generate the results.}
