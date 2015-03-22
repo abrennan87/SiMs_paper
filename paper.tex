@@ -7,6 +7,89 @@
 
 \usepackage[T1]{fontenc} % if needed
 %\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage{hepparticles}
+\usepackage{hepnames}
+\usepackage{hepnicenames}
+
+\usepackage{tikz}
+\usepackage{hyperref}
+
+%%%Physics, mostly
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\gev}{GeV}
+\DeclareMathOperator{\mev}{MeV}
+
+\newcommand{\fou}[1]{\ensuremath{\mathscr{F}\left[#1\right]}}
+\newcommand{\infou}[1]{\ensuremath{\mathscr{F}^{-1}\left[#1\right]}}
+\newcommand{\psibar}{\bar{\psi}}
+\newcommand{\pbar}{\overbar{p}}
+\newcommand{\ubar}{\overbar{u}}
+\newcommand{\vbar}{\overbar{v}}
+\newcommand{\kbar}{\overbar{k}}
+\newcommand{\chibar}{\overbar{\chi}}
+\newcommand{\MG}{M{\footnotesize AD}G{\footnotesize RAPH} }
+\newcommand{\FNMG}{{\footnotesize M}{\tiny AD}{\footnotesize G}{\tiny RAPH} }
+\newcommand{\PYTHIA}{P{\footnotesize YTHIA} }
+
+\newcommand{\tr}[1]{\Tr\left[#1\right]}
+
+\makeatother % End of region containing @ commands
+\renewcommand{\labelenumi}{(\alph{enumi})} % Use letters for enumerate
+ \DeclareMathOperator{\Sample}{Sample}
+\let\vaccent=\v % rename builtin command \v{} to \vaccent{}
+\renewcommand{\v}[1]{\ensuremath{\mathbf{#1}}} % for vectors
+\newcommand{\gv}[1]{\ensuremath{\mbox{\boldmath$ #1 $}}} 
+% for vectors of Greek letters
+\newcommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\newcommand{\uv}[1]{\ensuremath{\mathbf{\hat{#1}}}} % for unit vector
+\newcommand{\abs}[1]{\left| #1 \right|} % for absolute value
+\newcommand{\avg}[1]{\left< #1 \right>} % for average
+\let\underdot=\d % rename builtin command \d{} to \underdot{}
+\renewcommand{\d}[2]{\frac{d #1}{d #2}} % for derivatives
+\newcommand{\dd}[2]{\frac{d^2 #1}{d #2^2}} % for double derivatives
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}} 
+% for partial derivatives
+\newcommand{\pdd}[2]{\frac{\partial^2 #1}{\partial #2^2}} 
+% for double partial derivatives
+\newcommand{\pdn}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\newcommand{\pdh}[1]{\frac{\partial}{\partial #1}}   %things like d/dt, 
+\newcommand{\eval}[1]{\left< #1 \right>}
+\newcommand{\pdc}[3]{\left( \frac{\partial #1}{\partial #2}
+ \right)_{#3}} % for thermodynamic partial derivatives
+\newcommand{\ket}[1]{\left| #1 \right>} % for Dirac bras
+\newcommand{\bra}[1]{\left< #1 \right|} % for Dirac kets
+\newcommand{\braket}[2]{\left< #1 \vphantom{#2} \right|
+ \left. #2 \vphantom{#1} \right>} % for Dirac brackets
+\newcommand{\matrixel}[3]{\left< #1 \vphantom{#2#3} \right|
+ #2 \left| #3 \vphantom{#1#2} \right>} % for Dirac matrix elements
+\newcommand{\grad}[1]{\gv{\nabla} #1} % for gradient
+\let\divsymb=\div % rename builtin command \div to \divsymb
+\renewcommand{\div}[1]{\gv{\nabla} \cdot #1} % for divergence
+\newcommand{\curl}[1]{\gv{\nabla} \times #1} % for curl
+\let\baraccent=\= % rename builtin command \= to \baraccent
+\renewcommand{\=}[1]{\stackrel{#1}{=}} % for putting numbers above =
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+
+\tikzstyle arrowformat=[scale=2.5]
+\tikzstyle scalar =[dashed]
+\tikzstyle mom=[draw=blue]
+\tikzset{
+gluon/.style={decorate, draw=black, decoration={coil, amplitude = 3pt, segment length=5pt}},
+photon/.style={decorate, draw=black, decoration={snake=coil}},
+zbo/.style={decorate, draw=black, decoration={snake=coil}},
+fermion/.style={draw=black, postaction={decorate}, decoration={markings, mark = at position 0.55 with {\arrow[arrowformat]{>}}}},
+antifermion/.style={draw=black, postaction={decorate}, decoration={markings, mark = at position 0.55 with {\arrow[arrowformat]{<}}}}
+}
+\usetikzlibrary{patterns}
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.pathmorphing,decorations.markings, decorations.pathreplacing, trees}
 
 \title{\boldmath Draft: Constraints on Simplified Dark Matter Models using Mono-X Collider Searches}
 
@@ -57,7 +140,7 @@ Amelia, Johanna and Thomas: Anything in \textcolor{red}{red} (\textcolor{magenta
 \label{sec:sec2}
 \input{sections/Models.tex}
 
-\section{(Something like) Reinterpreting Mono-X Contraints} 
+\section{(Something like) Reinterpretation of Mono-X Contraints} 
 \label{sec:sec3}
 \input{sections/Reanalysis.tex}
 
