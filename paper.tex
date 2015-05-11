@@ -18,6 +18,8 @@
 \usepackage{tikz}
 \usepackage{hyperref}
 
+\usepackage{soul}% For strikeout, use \st{text} . Can be removed from submitted manuscript
+
 %%%Physics, mostly
 \newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
 \DeclareMathOperator{\Tr}{Tr}
@@ -77,6 +79,10 @@
 \newtheorem{thm}{Theorem}[section]
 \newtheorem{lem}[thm]{Lemma}
 
+\newcommand{\question}[1]{\textcolor{red}{#1}}%For comments
+\newcommand{\comm}[1]{\textcolor{magenta}{#1}}%For comments
+\newcommand{\draft}[1]{\textcolor{blue}{#1}}%For comments
+
 \tikzstyle arrowformat=[scale=2.5]
 \tikzstyle scalar =[dashed]
 \tikzstyle mom=[draw=blue]
@@ -131,6 +137,11 @@ antifermion/.style={draw=black, postaction={decorate}, decoration={markings, mar
 \begin{flushleft}
 Amelia, Johanna and Thomas: Anything in \textcolor{red}{red} (\textcolor{magenta}{magenta}) is a question (comment) regarding content and anything in \textcolor{blue}{blue} is incomplete/not ideally worded.
 \end{flushleft}
+
+\begin{flushleft}
+\comm{Thanks, this looks great so far! I've gone through and made a few changes to the theory section, but ran out of time, there's still quite a bit more for me to add. Could people please sign their initials on their comments so we can keep track of who's saying what?  -Tom}
+\end{flushleft}
+
 
 \section{Introduction} 
 \label{sec:sec1}
