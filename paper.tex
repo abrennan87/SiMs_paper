@@ -15,10 +15,15 @@
 \usepackage{hepnames}
 \usepackage{hepnicenames}
 
+\usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{tikz}
 \usepackage{hyperref}
 
 \usepackage{soul}% For strikeout, use \st{text} . Can be removed from submitted manuscript
+
+\usepackage{lineno}
+\linenumbers
+\usepackage{cancel}
 
 %%%Physics, mostly
 \newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
@@ -83,6 +88,8 @@
 \newcommand{\comm}[1]{\textcolor{magenta}{#1}}%For comments
 \newcommand{\draft}[1]{\textcolor{blue}{#1}}%For comments
 
+\newcommand{\fg}[1]{\textcolor{ForestGreen}{#1}}   % to avoid writing ForestGreen all the freaking time
+
 \tikzstyle arrowformat=[scale=2.5]
 \tikzstyle scalar =[dashed]
 \tikzstyle mom=[draw=blue]
@@ -142,6 +149,9 @@ Amelia, Johanna and Thomas: Anything in \textcolor{red}{red} (\textcolor{magenta
 \comm{Thanks, this looks great so far! I've gone through and made a few changes to the theory section, but ran out of time, there's still quite a bit more for me to add. Could people please sign their initials on their comments so we can keep track of who's saying what?  -Tom}
 \end{flushleft}
 
+\begin{flushleft}
+\textcolor{ForestGreen}{FYI - bits in green are what I've added, I'll drop the colour once others have had a chance to see (and because some of my sentences could maybe use rewriting). - Amelia}
+\end{flushleft}
 
 \section{Introduction} 
 \label{sec:sec1}
