@@ -54,7 +54,7 @@ The mono-X + $E_{T}^{\mathrm{miss}}$ signal is a popular signal in the search fo
 \caption{Dark matter pair-production processes with a SM particle, X, in the final state for the $s$-channel (a) vector/axial-vector mediator and (b) scalar mediator simplified models and for (c) the $t$-channel scalar mediator model. \textcolor{red}{Do we need to include this?} \comm{Yep, I like the diagrams, however I think they need some changing - we don't have here the case of gluons in the initial state, and I think this is enough to warrant splitting into two figures. Also, can we change the arrows on the anti-particles? - Amelia}}
 \end{figure}
 
-\hspace{1cm}\st{The monojet contraints are derived from a Supersymmetry search conducted by the ATLAS Collaboration (see Section X).} \comm{Change this to Exotics monojet.} Similarly, the mono-Z constraints are derived from a dark matter search originally optimised for the D1, D5 and D9 effective operators (see Section \ref{monoZ_constraints}). \textcolor{magenta}{Lastly, the mono-W constraints are derived from...} \comm{We should put references to all the papers here! And also include something like 'These analyses will be described in further detail in Section X.' - Amelia}
+\hspace{1cm}\draft{The monojet contraints are derived from a genertic search for new phenomena conducted by the ATLAS Collaboration using $pp$ collisions at $\sqrt{s}=$ 8 TeV (see Section \ref{monojet_constraints})}. Similarly, the mono-Z constraints are derived from a dark matter search originally optimised for the D1, D5 and D9 effective operators (see Section \ref{monoZ_constraints}). \textcolor{magenta}{Lastly, the mono-W constraints are derived from...} \comm{We should put references to all the papers here! And also include something like 'These analyses will be described in further detail in Section X.' - Amelia}
 \bigskip
 
 \textcolor{magenta}{Do we need something here like "The model-independent results for each of the above analyses are reintepreted as simplified model constraints following a simple methodology. Firstly..."? Or is it ok to assume that the reader understands the process employed in converting model-independent limits into limits on a specific model? Do we need to introduce them to $\sigma = N/\mathcal{L}\times\epsilon\times\mathcal{A}$?}
@@ -115,8 +115,60 @@ THIS IS WHERE I'M UP TO!
 \begin{flushleft}
 \comm{Just a note here to remind me - it would be nice to have a plot here demonstrating the effect of the width on the kinematics (MET in particular) for the $t$-channel model, and maybe the $s$-channel model if we get the coupling strength low enough. - Amelia}
 
-A monojet-like signal is predicted by R-parity conserving Supersymmetry models for the process $pp\rightarrow j + \tilde{t}(\rightarrow c+\tilde{\chi}^{0})\tilde{t}(\rightarrow c+\tilde{\chi}^{0})$ where $\tilde{t}$ is the top squark (stop), $\tilde{\chi}^{0}$ is the lightest neutralino and $j$ is a final-state jet. In this scenario, $\tilde{\chi}^{0}$ is assumed to be the lightest supersymmetric particle. The recent search for this process conducted by the ATLAS Supersymmetry group \cite{SUSY_official_paper} assumes that the stop and LSP masses are nearly degenerate. Jets from the charm-quark fragmentation are then too soft to be detected or identified. In this case, the stops decay essentially invisibly and the final state is trivially comparable to that of the dark matter pair production process $pp\rightarrow j + \chi\bar{\chi}$. The two processes are of course topologically dissimilar but since the Supersymmetry analysis simply looks for an initial-state jet recoiling against missing energy it seemed possible that the results of the Supersymmetry analysis optimised for a $\tilde{t}$ (and $\tilde{\chi}^{0}$) search might be directly transferable to $\chi$. This was confirmed via a two-fold check of the distributions of key kinematic variables - namely $E_{T}^{\mathrm{miss}}$, the jet multiplicity and the $p_{T}$ and $\eta$ of the leading jet - associated with both the dark matter and Supersymmetry signal processes.
+For the monojet channel, signal selection is carried out as in Ref. \cite{Aad:2015zva}: initially, events are required to have $E_{T}^{miss}>$ 150 GeV and at least one jet with $p_{T} >$ 30 GeV and $|\eta| <$ 4.5. The background contribution from QCD jets is managed with the requirement that all jets passing this initial selection criteria also satsify $\Delta\phi(jet,{E}_{T}^{miss})>1.0$. In order to isolate monojet-like topologies, surviving events are then required to have a leading jet, $j_{1}$, with $p_{T} >$ 120 GeV and $|\eta| <$ 2.0 satisfying $p_{T}^{j_{1}}/E_{T}^{miss} >$ 0.5. Lastly, nine separate signal regions are defined with increasing lower thresholds on the missing transverse energy as shown in Table \ref{monojet_SRs}.
+
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{c|c|c|c}
+ \hline
+ \hline
+ Signal Region & Minimum $E_{T}^{miss}$ [GeV] & $N_{obs}$ & $N_{exp}$ \\ %$N_{obs}/\mathcal{L}$ & $N_{exp}\mathcal{L}$ \\
+ \hline
+ SR1 & 150 & 14737.8 & 18980.5 \\%726 & 935 \\
+ SR2 & 200 & 3938.2 & 5501.3 \\%194 & 271 \\
+ SR3 & 250 & 1827 & 2151.8 \\%90 & 106 \\
+ SR4 & 300 & 913.5 & 1035.3 \\%45 & 51 \\
+ SR5 & 350 & 426.3 & 588.7 \\%21 & 29 \\
+ SR6 & 400 & 243.6 & 345.1 \\%12 & 17 \\
+ SR7 & 500 & 146.16 & 146.16 \\%7.2 & 7.2 \\
+ SR8 & 600 & 77.14 & 73.08 \\%3.8 & 3.6 \\
+ SR9 & 700 & 69.02 & 36.54 \\%3.4 & 1.8 \\
+ \hline
+ \hline
+\end{tabular}
+\caption{Signal region definitions and ATLAS 95\% confidence level upper limits on the number of observed signal events, $N_{obs}$ and the number of signal events given the expected number of background events, $N_{exp}$. Adapted from Ref. \cite{Aad:2015zva}.}
+\label{monojet_SRs}
+\end{table}
 \bigskip
+
+The signal selection and Monte Carlo generation procedures for the monojet channel were validated via reproduction of the ATLAS limits on the suppression scale, M$_{*}$, for the s-channel vector simplified model (refered to as the Z' model in the ATLAS monojet analysis). \comm{An example of blah is shown in Table blah. Comment on inevitable discrepancies between ATLAS values and mine and how this reflects the inadequacies of our detector simulation. Also make a comment about why it's still okay to use our results, etc. MM}
+
+ 
+
+%SUSY Selection
+%For the monojet channel, signal selection is carried out as in Ref. \cite{SUSY_official_paper} wherein events are required to have a maximum of three good jets with $p_{T}>30\,\mbox{GeV}$, $|\eta|<2.8$ and $\Delta\phi(jet\,\slashed{E}_{T}^{miss})>0.4$. Three separate signal regions are then defined with increasing lower thresholds on the momentum of the leading jet, $p_{T}^{j1}$, and $\slashed{E}_{T}^{miss}$ as shown in Table \ref{monojet_SRs}.
+%
+%\begin{table}[!htbp]
+%\centering
+%\begin{tabular}{l|c|c|c}
+% \hline
+% \hline
+% Signal Region: & M1 & M2 & M3\\
+% \hline
+% Minimum leading jet $p_{T}$ [GeV] & 280 & 340 & 450\\
+% Minimum $E_{T}^{miss}$ [GeV] & 220 & 340 & 450\\
+% \hline
+% \hline
+%\end{tabular}
+%\caption{Signal region definitions and associated for the analysis of simplified models in the monojet channel. Adapted from Ref. \cite{SUSY_official_paper}.}
+%\label{monojet_SRs}
+%\end{table}
+
+%The monojet channel is a popular channel in the search for new physics. It is predicted by an assorted collection of new physics models, including unparticle physics models \cite{CMS:raw} and the Arkani-Hamed, Dimopoulos, and Dvali (ADD) model of large extra spatial dimensions \cite{ATLAS:2012zim}. In addition, a monojet-like signal is predicted by R-parity conserving SUSY models for the process $pp\rightarrow j + \tilde{t}(\rightarrow c+\tilde{\chi}^{0})\bar{\tilde{t}}(\rightarrow \bar{c}+\tilde{\chi}^{0})$ where $\tilde{t}$ is the top squark (stop), $\tilde{\chi}^{0}$ is the lightest neutralino (assumed to be the lightest sparticle) and $j$ is a final-state jet. In this paper, we place limits on the simplified models discussed in Section \ref{models} using the results of a recent search for this process conducted by the ATLAS Supersymmetry group \cite{SUSY_official_paper}.
+%\bigskip
+%
+%\textcolor{magenta}{Do I need to talk about why the SUSY analysis results are compatible with a simplified model search?} Eg. "The SUSY analysis assumes that the stop and LSP masses are nearly degenerate. Jets from the charm-quark fragmentation are then too soft to be detected or identified. In this case, the stops decay essentially invisibly and the final state is trivially comparable to that of the dark matter pair production process $pp\rightarrow j + \chi\bar{\chi}$. The two processes are of course topologically dissimilar but since the Supersymmetry analysis simply looks for an initial-state jet recoiling against missing energy it seemed possible that the results of the Supersymmetry analysis optimised for a $\tilde{t}$ search might be directly transferable to $\chi$. This was confirmed via a two-fold check of the distributions of key kinematic variables - namely $E_{T}^{miss}$, the jet multiplicity and the $p_{T}$ and $\eta$ of the leading jet - associated with both the dark matter and Supersymmetry signal processes..."
+%\bigskip
 
 \textcolor{magenta}{Discussion of the cutflow and background estimation/uncertainties.}
 
