@@ -68,7 +68,7 @@ The mono-X + $E_{T}^{\mathrm{miss}}$ signal is a popular signal in the search fo
 \begin{flushleft}
 \comm{Here, I'd be ignoring the stuff specific to mono-jet (0,1,2 jets, and matching scheme), and include that in the mono-jet section. - Amelia}
 
-For each channel, signal production was modelled with \MG5$\_$aMC 2.2.2 \comm{(references needed throughout this section!)} (with 0, 1 and 2 jets included in the matrix element calculation for the monojet channel). Showering and hadronisation was then performed by \PYTHIA  8.201 using the \textcolor{magenta}{ATLAS UE Tune AU2-MSTW2008LO}. Using the MSTW2008lo68 PDF set (currently the benchmark for ATLAS analyses \cite{}. \question{Is this still true?}) and the default \MG factorization and renormalization scales\footnote{In \FNMG5 2.2.2 the default scale, $\mu$ is defined as the sum of $\sqrt{m_{\chi}^{2} + p_{T}^{2}}$ for all dark matter particles in the final state.}, samples were produced for a representative set of of dark matter and mediator masses, shown in Table \ref{Mass_coup_points}. \textcolor{magenta}{Something about the coupling strength, $f$, being set to a value of 1? Maybe leave out - we'll vary the value.} Note that rows one to three of Table \ref{Mass_coup_points} cover the case where the dark matter mass is small and the mediator has either a mass that is degenerate, low or sufficiently large so as to be in the EFT regime of validity\footnote{A recent study by Alves et al. found that EFT results do not apply to mediators with a mass less than 2.5 TeV at the LHC during Run I \cite{Alves:2011wf}.}. Rows four and five cover the case where the dark matter particle has a medium mass and the mediator is either near-degenerate or larger. Rows six and seven (eight and nine) cover the case where the dark matter particle is a few GeV (TeV) and the mediator is either near-degenerate or again sufficiently large so as to be in the EFT regime of validity.
+For each channel, signal production was modelled with \MG5$\_$aMC 2.2.2 \comm{(references needed throughout this section!)}. Showering and hadronisation was then performed by \PYTHIA  8.201 using the \textcolor{magenta}{ATLAS UE Tune AU2-MSTW2008LO}. Using the MSTW2008lo68 PDF set (currently the benchmark for ATLAS analyses \cite{}. \question{Is this still true?}) and the default \MG factorization and renormalization scales\footnote{In \FNMG5 2.2.2 the default scale, $\mu$ is defined as the sum of $\sqrt{m_{\chi}^{2} + p_{T}^{2}}$ for all dark matter particles in the final state.}, samples were produced for a representative set of of dark matter and mediator masses, shown in Table \ref{Mass_coup_points}. \textcolor{magenta}{Something about the coupling strength, $f$, being set to a value of 1? Maybe leave out - we'll vary the value.} Note that rows one to three of Table \ref{Mass_coup_points} cover the case where the dark matter mass is small and the mediator has either a mass that is degenerate, low or sufficiently large so as to be in the EFT regime of validity\footnote{A recent study by Alves et al. found that EFT results do not apply to mediators with a mass less than 2.5 TeV at the LHC during Run I \cite{Alves:2011wf}.}. Rows four and five cover the case where the dark matter particle has a medium mass and the mediator is either near-degenerate or larger. Rows six and seven (eight and nine) cover the case where the dark matter particle is a few GeV (TeV) and the mediator is either near-degenerate or again sufficiently large so as to be in the EFT regime of validity.
 
 \begin{table}[!htbp]
 \centering
@@ -101,7 +101,7 @@ For each channel, there are three key sources of systematic uncertainty: the fac
 
 \comm{Good question, can Thomas comment? Tom+Karl paper seems to suggest the impact is negligible? - Amelia}
 
-\hspace{1cm}The uncertainties associated with the aforementioned parameters \st{were} are estimated in the \st{usual} \fg{following} way. Firstly, the factorisation and renormalisation default scales \st{were} are varied \st{simultaneously} together by a factor of 0.5 \fg{(`down')} and of 2 \fg{(`up')} \st{times the default scale}. The uncertainty on the final \st{acceptance} \fg{cross section limit}, $\cancel{\mathcal{A}}$ \fg{$\sigma_{\mathrm{lim}}$}, was then taken to be the average change in $\cancel{\mathcal{A}}$ \fg{$\sigma_{\mathrm{lim}}$} resulting from these up and down variations. \textcolor{magenta}{Similarly, the uncertainty on $\mathcal{A}$ associated with $\alpha_{s}$ and the PDF was estimated by...}
+\hspace{1cm}The uncertainties associated with the aforementioned parameters are estimated in the following way. Firstly, the factorisation and renormalisation default scales are varied together by a factor of 0.5 \fg{(`down')} and by a factor of 2 \fg{(`up')} \st{times the default scale}. The uncertainty on the final \st{acceptance} \fg{cross section limit}, $\cancel{\mathcal{A}}$ \fg{$\sigma_{\mathrm{lim}}$}, is then taken to be the average change in $\cancel{\mathcal{A}}$ \fg{$\sigma_{\mathrm{lim}}$} resulting from these up and down variations. \textcolor{magenta}{Similarly, the uncertainty on $\mathcal{A}$ associated with $\alpha_{s}$ and the PDF is estimated by...}
 
 \hspace{1cm}\textcolor{magenta}{For the monojet channel the matching scale introduces an additional source of uncertainty, which is estimated by...}
 \bigskip
@@ -140,38 +140,35 @@ For the monojet channel, signal selection is carried out as in Ref. \cite{Aad:20
 \end{table}
 \bigskip
 
-The signal selection and Monte Carlo (MC) generation procedures for the monojet channel were validated via reproduction of the ATLAS limits on the suppression scale, M$_{*}$, for the s-channel vector simplified model (refered to as the Z' model in the ATLAS monojet analysis). The ATLAS and reproduced 95\% confidence level (CL) limits on M$_{*}$ for the case where $m_{\chi} = $ 50 GeV, $\Gamma = M/8\pi$ and $\sqrt{g_{q}g_{\chi}} = 1$ are shown in Table \ref{M_star_limits_monojet}. Note that the slight difference between the ATLAS and reproduced limits is expected given that the Monte Carlo generation procedure employed in this analysis (see Section \ref{signal_generation}) does not include a full simulation of the ATLAS detector. \comm{Instead, reconstruction effects are modelled by smearing the leading jet $p_{T}$ distribution.} \comm{Make a comment about the treatment of CLs?}
+The signal selection and Monte Carlo (MC) generation procedures for the monojet channel were validated via reproduction of the ATLAS limits on the suppression scale, M$_{*}$, for the s-channel vector simplified model (refered to as the Z' model in the ATLAS monojet analysis). A sample of ATLAS and reproduced limits on M$_{*}$ for the case where $m_{\chi} = $ 50 GeV, $\Gamma = M/8\pi$ and $\sqrt{g_{q}g_{\chi}} = 1$ is shown in Table \ref{M_star_limits_monojet}. In general, a slight difference between these values is expected given that the Monte Carlo generation procedure employed in this analysis (see Section \ref{signal_generation}) does not include a full simulation of the ATLAS detector. \comm{Instead, reconstruction effects are modelled by smearing of the leading jet $p_{T}$ distribution.} \draft{Furthermore, the specific discrepancy between the ATLAS and reproduced 95\% CL limits on M$_{*}$ can be attributed to non-identical treatment of statistical uncertainties. In general, our approach  results in more conservative limits on M$_{*}$ but ultimately removes the hassle of a full histFitter analysis. Importantly, agreement between M$_{*}^{\mbox{\tiny ATLAS,95}}$ and the reproduced nominal\footnote{Nominal in this case explicitly refers to a quantity which does not include statistical or systematic uncertainties.} M$_{*}$ values (denoted M$_{*}^{\mbox{\tiny R,N}}$ in Table \ref{M_star_limits_monojet}) is still reasonably high - within \comm{something percent} - validating our signal selection and MC generation procedures.}
+
 %Also note that while the signal samples used for validation of the monojet channel are generated for the processes $pp \rightarrow j\chi\bar{\chi}$ and $pp \rightarrow jj\chi\bar{\chi}$ where $j$ is a final state jet, the signal samples used to constrain the the simplified models discussed in Section \ref{SiM_models} also include the tree-level process $pp \rightarrow \chi \bar{\chi}$. \comm{This approach is taken as...}
 \bigskip
 
-In keeping with the ATLAS analysis, monojet signal samples are generated using the MLM scheme for matching between \MG and \PYTHIA. However, while the ATLAS analysis favours a single matching scale (QCUT) of 80 GeV, our approach is to use a sliding value of $m_{\chi}/4$. \comm{This ensures that all jet-related kinematic distributions are smoothly connected across all dark matter masspoints.} \draft{Also note that while the signal samples used for validation correspond to the processes $pp \rightarrow j\chi\bar{\chi}$ and $pp \rightarrow jj\chi\bar{\chi}$ where $j$ is a final state jet, constraints on the simplified models discussed in Section \ref{SiM_models} are determined using signal samples with zero, one and two jets in the final state.} \comm{This small deviation from the ATLAS analysis is motivated by the observation that the limits on $M_{*}$ improve with the addition of the process $pp \rightarrow \chi\bar{\chi}$.}
-
 \begin{table}[!htbp]
 \centering
-\begin{tabular}{c|c|c|c}
+\begin{tabular}{c|c|c|c|c|c}
  \hline
  \hline
- $M$ [GeV] & ATLAS M$_{*}$ [GeV] & Reproduced M$_{*}$ [GeV] & Difference [\%] \\ 
+ $M$ [TeV] & M$_{*}^{\mbox{\tiny ATLAS,95}}$ [GeV] & M$_{*}^{\mbox{\tiny R,N}}$ [GeV] & Difference [\%] & M$_{*}^{\mbox{\tiny R,95}}$ [GeV] & Difference [\%] \\ 
  \hline
-50 & & & \\
-100 & & & \\
-300 & & & \\
-600 & & & \\
-1000 & & & \\
-3000 & & & \\
-5000 & & & \\
-12000 & & & \\
+0.05 & & & & \\
+0.1 & & & & \\
+0.3 & & & & \\
+0.6 & & & & \\
+1 & & & & \\
+3 & & & & \\
+6 & & & & \\
+12 & & & & \\
  \hline
  \hline
 \end{tabular}
-\caption{Comparison of the 95\% CL limits on the suppression scale, M$_{*}$, for the s-channel vector mediator model for the case where $m_{\chi} = $ 50 GeV, $\Gamma = M/8\pi$, $\sqrt{g_{q}g_{\chi}} = 1$ and QCUT = 80 GeV. Adapted from Ref. \cite{Aad:2015zva}.}
+\caption{Comparison of the reproduced nominal ($\mbox{R,N}$) and reproduced 95\% CL ($\mbox{R,95}$) limits on the suppression scale, M$_{*}$, with the ATLAS 95\% CL limits ($\mbox{ATLAS,95}$) for the s-channel vector mediator model with $m_{\chi} = $ 50 GeV, $\Gamma = M/8\pi$, $\sqrt{g_{q}g_{\chi}} = 1$ and QCUT = 80 GeV. Adapted from Ref. \cite{Aad:2015zva}.}
 \label{M_star_limits_monojet}
 \end{table}
 \bigskip
 
-\comm{An example of blah is shown in Table blah. Comment on inevitable discrepancies between ATLAS values and mine and how this reflects the inadequacies of our detector simulation. Also make a comment about why it's still okay to use our results, etc. MM}
-
- 
+In keeping with the ATLAS analysis, monojet signal samples are generated using the MLM scheme for matching between \MG and \PYTHIA. However, while the ATLAS analysis favours a single matching scale (QCUT) of 80 GeV, we use a sliding value of $m_{\chi}/4$. \comm{This ensures that all jet-related kinematic distributions are smoothly connected across all dark matter masspoints.} \draft{It is also important to note that while the signal samples used for validation correspond to the processes $pp \rightarrow j\chi\bar{\chi}$ and $pp \rightarrow jj\chi\bar{\chi}$ where $j$ is a final state jet, constraints on the simplified models studied in this paper are determined using signal samples with zero, one and two jets in the final state.} \comm{This deviation from the ATLAS analysis is motivated by the observation that the limits on $M_{*}$ are improved with the addition of the process $pp \rightarrow \chi\bar{\chi}$.}
 
 %SUSY Selection
 %For the monojet channel, signal selection is carried out as in Ref. \cite{SUSY_official_paper} wherein events are required to have a maximum of three good jets with $p_{T}>30\,\mbox{GeV}$, $|\eta|<2.8$ and $\Delta\phi(jet\,\slashed{E}_{T}^{miss})>0.4$. Three separate signal regions are then defined with increasing lower thresholds on the momentum of the leading jet, $p_{T}^{j1}$, and $\slashed{E}_{T}^{miss}$ as shown in Table \ref{monojet_SRs}.
@@ -196,9 +193,6 @@ In keeping with the ATLAS analysis, monojet signal samples are generated using t
 %\bigskip
 %
 %\textcolor{magenta}{Do I need to talk about why the SUSY analysis results are compatible with a simplified model search?} Eg. "The SUSY analysis assumes that the stop and LSP masses are nearly degenerate. Jets from the charm-quark fragmentation are then too soft to be detected or identified. In this case, the stops decay essentially invisibly and the final state is trivially comparable to that of the dark matter pair production process $pp\rightarrow j + \chi\bar{\chi}$. The two processes are of course topologically dissimilar but since the Supersymmetry analysis simply looks for an initial-state jet recoiling against missing energy it seemed possible that the results of the Supersymmetry analysis optimised for a $\tilde{t}$ search might be directly transferable to $\chi$. This was confirmed via a two-fold check of the distributions of key kinematic variables - namely $E_{T}^{miss}$, the jet multiplicity and the $p_{T}$ and $\eta$ of the leading jet - associated with both the dark matter and Supersymmetry signal processes..."
-%\bigskip
-
-\textcolor{magenta}{Discussion of the cutflow and background estimation/uncertainties.}
 
 THIS IS WHERE I'M UP TO!
 
