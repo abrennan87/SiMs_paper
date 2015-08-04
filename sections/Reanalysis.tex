@@ -114,14 +114,14 @@ THIS IS WHERE I'M UP TO!
 \subsection{Monojet Constraints}
 \label{monojet_constraints}
 \begin{flushleft}
-For the monojet channel, signal selection is carried out as in Ref. \cite{Aad:2015zva}: initially, events are required to have $E_{T}^{miss}>$ 150 GeV and at least one jet with $p_{T} >$ 30 GeV and $|\eta| <$ 4.5. The background contribution from QCD jets is managed with the requirement that all jets passing this initial selection criteria also satsify $\Delta\phi(jet,{E}_{T}^{miss})>1.0$. In order to isolate monojet-like topologies, surviving events are then required to have a leading jet, $j_{1}$, with $p_{T} >$ 120 GeV and $|\eta| <$ 2.0 satisfying $p_{T}^{j_{1}}/E_{T}^{miss} >$ 0.5. Lastly, nine separate signal regions are defined with increasing lower thresholds on the missing transverse energy as shown in Table \ref{monojet_SRs}.
+For the monojet channel, signal selection is carried out as in Ref. \cite{Aad:2015zva}: initially, events are required to have $E_{T}^{miss}>$ 150 GeV and at least one jet with $p_{T} >$ 30 GeV and $|\eta| <$ 4.5. The background contribution from QCD jets is managed with the requirement that all jets passing this initial selection criteria also satsify $|\Delta\phi(jet,{E}_{T}^{miss})|>1.0$. In order to isolate monojet-like topologies, surviving events are then required to have a leading jet, $j_{1}$, with $p_{T} >$ 120 GeV and $|\eta| <$ 2.0 satisfying $p_{T}^{j_{1}}/E_{T}^{miss} >$ 0.5. Lastly, nine separate signal regions are defined with increasing lower thresholds on $E_{T}^{miss}$ from 150 GeV to 700 GeV as shown in Table \ref{monojet_SRs}.
 
 \begin{table}[!htbp]
 \centering
 \begin{tabular}{c|c|c|c}
  \hline
  \hline
- Signal Region & Minimum $E_{T}^{miss}$ [GeV] & $N_{obs}$ & $N_{exp}$ \\ %$N_{obs}/\mathcal{L}$ & $N_{exp}\mathcal{L}$ \\
+ Signal Region & $E_{T}^{miss}$ threshold [GeV] & $N_{obs}$ & $N_{exp}$ \\%& $N_{obs}/\mathcal{L}$ & $N_{exp}/\mathcal{L}$ \\
  \hline
  SR1 & 150 & 14737.8 & 18980.5 \\%726 & 935 \\
  SR2 & 200 & 3938.2 & 5501.3 \\%194 & 271 \\
@@ -135,40 +135,74 @@ For the monojet channel, signal selection is carried out as in Ref. \cite{Aad:20
  \hline
  \hline
 \end{tabular}
-\caption{Signal region definitions and ATLAS 95\% confidence level upper limits on the number of observed signal events, $N_{obs}$ and the number of signal events given the expected number of background events, $N_{exp}$. Adapted from Ref. \cite{Aad:2015zva}.}
+\caption{The ATLAS model-independent upper limits on the number of observed (expected) signal events, $N_{obs}$ ($N_{exp}$), at 95\% confidence level for the monojet channel signal regions. Adapted from Ref. \cite{Aad:2015zva}.}
 \label{monojet_SRs}
 \end{table}
 \bigskip
 
-The signal selection and Monte Carlo (MC) generation procedures for the monojet channel were validated via reproduction of the ATLAS limits on the suppression scale, M$_{*}$, for the s-channel vector simplified model (refered to as the Z' model in the ATLAS monojet analysis). A sample of ATLAS and reproduced limits on M$_{*}$ for the case where $m_{\chi} = $ 50 GeV, $\Gamma = M/8\pi$ and $\sqrt{g_{q}g_{\chi}} = 1$ is shown in Table \ref{M_star_limits_monojet}. In general, a slight difference between these values is expected given that the Monte Carlo generation procedure employed in this analysis (see Section \ref{signal_generation}) does not include a full simulation of the ATLAS detector. \comm{Instead, reconstruction effects are modelled by smearing of the leading jet $p_{T}$ distribution.} \draft{Furthermore, the specific discrepancy between the ATLAS and reproduced 95\% CL limits on M$_{*}$ can be attributed to non-identical treatment of statistical uncertainties. In general, our approach  results in more conservative limits on M$_{*}$ but ultimately removes the hassle of a full histFitter analysis. Importantly, agreement between M$_{*}^{\mbox{\tiny ATLAS,95}}$ and the reproduced nominal\footnote{Nominal in this case explicitly refers to a quantity which does not include statistical or systematic uncertainties.} M$_{*}$ values (denoted M$_{*}^{\mbox{\tiny R,N}}$ in Table \ref{M_star_limits_monojet}) is still reasonably high - within \comm{something percent} - validating our signal selection and MC generation procedures.}
+The signal selection and Monte Carlo (MC) generation procedures for the monojet channel were validated via reproduction of the ATLAS limits on the suppression scale, M$_{*}$, for the s-channel vector simplified model (refered to as the Z' model in the ATLAS monojet analysis). A sample of ATLAS and reproduced limits on M$_{*}$ for the case where $m_{\chi} = $ 50 GeV, $\Gamma = M/8\pi$ and $\sqrt{g_{q}g_{\chi}} = 1$ is shown in Table \ref{M_star_limits_monojet}. In general, good agreement is observed, with a maximum discrepancy of no more than 13\%. Note that a small difference is expected given the Monte Carlo generation procedure employed in this analysis does not include a full simulation of the ATLAS detector. \comm{Instead, reconstruction effects are modelled by smearing the leading jet $p_{T}$ distribution by a conservative factor of 5\%.} Note also that the 95\% CL uncertainties associated with the ATLAS limits are estimated using the HistFitter package while a more conservative approach is favoured for this analysis. Specifically, the 95\% CL uncertainty on the reproduced values of M$_{*}$ is estimated using the following formula:
+
+\begin{equation}
+\label{uncertainty_formula}
+\frac{\Delta \mbox{M}_{*}}{\mbox{M}_{*}} = \sqrt{\left(\frac{\Delta \sigma_{gen}}{\sigma_{gen}}\right)^{2} + \left(\frac{\Delta \mathcal{A}}{\mathcal{A}}\right)^{2} + \left(\frac{\Delta \epsilon}{\epsilon}\right)^{2} + \left(\frac{\Delta \mathcal{L}}{\mathcal{L}}\right)^{2} + \left(\frac{\Delta N}{N}\right)^{2}}
+\end{equation}
+
+where $\sigma_{gen}$ is the theoretical cross-section, $\mathcal{A}$ is the fraction of signal events passing the monojet selection criteria, $\epsilon$ is the efficiency of the ATLAS detector for selecting monojet signal events and $\mathcal{L}$ is the integrated luminosity of data recorded by the ATLAS detector and used for the ATLAS monojet analysis (20.3 fb$^{-1}$). The uncertainty on the theoretical cross-section, $\Delta \sigma_{gen}$ and the acceptance, $\Delta \mathcal{A}$ is estimated as described in Ref. \cite{CERN-THESIS-2015-038}.
+
+
+%In general, our approach  results in more conservative limits on M$_{*}$ but ultimately removes the hassle of a full histFitter analysis. Importantly, agreement between M$_{*}^{\mbox{\tiny ATLAS,95}}$ and the reproduced nominal\footnote{Nominal in this case explicitly refers to a quantity which does not yet include statistical or systematic uncertainties.} M$_{*}$ values (denoted M$_{*}^{\mbox{\tiny R,N}}$ in Table \ref{M_star_limits_monojet}) is still reasonably high - within \comm{something percent} - validating our signal selection and MC generation procedures.}
 
 %Also note that while the signal samples used for validation of the monojet channel are generated for the processes $pp \rightarrow j\chi\bar{\chi}$ and $pp \rightarrow jj\chi\bar{\chi}$ where $j$ is a final state jet, the signal samples used to constrain the the simplified models discussed in Section \ref{SiM_models} also include the tree-level process $pp \rightarrow \chi \bar{\chi}$. \comm{This approach is taken as...}
 \bigskip
 
+%\begin{table}[!htbp]
+%\centering
+%\begin{tabular}{c|c|c|c|c|c}
+% \hline
+% \hline
+% $M$ [TeV] & M$_{*}^{\mbox{\tiny ATLAS,95}}$ [GeV] & M$_{*}^{\mbox{\tiny R,N}}$ [GeV] & Difference [\%] & M$_{*}^{\mbox{\tiny R,95}}$ [GeV] & Difference [\%] \\ 
+% \hline
+%0.05 & 91 & 100.05 & +9.05 & 94.33 & +3.53 \\
+%%0.1 & 217 & 322.70 & +32.75 & 280.57 & +22.66 \\
+%0.3 & 1151 & 1288.15 & +10.65 & 1092.52 & $-$5.35 \\
+%0.6 & 1868 & 2013.68 & +7.23 & 1668.27 & $-$11.97 \\
+%1 & 2225 & 2363.06 & +5.84 & 1975.58 & $-$12.63 \\
+%3 & 1349 & 1479.66 & +8.83 & 1274.73 & $-$5.83 \\
+%%6 & 945 & 856.37 & $-$10.35 & 730.98 & $-$29.28 \\
+%10 & 928 & 1000.93 & +7.29 & 842.03 & $-$10.21 \\
+%30 & 914 & 989.49 & +7.54 & 838.34 & $-$9.03\\
+% \hline
+% \hline
+%\end{tabular}
+%\caption{Comparison of the ATLAS 95\% CL limits on M$_{*}$ (denoted M$_{*}^{\mbox{\tiny ATLAS,95}}$) with the reproduced nominal and reproduced 95\% CL limits on M$_{*}$ (denoted M$_{*}^{\mbox{\tiny R,N}}$ and M$_{*}^{\mbox{\tiny R,95}}$ respectively) for the s-channel vector mediator model with $m_{\chi} = $ 50 GeV, $\Gamma = M/8\pi$, $\sqrt{g_{q}g_{\chi}} = 1$ and QCUT = 80 GeV. Adapted from Ref. \cite{Aad:2015zva}.}
+%\label{M_star_limits_monojet}
+%\end{table}
+
 \begin{table}[!htbp]
 \centering
-\begin{tabular}{c|c|c|c|c|c}
+\begin{tabular}{c|c|c|c}
  \hline
  \hline
- $M$ [TeV] & M$_{*}^{\mbox{\tiny ATLAS,95}}$ [GeV] & M$_{*}^{\mbox{\tiny R,N}}$ [GeV] & Difference [\%] & M$_{*}^{\mbox{\tiny R,95}}$ [GeV] & Difference [\%] \\ 
+ $M$ [TeV] & M$_{*}^{\mbox{\tiny ATLAS,95}}$ [GeV] & M$_{*}^{\mbox{\tiny REPRO,95}}$ [GeV] & Difference [\%] \\ 
  \hline
-0.05 & & & & \\
-0.1 & & & & \\
-0.3 & & & & \\
-0.6 & & & & \\
-1 & & & & \\
-3 & & & & \\
-6 & & & & \\
-12 & & & & \\
+0.05 & 91 & 94.33 & +3.53 \\
+%0.1 & 217 & 280.57 & +22.66 \\
+0.3 & 1151 & 1092.52 & $-$5.35 \\
+0.6 & 1868 & 1668.27 & $-$11.97 \\
+1 & 2225 & 1975.58 & $-$12.63 \\
+3 & 1349 & 1274.73 & $-$5.83 \\
+%6 & 945 & 730.98 & $-$29.28 \\
+10 & 928 & 842.03 & $-$10.21 \\
+30 & 914 & 838.34 & $-$9.03\\
  \hline
  \hline
 \end{tabular}
-\caption{Comparison of the reproduced nominal ($\mbox{R,N}$) and reproduced 95\% CL ($\mbox{R,95}$) limits on the suppression scale, M$_{*}$, with the ATLAS 95\% CL limits ($\mbox{ATLAS,95}$) for the s-channel vector mediator model with $m_{\chi} = $ 50 GeV, $\Gamma = M/8\pi$, $\sqrt{g_{q}g_{\chi}} = 1$ and QCUT = 80 GeV. Adapted from Ref. \cite{Aad:2015zva}.}
+\caption{Comparison of reproduced suppression scale limits at 95\% confidence level (M$_{*}^{\mbox{\tiny REPRO,95}}$) with limits from the ATLAS monojet analysis (M$_{*}^{\mbox{\tiny ATLAS,95}}$) for the s-channel vector mediator model with $m_{\chi} = $ 50 GeV, $\Gamma = M/8\pi$, $\sqrt{g_{q}g_{\chi}} = 1$ and QCUT = 80 GeV. Adapted from Ref. \cite{Aad:2015zva}.}
 \label{M_star_limits_monojet}
 \end{table}
 \bigskip
 
-In keeping with the ATLAS analysis, monojet signal samples are generated using the MLM scheme for matching between \MG and \PYTHIA. However, while the ATLAS analysis favours a single matching scale (QCUT) of 80 GeV, we use a sliding value of $m_{\chi}/4$. \comm{This ensures that all jet-related kinematic distributions are smoothly connected across all dark matter masspoints.} \draft{It is also important to note that while the signal samples used for validation correspond to the processes $pp \rightarrow j\chi\bar{\chi}$ and $pp \rightarrow jj\chi\bar{\chi}$ where $j$ is a final state jet, constraints on the simplified models studied in this paper are determined using signal samples with zero, one and two jets in the final state.} \comm{This deviation from the ATLAS analysis is motivated by the observation that the limits on $M_{*}$ are improved with the addition of the process $pp \rightarrow \chi\bar{\chi}$.}
+In keeping with the ATLAS analysis, monojet signal samples were generated using the MLM scheme for matching between \MG and \PYTHIA. However, while the ATLAS analysis favours a single matching scale (QCUT) of 80 GeV, we use a sliding value of $m_{\chi}/4$. \comm{This ensures that all jet-related kinematic distributions are smoothly connected across all dark matter masspoints.} \draft{It is also important to note that while the signal samples used for validation correspond to the processes $pp \rightarrow j\chi\bar{\chi}$ and $pp \rightarrow jj\chi\bar{\chi}$ where $j$ is a final state jet, constraints on the simplified models studied in this paper are determined using signal samples with zero, one and two jets in the final state.} \comm{This deviation from the ATLAS analysis is motivated by the observation that the limits on $M_{*}$ are improved with the addition of the process $pp \rightarrow \chi\bar{\chi}$.}
 
 %SUSY Selection
 %For the monojet channel, signal selection is carried out as in Ref. \cite{SUSY_official_paper} wherein events are required to have a maximum of three good jets with $p_{T}>30\,\mbox{GeV}$, $|\eta|<2.8$ and $\Delta\phi(jet\,\slashed{E}_{T}^{miss})>0.4$. Three separate signal regions are then defined with increasing lower thresholds on the momentum of the leading jet, $p_{T}^{j1}$, and $\slashed{E}_{T}^{miss}$ as shown in Table \ref{monojet_SRs}.
