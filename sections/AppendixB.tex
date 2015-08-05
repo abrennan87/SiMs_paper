@@ -1,0 +1,45 @@
+\begin{flushleft}
+In this appendix we present a summation of the procedure employed to estimate the 95\% confidence level uncertainties on M$_{*}$, $\sigma_{obs}^{lim}$, $\sigma{exp}^{lim}$, $f_{obs}^{lim}$ and $f_{exp}^{lim}$.
+\bigskip
+
+For each channel, there are three key sources of systematic uncertainty: the factoriation and renormalisation scale, the strong coupling constant ($\alpha_{s}$) and the parton distribution function (PDF). The uncertainty associated with these parameters is estimated in the following way.
+\bigskip
+
+Firstly, the factorisation and renormalisation default scales are varied simultaneously by a factor of 0.5 \fg{(`down')} and by a factor of 2 \fg{(`up')} \st{times the default scale}. The uncertainty on the theoretical cross-section, $\Delta \sigma_{gen}$, is then taken to be the average change in $\sigma_{gen}$ resulting from these up and down variations.
+\bigskip
+
+\draft{The systematic effects of the strong coupling constant and the PDF are difficult to separate and so are treated in tandem. We begin by assuming that the systematic uncertainty introduced by $\alpha_{s}$ at matrix-element level is negligible when compared to the PDF uncertainties. Similarly, we assume that the PDF effects are negligible when compared to the $\alpha_{s}$ systematic uncertainties at the parton-shower level. \comm{This approach is validated in Ref. (see Ref. \cite{CERN-THESIS-2015-038})(?)} While there is no way to change the value of $\alpha_{s}$ in \MG, there are specific `tunes' in
+Pythia which can be used to perform this function. Hence we estimate the uncertainty on $\Delta \sigma_{gen}$ by changing the choice of PDF and tune simultaneously. Specifically, we change the nominal PDF (MSTW2008lo68) and tune (ATLAS UE AU2-MSTW2008LO) to the CTEQ6L1 PDF and ATLAS UE AU2-CTEQ6L1 tune respectively and then to the NNPDF2.1LO PDF and Monash tune respectively. The PDFs chosen represent the three main PDFs considered for LHC physics \cite{CooperSarkar:2011vp} while the associated tunes are the recommended defaults \comm{reference here}. The systematic uncertainty on $\sigma_{gen}$ is then calculated from the mean of the two variations (MSTW2008lo68 + ATLAS UE AU2-MSTW2008LO to CTEQ6L1 + ATLAS UE AU2-CTEQ6L1 and MSTW2008lo68 + ATLAS UE AU2-MSTW2008LO to NNPDF2.1LO + Monash). \question{Amelia - did you want to make any changes/further comments here?}}
+\bigskip
+
+Lastly, the uncertainty on $\sigma_{gen}$ is calculated using the formula:
+\begin{equation}
+\label{uncertainty_formula}
+\left(\frac{\Delta \sigma_{gen}}{\sigma_{gen}}\right)^{2} = \left(\frac{\Delta \sigma_{gen}}{\sigma_{gen}}\right)_{\mbox{\footnotesize scale}}^{2} + \left(\frac{\Delta \sigma_{gen}}{\sigma_{gen}}\right)_{\mbox{\footnotesize PDF+tune}}^{2}
+\end{equation}
+
+where $\sigma_{gen}$ is the nominal theoretical cross-section, $(\Delta \sigma_{gen})_{\mbox{\footnotesize scale}}$ is the uncertainty on $\sigma_{gen}$ due to the factorisation and renormalisation scale and $(\Delta \sigma_{gen})_{\mbox{\footnotesize PDF+tune}}$ is the uncertainty on $\sigma_{gen}$ due to the PDF and strong coupling constant.
+\bigskip
+
+\textcolor{magenta}{Should we say something here about using only leading order predictions? For example, should we comment on the uncertainty associated with not including NLO corrections to the cross-section?} %It is important to note that a complete examination of the uncertainties associated
+%with each simplified model and each mass and coupling combination was not necessary.
+
+\comm{Good question, can Thomas comment? Tom+Karl paper seems to suggest the impact is negligible? - Amelia}
+\bigskip
+
+The uncertainty on the acceptance is estimated using a similar approach to that outlined above. In this case however, the statistical uncertainty - taken to be the 95\% confidence interval as calculated using the \comm{Wald approximation} - is first subtracted from the nominal acceptance. Equation \ref{uncertainty_formula} is then applied to this new variable (denoted $\mathcal{A}'$). Note also that the matching scale (qcut) between \MG and \PYTHIA is included when estimating the uncertainty on the acceptance for the monojet channel. As in the case of the factorisation and renormalisation scales, the matching scale uncertainty is determined by varying the value of the qcut up by a factor of two (to a value of $m_{\chi}/2$) and down by a factor of two (to a value of $m_{\chi}/8$). The uncertainty on $\mathcal{A}'$ is then quantified as the average change in $\mathcal{A}'$ resulting from these up and down variations. \comm{The qcut uncertainty is ignored at the theoretical cross-section level because...}
+\bigskip
+
+THIS IS WHERE I'M UP TO!
+\end{flushleft}
+
+\begin{flushleft}
+For each channel, the 95\% confidence level limits on the suppression scale, M$_{*}$, are calculated using the following formula:
+
+\begin{equation}
+\label{uncertainty_formula}
+\frac{\Delta \mbox{M}_{*}}{\mbox{M}_{*}} = \sqrt{\left(\frac{\Delta \sigma_{gen}}{\sigma_{gen}}\right)^{2} + \left(\frac{\Delta \mathcal{A}}{\mathcal{A}}\right)^{2} + \left(\frac{\Delta \epsilon}{\epsilon}\right)^{2} + \left(\frac{\Delta \mathcal{L}}{\mathcal{L}}\right)^{2} + \left(\frac{\Delta N}{N}\right)^{2}}
+\end{equation}
+
+where $\sigma_{gen}$ is the theoretical cross-section, $\mathcal{A}$ is the fraction of signal events passing the channel-specific selection criteria, $\epsilon$ is the efficiency of the ATLAS detector for selecting channel-specific signal events and $\mathcal{L}$ is the integrated luminosity of data recorded by the ATLAS detector and used for the analysis. For the monojet channel, $\mathcal{L}=20.3$ fb$^{-1}$ and the uncertainty on the theoretical cross-section, $\Delta \sigma_{gen}$ and the acceptance, $\Delta \mathcal{A}$ is estimated as described in Ref. \cite{CERN-THESIS-2015-038}. \comm{Comment on the specific systematics that go into $\Delta \sigma_{gen}$ and $\Delta \mathcal{A}$?} \draft{A similar approach is used for the mono-Z channel... include reference here?}
+\end{flushleft}
