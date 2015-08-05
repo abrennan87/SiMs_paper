@@ -94,21 +94,6 @@ For each channel, signal production was modelled with \MG5$\_$aMC 2.2.2 \comm{(r
 \end{table}
 \end{flushleft}
 
-\subsection{Signal Systematics}
-\begin{flushleft}
-For each channel, there are three key sources of systematic uncertainty: the factoriation and renormalisation scale, the strong coupling constant ($\alpha_{s}$) and the PDF. The last two sources are difficult to separate, however, so they are examined in tandem. \textcolor{magenta}{Should we say something here about using only leading order predictions? For example, should we comment on the uncertainty associated with not including NLO corrections to the cross-section?} %It is important to note that a complete examination of the uncertainties associated
-%with each simplified model and each mass and coupling combination was not necessary.
-
-\comm{Good question, can Thomas comment? Tom+Karl paper seems to suggest the impact is negligible? - Amelia}
-
-\hspace{1cm}The uncertainties associated with the aforementioned parameters are estimated in the following way. Firstly, the factorisation and renormalisation default scales are varied together by a factor of 0.5 \fg{(`down')} and by a factor of 2 \fg{(`up')} \st{times the default scale}. The uncertainty on the final \st{acceptance} \fg{cross section limit}, $\cancel{\mathcal{A}}$ \fg{$\sigma_{\mathrm{lim}}$}, is then taken to be the average change in $\cancel{\mathcal{A}}$ \fg{$\sigma_{\mathrm{lim}}$} resulting from these up and down variations. \textcolor{magenta}{Similarly, the uncertainty on $\mathcal{A}$ associated with $\alpha_{s}$ and the PDF is estimated by...}
-
-\hspace{1cm}\textcolor{magenta}{For the monojet channel the matching scale introduces an additional source of uncertainty, which is estimated by...}
-\bigskip
-
-THIS IS WHERE I'M UP TO!
-\end{flushleft}
-
 \fg{We now move to a discussion of each of the mono-X channels separately.}
 
 \subsection{Monojet Constraints}
@@ -140,7 +125,7 @@ For the monojet channel, signal selection is carried out as in Ref. \cite{Aad:20
 \end{table}
 \bigskip
 
-The signal selection and Monte Carlo (MC) generation procedures for the monojet channel were validated via reproduction of the ATLAS limits on the suppression scale, M$_{*}$, for the s-channel vector simplified model (refered to as the Z' model in the ATLAS monojet analysis). A sample of ATLAS and reproduced limits on M$_{*}$ for the case where $m_{\chi} = $ 50 GeV, $\Gamma = M/8\pi$ and $\sqrt{g_{q}g_{\chi}} = 1$ is shown in Table \ref{M_star_limits_monojet}. In general, good agreement is observed, with a maximum discrepancy of no more than 13\%. Note that a small difference is expected given the Monte Carlo generation procedure employed in this analysis does not include a full simulation of the ATLAS detector. \comm{Instead, reconstruction effects are modelled by smearing the leading jet $p_{T}$ distribution by a conservative factor of 5\%.} Note also that the 95\% CL uncertainties associated with the ATLAS limits are estimated using the HistFitter package while a more conservative approach is favoured for this analysis. Specifically, the 95\% CL uncertainty on the reproduced values of M$_{*}$ is estimated using the formula \ref{uncertainty_formula} in Appendix \ref{AppendixA}. \comm{Could this be moved to the Signal Systematics section above? Or should the Signal Systematics section be moved to Appendix \ref{AppendixA} (before the explanation of the 95\% CL estimation approach)?}
+The signal selection and Monte Carlo (MC) generation procedures for the monojet channel were validated via reproduction of the ATLAS limits on the suppression scale, M$_{*}$, for the s-channel vector simplified model (refered to as the Z' model in the ATLAS monojet analysis). A sample of ATLAS and reproduced limits on M$_{*}$ for the case where $m_{\chi} = $ 50 GeV, $\Gamma = M/8\pi$ and $\sqrt{g_{q}g_{\chi}} = 1$ is shown in Table \ref{M_star_limits_monojet}. In general, good agreement is observed, with a maximum discrepancy of no more than 13\%. Note that a small difference is expected given the Monte Carlo generation procedure employed in this analysis does not include a full simulation of the ATLAS detector. \comm{Instead, reconstruction effects are modelled by smearing the leading jet $p_{T}$ distribution by a conservative factor of 5\%.} Note also that the 95\% CL uncertainties associated with the ATLAS limits are estimated using the HistFitter package while a more conservative approach is favoured for this analysis (see appendix \ref{AppendixB}).
 
 %In general, our approach  results in more conservative limits on M$_{*}$ but ultimately removes the hassle of a full histFitter analysis. Importantly, agreement between M$_{*}^{\mbox{\tiny ATLAS,95}}$ and the reproduced nominal\footnote{Nominal in this case explicitly refers to a quantity which does not yet include statistical or systematic uncertainties.} M$_{*}$ values (denoted M$_{*}^{\mbox{\tiny R,N}}$ in Table \ref{M_star_limits_monojet}) is still reasonably high - within \comm{something percent} - validating our signal selection and MC generation procedures.}
 
