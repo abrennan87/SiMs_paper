@@ -66,6 +66,8 @@ The mono-X + $E_{T}^{\mathrm{miss}}$ signal is a popular signal in the search fo
 \subsection{Signal Generation}
 \label{signal_generation}
 \begin{flushleft}
+\comm{Here, I'd be ignoring the stuff specific to mono-jet (0,1,2 jets, and matching scheme), and include that in the mono-jet section. - Amelia}
+
 For each channel, signal production was modelled with \MG5$\_$aMC 2.2.2 \comm{(references needed throughout this section!)}. Showering and hadronisation was then performed by \PYTHIA  8.201 using the \textcolor{magenta}{ATLAS UE Tune AU2-MSTW2008LO}. Using the MSTW2008lo68 PDF set (currently the benchmark for ATLAS analyses \cite{}. \question{Is this still true?}) and the default \MG factorization and renormalization scales\footnote{In \FNMG5 2.2.2 the default scale, $\mu$ is defined as the sum of $\sqrt{m_{\chi}^{2} + p_{T}^{2}}$ for all dark matter particles in the final state.}, samples were produced for a representative set of of dark matter and mediator masses, shown in Table \ref{Mass_coup_points}. \textcolor{magenta}{Something about the coupling strength, $f$, being set to a value of 1? Maybe leave out - we'll vary the value.} Note that rows one to three of Table \ref{Mass_coup_points} cover the case where the dark matter mass is small and the mediator has either a mass that is degenerate, low or sufficiently large so as to be in the EFT regime of validity\footnote{A recent study by Alves et al. found that EFT results do not apply to mediators with a mass less than 2.5 TeV at the LHC during Run I \cite{Alves:2011wf}.}. Rows four and five cover the case where the dark matter particle has a medium mass and the mediator is either near-degenerate or larger. Rows six and seven (eight and nine) cover the case where the dark matter particle is a few GeV (TeV) and the mediator is either near-degenerate or again sufficiently large so as to be in the EFT regime of validity. \comm{Comment on the masspoints being dictated by the narrow width approximation used by MG?}
 
 \begin{table}[!htbp]
@@ -125,7 +127,7 @@ For the monojet channel, signal selection is carried out as in Ref. \cite{Aad:20
 The signal selection and Monte Carlo (MC) generation procedures for the monojet channel were validated via reproduction of the ATLAS limits on the suppression scale, M$_{*}$, for the s-channel vector simplified model (refered to as the Z' model in the ATLAS monojet analysis). The results of this process are contained in appendix \ref{monojet_validation}.
 \bigskip
 
-In keeping with the ATLAS analysis, monojet signal samples were generated using the MLM scheme for matching between \MG and \PYTHIA. However, while the ATLAS MC samples are generated for only two matching scale values (80 GeV and 300 GeV), we use a sliding value of $m_{\chi}/4$. \comm{This ensures that all jet-related kinematic distributions are smoothly connected across all dark matter masspoints.} \draft{It is also important to note that while the signal samples used for validation correspond to the processes $pp \rightarrow j\chi\bar{\chi}$ and $pp \rightarrow jj\chi\bar{\chi}$ where $j$ is a final state jet, constraints on the simplified models studied in this paper are determined using signal samples with zero, one and two jets in the final state.} \comm{This deviation from the ATLAS analysis is motivated by the observation that the limits on $M_{*}$ are improved with the addition of the process $pp \rightarrow \chi\bar{\chi}$.}
+In keeping with the ATLAS analysis, monojet signal samples were generated using the MLM scheme for matching between \MG and \PYTHIA. However, while the ATLAS analysis favours a single matching scale (QCUT) of 80 GeV, we use a sliding value of $m_{\chi}/4$. \comm{This ensures that all jet-related kinematic distributions are smoothly connected across all dark matter masspoints.} \draft{It is also important to note that while the signal samples used for validation correspond to the processes $pp \rightarrow j\chi\bar{\chi}$ and $pp \rightarrow jj\chi\bar{\chi}$ where $j$ is a final state jet, constraints on the simplified models studied in this paper are determined using signal samples with zero, one and two jets in the final state.} \comm{This deviation from the ATLAS analysis is motivated by the observation that the limits on $M_{*}$ are improved with the addition of the process $pp \rightarrow \chi\bar{\chi}$.}
 
 %SUSY Selection
 %For the monojet channel, signal selection is carried out as in Ref. \cite{SUSY_official_paper} wherein events are required to have a maximum of three good jets with $p_{T}>30\,\mbox{GeV}$, $|\eta|<2.8$ and $\Delta\phi(jet\,\slashed{E}_{T}^{miss})>0.4$. Three separate signal regions are then defined with increasing lower thresholds on the momentum of the leading jet, $p_{T}^{j1}$, and $\slashed{E}_{T}^{miss}$ as shown in Table \ref{monojet_SRs}.
@@ -214,73 +216,6 @@ THIS IS WHERE I'M UP TO!
 \label{monoZ_constraints}
 \begin{flushleft}
 \comm{Note to Amelia: Here you should discuss the original intention of the mono-Z analysis. Also comment on any validation you did in order to confirm that you could use the results of the analysis. Lastly, discuss or list the cuts used in the analysis and the uncertainties associated with the results. This will inevitably include details of the background estimation and the detector performance.}
-
-The ATLAS mono-$Z$ analysis (ref) is a search for dark matter that appears as missing transverse momentum ($\vec{E}_{\mathrm{T}}^{\mathrm{miss}}$) in the detector, balanced against a $Z$-boson which decays leptonically. The analysis focuses on the EFT model of dark matter interactions, and also includes a simplified model where the dark matter particle couples to a quark via a coloured scalar mediator, exchanged in the $t$-channel. This simplified model is used below to validate our approach. 
-
-The analysis selection requires two oppositely-charged electrons or muons with an invariant mass $m_{\ell \ell} \in [76, 106]$ GeV, which form a $Z$-boson candidate. The electrons must satisfy $E_{\mathrm{T}} < 20$ GeV and $|\eta| < 2.47$, while muons must have $p_{\mathrm{T}} < 20$ GeV and $|\eta| < 2.5$; all leptons must be isolated. Events with a third lepton, with $p_{\mathrm{T}} < 7$ GeV, are removed. The requirements that the $Z$ candidate and $\vec{E}_{\mathrm{T}}^{\mathrm{miss}}$ be back-to-back and balanced are implemented with a cut on the azimuthal angle between them, $\Delta \phi (\vec{E}_{\mathrm{T}}^{\mathrm{miss}}, p_{\mathrm{T}}^Z) < 2.5$, and on the different in momentum magnitude, $|p_{\mathrm{T}}^Z - E_{\mathrm{T}}^{\mathrm{miss}}| / p_{\mathrm{T}}^Z < 0.5$. The $Z$ candidate must have pseudorapidity $\eta^Z$ in the range $[-2.5, 2.5]$. Finally, events containing a jet ($p_{\mathrm{T}} < 25$ GeV, $|\eta| < 2.5$) are vetoed. Four signal regions are defined by $E_{\mathrm{T}}^{\mathrm{miss}} > $ 150, 250, 350, 450 GeV. In the following, we focus just on the first two signal regions, as these give the better limits for our simplified models.
-
-The dominant background in this analysis comes from $ZZ \rightarrow \ell^+ \ell^- \bar{\nu} \nu$ events, which are estimated using Monte Carlo, and validated with a $ZZ \rightarrow \ell^+ \ell^- \ell^+ \ell^-$ control region. The dominant systematic uncertainties for this background come from the MC generator choice, and the jet-energy scale and electron and muon momentum scales also contribute. The total background, uncertainties and data are summarised in the first two rows of table \ref{tab:MonoZPaperLims}.
-
-\begin{table}
-\begin{center}
-\begin{tabular}{ l | c c }
-\hline
-\hline
-& \multicolumn{2}{c}{Signal region} \\
-& $E_{\mathrm{T}}^{\mathrm{miss}} >$ 150 GeV & $E_{\mathrm{T}}^{\mathrm{miss}} >$ 250 GeV \\
-\hline
-Background & 51.5 $\pm$ 18 & 7.2 $\pm$ 2.8 \\
-Data & 45 & 3 \\
-\hline
-$N_{\mathrm{exp}}$ & 34.7 & 32.2 \\
-$N_{\mathrm{obs}}$ & 6.8 & 5.9 \\ 
-\hline
-\end{tabular}
-\end{center}
-\caption{The number of background and data events from the ATLAS mono-$Z$ analysis, and the upper limits on the number of new physics events, calculated with \texttt{HistFitter}.}
-\label{tab:MonoZPaperLims}
-\end{table}
-
-Unfortunately, the published paper does not provide an upper limit on the number of events, or cross section, coming from possible new physics, so we calculate this ourselves using \texttt{HistFitter} \cite{ATLASmonoZ}, with the frequentist calculator and one-sided profile likelihood test statistic (the LHC default), and a 3\% luminosity uncertainty. The resulting expected and observed 95\%C.L. upper limits on the number of new physics events, $N_{\mathrm{exp}}$ and $N_{\mathrm{obs}}$, are shown in the bottom rows of table \ref{tab:MonoZPaperLims}. 
-
-\subsection{Validation procedure}
-
-To validate our sample generation and selection, we take advantage of the $t$-channel simplified model that was included in the ATLAS mono-$Z$ analysis, by generating our own version of this model and comparing the limits we obtain with those from the analysis. The $t$-channel model differs from our own in several important ways; the dark matter is assumed to be Majorana rather than Dirac (affecting the cross section but not the kinematic behaviour), there are two scalar mediators rather than six, which couple only to the first two quark generations, and finally, the width of these mediators is set to a narrow value, rather than the minimum width.
-
-We generate this model with our own procedure, and calculate production cross sections ($\sigma(p p \rightarrow Z \chi \chi \rightarrow \ell^+ \ell^- \chi \chi)$) within 2\% of the ATLAS analysis values.
-
-%%%% Note: I say 2%, because for the cross sections that we could take from the paper (fig 7), which are for m_eta = 1000, we get differences of 1.1%, 2% and -1.7%. %%%
-
-The resulting samples were passed through our selection procedure, and 95\%CL upper limits were calculated for the cross section, and the coupling strength $f$. We extract the analysis limits for $\sigma_{\mathrm{exp/obs}}^{\mathrm{lim}}$ for $m_{\chi}$ = $\{$10, 200, 400$\}$ GeV and $M_{\mathrm{med}}$ = 1000 GeV from fig. 7 of \cite{ATLASmonoZ}. Limits on the coupling, in fig. 8 of \cite{ATLASmonoZ}, are available for the larger set of points indicated in table \ref{tab:monoZval} below. Comparison with the ATLAS limits in shown in table \ref{tab:monoZval}; we find differences in $\sigma_{\mathrm{exp}}^{\mathrm{lim}}$ ($\sigma_{\mathrm{obs}}^{\mathrm{lim}}$) ranging from $<$1\% to 50\% ($<$2\% to 63\%), and in the upper limit on $f$ of $<$5\% for most samples, and $<$20\% overall. We consider these comparisons to indicate acceptable agreement, given the sparse information available in the publication from which we calculate our limits on $N_{\mathrm{exp/obs}}$, and our more conservative systematic approach. In all cases, our limits were more conservative than those from the ATLAS analysis.
-
-\begin{table}
-\begin{center}
-\begin{tabular}{|c c | c c c|}
-\hline
-\hline
-$m_{\chi}$ & $M_{\mathrm{med}}$ & $\sigma_{\mathrm{exp}}^{\mathrm{lim}}$ & $\sigma_{\mathrm{obs}}^{\mathrm{lim}}$ & $f$ \\
-$[$GeV$]$ & $[$GeV$]$ & \% diff. & \% diff. & \% diff. \\
-\hline
-10 & 200 & & & 3.2 \\
-   & 500 & & & 14.7 \\
-   & 700 & & & 19.4  \\
-   & 1000  & 47.7 & 63.1 & 12.7  \\
-200   & 500  & & & 16.0  \\
-   & 700  & & & 4.3  \\
-   & 1000  & $<$1 & 10.5 & 2.0  \\
-400   & 500  & & & 1.5  \\
-   & 700  & & & 5.0  \\
-   & 1000  & -7.7 & 1.9 & 0.9  \\
-1000   & 1200  & & & 0.8  \\
-\hline
-\end{tabular}
-\end{center}
-\caption{Validation of the $t$-channel model from the ATLAS mono-$Z$ analysis.}
-\label{tab:monoZval}
-\end{table}
-
-At this point, we consider the generation and limit-setting procedure for the mono-$Z$ channel validated, and present limits on our set of simplified models for this channel in section X.
-
 \end{flushleft}
 
 \subsection{Mono-W Constraints}
