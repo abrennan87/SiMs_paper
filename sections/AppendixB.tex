@@ -1,14 +1,14 @@
 \begin{flushleft}
-In this appendix we present a summation of the procedure employed to calculate the 95\% confidence level limits on M$_{*}$, $\sigma(pp \rightarrow X\chi\bar{\chi})$ and $\sqrt{g_{q}g_{\chi}}$. Note that the following formulae are presented for the observed limits but are also used to evaluate the expected limits.
+In this appendix we present a summation of the procedure employed to calculate the 95\% confidence level limits on M$_{*}$, $\sigma(pp \rightarrow X + \chi\bar{\chi})$ and $\sqrt{g_{q}g_{\chi}}$. Note that the following formulae are presented for the observed limits but are also used to evaluate the expected limits.
 \end{flushleft}
 
 \subsection{Nominal Values}
 \begin{flushleft}
-For each simplified model, the nominal value for the observed limit on the cross-section for the process $pp \rightarrow X\chi\bar{\chi}$ is calculated using the formula:
+For each simplified model, the nominal value for the observed limit on the cross-section for the process $pp \rightarrow X + \chi\bar{\chi}$ is calculated using the formula:
 
 \begin{equation}
 \label{sigma_nom}
-\sigma_{obs}^{lim}(pp \rightarrow X\chi\bar{\chi}) = \frac{N_{obs}}{\mathcal{L}\times\mathcal{A}\times\epsilon}
+\sigma_{obs}^{lim}(pp \rightarrow X + \chi\bar{\chi}) = \frac{N_{obs}}{\mathcal{L}\times\mathcal{A}\times\epsilon}
 \end{equation}
 
 where $N_{obs}$ is the number of observed signal events in the channel and signal region of interest (a model-independent quantity), $\mathcal{L}$ is the integrated luminosity, $\mathcal{A}$ is the acceptance (the fraction of signal events passing the channel/SR-specific selection criteria) and $\epsilon$ is the efficiency of the ATLAS detector for selecting channel/SR-specific signal events. For both $X=0j +1j + 2j$ and $X=Z$, $\mathcal{L}=20.3$ fb$^{-1}$ and $\mathcal{A}\times\epsilon$ is regarded as a single variable.
@@ -18,7 +18,7 @@ The nominal value for the observed limit on the suppression scale is then calcul
 
 \begin{equation}
 \label{M_*_nom}
-\mbox{M}_{*, obs}^{lim} = \mbox{M}_{*}^{gen}\left[\frac{\sigma_{gen}}{\sigma_{obs}^{lim}(pp \rightarrow X\chi\bar{\chi})}\right]^{1/4}
+\mbox{M}_{*, obs}^{lim} = \mbox{M}_{*}^{gen}\left[\frac{\sigma_{gen}}{\sigma_{obs}^{lim}(pp \rightarrow X + \chi\bar{\chi})}\right]^{1/4}
 \end{equation}
 
 where M$_{*}^{gen}$ is the theoretical suppression scale and $\sigma_{gen}$ is the theoretical cross-section.
@@ -28,7 +28,7 @@ Similarly, the nominal value for the limit on the observed coupling constants is
 
 \begin{equation}
 \label{coupling_nom}
-(\sqrt{g_{q}g_{\chi}})_{obs}^{lim} = (\sqrt{g_{q}g_{\chi}})^{gen}\left[\frac{\sigma_{obs}^{lim}(pp \rightarrow X\chi\bar{\chi})}{\sigma_{gen}}\right]^{1/4}
+(\sqrt{g_{q}g_{\chi}})_{obs}^{lim} = (\sqrt{g_{q}g_{\chi}})^{gen}\left[\frac{\sigma_{obs}^{lim}(pp \rightarrow X + \chi\bar{\chi})}{\sigma_{gen}}\right]^{1/4}
 \end{equation}
 
 where $(\sqrt{g_{q}g_{\chi}})^{gen}$ is the product of the theoretical coupling constants. Note that $(\sqrt{g_{q}g_{\chi}})^{gen}$ is always equal to 1 for the t-channel scalar mediator model. \comm{DOUBLE CHECK THIS!}
@@ -36,7 +36,7 @@ where $(\sqrt{g_{q}g_{\chi}})^{gen}$ is the product of the theoretical coupling 
 
 \subsection{Uncertainty Estimation}
 \begin{flushleft}
-Our nominal limits on M$_{*}$, $\sigma(pp \rightarrow X\chi\bar{\chi})$ and $\sqrt{g_{q}g_{\chi}}$ rely on both $\sigma_{gen}$ and $\mathcal{A}\times\epsilon$ and so are subject to systematic uncertainties which derive from our choice of MC generation procedure. For our MC samples, there are three key sources of systematic uncertainty: the factoriation and renormalisation scales, the strong coupling constant ($\alpha_{s}$) and the parton distribution function (PDF). The uncertainty associated with these parameters is estimated as follows.
+Our nominal limits on M$_{*}$, $\sigma(pp \rightarrow X + \chi\bar{\chi})$ and $\sqrt{g_{q}g_{\chi}}$ rely on both $\sigma_{gen}$ and $\mathcal{A}\times\epsilon$ and so are subject to systematic uncertainties which derive from our choice of MC generation procedure. For our MC samples, there are three key sources of systematic uncertainty: the factoriation and renormalisation scales, the strong coupling constant ($\alpha_{s}$) and the parton distribution function (PDF). The uncertainty associated with these parameters is estimated as follows.
 \bigskip
 
 %first for the theoretical cross-section, $\sigma_{gen}$ and then for the acceptance, $\mathcal{A}$, which is defined as:
@@ -73,7 +73,10 @@ where $\sigma_{gen}$ is the nominal theoretical cross-section, $(\Delta \sigma_{
 \comm{Good question, can Thomas comment? Tom+Karl paper seems to suggest the impact is negligible? - Amelia}
 \bigskip
 
-The uncertainty on the acceptance $\times$ efficiency is estimated using a similar approach but with two key differences. Firstly, the statistical uncertainty (taken to be the 95\% confidence interval on $\mathcal{A}\times\epsilon$ as calculated using the \comm{Wald approximation}) is subtracted from the nominal value of $\mathcal{A}\times\epsilon$. Equation \ref{uncertainty_sigma_gen} is then applied to this new variable (denoted $\mathcal{A}'$). Secondly, the matching scale (qcut) between \MG and \PYTHIA is included when estimating the uncertainty on $\mathcal{A}'$ for the monojet channel. As in the case of the factorisation and renormalisation scales, the matching scale uncertainty is determined by varying the value of the qcut up by a factor of two (to a value of $m_{\chi}/2$) and down by a factor of two (to a value of $m_{\chi}/8$). The uncertainty on $\mathcal{A}'$ is then quantified as the average change in $\mathcal{A}'$ resulting from these up and down variations. \comm{The qcut uncertainty is ignored at the theoretical cross-section level because...}
+The uncertainty on the acceptance $\times$ efficiency is estimated using a similar approach but with two key differences. Firstly, the statistical uncertainty (taken to be the 95\% confidence interval on $\mathcal{A}\times\epsilon$ as calculated using the \comm{Wald approximation}) is subtracted from the nominal value of $\mathcal{A}\times\epsilon$. Equation \ref{uncertainty_sigma_gen} is then applied to this new variable (denoted $\mathcal{A}'$). Secondly, the matching scale (qcut) between \MG and \PYTHIA is included when estimating the uncertainty on $\mathcal{A}'$ for the monojet channel. Following the approach utilised by the ATLAS group \cite{CERN-THESIS-2015-038}, conservative matching scale uncertainties of 10\% for events with $E_{T}^{miss} <$ 350 GeV and 60\% for events with $E_{T}^{miss} >$ 350 GeV were used \comm{for the validation}.
+ 
+%As in the case of the factorisation and renormalisation scales, the matching scale uncertainty is determined by varying the value of the qcut up by a factor of two (to a value of $m_{\chi}/2$) and down by a factor of two (to a value of $m_{\chi}/8$). The uncertainty on $\mathcal{A}'$ is then quantified as the average change in $\mathcal{A}'$ resulting from these up and down variations. 
+\comm{The qcut uncertainty is ignored at the theoretical cross-section level because...}
 \bigskip
 
 Finally, the 95\% CL uncertainties on $\sigma_{obs}^{lim}$, M$_{*}$ and $f$ are given by the following equations:
