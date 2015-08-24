@@ -59,7 +59,7 @@ As mentioned in Section \ref{monojet_constraints}, the signal selection and Mont
  \hline
  \hline
 \end{tabular}
-\caption{Comparison of reproduced M$_{*}$ limits at 95\% confidence level (M$_{*}^{\mbox{\tiny REPRO,95}}$) with ATLAS limits (M$_{*}^{\mbox{\tiny ATLAS,95}}$) for the processes $pp \rightarrow j\chi\bar{\chi}$ and $pp \rightarrow jj\chi\bar{\chi}$ for the s-channel vector mediator model with $m_{\chi} = $ 50 GeV, $\Gamma = M/8\pi$, $\sqrt{g_{q}g_{\chi}} = 1$ and QCUT = 80 GeV + 300 GeV. Adapted from Ref. \cite{Aad:2015zva}.}
+\caption{Comparison of reproduced M$_{*}$ limits at 95\% confidence level (M$_{*}^{\mbox{\tiny REPRO,95}}$) with ATLAS limits (M$_{*}^{\mbox{\tiny ATLAS,95}}$) for the processes $pp \rightarrow j\chi\bar{\chi}$ and $pp \rightarrow jj\chi\bar{\chi}$ for the s-channel vector mediator model with $m_{\chi} = $ 50 GeV, $\Gamma = M/8\pi$, $\sqrt{g_{q}g_{\chi}} = 1$ and QCUT = 80 GeV + 300 GeV. Adapted from Ref. \cite{Aad:2015zva}. \comm{Just a thought - would it make more sense to calculate these as (ATLAS - us)/ATLAS? Then we say ours are x\% smaller/more conservative than the official values. Also added bonus of reducing the percentages slightly. -Mia}}
 \label{M_star_limits_monojet}
 \end{table}
 \end{flushleft}
@@ -68,6 +68,179 @@ As mentioned in Section \ref{monojet_constraints}, the signal selection and Mont
 \label{monoZ_validation}
 \begin{flushleft}
 \comm{Amelia, please put your validation results here.}
+
+\bigskip
+
+The ATLAS mono-$Z$ analysis result includes an upper limit on the coupling $g_{q \chi}$ for a $t$-channel simplified model that is very similar to the model tested here, and so is used for validating our procedure. The most significant differences are in the number of mediating particles --- the ATLAS model includes just two mediators ($up$- and $down$-type) compared to our six --- and in the nature of the DM particle, which is taken to be Majorana. This latter choice does not impact the kinematic behaviour, but does impact the cross section. Additionally, while we use a universal coupling $g_{q \chi}$ to all three quark generations, the analysis used a model which set $g_{t,b \chi}$ = 0.
+
+\comm{The following paragraphs may need to appear in the results section of the paper.- Amelia}
+The published result unfortunately does not give upper limits on the number of new physics events, but rather the number of expected and observed events in each signal region, along with uncertainties. We convert these to upper limits on $N_{exp,obs}$ (see eq.~\ref{sigma_nom}) with a simple implementation of HistFitter that uses a frequentist calculator and a one-sided profile likelihood test statistic (the LHC default), giving the model-independent upper limits shown in the table below. Note that we use signal regions 1 and 2 only, as this simplified HistFitter approach was deemed inappropriate for the very low statistics of signal regions 3 and 4. 
+
+\begin{table}
+\begin{center}
+\begin{tabular}{ c  c  c }
+\hline
+& SR1 & SR2 \T \\
+& ($E_{\mathrm{T}}^{\mathrm{miss}} > $ 150 GeV) & ($E_{\mathrm{T}}^{\mathrm{miss}} > $ 250 GeV) \B \\
+\hline
+$N_{\mathrm{sig}}^{\mathrm{exp}}$ & 34.7 & 6.8 \T \\
+$N_{\mathrm{sig}}^{\mathrm{obs}}$ & 32.2 & 5.9 \B \\
+\hline
+\end{tabular}
+\end{center}
+\label{tab:Nlim_monoZ}
+\caption{The expected and observed upper limits on the number of new physics events in the ATLAS mono-$Z$ analysis, calculated with HistFitter using the results of \cite{Aad:2014monoZlep}.}
+\end{table}
+
+Table \ref{tab:monoZvalidation} shows the 95\% CL upper limits on $g_{q \chi}$ that we calculate using the same $t$-channel model and our own generation procedure, compared with the limits on this same variable taken from the ATLAS analysis.
+
+\begin{table}
+\begin{center}
+\begin{tabular}{| c | c | c | c | c |}
+\hline
+$m_{\chi}$ & $M_{med}$ & $g_{q \chi}^{95\%\mathrm{CL}}$ & $g_{q \chi}^{95\%\mathrm{CL}}$ & difference \T \\
+(GeV) & (GeV) & (ATLAS) & (this work) & (\%) \B \\
+\hline
+\hline
+10 & 200 & 1.9 & 2.0 & -5.3 \T \\
+ & 500 & 2.8 & 3.2 & -14.3 \\
+ & 700 & 3.5 & 4.4 & -25.7 \\
+ & 1000 & 4.5 & 5.2 & -15.6 \\
+200 & 500 & 3.4 & 4.0 & -17.6 \T \\
+ & 700 & 4.2 & 4.5 & -7.1 \\
+ & 1000 & 5.2 & 5.3 & -1.9 \\
+400 & 500 & 5.5 & 5.7 & -3.6 \T \\
+ & 700 & 6.1 & 6.5 & -6.6 \\
+ & 1000 & 7.2 & 7.4 & -2.8 \\
+1000 & 1200 & 23.3 & 24.1 & -3.4 \T \B \\
+\hline
+\end{tabular}
+\end{center}
+\label{tab:monoZvalidation}
+\caption{Comparison of the upper limit on $g_{q \chi}$ from the ATLAS analysis (middle column) and this work.}
+\end{table} 
+
+I'm comparing with the $t$-channel model used in the ATLAS mono-$Z (\rightarrow l^+ l^-)$ paper (arXiv:1404.0051). This model is now the \emph{old} version of the TSD model, the points of difference in generation (as compared to the TSD model we now have) are as follows:
+
+\iffalse
+
+\begin{itemize}
+\item There are just the two mediators (up-type and down-type), rather than the proper six.
+\item The DM is Majorana-type (which doesn't affect kinematics but does affect cross section).
+\item The couplings $f_{q \chi}$ are set as $f_{ud} = f_{cs} \equiv f$, $f_{tb} = 0$.
+\item The $b$-quark is not included in the definition of the proton or jet in MadGraph.
+\end{itemize}
+
+The mass/coupling combinations are listed in table 1, along with the cross sections taken from the mono-$Z$ note (not useable), the cross sections I have generated with the settings above, and the difference in these cross sections. Note that the MG version was different, which should not have a significant effect.
+
+\begin{table}
+\begin{center}
+\begin{tabular}{| c | c | c || c | c | c |}
+\hline
+$m_{\chi}$ (GeV) & $M_{med}$ (GeV) & $f$ & $\sigma_{note}$ (fb) &  $\sigma_{val}$ (fb) & $\%$ diff \\
+\hline
+\hline
+10 & 200 & 2 & 45.1 & 45.6 & 1.1 \\
+ & 500 & 3 & 25.8 & 26.1 & 1.2 \\
+ & 700 & 4 & 31.8 & 32.2 & 1.3 \\
+ & 1000 & 6 & 54.4 & 55 & 1.1 \\
+200 & 500 & 2 & 1.2 & 1.17 & -2.5 \\
+ & 700 & 2 & 0.59 & 0.608 & 3.1 \\
+ & 1000 & 2 & 0.25 & 0.255 & 2.0 \\
+400 & 500 & 2 & 0.17 & 0.177 & 4.1 \\
+ & 700 & 2 & 0.11 & 0.111 & 0.9 \\
+ & 1000 & 2 & 0.06 & 0.059 & -1.7 \\
+1000 & 1200 & 2 & 0.00041 & 0.00047 & 14.6 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{The masses and couplings used for validation.}
+\end{table}
+
+\bigskip
+I'm pretty convinced the generation at this stage is consistent with what was used in the analysis.
+
+\bigskip
+The next stage was to run my samples through Pythia, apply smearing and run through the cutflow. The cutflow was written based only on the information available in the paper (though there were some ambiguities in the way it is written). I focus here on just the first two signal regions (MET $>$ 150, 250 GeV), since the ATLAS analysis found that these two gave the best limits for all the masspoints, and it is difficult to find a strategy (outlined below) that fits in all four signal regions (the remaining two are MET $>$ 350, 450 GeV); in addition, the statistical uncertainties in the latter signal regions are very large, so it's not a very useful study here.
+
+\bigskip
+I have the list of acceptances for the official samples in the analysis, which I was comparing with (again, not useable, but good for now). To separate the effects of the generation and the cutflow, I could study just the cutflow by running the official samples through my own cutflow and comparing to the acceptances from the note. Nine of the 11 ATLAS samples gave acceptances within 5\% of those from the note, and the two remaining samples were out by 9\% and 12\%. Therefore, I am confident my cutflow is acceptable.
+
+\bigskip
+The only wriggle room in the generation procedure is in the smearing process. Smearing is applied to jets, photons and leptons (note it is not applied to the MET), but the dominant effect in this mainly lepton-based analysis is the smearing of the electrons and muons. Values for the uncertainties on the energy/momentum resolution should be taken from arXiv:1407.5063 (electrons) and arXiv:1407.3935 (muons), however it's not immediately clear to me what values to take from the papers, and in fact I tried a few different values to see the effects, as seen below.
+
+\bigskip
+If the leptons are unsmeared, the acceptances range between 30-55\% too large in SR1, and 10-60\% too large in SR2. This makes sense, the smearing should reduce our efficiency. The first set of smearing values I tested were 4\% for muons and a variable smearing for electrons, this gave acceptances which were between 30\% and 70\% smaller than those from the note, ie way too conservative. After a few iterations I settled on smearing values of 0.8\% for muons and 1.0\% for electrons. These give the acceptances listed in table 2 - note that statistical uncertainties aren't considered here, but are relatively large as these are small numbers of events passing the selection, hence these values are just to give an idea. I'm not sure at this stage how best to justify the smearing values, other than, they give pretty good agreement with the acceptances that I shouldn't really know about, and are within an order of magnitude of what it looks like the performance papers recommend.
+
+\begin{table}
+\begin{center}
+\begin{tabular}{| c | l | c | c |}
+\hline
+ & HistFitter parameters& $N_{exp}$ & $N_{obs}$ \\
+ \hline
+ & - ndata = 45.5 & & \\
+ & - nbkg = 51.5 & & \\
+ SR1 & - nbkgErr = 1.0 (stat) & 34.7 & 32.2 \\
+ & - lumiError = 0.03 & & \\
+ & - syst = 35\% & & \\
+\hline
+& - ndata = 3 & & \\
+& - nbkg = 7.2 & & \\
+SR2 & - nbkgErr = 0.4 (stat) & 6.8 & 5.9 \\
+& - lumiError = 0.03 & & \\
+& - syst = 39\% & & \\
+\hline
+\end{tabular}
+\end{center}
+\caption{My calculated limiting values of $N_{lim}$.}
+\end{table}
+
+\bigskip
+The values here, particularly in SR2, are obviously still too strong, however I don't see a feasible way to weaken them using the information available in the paper, so I think we're stuck with them.
+
+\bigskip
+The next step was to calculate my limits on the cross section and coupling strength, and compare these to the values from the paper. (The paper only gives the limits in plots, however I have the numbers that were used to make these plots and I think it's acceptable to use them, since they are technically public.) With the conservative method of handling the uncertainties that we have established, I obtain limits on $\sigma_{exp}$ ranging from $<$10\% to 60\% (with an outlier at 86\%) larger than those in the paper, and limits on $\sigma_{obs}$ from $<$10\% to 75\% (with the same outlier now at 105\%) larger than the public result. In all cases my results are more conservative.
+
+\bigskip
+The 95\% CL upper limits on $f$ in the paper were calculated with
+
+\begin{equation}
+f_{lim} = f_{gen} \times \left ( \frac{\sigma_{lim}^{95\%CL}}{\sigma_{gen}} \right )^{0.25}
+\end{equation}
+
+When I apply the same calculation to my own limits, I get limiting values of $f$ that are conservative, seven of the 11 values are within 10\% of the ATLAS values (YES!), and the remaining four are within 20\%.
+
+\bigskip
+Our more conservative limits on the coupling also take into account the systematic uncertainty on the generated cross sections which are propagated through the calculation for the coupling limit. Again, the majority of the masspoints are within 10\% of the public limits, and the remaining are within 25\%; see table 5.
+
+\begin{table}
+\begin{center}
+\begin{tabular}{| c | c | c || c | c | c |}
+\hline
+&&&&& \\
+$m_{\chi}$ (GeV) & $M_{med}$ (GeV) & $f$ & $f_{lim,paper}$ &  $f^{95\%\mathrm{CL}}_{lim,val}$ & $\%$ diff \\
+&&&&& \\
+\hline
+\hline
+10 & 200 & 2 & 1.89 & 1.96 & 3.5 \\
+ & 500 & 3 & 2.76 & 3.24 & 17.5 \\
+ & 700 & 4 & 3.51 & 4.37 & 24.4 \\
+ & 1000 & 6 & 4.52 & 5.21 & 15.2 \\
+200 & 500 & 2 & 3.41 & 3.99 & 17.0 \\
+ & 700 & 2 & 4.23 & 4.46 & 5.3 \\
+ & 1000 & 2 & 5.17 & 5.34 & 3.4 \\
+400 & 500 & 2 & 5.50 & 5.69 & 3.4 \\
+ & 700 & 2 & 6.12 & 6.49 & 6.2 \\
+ & 1000 & 2 & 7.24 & 7.44 & 2.7 \\
+1000 & 1200 & 2 & 23.29 & 24.12 & 3.6 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{The final limits on the coupling strength, used for the final validation.}
+\end{table}
+
+\fi
+
 \end{flushleft}
 
 \subsection{Mono-W/Z Channel}
