@@ -67,38 +67,18 @@ As mentioned in Section \ref{monojet_constraints}, the signal selection and Mont
 \subsection{Mono-Z Channel}
 \label{monoZ_validation}
 \begin{flushleft}
-\comm{Amelia, please put your validation results here.}
 
 \bigskip
 
 The ATLAS mono-$Z$ analysis result includes an upper limit on the coupling $g_{q \chi}$ for a $t$-channel simplified model that is very similar to the model tested here, and so is used for validating our procedure. The most significant differences are in the number of mediating particles --- the ATLAS model includes just two mediators ($up$- and $down$-type) compared to our six --- and in the nature of the DM particle, which is taken to be Majorana. This latter choice does not impact the kinematic behaviour, but does impact the cross section. Additionally, while we use a universal coupling $g_{q \chi}$ to all three quark generations, the analysis used a model which set $g_{t,b \chi}$ = 0.
 
-\comm{(The following paragraphs may need to appear in the results section of the paper.- Mia)}
-The published result unfortunately does not give upper limits on the number of new physics events, but rather the number of expected and observed events in each signal region, along with uncertainties. We convert these to upper limits on $N_{exp,obs}$ (see eq.~\ref{sigma_nom}) with a simple implementation of HistFitter that uses a frequentist calculator and a one-sided profile likelihood test statistic (the LHC default), giving the model-independent upper limits shown in the table below. Note that we use signal regions 1 and 2 only, as this simplified HistFitter approach was deemed inappropriate for the very low statistics of signal regions 3 and 4. 
-
 \begin{table}
 \begin{center}
-\begin{tabular}{ c  c  c }
+\begin{tabular}{ c | c | c | c | c }
 \hline
-& SR1 & SR2 \T \\
-& ($E_{\mathrm{T}}^{\mathrm{miss}} > $ 150 GeV) & ($E_{\mathrm{T}}^{\mathrm{miss}} > $ 250 GeV) \B \\
 \hline
-$N_{\mathrm{sig}}^{\mathrm{exp}}$ & 34.7 & 6.8 \T \\
-$N_{\mathrm{sig}}^{\mathrm{obs}}$ & 32.2 & 5.9 \B \\
-\hline
-\end{tabular}
-\end{center}
-\label{tab:Nlim_monoZ}
-\caption{The expected and observed upper limits on the number of new physics events in the ATLAS mono-$Z$ analysis, calculated with HistFitter using the results of \cite{Aad:2014monoZlep}.}
-\end{table}
-
-\begin{table}
-\begin{center}
-\begin{tabular}{| c | c | c | c | c |}
-\hline
-$m_{\chi}$ & $M_{med}$ & $g_{q \chi}^{95\%\mathrm{CL}}$ & $g_{q \chi}^{95\%\mathrm{CL}}$ & difference \T \\
-(GeV) & (GeV) & (ATLAS) & (this work) & (\%) \B \\
-\hline
+$m_{\chi}$ & $M_{med}$ & $g_{q \chi}^{95\%\mathrm{CL}}$ & $g_{q \chi}^{95\%\mathrm{CL}}$ & Difference \T \\
+$[$GeV$]$ & $[$GeV$]$ & (ATLAS) & (this work) & $[\%]$ \B \\
 \hline
 10 & 200 & 1.9 & 2.0 & -5.3 \T \\
  & 500 & 2.8 & 3.2 & -14.3 \\
@@ -112,18 +92,23 @@ $m_{\chi}$ & $M_{med}$ & $g_{q \chi}^{95\%\mathrm{CL}}$ & $g_{q \chi}^{95\%\math
  & 1000 & 7.2 & 7.4 & -2.8 \\
 1000 & 1200 & 23.3 & 24.1 & -3.4 \T \B \\
 \hline
+\hline
 \end{tabular}
 \end{center}
 \caption{Comparison of the upper limit on $g_{q \chi}$ from the ATLAS analysis (middle column) and this work.}
 \label{tab:monoZvalidation}
 \end{table} 
 
-Table \ref{tab:monoZvalidation} shows the 95\% CL upper limits on $g_{q \chi}$ that we calculate using the same $t$-channel model and our own generation procedure, compared with the limits on this same variable taken from the ATLAS analysis. The difference as a percentage of the ATLAS limit is also shown in the table. We see reasonable agreement; most of the 11 points in parameter space are within 10\% of the ATLAS limits, and all are within 26\%. Additionally, our results are consistently more conservative, which is to be expected due to the coarser? rougher? less sophisticated? cruder? nature of our generation procedure. The dominant effects are due to the use of $p_{\mathrm{T}}$ smearing applied to the leptons, rather than considering the full reconstruction effects, and the simple systematic treatment that was used with HistFitter.
+Table \ref{tab:monoZvalidation} shows the 95\% CL upper limits on $g_{q \chi}$ that we calculate using the same $t$-channel model and our own generation procedure, compared with the limits on this same variable taken from the ATLAS analysis. The difference as a percentage of the ATLAS limit is also shown in the table. We see reasonable agreement; most of the 11 points in parameter space are within 10\% of the ATLAS limits, and all are within 26\%. Additionally, our results are consistently more conservative, which is to be expected due to the less sophisticated nature of our generation procedure. The dominant effects are due to the use of $p_{\mathrm{T}}$ smearing applied to the leptons, rather than considering the full reconstruction effects, and the simple systematic treatment that was used with HistFitter.
 
 \end{flushleft}
+
+\iffalse
 
 \subsection{Mono-W/Z Channel}
 \label{monoWZ_validation}
 \begin{flushleft}
 \comm{Johanna, please put your validation results here.}
 \end{flushleft}
+
+\fi

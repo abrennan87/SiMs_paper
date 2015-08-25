@@ -1,5 +1,5 @@
 \begin{flushleft}
-The mono-X + $E_{T}^{\mathrm{miss}}$ signal is a popular signal in the search for new physics, particularly in the search for dark matter. Since WIMPs are not expected to interact with detector material, they appear as missing transverse momentum, $\mathbf{p}_{T}^{miss}$, when balanced against a visible object that is radiated from the initial or intermediate state. 
+The mono-X + $\met$ signal is a popular signal in the search for new physics, particularly in the search for dark matter. Since WIMPs are not expected to interact with detector material, they appear as missing transverse momentum, $\mathbf{p}_{T}^{miss}$, when balanced against a visible object that is radiated from the initial or intermediate state. 
 %\st{It is predicted by an assorted collection of new physics models, including unparticle physics models }\cite{CMS-PAS-EXO-12-048}\st{ and the Arkani-Hamed, Dimopoulos, and Dvali (ADD) model of large extra spatial dimensions }\cite{ATLAS-CONF-2012-147}. 
 For the $s$-channel simplified models discussed in Section \ref{sec:sec2}, a SM particle, X, is emitted from one of a pair of intial-state partons (shown in Figure \ref{schannel_sig_phen}). The case where X is radiated from the mediator - a process known as virtual internal Bremsstrahlung - is only possible if the SM-dark matter interaction occurs via the $t$-channel (as shown in Figure \ref{tchannel_sig_phen}). 
 %\st{In both cases, the parton and Z boson are the SM particles most likely to be emitted \question{is Pr(W)$>$Pr(Z)?}}\cite{Kumar:2013iva}. \st{Hence, this paper will focus on thre detection channels: monojet, mono-Z and mono-W.}
@@ -249,7 +249,7 @@ The monojet contraints are derived from a search for new phenomena conducted by 
 \subsection{Signal Simulation}
 \label{signal_generation}
 \begin{flushleft}
-Signal samples for each channel and for each simplified model discussed in Section \ref{sec:sec2} were generated in the following manner. Firstly, leading order matrix elements for the process $pp \rightarrow X + \chi\bar{\chi}$ (where $X$ is either one or two jets\footnote{For the monojet channel, jets are seeded by any parton excluding the (anti-)top quark.} or a Z boson) were modelled using \MG$\_$aMC$@$NLO v2.2.2 with the default PDF (MSTW2008lo68). The default renormalisation and factorisation scales were also used and set to the sum of $\sqrt{m^{2} + p_{T}^{2}}$ for all particles in the final state. Showering and hadronisation was then performed by \PYTHIA  8.201 with the default tune (ATLAS UE Tune AU2-MSTW2008LO). For the monojet channel, matching between \MG$\mbox{ }$and \PYTHIA was done using the MLM scheme with matching scales of 80 GeV and 300 GeV. Samples made with the latter matching scale are included both to increase statistics in the high $E_{T}^{miss}$ region and to account for the shape bias introduced by the 80 GeV matching scale. To avoid double-counting, events from the 80 (300) GeV monojet samples are required to have a leading jet with $p_{T} <$ ($\geq$) 350 GeV.
+Signal samples for each channel and for each simplified model discussed in Section \ref{sec:sec2} were generated in the following manner. Firstly, leading order matrix elements for the process $pp \rightarrow X + \chi\bar{\chi}$ (where $X$ is either one or two jets\footnote{For the monojet channel, jets are seeded by any parton excluding the (anti-)top quark.} or a Z boson) were modelled using \MG$\_$aMC$@$NLO v2.2.2 with the default PDF (MSTW2008lo68). The default renormalisation and factorisation scales were also used and set to the sum of $\sqrt{m^{2} + p_{T}^{2}}$ for all particles in the final state. Showering and hadronisation was then performed by \PYTHIA  8.201 with the default tune (ATLAS UE Tune AU2-MSTW2008LO). For the monojet channel, matching between \MG$\mbox{ }$and \PYTHIA was done using the MLM scheme with matching scales of 80 GeV and 300 GeV. Samples made with the latter matching scale are included both to increase statistics in the high $\met$ region and to account for the shape bias introduced by the 80 GeV matching scale. To avoid double-counting, events from the 80 (300) GeV monojet samples are required to have a leading jet with $p_{T} <$ ($\geq$) 350 GeV.
 \bigskip
 
 For each channel and simplified model, signal samples were generated for a representative set of dark matter and mediator masses, shown in Table \ref{Mass_coup_points}. \textcolor{magenta}{Something about the coupling strength, $f$, being set to a value of 1? Maybe leave out - we'll vary the value.} The mediator masses were chosen \comm{to reflect} predominantly three regimes: (near-)degenerate ($M\approx m_{\chi}$), kinematically allowed ($M \geq 2m_{\chi}$), and EFT-like ($\sqrt{\hat{s}} << M$)\footnote{A recent study by Alves et al. found that EFT results do not apply to mediators with a mass less than 2.5 TeV at the LHC during Run I \cite{Alves:2011wf}.}. We also allow for the possibility of a light mediator/heavy WIMP scenario (M < $m_{\chi}$). \comm{In addition to covering a broad parameter space, the masspoints in Table \ref{Mass_coup_points} also satisfy the narrow width approximation employed by \MG.} 
@@ -290,14 +290,14 @@ For each channel and simplified model, signal samples were generated for a repre
 \subsection{Monojet Constraints}
 \label{monojet_constraints}
 \begin{flushleft}
-For the monojet channel, signal selection is carried out as in Ref. \cite{Aad:2015zva}: initially, events are required to have $E_{T}^{miss}>$ 150 GeV and at least one jet with $p_{T} >$ 30 GeV and $|\eta| <$ 4.5. The background contribution from QCD jets is managed with the requirement that all jets passing this initial selection criteria also satsify $|\Delta\phi(jet,{E}_{T}^{miss})|>1.0$. In order to isolate monojet-like topologies, surviving events are then required to have a leading jet, $j_{1}$, with $p_{T} >$ 120 GeV and $|\eta| <$ 2.0 satisfying $p_{T}^{j_{1}}/E_{T}^{miss} >$ 0.5. Lastly, nine separate signal regions are defined with increasing lower thresholds on $E_{T}^{miss}$ from 150 GeV to 700 GeV as shown in Table \ref{monojet_SRs}.
+For the monojet channel, signal selection is carried out as in Ref. \cite{Aad:2015zva}: initially, events are required to have $\met>$ 150 GeV and at least one jet with $p_{T} >$ 30 GeV and $|\eta| <$ 4.5. The background contribution from QCD jets is managed with the requirement that all jets passing this initial selection criteria also satsify $|\Delta\phi(jet,\metvec)|>1.0$. In order to isolate monojet-like topologies, surviving events are then required to have a leading jet, $j_{1}$, with $p_{T} >$ 120 GeV and $|\eta| <$ 2.0 satisfying $p_{T}^{j_{1}}/\met >$ 0.5. Lastly, nine separate signal regions are defined with increasing lower thresholds on $\met$ from 150 GeV to 700 GeV as shown in Table \ref{monojet_SRs}.
 
 \begin{table}[!htbp]
 \centering
 \begin{tabular}{c|c|c|c}
  \hline
  \hline
- Signal Region & $E_{T}^{miss}$ threshold [GeV] & $N_{obs}$ & $N_{exp}$ \\%& $N_{obs}/\mathcal{L}$ & $N_{exp}/\mathcal{L}$ \\
+ Signal Region & $\met$ threshold [GeV] & $N_{obs}$ & $N_{exp}$ \\%& $N_{obs}/\mathcal{L}$ & $N_{exp}/\mathcal{L}$ \\
  \hline
  SR1 & 150 & 14737.8 & 18980.5 \\%726 & 935 \\
  SR2 & 200 & 3938.2 & 5501.3 \\%194 & 271 \\
@@ -315,10 +315,10 @@ For the monojet channel, signal selection is carried out as in Ref. \cite{Aad:20
 \label{monojet_SRs}
 \end{table}
 
-%Monojet signal samples for each of the simplified models discussed in Section \ref{sec:sec2} and for each of the masspoints listed in Table \ref{Mass_coup_points} were generated following a similar procedure to that employed in the ATLAS analysis. Firstly, leading order matrix elements for the processes $pp \rightarrow j\chi\bar{\chi}$ and $pp \rightarrow jj\chi\bar{\chi}$ (where $j$ is a final state jet\footnote{In this analysis a jet is seeded by any parton excluding the (anti-)top quark.}) were generated using \MG$\_$aMC$@$NLO v2.2.2 with the default PDF (MSTW2008lo68). The default renormalisation and factorisation scales, $\mu_{R,F}$, which correspond to \comm{the geometric average of $m_{\chi}^{2} + p_{T, \chi}^{2}$}, were also used. Next, showering and hadronisation of the matrix elements was done using \PYTHIA \comm{8.185} with the default tune (ATLAS UE AU2-MSTW2008LO). Matching between \MG$\mbox{ }$and \PYTHIA was performed using the MLM scheme with matching scales of 80 GeV and 300 GeV. Samples made with the latter matching scale are included both to increase statistics in the high $E_{T}^{miss}$ region and to account for the shape bias introduced by the 80 GeV matching scale. To avoid double-counting, events from the 80 (300) GeV samples are required to have a leading jet with $p_{T} <$ ($\geq$) 350 GeV.
+%Monojet signal samples for each of the simplified models discussed in Section \ref{sec:sec2} and for each of the masspoints listed in Table \ref{Mass_coup_points} were generated following a similar procedure to that employed in the ATLAS analysis. Firstly, leading order matrix elements for the processes $pp \rightarrow j\chi\bar{\chi}$ and $pp \rightarrow jj\chi\bar{\chi}$ (where $j$ is a final state jet\footnote{In this analysis a jet is seeded by any parton excluding the (anti-)top quark.}) were generated using \MG$\_$aMC$@$NLO v2.2.2 with the default PDF (MSTW2008lo68). The default renormalisation and factorisation scales, $\mu_{R,F}$, which correspond to \comm{the geometric average of $m_{\chi}^{2} + p_{T, \chi}^{2}$}, were also used. Next, showering and hadronisation of the matrix elements was done using \PYTHIA \comm{8.185} with the default tune (ATLAS UE AU2-MSTW2008LO). Matching between \MG$\mbox{ }$and \PYTHIA was performed using the MLM scheme with matching scales of 80 GeV and 300 GeV. Samples made with the latter matching scale are included both to increase statistics in the high $\met$ region and to account for the shape bias introduced by the 80 GeV matching scale. To avoid double-counting, events from the 80 (300) GeV samples are required to have a leading jet with $p_{T} <$ ($\geq$) 350 GeV.
 %\bigskip
 
-For the monoejet channel, the event selection and Monte Carlo (MC) generation procedures discussed above were validated via reproduction of ATLAS limits on the suppression scale, M$_{*}$, for the s-channel vector simplified model (refered to as the Z' model in the ATLAS monojet analysis). The results of this process are contained in appendix \ref{monojet_validation}.
+For the monoejet channel, the event selection and Monte Carlo (MC) generation procedures discussed above were validated via reproduction of ATLAS limits on the suppression scale, M$_{*}$, for the s-channel vector simplified model (referred to as the Z' model in the ATLAS monojet analysis). The results of this process are contained in appendix \ref{monojet_validation}.
 \bigskip
 
 %\draft{While the signal samples used by the ATLAS group (and for validation) correspond to the processes $pp \rightarrow j\chi\bar{\chi}$ and $pp \rightarrow jj\chi\bar{\chi}$ where $j$ is a final state jet, monojet constraints on the simplified models studied in this paper were set using signal samples with zero, one and two jets in the final state.} \comm{This deviation from the ATLAS analysis is motivated by the observation that the limits on $M_{*}$ are improved with the addition of the process $pp \rightarrow \chi\bar{\chi}$.}
@@ -332,8 +332,40 @@ THIS IS WHERE I'M UP TO!
 \label{monoZ_constraints}
 \begin{flushleft}
 \comm{Note to Amelia: Here you should discuss the original intention of the mono-Z analysis. Also comment on any validation you did in order to confirm that you could use the results of the analysis. Lastly, discuss or list the cuts used in the analysis and the uncertainties associated with the results. This will inevitably include details of the background estimation and the detector performance. \\}
-Describe the mono-Z analysis, intentions and results. Refer to appA for the validation of this channel. Discuss results.
+
+The signature of the ATLAS mono-$Z(\rightarrow \ell^+ \ell^-)$ analysis \cite{Aad:2014monoZlep} is a pair of opposite-sign same-flavour leptons balanced against a large amount of missing transverse momentum. The analysis is designed to search for a set of EFT models of DM, where a $Z$ boson is radiated from an initial state quark. Leptons much cleaner and simpler than jets, so this channel included here to investigate whether reduction in uncertainties from cleaner channel can provide quick results that are comparable (?) to the more complicated mono-jet channel. 
+
+The analysis also includes a short study of a $t$-channel simplified model similar to that discussed here. This model is used to validate our results in this channel; see the details in sec.~\ref{monoZ_validation}.
+
+The selection is summarised as follows (see the paper for a full description). Electrons (muons) are required to have a $p_{\mathrm{T}}$ greater than 20 GeV, and $|\eta|$ less than 2.47 (2.5). Two opposite-sign, same-flavour leptons are selected, and required to have invariant mass and pseudorapidity such that $m_{\ell \ell} \in [76, 106]$ GeV and $|\eta^{\ell \ell}| < 2.5$. The reconstructed $Z$ boson should be approximately back-to-back and balanced against the $\met$, ensured with the selections $\Delta \phi (\metvec, p_{\mathrm{T}}^{\ell \ell}) > 2.5$ and $| p_{\mathrm{T}}^{\ell \ell} - \met | \, /  \, p_{\mathrm{T}}^{\ell \ell} < 0.5$. Jets are reconstructed with the anti-$k_t$ algorithm, with radius parameter 0.4; events containing a jet with $p_{\mathrm{T}}>$ 25 GeV and $|\eta|< $ 2.5 are vetoed. Events are also vetoed if they contain a third lepton with $p_{\mathrm{T}}>$ 7 GeV. The signal regions are defined in terms of the $\met$: $\met >$ 150, 250, 350, 450 GeV. 
+
+% Note: I haven't included any info on the overlap removal here.
+
+The dominant background in this analysis is the irreducible $ZZ \rightarrow \ell^+ \ell^- \bar{\nu} \nu$ process, which has a softer $\met$ distribution that the DM signal. The background is estimated with MC simulation, and has a systematic uncertainty in the range 36-46$\%$ across the four signal regions. 
+
+A cut-and-count strategy is used, and the total numbers of expected and observed events, along with total uncertainties, are reported for each signal region. The published result unfortunately does not give upper limits on the number of new physics events, so we calculate these ourselves: we obtain upper limits on $N_{exp,obs}$ (see eq.~\ref{sigma_nom}) with a simple implementation of HistFitter that uses a frequentist calculator and a one-sided profile likelihood test statistic (the LHC default), giving the model-independent upper limits shown in the table below. Note that we use signal regions 1 and 2 only, as this simplified HistFitter approach was deemed inappropriate for the very low statistics of signal regions 3 and 4. These upper limits are also used for our validation procedure (see sec.~\ref{monoZ_validation}).
+
+\begin{table}
+\begin{center}
+\begin{tabular}{ c  c  c }
+\hline
+\hline
+& SR1 & SR2 \T \\
+& ($E_{\mathrm{T}}^{\mathrm{miss}} > $ 150 GeV) & ($E_{\mathrm{T}}^{\mathrm{miss}} > $ 250 GeV) \B \\
+\hline
+$N_{\mathrm{sig}}^{\mathrm{exp}}$ & 34.7 & 6.8 \T \\
+$N_{\mathrm{sig}}^{\mathrm{obs}}$ & 32.2 & 5.9 \B \\
+\hline
+\hline
+\end{tabular}
+\end{center}
+\label{tab:Nlim_monoZ}
+\caption{The expected and observed upper limits on the number of new physics events in the ATLAS mono-$Z$ analysis, calculated with HistFitter using the results of \cite{Aad:2014monoZlep}.}
+\end{table}
+
 \end{flushleft}
+
+\iffalse
 
 \subsection{Mono-W Constraints}
 \begin{flushleft}
@@ -349,3 +381,5 @@ Describe the mono-Z analysis, intentions and results. Refer to appA for the vali
 \item \textcolor{magenta}{The limit setting strategy (?).}
 \end{enumerate}
 \end{flushleft}
+
+\fi
