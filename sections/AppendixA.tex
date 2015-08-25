@@ -74,7 +74,7 @@ As mentioned in Section \ref{monojet_constraints}, the signal selection and Mont
 The ATLAS mono-$Z$ analysis result includes an upper limit on the coupling $g_{q \chi}$ for a $t$-channel simplified model that is very similar to the model tested here, and so is used for validating our procedure. The most significant differences are in the number of mediating particles --- the ATLAS model includes just two mediators ($up$- and $down$-type) compared to our six --- and in the nature of the DM particle, which is taken to be Majorana. This latter choice does not impact the kinematic behaviour, but does impact the cross section. Additionally, while we use a universal coupling $g_{q \chi}$ to all three quark generations, the analysis used a model which set $g_{t,b \chi}$ = 0.
 
 \comm{(The following paragraphs may need to appear in the results section of the paper.- Mia)}
-The published result unfortunately does not give upper limits on the number of new physics events, but rather the number of expected and observed events in each signal region, along with uncertainties. We convert these to upper limits on $N_{exp,obs}$ (see eq.~\ref{sigma_nom}) with a simple implementation of HistFitter that uses a frequentist calculator and a one-sided profile likelihood test statistic (the LHC default), giving the model-independent upper limits shown in the table below. Note that we use signal regions 1 and 2 only, as this simplified HistFitter approach was deemed inappropriate for the very low statistics of signal regions 3 and 4. 
+The published result unfortunately does not give upper limits on the number of new physics events, but rather the number of expected and observed events in each signal region, along with uncertainties. We convert these to upper limits on $N_{exp,obs}$ (see eq.~\ref{sigma_nom}) with a simple implementation of HistFitter that uses a frequentist calculator and a one-sided profile likelihood test statistic (the LHC default), giving the model-independent upper limits shown in Table \ref{tab:Nlim_monoZ}. Note that we use signal regions 1 and 2 only, as this simplified HistFitter approach was deemed inappropriate for the very low statistics of signal regions 3 and 4. 
 
 \begin{table}
 \begin{center}
@@ -88,8 +88,8 @@ $N_{\mathrm{sig}}^{\mathrm{obs}}$ & 32.2 & 5.9 \B \\
 \hline
 \end{tabular}
 \end{center}
-\label{tab:Nlim_monoZ}
 \caption{The expected and observed upper limits on the number of new physics events in the ATLAS mono-$Z$ analysis, calculated with HistFitter using the results of \cite{Aad:2014monoZlep}.}
+\label{tab:Nlim_monoZ}
 \end{table}
 
 \begin{table}
