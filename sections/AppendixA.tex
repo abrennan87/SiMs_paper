@@ -1,7 +1,7 @@
 \subsection{Monojet Channel}
 \label{monojet_validation}
 \begin{flushleft}
-As mentioned in Section \ref{monojet_constraints}, the signal selection and Monte Carlo (MC) generation procedures for the monojet channel were validated via reproduction of the ATLAS limits on the suppression scale, M$_{*}$, for the s-channel vector simplified model. A comparison of SR7 limits for a representative sample of mediator masses with $m_{\chi} = $ 50 GeV, $\Gamma = M/8\pi$ and $\sqrt{g_{q}g_{\chi}} = 1$ is presented in Table \ref{M_star_limits_monojet}. In general, good agreement is observed between the ATLAS and reproduced limits. We note that a discrepancy of a few percent is expected and allowed for two reasons. Firstly, the Monte Carlo generation procedure employed in this analysis does not include a full simulation of the ATLAS detector. \comm{Instead, reconstruction effects are modelled somewhat crudely by smearing the leading jet $p_{T}$ distribution by a conservative factor of 5\%.} Secondly, the 95\% CL uncertainties associated with the ATLAS limits are estimated using the HistFitter package while a different approach is favoured for this analysis (see appendix \ref{AppendixB}). \comm{Given that the difference between the ATLAS and reproduced limits is consistently negative, we consider this approach acceptable.}
+As mentioned in Section \ref{monojet_constraints}, the signal selection and Monte Carlo (MC) generation procedures for the monojet channel were validated via reproduction of the ATLAS limits on the suppression scale, M$_{*}$, for the s-channel vector simplified model. A comparison of SR7 limits for a representative sample of mediator masses with $m_{\chi} = $ 50 GeV, $\Gamma = M/8\pi$ and $\sqrt{g_{q}g_{\chi}} = 1$ is presented in Table \ref{M_star_limits_monojet}. In general, good agreement is observed between the ATLAS and reproduced limits, with a maximum discrepancy of $>$11\%. We note that a discrepancy of a few percent is expected and allowed for two reasons. Firstly, the Monte Carlo generation procedure employed in this analysis does not include a full simulation of the ATLAS detector. \comm{Instead, reconstruction effects are modelled somewhat crudely by smearing the leading jet $p_{T}$ distribution by a conservative factor of 5\%.} Secondly, the 95\% CL uncertainties associated with the ATLAS limits are estimated using the HistFitter package while a different approach is favoured for this analysis (see appendix \ref{AppendixB}). \comm{Given that the difference between the ATLAS and reproduced limits is consistently negative, we consider this approach acceptable.}
 
 %In general, our approach  results in more conservative limits on M$_{*}$ but ultimately removes the hassle of a full histFitter analysis. Importantly, agreement between M$_{*}^{\mbox{\tiny ATLAS,95}}$ and the reproduced nominal\footnote{Nominal in this case explicitly refers to a quantity which does not yet include statistical or systematic uncertainties.} M$_{*}$ values (denoted M$_{*}^{\mbox{\tiny R,N}}$ in Table \ref{M_star_limits_monojet}) is still reasonably high - within \comm{something percent} - validating our signal selection and MC generation procedures.}
 
@@ -37,15 +37,15 @@ As mentioned in Section \ref{monojet_constraints}, the signal selection and Mont
  \hline
  $M$ [TeV] & M$_{*}^{\mbox{\tiny ATLAS,95}}$ [GeV] & M$_{*}^{\mbox{\tiny REPRO,95}}$ [GeV] & Difference [\%] \\ 
  \hline
- 0.05 & 91 & 84.20 & $-$8.08 \\
+ 0.05 & 91 & 84.20 & $-$7.47 \\%$-$8.08 \\
 %0.1 & 217 & 246.54 & +11.96 \\
-0.3 & 1151 & 1088.87 & $-$5.71 \\
-0.6 & 1868 & 1697.19 & $-$10.06 \\
-1 & 2225 & 1986.67 & $-$12.00 \\
-3 & 1349 & 1241.93 & $-$8.62 \\
+0.3 & 1151 & 1088.87 & $-$5.40 \\ %$-$5.71 \\
+0.6 & 1868 & 1697.19 & $-$9.14 \\% $-$10.06 \\
+1 & 2225 & 1986.67 & $-$10.71 \\ %$-$12.00 \\
+3 & 1349 & 1241.93 & $-$7.94 \\% $-$8.62 \\
 %6 & 945 & 721.87 & $-$30.91 \\
-10 & 928 & 844.33 & $-$9.91 \\
-30 & 914 & 834.56 & $-$9.52\\
+10 & 928 & 844.33 & $-$9.02 \\% $-$9.91 \\
+30 & 914 & 834.56 & $-$8.69 \\% $-$9.52\\
 
 %0.05 & 91 & 94.33 & +3.53 \\
 %%0.1 & 217 & 280.57 & +22.66 \\
@@ -59,7 +59,8 @@ As mentioned in Section \ref{monojet_constraints}, the signal selection and Mont
  \hline
  \hline
 \end{tabular}
-\caption{Comparison of reproduced M$_{*}$ limits at 95\% confidence level (M$_{*}^{\mbox{\tiny REPRO,95}}$) with ATLAS limits (M$_{*}^{\mbox{\tiny ATLAS,95}}$) for the processes $pp \rightarrow j\chi\bar{\chi}$ and $pp \rightarrow jj\chi\bar{\chi}$ for the s-channel vector mediator model with $m_{\chi} = $ 50 GeV, $\Gamma = M/8\pi$, $\sqrt{g_{q}g_{\chi}} = 1$ and QCUT = 80 GeV + 300 GeV. Adapted from Ref. \cite{Aad:2015zva}. \comm{Just a thought - would it make more sense to calculate these as (ATLAS - us)/ATLAS? Then we say ours are x\% smaller/more conservative than the official values. Also added bonus of reducing the percentages slightly. -Mia}}
+\caption{Comparison of the 95\% confidence level upper limits on M$_{*}$ from this work (M$_{*}^{\mbox{\tiny REPRO,95}}$) and from the ATLAS monojet analysis (M$_{*}^{\mbox{\tiny ATLAS,95}}$). The values shown in columns two and three are   for the processes $pp \rightarrow j\chi\bar{\chi}$ and $pp \rightarrow jj\chi\bar{\chi}$ for the s-channel vector mediator model with $m_{\chi} = $ 50 GeV, $\Gamma = M/8\pi$, $\sqrt{g_{q}g_{\chi}} = 1$ and QCUT = 80 GeV + 300 GeV. The difference shown in column four corresponds to 100$\times$(M$_{*}^{\mbox{\tiny REPRO,95}}$ $-$ M$_{*}^{\mbox{\tiny ATLAS,95}}$)/M$_{*}^{\mbox{\tiny ATLAS,95}}$.
+Adapted from Ref. \cite{Aad:2015zva}. \comm{Just a thought - would it make more sense to calculate these as (ATLAS - us)/ATLAS? Then we say ours are x\% smaller/more conservative than the official values. Also added bonus of reducing the percentages slightly. -Mia} Done! - Millie}
 \label{M_star_limits_monojet}
 \end{table}
 \end{flushleft}
