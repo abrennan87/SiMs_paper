@@ -1,18 +1,22 @@
 \begin{flushleft}
-The mono-X + $\met$ (abbreviated mono-X) signal is a popular collider signal in the search for new physics, particularly in the search for dark matter. Since WIMPs are not expected to interact with detector material, they appear as missing transverse momentum, $\mathbf{\vec{p}}_{T}^{miss}$, when balanced against a visible object that is radiated from the initial or intermediate state. 
+The mono-X + $\met$ (abbreviated mono-X) signal is a popular collider signal in the search for new physics, particularly in the search for dark matter. Since WIMPs are not expected to interact with detector material, they appear as missing transverse momentum, $\vec{p}_{\mathrm{T}}^{\mathrm{miss}}$, when balanced against a visible object that is radiated from the initial or intermediate state. 
 %\st{It is predicted by an assorted collection of new physics models, including unparticle physics models }\cite{CMS-PAS-EXO-12-048}\st{ and the Arkani-Hamed, Dimopoulos, and Dvali (ADD) model of large extra spatial dimensions }\cite{ATLAS-CONF-2012-147}. 
 For the $s$-channel simplified models discussed in Section \ref{sec:sec2}, a SM particle, X, is emitted from one of a pair of intial-state partons (shown in Figure \ref{schannel_sig_phen}). The case where X is radiated from the mediator - a process known as virtual internal Bremsstrahlung - is only possible if the SM-dark matter interaction occurs via the $t$-channel (as shown in Figure \ref{tchannel_sig_phen}). 
 %\st{In both cases, the parton and Z boson are the SM particles most likely to be emitted \question{is Pr(W)$>$Pr(Z)?}}\cite{Kumar:2013iva}. \st{Hence, this paper will focus on thre detection channels: monojet, mono-Z and mono-W.}
-For all models, emission of a parton is the most likely scenario at the LHC owing to the strength of the strong coupling. Hence the mono-jet channel is expected to provide the strongest limits. Emission of $Z$ and $W$ bosons is also possible however and often provides a cleaner signal. So we also include the mono-$Z$ \comm{and mono-$W$} channels\footnote{\fg{It is worth noting here that the mono-$W$ channel has previously been chosen for its apparent ability to distinguish a case where $u$- and $d$-type quarks couple with opposite sign to the new physics sector \cite{}\comm{(Tait)}. However, during the preparation of this paper this has been shown to be an unphysical scenario \cite{}\comm{(Bell, Leane)}.}} when applying constraints to our simplified models of dark matter.
+For all models, emission of a parton is the most likely scenario at the LHC owing to the strength of the strong coupling. Hence the mono-jet channel is expected to provide the strongest limits. Emission of $Z$ and $W$ bosons or photons is also possible however, and may be chosen for study over jet processes to take advantage of the relative simplicity/cleanliness (\comm{better word??}) of leptons compared to jets. In this work we also include the mono-$(\rightarrow ]ell^+ \ell^-)Z$ channel for comparison.
+
+%previously had a footnote: It is worth noting here that the mono-$W$ channel has previously been chosen for its apparent ability to distinguish a case where $u$- and $d$-type quarks couple with opposite sign to the new physics sector \cite{}\comm{(Tait)}. However, during the preparation of this paper this has been shown to be an unphysical scenario \cite{}\comm{(Bell, Leane)}
+
+
 %, which may then enhance the limit in combination with monojet processes.}
 \bigskip
 
-The procedure for recasting existing mono-X constraints as simplified model constraints is threefold. Firstly, signal events are simulated as described in Section \ref{signal_generation}. The event selection criteria of the mono-X analysis of interest is then reproduced and applied to the simulated signal samples. Events surviving the selection criteria are counted to determine both the likelihood of a dark matter event occurring (refered to as the acceptance, $\mathcal{A}$) and the probability of detecting said event (refered to as the efficiency, $\epsilon$). These quantities are then used in combination with channel-specific model-independent limits on new physics events to exclude a given model, masspoint and/or coupling. For a comprehensive description of the recasting procedure, see appendix \ref{AppendixB}.
+The procedure for recasting existing mono-X constraints as simplified model constraints is straightforward. Firstly, signal events are simulated as described in Section \ref{signal_generation}. The event selection criteria of the mono-X analysis of interest is then reproduced and applied to the simulated signal samples. Events surviving the selection criteria are counted to determine both the likelihood of a dark matter event occurring (refered to as the acceptance, $\mathcal{A}$) and the probability of detecting said event (refered to as the efficiency, $\epsilon$). These quantities are then used in combination with channel-specific model-independent limits on new physics events to exclude a given model, masspoint and/or coupling. For a comprehensive description of the recasting procedure, see appendix \ref{AppendixB}.
 \bigskip
 
-In this paper, monojet constraints are derived from a search for new phenomena conducted by the ATLAS Collaboration using $pp$ collisions at $\sqrt{s}=$ 8 TeV as described in Ref. \cite{Aad:2015zva}. Similarly, the mono-Z constraints are derived from an ATLAS dark matter search originally optimised for the D1, D5 and D9 effective operators (see \cite{}).. \textcolor{magenta}{Lastly, the mono-W constraints are derived from...} These analyses are described in further detail in Sections \ref{monojet_constraints} and \ref{monoZ_constraints} respectively.
+In this paper, monojet constraints are derived from a search for new phenomena conducted by the ATLAS Collaboration using $pp$ collisions at $\sqrt{s}=$ 8 TeV as described in Ref. \cite{Aad:2015zva}. Similarly, the mono-$Z$ constraints are derived from an ATLAS dark matter search originally optimised for the D1, D5 and D9 effective operators (see \cite{Aad:2014monoZlep}). These analyses are described in further detail in Sections \ref{monojet_constraints} and \ref{monoZ_constraints} respectively.
 
-\comm{We should put references to all the papers here! - Amelia}
+%\comm{We should put references to all the papers here! - Amelia}
 
 \begin{figure}[ht!]
 \begin{center}
@@ -20,35 +24,36 @@ In this paper, monojet constraints are derived from a search for new phenomena c
 \centering
 \begin{tikzpicture}
 \draw[fermion] (-1.5,1.5)node[left]{$q$} --(-0.75,0.75);
-\draw[dashed] (-0.75,0.75) -- (0,1.5)node[right]{$j$}; %\draw[dashed] (-0.75,0.75) -- (0,1.5)node[right]{X};
+%\draw[dashed] (-0.75,0.75) -- (0,1.5)node[right]{$j$}; %\draw[dashed] (-0.75,0.75) -- (0,1.5)node[right]{X};
+\draw[gluon] (-0.75,0.75) -- (0,1.5)node[right]{$g$};
 \draw[fermion] (-0.75,0.75) -- (0,0);
-\draw[antifermion] (-1.5,-1.5)node[left]{$\bar{q}'$} --(0,0);
-\draw[fill] (0,0) circle [radius=0.05]node[left]{$g_{q'}\mbox{ }$};
+\draw[antifermion] (-1.5,-1.5)node[left]{$\bar{q}$} --(0,0);
+\draw[fill] (0,0) circle [radius=0.0]node[left]{$g_{q}\mbox{ }$};
 \draw[photon] (0,0) --node[above]{$\xi$} (2,0);
 \draw[fermion] (2,0) -- (3.5,1.5)node[right]{$\chi$};
 \draw[antifermion] (2,0) --(3.5,-1.5)node[right]{$\bar{\chi}$};
-\draw[fill] (2,0) circle [radius=0.05]node[right]{$\mbox{ }g_{\chi}$};
+\draw[fill] (2,0) circle [radius=0.0]node[right]{$\mbox{ }g_{\chi}$};
 \end{tikzpicture}
 \caption{}
 \label{Signal_phen_sa}
 \end{subfigure} \hspace{0.1cm}
-\begin{subfigure}[b]{0.45\textwidth}
-\centering
-\begin{tikzpicture}
-\draw[fermion] (-1.5,1.5)node[left]{$q$} --(0,0);
-\draw[antifermion] (-1.5,-1.5)node[left]{$\bar{q}$} --(0,0);
-\draw[fill] (0,0) circle [radius=0.05]node[left]{$g_{q'}\mbox{ }$};
-\draw[fermion] (0,0) --node[above]{$q$} (2,0);
-\draw[dashed] (2,0) -- node[above]{$\xi\mbox{\textcolor{white}{m}}$}(2.75,0.75);
-\draw[fermion] (2.75,0.75) -- (3.5,1.5)node[right]{$\chi$};
-\draw[antifermion] (2.75,0.75) --(3.5,0)node[right]{$\bar{\chi}$};
-\draw[fill] (2,0) circle [radius=0.05]node[right]{$\mbox{ }g_{q}$};
-\draw[antifermion] (2,0) --(3.5,-1.5)node[right]{$q$};
-\draw[fill] (2.75,0.75) circle [radius=0.05]node[right]{$\mbox{\textcolor{white}{\tiny m}}g_{\chi}$};
-\end{tikzpicture}
-\caption{}
-\label{Signal_phen_sb}
-\end{subfigure}
+%\begin{subfigure}[b]{0.45\textwidth}		%% removed this as I think the incoming quark should be a gluon, and this turns into fig (d)
+%\centering
+%\begin{tikzpicture}
+%\draw[fermion] (-1.5,1.5)node[left]{$q$} --(0,0);
+%\draw[antifermion] (-1.5,-1.5)node[left]{$\bar{q}$} --(0,0);
+%\draw[fill] (0,0) circle [radius=0.05]node[left]{$g_{q'}\mbox{ }$};
+%\draw[fermion] (0,0) --node[above]{$q$} (2,0);
+%\draw[dashed] (2,0) -- node[above]{$\xi\mbox{\textcolor{white}{m}}$}(2.75,0.75);
+%\draw[fermion] (2.75,0.75) -- (3.5,1.5)node[right]{$\chi$};
+%\draw[antifermion] (2.75,0.75) --(3.5,0)node[right]{$\bar{\chi}$};
+%\draw[fill] (2,0) circle [radius=0.05]node[right]{$\mbox{ }g_{q}$};
+%\draw[antifermion] (2,0) --(3.5,-1.5)node[right]{$q$};
+%\draw[fill] (2.75,0.75) circle [radius=0.05]node[right]{$\mbox{\textcolor{white}{\tiny m}}g_{\chi}$};
+%\end{tikzpicture}
+%\caption{}
+%\label{Signal_phen_sb}
+%\end{subfigure}
 %\begin{subfigure}[b]{0.5\textwidth}
 %\centering
 %\begin{tikzpicture}
@@ -66,35 +71,36 @@ In this paper, monojet constraints are derived from a search for new phenomena c
 %\label{Signal_phen_b}
 %\end{subfigure}\vspace{0.2cm}
 %\centering
-\begin{subfigure}[b]{0.45\textwidth}
-\centering
-\begin{tikzpicture}
-\draw[gluon] (-1.5,1.5)node[left]{$g$} --(0,0); %-0.75,0.75);
-\draw[dashed] (-0.75,0.75) -- (0,1.5)node[right]{$j$};
-%\draw[gluon] (-0.75,0.75) -- (0,0);
-\draw[gluon] (-1.5,-1.5)node[left]{$g$} --(0,0);
-\draw[fill] (0,0) circle [radius=0.05]node[left]{$g_{q'}\mbox{ }$};
-\draw[photon] (0,0) --node[above]{$\xi$} (2,0);
-\draw[fermion] (2,0) -- (3.5,1.5)node[right]{$\chi$};
-\draw[antifermion] (2,0) --(3.5,-1.5)node[right]{$\bar{\chi}$};
-\draw[fill] (2,0) circle [radius=0.05]node[right]{$\mbox{ }g_{\chi}$};
-\end{tikzpicture}
-\caption{}
-\label{Signal_phen_sc}
-\end{subfigure} \hspace{0.1cm}
+%\begin{subfigure}[b]{0.45\textwidth}		%% removed as the mediator shouldn't couple to a pair of gluons
+%\centering
+%\begin{tikzpicture}
+%\draw[gluon] (-1.5,1.5)node[left]{$g$} --(0,0); %-0.75,0.75);
+%\draw[dashed] (-0.75,0.75) -- (0,1.5)node[right]{$j$};
+%%\draw[gluon] (-0.75,0.75) -- (0,0);
+%\draw[gluon] (-1.5,-1.5)node[left]{$g$} --(0,0);
+%\draw[fill] (0,0) circle [radius=0.05]node[left]{$g_{q'}\mbox{ }$};
+%\draw[photon] (0,0) --node[above]{$\xi$} (2,0);
+%\draw[fermion] (2,0) -- (3.5,1.5)node[right]{$\chi$};
+%\draw[antifermion] (2,0) --(3.5,-1.5)node[right]{$\bar{\chi}$};
+%\draw[fill] (2,0) circle [radius=0.05]node[right]{$\mbox{ }g_{\chi}$};
+%\end{tikzpicture}
+%\caption{}
+%\label{Signal_phen_sc}
+%\end{subfigure} \hspace{0.1cm}
 \begin{subfigure}[b]{0.45\textwidth}
 \centering
 \begin{tikzpicture}
 \draw[fermion] (-1.5,1.5)node[left]{$q$} --(0,0);
 \draw[gluon] (-1.5,-1.5)node[left]{$g$} --(0,0);
-\draw[fill] (0,0) circle [radius=0.05]node[left]{$g_{q'}\mbox{ }$};
+%\draw[fill] (0,0) circle [radius=0.05]node[left]{$g_{q'}\mbox{ }$};
+\draw[fill] (0,0) circle [radius=0.0]node[left]{$\mbox{ }$};
 \draw[fermion] (0,0) --node[above]{$q$} (2,0);
-\draw[dashed] (2,0) -- node[above]{$\xi\mbox{\textcolor{white}{m}}$}(2.75,0.75);
+\draw[photon] (2,0) -- node[above]{$\xi\mbox{\textcolor{white}{m}}$}(2.75,0.75);
 \draw[fermion] (2.75,0.75) -- (3.5,1.5)node[right]{$\chi$};
 \draw[antifermion] (2.75,0.75) --(3.5,0)node[right]{$\bar{\chi}$};
-\draw[fill] (2,0) circle [radius=0.05]node[right]{$\mbox{ }g_{q}$};
-\draw[antifermion] (2,0) --(3.5,-1.5)node[right]{$q$};
-\draw[fill] (2.75,0.75) circle [radius=0.05]node[right]{$\mbox{\textcolor{white}{\tiny m}}g_{\chi}$};
+\draw[fill] (2,0) circle [radius=0.0]node[below]{$\mbox{ }g_{q}$};
+\draw[fermion] (2,0) --(3.5,-1.5)node[right]{$q$};
+\draw[fill] (2.75,0.75) circle [radius=0.0]node[right]{$\mbox{\textcolor{white}{\tiny m}}g_{\chi}$};
 \end{tikzpicture}
 \caption{}
 \label{Signal_phen_sd}
@@ -105,20 +111,21 @@ In this paper, monojet constraints are derived from a search for new phenomena c
 \draw[fermion] (-1.5,1.5)node[left]{$q$} --(-0.75,0.75);
 \draw[photon] (-0.75,0.75) -- (0,1.5)node[right]{$Z$}; %\draw[dashed] (-0.75,0.75) -- (0,1.5)node[right]{X};
 \draw[fermion] (-0.75,0.75) -- (0,0);
-\draw[antifermion] (-1.5,-1.5)node[left]{$\bar{q}'$} --(0,0);
-\draw[fill] (0,0) circle [radius=0.05]node[left]{$g_{q'}\mbox{ }$};
+\draw[antifermion] (-1.5,-1.5)node[left]{$\bar{q}$} --(0,0);
+\draw[fill] (0,0) circle [radius=0.0]node[left]{$g_{q}\mbox{ }$};
 \draw[photon] (0,0) --node[above]{$\xi$} (2,0);
 \draw[fermion] (2,0) -- (3.5,1.5)node[right]{$\chi$};
 \draw[antifermion] (2,0) --(3.5,-1.5)node[right]{$\bar{\chi}$};
-\draw[fill] (2,0) circle [radius=0.05]node[right]{$\mbox{ }g_{\chi}$};
+\draw[fill] (2,0) circle [radius=0.0]node[right]{$\mbox{ }g_{\chi}$};
 \end{tikzpicture}
 \caption{}
 \label{Signal_phen_se}
 \end{subfigure}
-\caption{Dark matter pair-production processes with a parton, $j$, or $Z$ boson in the final state for the $s$-channel vector/axial-vector mediator model.}
+\caption{Dark matter pair-production processes with a parton or $Z$ boson in the final state for the $s$-channel vector/axial-vector mediator models. }
 \label{schannel_sig_phen}
 \end{center}
 \end{figure}
+
 
 \begin{figure}[ht!]
 \begin{center}
@@ -126,14 +133,14 @@ In this paper, monojet constraints are derived from a search for new phenomena c
 \centering
 \begin{tikzpicture}
 \draw[fermion] (-2,2.25)node[left]{$q$} --(-1,2.25);
-\draw[dashed] (-1,2.25) -- (0,3)node[right]{$j$};
+\draw[gluon] (-1,2.25) -- (0,3.25)node[right]{$g$};
 \draw[fermion] (-1,2.25) --(0,2.25);
-\draw[antifermion] (-2,0.25)node[left]{$\bar{q}'$} --(0,0.25);
-\draw[fill] (0,2.25) circle [radius=0.05]node[above]{$g_{q'}$};
-\draw[photon] (0,2.25) -- node[left]{$\eta'_{q}$}(0,0.25);
+\draw[antifermion] (-2,0.25)node[left]{$\bar{q}$} --(0,0.25);
+\draw[fill] (0,2.25) circle [radius=0.0]node[above]{$g_{q \chi}$};
+\draw[dashed] (0,2.25) -- node[left]{$\phi_{q}$}(0,0.25);
 \draw[antifermion] (0,0.25) -- (2, 0.25)node[right]{$\bar{\chi}$};
 \draw[fermion] (0,2.25) -- (2,2.25)node[right]{$\chi$};
-\draw[fill] (0,0.25) circle [radius=0.05]node[below]{$g_{q'}$};
+\draw[fill] (0,0.25) circle [radius=0.0]node[below]{$g_{q \chi}$};
 \end{tikzpicture}
 \caption{}
 \label{Signal_phen_ta}
@@ -143,34 +150,33 @@ In this paper, monojet constraints are derived from a search for new phenomena c
 \begin{tikzpicture}
 \draw[gluon] (-2,2.25)node[left]{$g$} --(0,2.25);
 %\draw[dashed] (-1,2.25) -- (0,3)node[right]{$j$};
-\draw[fermion] (-2,0.25)node[left]{$q'$} --(0,0.25);
-\draw[fill] (0,2.25) circle [radius=0.05]node[above]{$g_{q'}$};
-\draw[photon] (0,2.25) -- node[left]{$\eta'_{q}$}(0,0.25);
+\draw[fermion] (-2,0.25)node[left]{$q$} --(0,0.25);
+\draw[fill] (0,2.25) circle [radius=0.0]node[above]{$g_{q \chi}$};
+\draw[dashed] (0,2.25) -- node[left]{$\phi_{q}$}(0,0.25);
 \draw[fermion] (0,0.25) -- (2, 0.25)node[right]{$\chi$};
-\draw[dashed] (0,2.25) -- node[above]{$\eta'_{q}$}(1,2.25);
+\draw[dashed] (0,2.25) -- node[below]{$\phi_{q}$}(1,2.25);
 \draw[fermion] (1,2.25) -- (2,3)node[right]{$q$};
-\draw[fermion] (1,2.25) -- (2,1.5)node[right]{$\bar{\chi}$};
-\draw[fill] (1,2.25) circle [radius=0.05]node[right]{$\textcolor{white}{\tiny m}g_{q'}$};
-\draw[fill] (0,0.25) circle [radius=0.05]node[below]{$g_{q'}$};
+\draw[antifermion] (1,2.25) -- (2,1.5)node[right]{$\bar{\chi}$};
+\draw[fill] (1,2.25) circle [radius=0.0]node[right]{$\textcolor{white}{\tiny m}g_{q \chi}$};
+\draw[fill] (0,0.25) circle [radius=0.0]node[below]{$g_{q \chi}$};
 \end{tikzpicture}
 \caption{}
 \label{Signal_phen_tb}
 \end{subfigure}
-
 
 \begin{subfigure}[b]{0.45\textwidth}
 \centering
 \begin{tikzpicture}
 \draw[fermion] (-1.5,1.5)node[left]{$q$} --(0,0);
 \draw[gluon] (-1.5,-1.5)node[left]{$g$} --(0,0);
-\draw[fill] (0,0) circle [radius=0.05]node[left]{$g_{q}\mbox{\textcolor{white}{\tiny m}}$};
+\draw[fill] (0,0) circle [radius=0.0]node[left]{$\mbox{\textcolor{white}{\tiny m}}$};
 \draw[fermion] (0,0) --node[above]{$q$} (2,0);
-\draw[dashed] (2,0) -- node[above]{$\xi\mbox{\textcolor{white}{m}}$}(2.75,0.75);
+\draw[dashed] (2,0) -- node[above]{$\phi_q\mbox{\textcolor{white}{m}}$}(2.75,0.75);
 \draw[fermion] (2.75,0.75) -- (3.5,1.5)node[right]{$q$};
-\draw[fermion] (2.75,0.75) --(3.5,0)node[right]{$\bar{\chi}$};
-\draw[fill] (2,0) circle [radius=0.05]node[right]{$\mbox{ }g_{q'}$};
+\draw[antifermion] (2.75,0.75) --(3.5,0)node[right]{$\bar{\chi}$};
+\draw[fill] (2,0) circle [radius=0.0]node[below]{$\mbox{ }g_{q \chi}$};
 \draw[fermion] (2,0) --(3.5,-1.5)node[right]{$\chi$};
-\draw[fill] (2.75,0.75) circle [radius=0.05]node[right]{$\mbox{\textcolor{white}{\tiny m}}g_{q'}$};
+\draw[fill] (2.75,0.75) circle [radius=0.0]node[right]{$\mbox{\textcolor{white}{\tiny m}}g_{q \chi}$};
 \end{tikzpicture}
 \caption{}
 \label{Signal_phen_tc}
@@ -180,68 +186,69 @@ In this paper, monojet constraints are derived from a search for new phenomena c
 \begin{tikzpicture}
 \draw[fermion] (-2,1.5)node[left]{$q$} --(0,1.5);
 \draw[gluon] (-2,-1)node[left]{$g$} --(0,-1);
-\draw[fill] (0,1.5) circle [radius=0.05]node[above]{$g_{q'}$};
-\draw[photon] (0,1.5) -- node[left]{$\eta'_{q}$}(0,0.25);
+\draw[fill] (0,1.5) circle [radius=0.0]node[above]{$g_{q \chi}$};
+\draw[dashed] (0,1.5) -- node[left]{$\phi_{q}$}(0,0.25);
 \draw[antifermion] (0,0.25) -- (2, 0.25)node[right]{$\bar{\chi}$};
-\draw[fill] (0,0.25) circle [radius=0.05]node[left]{$g_{q'}$};
+\draw[fill] (0,0.25) circle [radius=0.0]node[left]{$g_{q \chi}$};
 \draw[fermion] (0,0.25) -- node[left]{$q$}(0,-1);
 \draw[fermion] (0,1.5) -- (2,1.5)node[right]{$\chi$};
 \draw[fermion] (0,-1) --(2,-1)node[right]{$q$};
-\draw[fill] (0,-1) circle [radius=0.05]node[below]{$g_{q}$};
+\draw[fill] (0,-1) circle [radius=0.0];
 \end{tikzpicture}
 \caption{}
 \label{Signal_phen_td}
 \end{subfigure}
+
 \begin{subfigure}[b]{0.45\textwidth}
 \centering
 \begin{tikzpicture}
 \draw[fermion] (-2,1.5)node[left]{$q$} --(0,1.5);
-\draw[antifermion] (-2,-1)node[left]{$\bar{q}'$} --(0,-1);
-\draw[fill] (0,1.5) circle [radius=0.05]node[above]{$g_{q'}$};
-\draw[photon] (0,1.5) -- node[left]{$\eta'_{q}$}(0,0.25);
-\draw[gluon] (0,0.25) -- (2, 0.25)node[right]{g};
-\draw[photon] (0,0.25) -- node[left]{$\eta'_{q'}$}(0,-1);
+\draw[antifermion] (-2,-1)node[left]{$\bar{q}$} --(0,-1);
+\draw[fill] (0,1.5) circle [radius=0.0]node[above]{$g_{q \chi}$};
+\draw[dashed] (0,1.5) -- node[left]{$\phi_{q}$}(0,0.25);
+\draw[gluon] (0,0.25) -- (2, 0.25)node[right]{$g$};
+\draw[dashed] (0,0.25) -- node[left]{$\phi_{q}$}(0,-1);
 \draw[fermion] (0,1.5) -- (2,1.5)node[right]{$\chi$};
 \draw[antifermion] (0,-1) --(2,-1)node[right]{$\bar{\chi}$};
-\draw[fill] (0,-1) circle [radius=0.05]node[below]{$g_{q'}$};
+\draw[fill] (0,-1) circle [radius=0.0]node[below]{$g_{q \chi}$};
 \end{tikzpicture}
 \caption{}
 \label{Signal_phen_te}
 \end{subfigure}
-
 \begin{subfigure}[b]{0.45\textwidth}
 \centering
 \begin{tikzpicture}
 \draw[fermion] (-2,2.25)node[left]{$q$} --(-1,2.25);
 \draw[photon] (-1,2.25) -- (0,3)node[right]{$Z$};
 \draw[fermion] (-1,2.25) --(0,2.25);
-\draw[antifermion] (-2,0.25)node[left]{$\bar{q}'$} --(0,0.25);
-\draw[fill] (0,2.25) circle [radius=0.05]node[above]{$g_{q'}$};
-\draw[photon] (0,2.25) -- node[left]{$\eta'_{q}$}(0,0.25);
+\draw[antifermion] (-2,0.25)node[left]{$\bar{q}$} --(0,0.25);
+\draw[fill] (0,2.25) circle [radius=0.0]node[above]{$g_{q \chi}$};
+\draw[dashed] (0,2.25) -- node[left]{$\phi_{q}$}(0,0.25);
 \draw[antifermion] (0,0.25) -- (2, 0.25)node[right]{$\bar{\chi}$};
 \draw[fermion] (0,2.25) -- (2,2.25)node[right]{$\chi$};
-\draw[fill] (0,0.25) circle [radius=0.05]node[below]{$g_{q'}$};
+\draw[fill] (0,0.25) circle [radius=0.0]node[below]{$g_{q \chi}$};
 \end{tikzpicture}
 \caption{}
 \label{Signal_phen_tf}
 \end{subfigure}
+
 \begin{subfigure}[b]{0.45\textwidth}
 \centering
 \begin{tikzpicture}
 \draw[fermion] (-2,1.5)node[left]{$q$} --(0,1.5);
-\draw[antifermion] (-2,-1)node[left]{$\bar{q}'$} --(0,-1);
-\draw[fill] (0,1.5) circle [radius=0.05]node[above]{$g_{q'}$};
-\draw[photon] (0,1.5) -- node[left]{$\eta'_{q}$}(0,0.25);
-\draw[photon] (0,0.25) -- (2, 0.25)node[right]{Z};
-\draw[photon] (0,0.25) -- node[left]{$\eta'_{q'}$}(0,-1);
+\draw[antifermion] (-2,-1)node[left]{$\bar{q}$} --(0,-1);
+\draw[fill] (0,1.5) circle [radius=0.0]node[above]{$g_{q \chi}$};
+\draw[dashed] (0,1.5) -- node[left]{$\phi_{q}$}(0,0.25);
+\draw[photon] (0,0.25) -- (2, 0.25)node[right]{$Z$};
+\draw[dashed] (0,0.25) -- node[left]{$\phi_{q}$}(0,-1);
 \draw[fermion] (0,1.5) -- (2,1.5)node[right]{$\chi$};
 \draw[antifermion] (0,-1) --(2,-1)node[right]{$\bar{\chi}$};
-\draw[fill] (0,-1) circle [radius=0.05]node[below]{$g_{q'}$};
+\draw[fill] (0,-1) circle [radius=0.0]node[below]{$g_{q \chi}$};
 \end{tikzpicture}
 \caption{}
 \label{Signal_phen_tg}
 \end{subfigure}
-\caption{Dark matter pair-production processes with a quark, $q$, gluon, $g$, (collectively, a parton, $j$) or Z boson in the final state for the $t$-channel scalar mediator model.}
+\caption{Dark matter pair-production processes with a parton or $Z$ boson in the final state for the $t$-channel scalar mediator model.}
 \label{tchannel_sig_phen}
 \end{center}
 \end{figure}
