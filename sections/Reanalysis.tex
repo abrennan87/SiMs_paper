@@ -3,7 +3,7 @@ The mono-X + $\met$ (abbreviated mono-X) signal is a popular collider signal in 
 %\st{It is predicted by an assorted collection of new physics models, including unparticle physics models }\cite{CMS-PAS-EXO-12-048}\st{ and the Arkani-Hamed, Dimopoulos, and Dvali (ADD) model of large extra spatial dimensions }\cite{ATLAS-CONF-2012-147}. 
 For the $s$-channel simplified models discussed in Section \ref{sec:sec2}, a SM particle, X, is emitted from one of a pair of intial-state partons (shown in Figure \ref{schannel_sig_phen}). The case where X is radiated from the mediator - a process known as virtual internal Bremsstrahlung - is only possible if the SM-dark matter interaction occurs via the $t$-channel (as shown in Figure \ref{tchannel_sig_phen}). 
 %\st{In both cases, the parton and Z boson are the SM particles most likely to be emitted \question{is Pr(W)$>$Pr(Z)?}}\cite{Kumar:2013iva}. \st{Hence, this paper will focus on thre detection channels: monojet, mono-Z and mono-W.}
-For all models, emission of a parton is the most likely scenario at the LHC owing to the strength of the strong coupling. Hence the mono-jet channel is expected to provide the strongest limits. Emission of $Z$ and $W$ bosons or photons is also possible however, and may be chosen for study over jet processes to take advantage of the relative simplicity/cleanliness (\comm{better word??}) of leptons compared to jets. In this work we also include the mono-$(\rightarrow ]ell^+ \ell^-)Z$ channel for comparison.
+For all models, emission of a parton is the most likely scenario at the LHC owing to the strength of the strong coupling. Hence the mono-jet channel is expected to provide the strongest limits. Emission of $Z$ and $W$ bosons or photons is also possible however, and may be chosen for study over jet processes to take advantage of the relative simplicity/cleanliness (\comm{better word??}) of leptons compared to jets. In this work we also include the mono-$(\rightarrow \ell^+ \ell^-)Z$ channel for comparison.
 
 %previously had a footnote: It is worth noting here that the mono-$W$ channel has previously been chosen for its apparent ability to distinguish a case where $u$- and $d$-type quarks couple with opposite sign to the new physics sector \cite{}\comm{(Tait)}. However, during the preparation of this paper this has been shown to be an unphysical scenario \cite{}\comm{(Bell, Leane)}
 
@@ -14,7 +14,7 @@ For all models, emission of a parton is the most likely scenario at the LHC owin
 The procedure for recasting existing mono-X constraints as simplified model constraints is straightforward. Firstly, signal events are simulated as described in Section \ref{signal_generation}. The event selection criteria of the mono-X analysis of interest is then reproduced and applied to the simulated signal samples. Events surviving the selection criteria are counted to determine both the likelihood of a dark matter event occurring (refered to as the acceptance, $\mathcal{A}$) and the probability of detecting said event (refered to as the efficiency, $\epsilon$). These quantities are then used in combination with channel-specific model-independent limits on new physics events to exclude a given model, masspoint and/or coupling. For a comprehensive description of the recasting procedure, see appendix \ref{AppendixB}.
 \bigskip
 
-In this paper, monojet constraints are derived from a search for new phenomena conducted by the ATLAS Collaboration using $pp$ collisions at $\sqrt{s}=$ 8 TeV as described in Ref. \cite{Aad:2015zva}. Similarly, the mono-$Z$ constraints are derived from an ATLAS dark matter search originally optimised for the D1, D5 and D9 effective operators (see \cite{Aad:2014monoZlep}). These analyses are described in further detail in Sections \ref{monojet_constraints} and \ref{monoZ_constraints} respectively.
+In this paper, monojet constraints are derived from a search for new phenomena conducted by the ATLAS Collaboration using $pp$ collisions at $\sqrt{s}=$ 8 TeV as described in Ref. \cite{Aad:2015zva}. Similarly, the mono-$Z$ constraints are derived from an ATLAS dark matter search originally optimised for the D1, D5 and D9 effective operators \cite{Aad:2014monoZlep}. These analyses are described in further detail in Sections \ref{monojet_constraints} and \ref{monoZ_constraints} respectively.
 
 %\comm{We should put references to all the papers here! - Amelia}
 
@@ -258,23 +258,24 @@ In this paper, monojet constraints are derived from a search for new phenomena c
 \subsection{Signal Simulation}
 \label{signal_generation}
 \begin{flushleft}
-Signal samples for each channel and for each simplified model discussed in Section \ref{sec:sec2} were generated in the following manner. Firstly, leading order matrix elements for the process $pp \rightarrow X + \chi\bar{\chi}$ (where $X$ is either one or two jets\footnote{For the monojet channel, jets are seeded by any parton excluding the (anti-)top quark.} or a Z boson) were modelled using \MG$\_$aMC$@$NLO v2.2.2 with the default PDF (MSTW2008lo68). The default renormalisation and factorisation scales were also used and set to the sum of $\sqrt{m^{2} + p_{T}^{2}}$ for all particles in the final state. Showering and hadronisation was then performed by \PYTHIA  8.201 with the default tune (ATLAS UE Tune AU2-MSTW2008LO). For the monojet channel, matching between \MG$\mbox{ }$and \PYTHIA was done using the MLM scheme with matching scales of 80 GeV and 300 GeV. Samples made with the latter matching scale are included both to increase statistics in the high $\met$ region and to account for the shape bias introduced by the 80 GeV matching scale. To avoid double-counting, events from the 80 (300) GeV monojet samples are required to have a leading jet with $p_{T} <$ ($\geq$) 350 GeV.
+Signal samples for each channel and for each simplified model discussed in Section \ref{sec:sec2} were generated in the following manner. Firstly, leading order matrix elements for the process $pp \rightarrow \mathrm{X} + \chi\bar{\chi}$ (where X is either one or two jets\footnote{For the monojet channel, jets are seeded by any parton excluding the (anti-)top quark.} or a $Z$ boson) were modelled using \MG$\_${\footnotesize A}MC$@$NLO v2.2.2 \cite{MG_aMCNLO2014} with the PDF MSTW2008lo68cl \cite{MSTW}. The default renormalisation and factorisation scales were also used and set to the sum of $\sqrt{m^{2} + p_{T}^{2}}$ for all particles in the final state. Showering and hadronisation were then performed by \PYTHIA  8.201 with the appropriate PDF and using ATLAS UE Tune AU2-MSTW2008LO~\cite{AUtune}. For the monojet channel, parton matching between \MG$\mbox{ }$and \PYTHIA was done using the MLM scheme with matching scales of 80 GeV and 300 GeV. Samples made with the latter matching scale are included both to increase statistics in the high $\met$ region and to account for the shape bias introduced by the 80 GeV matching scale. To avoid double-counting, events from the 80 (300) GeV monojet samples are required to have a leading jet with $p_{T} <$ 350 GeV ($p_{T} \geq$ 350 GeV).
+
 \bigskip
 
 Following the above procedure, signal samples were generated for a representative set of dark matter and mediator masses, shown in Table \ref{Mass_coup_points}. \textcolor{magenta}{Something about the coupling strength, $f$, being set to a value of 1? Maybe leave out - we'll vary the value.} The mediator masses were chosen \comm{to coincide with} predominantly three regimes: (near-)degenerate ($M\approx m_{\chi}$), kinematically allowed ($M \geq 2m_{\chi}$), and EFT-like ($\sqrt{\hat{s}} << M$)\footnote{A recent study by Alves et al. found that EFT results do not apply to mediators with a mass less than 2.5 TeV at the LHC during Run I \cite{Alves:2011wf}.}. We also allow for the possibility of a light mediator/heavy WIMP scenario (M < $m_{\chi}$). \comm{In addition to covering a broad parameter space, the masspoints in Table \ref{Mass_coup_points} also satisfy the narrow width approximation employed by \MG.} 
 %Rows one to three of Table \ref{Mass_coup_points} cover the case where the dark matter mass is small and the mediator mass is either degenerate, low or sufficiently large so as to be in the EFT regime of validity\footnote{A recent study by Alves et al. found that EFT results do not apply to mediators with a mass less than 2.5 TeV at the LHC during Run I \cite{Alves:2011wf}.}. Rows four and five cover the case where the dark matter particle has a medium mass and the mediator is either near-degenerate or larger. Rows six and seven (eight and nine) cover the case where the dark matter particle is a few GeV (TeV) and the mediator is either near-degenerate or again sufficiently large so as to be in the EFT regime of validity.
 
-\begin{table}[!htbp]
-\centering
-\begin{tabular}{l|l}
-\hline
-\hline
- \rule{0pt}{2.2ex}$m_{\chi}$ [GeV] & $M$ [GeV]\\
-\hline
- \rule{0pt}{2.2ex} 1 & 1, 2, 10, 20, 100, 200, 1000, 2000, 20000 \\
- 10 & 1, 2, 10, 20, 100, 200, 1000, 2000, 20000 \\
- 100 & 1, 2, 10, 20, 100, 200, 1000, 2000, 20000 \\
- 1000 & 1, 2, 10, 20, 100, 200, 1000, 2000, 20000 \\
+%\begin{table}[!htbp]
+%\centering
+%\begin{tabular}{l|l}
+%\hline
+%\hline
+% \rule{0pt}{2.2ex}$m_{\chi}$ [GeV] & $M$ [GeV]\\
+%\hline
+% \rule{0pt}{2.2ex} 1 & 1, 2, 10, 20, 100, 200, 1000, 2000, 20000 \\
+%% 10 & 1, 2, 10, 20, 100, 200, 1000, 2000, 20000 \\
+%% 100 & 1, 2, 10, 20, 100, 200, 1000, 2000, 20000 \\
+%% 1000 & 1, 2, 10, 20, 100, 200, 1000, 2000, 20000 \\
 % 1 & 10 & 10\\
 % 2 & 10 & 200\\
 % 3 & 10 & 25000\\
@@ -284,13 +285,27 @@ Following the above procedure, signal samples were generated for a representativ
 % 7 & 500 & 25000\\
 % 8 & 1000 & 2000\\
 % 9 & 1000 & 25000\\
- \hline
- \hline
+% \hline
+% \hline
+%\end{tabular}
+%\caption{Mass points chosen for the analysis of simplified dark matter models. The mediator masses are primarily representative of three regimes: (near-)degenerate ($M\approx m_{\chi}$), kinematically allowed ($M \geq 2m_{\chi}$), and EFT-like ($\sqrt{\hat{s}} << M$).}
+%\label{Mass_coup_points}
+%\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{c | c | c | c}
+\hline
+\hline
+$m_{\chi}$ [GeV] & $M_{\mathrm{med}}$ [GeV] & $g_q$ & $g_{\chi}$ \T \B\\
+\hline
+1, 10, 100, 1000 & 1, 2, 10, 20, 100, 200, 1000, 2000, 20000 & 1 & 0.2, 0.5, 1, 2, 5 \T \B \\
+\hline
+\hline
 \end{tabular}
 \caption{Mass points chosen for the analysis of simplified dark matter models. The mediator masses are primarily representative of three regimes: (near-)degenerate ($M\approx m_{\chi}$), kinematically allowed ($M \geq 2m_{\chi}$), and EFT-like ($\sqrt{\hat{s}} << M$).}
 \label{Mass_coup_points}
 \end{table}
-
 %signal production was modelled with \MG$\_$aMC 2.2.2 \comm{(references needed throughout this section!)}. Showering and hadronisation was then performed by \PYTHIA  8.201 using the default tune (ATLAS UE Tune AU2-MSTW2008LO). Using the MSTW2008lo68 PDF set (currently the benchmark for ATLAS analyses \cite{}. \question{Is this still true?}) and the default \MG factorization and renormalization scales\footnote{In \FNMG5 2.2.2 the default scale, $\mu$ is defined as the sum of $\sqrt{m_{\chi}^{2} + p_{T}^{2}}$ for all dark matter particles in the final state.}, samples were produced for a representative set of of dark matter and mediator masses, shown in Table \ref{Mass_coup_points}. \textcolor{magenta}{Something about the coupling strength, $f$, being set to a value of 1? Maybe leave out - we'll vary the value.} Note that rows one to three of Table \ref{Mass_coup_points} cover the case where the dark matter mass is small and the mediator has either a mass that is degenerate, low or sufficiently large so as to be in the EFT regime of validity\footnote{A recent study by Alves et al. found that EFT results do not apply to mediators with a mass less than 2.5 TeV at the LHC during Run I \cite{Alves:2011wf}.}. Rows four and five cover the case where the dark matter particle has a medium mass and the mediator is either near-degenerate or larger. Rows six and seven (eight and nine) cover the case where the dark matter particle is a few GeV (TeV) and the mediator is either near-degenerate or again sufficiently large so as to be in the EFT regime of validity. \comm{Comment on the masspoints being dictated by the narrow width approximation used by MG?}
 \end{flushleft}
 
