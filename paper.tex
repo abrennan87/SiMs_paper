@@ -10,6 +10,8 @@
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{tabularx}
+\usepackage{multirow}
 
 \usepackage{hepparticles}
 \usepackage{hepnames}
@@ -24,6 +26,7 @@
 \usepackage{lineno}
 \linenumbers
 \usepackage{cancel}
+\usepackage{array}
 
 %%%Physics, mostly
 \newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
@@ -46,6 +49,7 @@
 \newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
 
 \newcommand{\tr}[1]{\Tr\left[#1\right]}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 \makeatother % End of region containing @ commands
 \renewcommand{\labelenumi}{(\alph{enumi})} % Use letters for enumerate
