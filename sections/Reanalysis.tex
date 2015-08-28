@@ -1,4 +1,3 @@
-\begin{flushleft}
 The mono-X + $\met$ (abbreviated mono-X) signal is a popular collider signal in the search for new physics, particularly in the search for dark matter. Since WIMPs are not expected to interact with detector material, they appear as missing transverse momentum, $\vec{p}_{\mathrm{T}}^{\mathrm{miss}}$, when balanced against a visible object that is radiated from the initial or intermediate state. 
 %\st{It is predicted by an assorted collection of new physics models, including unparticle physics models }\cite{CMS-PAS-EXO-12-048}\st{ and the Arkani-Hamed, Dimopoulos, and Dvali (ADD) model of large extra spatial dimensions }\cite{ATLAS-CONF-2012-147}. 
 For the $s$-channel simplified models discussed in Section \ref{sec:sec2}, a SM particle, X, is emitted from one of a pair of intial-state partons (shown in Figure \ref{schannel_sig_phen}). The case where X is radiated from the mediator - a process known as virtual internal Bremsstrahlung - is only possible if the SM-dark matter interaction occurs via the $t$-channel (as shown in Figure \ref{tchannel_sig_phen}). 
@@ -9,10 +8,10 @@ For all models, emission of a parton is the most likely scenario at the LHC owin
 
 
 %, which may then enhance the limit in combination with monojet processes.}
-\bigskip
+%\bigskip
 
 The procedure for recasting existing mono-X constraints as simplified model constraints is straightforward. Firstly, signal events are simulated as described in Section \ref{signal_generation}. The event selection criteria of the mono-X analysis of interest is then reproduced and applied to the simulated signal samples. Events surviving the selection criteria are counted to determine both the likelihood of a dark matter event occurring (refered to as the acceptance, $\mathcal{A}$) and the probability of detecting said event (refered to as the efficiency, $\epsilon$). These quantities are then used in combination with channel-specific model-independent limits on new physics events to exclude a given model, masspoint and/or coupling. For a comprehensive description of the recasting procedure, see appendix \ref{AppendixB}.
-\bigskip
+%\bigskip
 
 In this paper, monojet constraints are derived from a search for new phenomena conducted by the ATLAS Collaboration using $pp$ collisions at $\sqrt{s}=$ 8 TeV as described in Ref. \cite{Aad:2015zva}. Similarly, the mono-$Z$ constraints are derived from an ATLAS dark matter search originally optimised for the D1, D5 and D9 effective operators \cite{Aad:2014monoZlep}. These analyses are described in further detail in Sections \ref{monojet_constraints} and \ref{monoZ_constraints} respectively.
 
@@ -253,14 +252,12 @@ In this paper, monojet constraints are derived from a search for new phenomena c
 \end{center}
 \end{figure}
 
-\end{flushleft}
 
 \subsection{Signal Simulation}
 \label{signal_generation}
-\begin{flushleft}
 Signal samples for each channel and for each simplified model discussed in Section \ref{sec:sec2} were generated in the following manner. Firstly, leading order matrix elements for the process $pp \rightarrow \mathrm{X} + \chi\bar{\chi}$ (where X is either one or two jets\footnote{For the monojet channel, jets are seeded by any parton excluding the (anti-)top quark.} or a $Z$ boson) were modelled using \MG$\_${\footnotesize A}MC$@$NLO v2.2.2 \cite{MG_aMCNLO2014} with the PDF MSTW2008lo68cl \cite{MSTW}. The default renormalisation and factorisation scales were also used and set to the sum of $\sqrt{m^{2} + p_{T}^{2}}$ for all particles in the final state. Showering and hadronisation were then performed by \PYTHIA  8.201 with the appropriate PDF and using ATLAS UE Tune AU2-MSTW2008LO~\cite{AUtune}.
 
-\bigskip
+%\bigskip
 \comm{Short discussion of smearing process here}
 
  
@@ -268,7 +265,7 @@ Signal samples for each channel and for each simplified model discussed in Secti
 \comm{Make explicit the choice of $(0+1+2)j$ vs $(1+2)j$ here. Also refer to the Papucci paper, and why we don't split the sample.}
 For the monojet channel, parton matching between \MG$\mbox{ }$and \PYTHIA was done using the MLM scheme with matching scales of 80 GeV and 300 GeV. Samples made with the latter matching scale are included both to increase statistics in the high $\met$ region and to account for the shape bias introduced by the 80 GeV matching scale. To avoid double-counting, events from the 80 (300) GeV monojet samples are required to have a leading jet with $p_{T} <$ 350 GeV ($p_{T} \geq$ 350 GeV).
 
-\bigskip
+%\bigskip
 
 Following the above procedure, signal samples were generated for a representative set of dark matter and mediator masses, shown in Table \ref{Mass_coup_points}. All $m_{\chi}-M_{\mathrm{med}}$ combinations are permitted in the sV and sA models; in the tS model $M_{\mathrm{med}}$ should be greater than $m_{\chi}$, to ensure stability of the DM particle. The coupling values are set to unity, however for the $s$-channel models, the DM-coupling is allowed to vary from this by up to a factor of 5. In all cases, a point in phase space is disregarded if it leads to a mediator width that is greater than 50\% (\comm{or is it 80\%?}), so we ensure we remain within the NWA where the \MG$\mbox{ }$treatment of width is acceptable. The mediator masses were chosen to cover a broad range of parameter space and to coincide with predominantly three regimes: (near-)degenerate ($M\approx m_{\chi}$), kinematically allowed ($M \geq 2m_{\chi}$), and EFT-like ($\sqrt{\hat{s}} << M$)\footnote{A recent study by Alves et al. found that EFT results do not apply to mediators with a mass less than 2.5 TeV at the LHC during Run I \cite{Alves:2011wf}.}. We also allow for the possibility of a light mediator/heavy WIMP scenario (M < $m_{\chi}$).
 %Rows one to three of Table \ref{Mass_coup_points} cover the case where the dark matter mass is small and the mediator mass is either degenerate, low or sufficiently large so as to be in the EFT regime of validity\footnote{A recent study by Alves et al. found that EFT results do not apply to mediators with a mass less than 2.5 TeV at the LHC during Run I \cite{Alves:2011wf}.}. Rows four and five cover the case where the dark matter particle has a medium mass and the mediator is either near-degenerate or larger. Rows six and seven (eight and nine) cover the case where the dark matter particle is a few GeV (TeV) and the mediator is either near-degenerate or again sufficiently large so as to be in the EFT regime of validity.
@@ -319,22 +316,20 @@ Following the above procedure, signal samples were generated for a representativ
 \end{table}
 
 %signal production was modelled with \MG$\_$aMC 2.2.2 \comm{(references needed throughout this section!)}. Showering and hadronisation was then performed by \PYTHIA  8.201 using the default tune (ATLAS UE Tune AU2-MSTW2008LO). Using the MSTW2008lo68 PDF set (currently the benchmark for ATLAS analyses \cite{}. \question{Is this still true?}) and the default \MG factorization and renormalization scales\footnote{In \FNMG5 2.2.2 the default scale, $\mu$ is defined as the sum of $\sqrt{m_{\chi}^{2} + p_{T}^{2}}$ for all dark matter particles in the final state.}, samples were produced for a representative set of of dark matter and mediator masses, shown in Table \ref{Mass_coup_points}. \textcolor{magenta}{Something about the coupling strength, $f$, being set to a value of 1? Maybe leave out - we'll vary the value.} Note that rows one to three of Table \ref{Mass_coup_points} cover the case where the dark matter mass is small and the mediator has either a mass that is degenerate, low or sufficiently large so as to be in the EFT regime of validity\footnote{A recent study by Alves et al. found that EFT results do not apply to mediators with a mass less than 2.5 TeV at the LHC during Run I \cite{Alves:2011wf}.}. Rows four and five cover the case where the dark matter particle has a medium mass and the mediator is either near-degenerate or larger. Rows six and seven (eight and nine) cover the case where the dark matter particle is a few GeV (TeV) and the mediator is either near-degenerate or again sufficiently large so as to be in the EFT regime of validity. \comm{Comment on the masspoints being dictated by the narrow width approximation used by MG?}
-\end{flushleft}
 
 %\fg{We now move to a discussion of each of the mono-X channels separately.}
 
 \subsection{Monojet Constraints}
 \label{monojet_constraints}
-\begin{flushleft}
 The ATLAS mono-jet plus missing transverse energy search \cite{Aad:2015zva} was originally designed to set limits on three new physics scenarios\comm{,}
 %\st{: the production of light grativinos in association with gluinos or scalar quarks in a gauge-mediated supersymmetric model, the production of graviton modes in the Arkani-Hamed, Dimopoulos, and Dvali model for large extra spatial dimensions, and}
 the most relevant of which is the production of WIMP DM within the context of six \comm{(?)} effective operators. The analysis also includes a brief study of a Z' DM model which is analogous to our sV model.
-\bigskip
+%\bigskip
 
 For the mono-jet channel, signal selection is carried out based on at least one hard jet recoiling against missing energy.  
 %\st{initially, events are required to have $\met>$ 150 GeV and at least one jet with $p_{T} >$ 30 GeV and $|\eta| <$ 4.5} (\comm{My logic here is that these cuts are for trigger, or pre-selection - they are overwritten by later cuts, right? So I think not worth including.}). 
 To ensure that the correct back-to-back jet + $\met$ topology is selected we require $|\Delta\phi(\mathrm{jet},\metvec)|>1.0$. The contribution from background QCD jets is then managed with the requirement that surviving events have a leading jet, $j_{1}$, with $p_{T} >$ 120 GeV and $|\eta| <$ 2.0 satisfying $p_{T}^{j_{1}}/\met >$ 0.5. (\comm{Is this the dominant background? If so, include `dominant', if not, this cut is maybe better understood as implementing back-to-backness. Is there an upper limit on $N_{jets}$?}). \comm{Note to self: include lepton veto criteria here.} Lastly, nine separate signal regions are defined with increasing lower thresholds on $\met$, which range from 150 GeV to 700 GeV as shown in Table \ref{monojet_SRs}.
-\bigskip
+%\bigskip
 
 \comm{Comment on the process used to obtain the model-independent limits in this channel. Then add "The ATLAS model-independent limits on new physics events in each signal region are shown in Table \ref{monojet_SRs}."}
 
@@ -371,12 +366,9 @@ For the monojet channel, the Monte Carlo (MC) generation and event selection pro
 \st{Note that we only calculate limits on M$_{*}$ for this aspect of the analysis. Although it is customary to present constraints on dark matter models in the form of limits on M$_{*}$, we shall hereafter present constraints in the form of limits on the cross-section. This is done to better facilitate the comparison of collider and direct detection results, where $\sigma(pp \rightarrow X + \chi\bar{\chi})$ and $\sigma(N\chi \rightarrow N\chi)$ are related by a Fierz transformation in the simplified model framework} \cite{PJFox, NBellDent}. (\comm{I think we're ditching the limits on $\sigma$ now, and I'll add something earlier on that specifies we put limits on the couplings everywhere. We should also define $\Mstar$ somewhere (actually maybe in teh validation section, and we can just refer to the suppression scale here or something).}) 
 %\draft{While the signal samples used by the ATLAS group (and for validation) correspond to the processes $pp \rightarrow j\chi\bar{\chi}$ and $pp \rightarrow jj\chi\bar{\chi}$ where $j$ is a final state jet, monojet constraints on the simplified models studied in this paper were set using signal samples with zero, one and two jets in the final state.} \comm{This deviation from the ATLAS analysis is motivated by the observation that the limits on $M_{*}$ are improved with the addition of the process $pp \rightarrow \chi\bar{\chi}$.}
 %However, while the ATLAS MC samples are generated for only two matching scale values (80 GeV and 300 GeV), we use a sliding value of $m_{\chi}/4$. \comm{This ensures that all jet-related kinematic distributions are smoothly connected across all dark matter masspoints.}
-\end{flushleft}
 
 \subsection{Mono-$Z$ Constraints}
 \label{monoZ_constraints}
-\begin{flushleft}
-
 The signature of the ATLAS mono-$Z(\rightarrow \ell^+ \ell^-)$ analysis \cite{Aad:2014monoZlep} is a pair of opposite-sign same-flavour leptons balanced against a large amount of missing transverse momentum. The analysis is designed to search for a set of EFT models of DM, where a $Z$ boson is radiated from an initial state quark. Leptons are in general much cleaner and simpler than jets, so this channel is included here to investigate whether reduction in uncertainties from cleaner channel can provide quick results that are comparable (?) to the more complicated mono-jet channel (\comm{reword}). 
 
 The analysis also includes a short study of a $t$-channel simplified model similar to that discussed here. This model is used to validate our results in this channel; see the details in sec.~\ref{monoZ_validation}.
@@ -407,16 +399,12 @@ $N_{\mathrm{sig}}^{\mathrm{obs}}$ & 32.2 & 5.9 \B \\
 \caption{The expected and observed upper limits on the number of new physics events in the ATLAS mono-$Z$ analysis, calculated with HistFitter using the results of \cite{Aad:2014monoZlep}.}
 \end{table}
 
-\end{flushleft}
 
 \iffalse
 
 \subsection{Mono-W Constraints}
-\begin{flushleft}
 \comm{Note to Johanna: Here you should discuss the original intention of the mono-W analysis. Also comment on any validation you did in order to confirm that you could use the results of the analysis. Lastly, discuss or list the cuts used in the analysis and the uncertainties associated with the results. This will inevitably include details of the background estimation and the detector performance.}
-\end{flushleft}
 
-\begin{flushleft}
 \textcolor{magenta}{This section should include:}
 \begin{enumerate}
 \item \textcolor{magenta}{A description of the general process employed to reinterpret monojet, mono-W and mono-Z limits. This should cover MC signal generation, the cuts used in each mono-X channel and validation of the procedure(s) used to generate the results.}
@@ -424,6 +412,5 @@ $N_{\mathrm{sig}}^{\mathrm{obs}}$ & 32.2 & 5.9 \B \\
 \item \textcolor{magenta}{A description of the assessment of the systematics.}
 \item \textcolor{magenta}{The limit setting strategy (?).}
 \end{enumerate}
-\end{flushleft}
 
 \fi
