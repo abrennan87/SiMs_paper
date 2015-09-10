@@ -61,9 +61,18 @@ An important factor when considering simplified models is to ensure the mediator
 \label{gamma_tS}
 \Gamma_{tS} = \sum_{\substack{q}} \frac{g_{q\chi}^2M}{16\pi}\left(1 - \frac{m_{q}^{2}}{M^{2}} - \frac{m_{\chi}^{2}}{M^{2}}\right)\sqrt{\left(1 - \frac{m_{q}^{2}}{M^{2}} + \frac{m_{\chi}^{2}}{M^{2}}\right)^{2} - 4\frac{m_{\chi}^{2}}{M^{2}}}
 \end{equation}
-where $m_{\chi} \leq M/2$ is required for the $s$-channel models and $M \geq m_{\chi} + m_{q}$ is required for the $t$-channel model. Note also that the summation over $q$ is restricted to quarks with $m_{q} \leq M/2$ for all models. \comm{We need to extend this discussion; See e.g. my paper with Karl, 1502.05721; The width expression above is only valid for $\Gamma < M$, which doesn't always hold true for Run 1 data - Tom.}
+where $m_{\chi} \leq M/2$ is required for the $s$-channel models (\fg{Is this necessary? I find this width calc also works (at least matches MG `auto') when $m_{\chi} > M$ as well, not to mention we are including multiple points where $M < m_{\chi}$.}) and $M \geq m_{\chi} + m_{q}$ is required for the $t$-channel model. Note also that the summation over $q$ is restricted to quarks with $m_{q} \leq M/2$ for all models. \comm{We need to extend this discussion; See e.g. my paper with Karl, 1502.05721; The width expression above is only valid for $\Gamma < M$, which doesn't always hold true for Run 1 data - Tom.}
 
-\comm{I agree - I might try to implement something where we don't test a point if the minimum width is larger than the mediator mass, or at least reduce it by scaling down the coupling, so that we always avoid this issue. - Amelia}
+The expressions for width above are valid where that width is smaller than the mass of the mediator; moreover, a recent paper [Tom+Karl] demonstrated that the MadGraph treatment of the particle width is accurate only up to $\Gamma < \frac{M}{2}$. We find this to hold true in all cases where the couplings are set to unity, and violated in a set of $s$-channel cases where the coupling ratio satisfies $\frac{g_{\chi}}{g_q} \geq 2$. These points in phase space are therefore not included in this work.
+
+Restricting ourselves to this regime where $\Gamma < \frac{M}{2}$ allows a simplification in obtaining our limits on the coupling, as the approximation that $sigma \sim g_{\chi}^2 g_q^2$ becomes valid. We can exploit this to obtain limits following
+
+\begin{equation}
+\label{Xsec_sim_coupling4}
+(g_q g_{\chi})_{\mathrm{lim}} = (g_q g_{\chi})_{\mathrm{gen}} \times \left ( \frac{\sigma_{\mathrm{lim}}}{\sigma_{\mathrm{gen}}} \right )^{\frac{1}{2}}
+\end{equation}
+where uncertainties are ignored for now. This approximation also relies on the kinematic behaviour of the 
+
 
 %\textcolor{magenta}{This section should include:}
 %\begin{enumerate}
