@@ -1,6 +1,7 @@
 \subsection{Monojet Channel}
 \label{monojet_validation}
-The MC generation and signal selection procedures for the mono-jet channel are validated via reproduction of the ATLAS limits on $\Mstar \equiv \frac{M_{\mathrm{med}}}{\sqrt{g_q g_{\chi}}}$, for the $s$-channel vector simplified model. A comparison of SR7 limits for a representative sample of mediator masses with $m_{\chi} = $ 50 GeV, $\Gamma = M/8\pi$ and $\sqrt{g_{q}g_{\chi}} = 1$ is presented in Table \ref{M_star_limits_monojet}. In general, good agreement is observed between the ATLAS and reproduced limits, with a maximum difference (with respect to the ATLAS limit) of $<$11\%. We note that a discrepancy of a few percent is expected and allowed for two reasons. Firstly, the MC generation procedure employed in this analysis does not include a full simulation of the ATLAS detector. Instead, reconstruction effects are simulated by applying a Gaussian smearing of the jet $p_{\mathrm{T}}$ by a conservative factor of 5\%. Secondly, the 95\% CL uncertainties associated with the ATLAS limits are estimated using the HistFitter package while a different approach is favoured for this analysis (see appendix \ref{AppendixB}). As our results are consistently more conservative than those of the ATLAS analysis, we consider this approach acceptable.
+The MC generation and signal selection procedures for the mono-jet channel are validated via reproduction of the ATLAS limits on $\Mstar \equiv \frac{M_{\mathrm{med}}}{\sqrt{g_q g_{\chi}}}$, for the $s$-channel vector simplified model. A comparison of SR7 limits for a representative sample of mediator masses with $m_{\chi} = $ 50 GeV, $\Gamma = M/8\pi$ and $\sqrt{g_{q}g_{\chi}} = 1$ is presented in Table \ref{M_star_limits_monojet}. In general, good agreement is observed between the ATLAS and reproduced limits, with a maximum difference (with respect to the ATLAS limit) of $<$25\%. We note that a discrepancy of a few percent is expected and allowed for three reasons. Firstly, the MC generation procedure employed in this analysis does not include a full simulation of the ATLAS detector. Instead, reconstruction effects are simulated by applying a Gaussian smearing of the jet $p_{\mathrm{T}}$ by a conservative factor of 5\%. Next, the matching procedure employed in this analysis (and discussed in detail in Section \ref{matching_procedure}) is largely simplified. This introduces a substantial uncertainty when compared to the matching procedure utilised by the ATLAS mono-jet group. For example, where the ATLAS group observe a maximum matching scale uncertainty of 5\% for events with $\met$ above 350 GeV, we observe an uncertainty of $\sim30$\%. Lastly, the 95\% CL uncertainties on $\Mstar$ for this work are estimated in a non-identical fashion to that used in the ATLAS analysis. In particular, where the ATLAS limits are estimated using the HistFitter package, we use the approach described in appendix \ref{AppendixB}. As our results are consistently more conservative than those of the ATLAS analysis, we consider this approach acceptable.
+
 %In general, our approach  results in more conservative limits on M$_{*}$ but ultimately removes the hassle of a full histFitter analysis. Importantly, agreement between M$_{*}^{\mbox{\tiny ATLAS,95}}$ and the reproduced nominal\footnote{Nominal in this case explicitly refers to a quantity which does not yet include statistical or systematic uncertainties.} M$_{*}$ values (denoted M$_{*}^{\mbox{\tiny R,N}}$ in Table \ref{M_star_limits_monojet}) is still reasonably high - within \comm{something percent} - validating our signal selection and MC generation procedures.}
 
 %Also note that while the signal samples used for validation of the monojet channel are generated for the processes $pp \rightarrow j\chi\bar{\chi}$ and $pp \rightarrow jj\chi\bar{\chi}$ where $j$ is a final state jet, the signal samples used to constrain the the simplified models discussed in Section \ref{SiM_models} also include the tree-level process $pp \rightarrow \chi \bar{\chi}$. \comm{This approach is taken as...}
@@ -35,15 +36,26 @@ The MC generation and signal selection procedures for the mono-jet channel are v
  \hline
  $M$ [TeV] & $\Mstar^{\tiny \mathrm{ATLAS9}5}$ [GeV] & $\Mstar^{\tiny 95}$ [GeV] & Difference [\%] \\ 
  \hline
- 0.05 & 91 & 84.20 & 7.47 \\%$-$8.08 \\
-%0.1 & 217 & 246.54 & +11.96 \\
-0.3 & 1151 & 1088.87 & 5.40 \\ %$-$5.71 \\
-0.6 & 1868 & 1697.19 & 9.14 \\% $-$10.06 \\
-1 & 2225 & 1986.67 & 10.71 \\ %$-$12.00 \\
-3 & 1349 & 1241.93 & 7.94 \\% $-$8.62 \\
-%6 & 945 & 721.87 & $-$30.91 \\
-10 & 928 & 844.33 & 9.02 \\% $-$9.91 \\
-30 & 914 & 834.56 & 8.69 \\% $-$9.52\\
+%QCUT = 80 GeV and 350 GeV leading jet cut
+% 0.05 & 91 & 84.20 & 7.47 \\%$-$8.08 \\
+%%0.1 & 217 & 246.54 & +11.96 \\
+%0.3 & 1151 & 1088.87 & 5.40 \\ %$-$5.71 \\
+%0.6 & 1868 & 1697.19 & 9.14 \\% $-$10.06 \\
+%1 & 2225 & 1986.67 & 10.71 \\ %$-$12.00 \\
+%3 & 1349 & 1241.93 & 7.94 \\% $-$8.62 \\
+%%6 & 945 & 721.87 & $-$30.91 \\
+%10 & 928 & 844.33 & 9.02 \\% $-$9.91 \\
+%30 & 914 & 834.56 & 8.69 \\% $-$9.52\\
+
+0.05 & 91 & 84.29 & 7.38 \\
+%0.1 & 219 & 273.20 & 24.75 \\
+0.3 & 1151 & 1041.34 & 9.53 \\ 
+0.6 & 1868 & 1535.00 & 17.83 \\
+1 & 2225 & 1731.92 & 22.16 \\ 
+3 & 1349 & 1072.06 & 20.53 \\
+6 & 945 & 769.12 & 18.61 \\
+10 & 928 & 724.33 & 21.95 \\
+30 & 914 & 722.47 & 20.95 \\
 
 %0.05 & 91 & 94.33 & +3.53 \\
 %%0.1 & 217 & 280.57 & +22.66 \\
@@ -57,7 +69,7 @@ The MC generation and signal selection procedures for the mono-jet channel are v
  \hline
  \hline
 \end{tabular}
-\caption{Comparison of the 95\% CL upper limits on $\Mstar$ from this work ($\Mstar^{\tiny 95}$) and from the ATLAS mono-jet analysis ($\Mstar^{\tiny \mathrm{ATLAS,95}}$) \cite{Aad:2015zva}. The values shown in the second and third columns are for the processes $pp \rightarrow j\chi\bar{\chi}$ and $pp \rightarrow jj\chi\bar{\chi}$ for the $s$-channel vector mediator model with $m_{\chi} = $ 50 GeV, $\Gamma = M/8\pi$, $\sqrt{g_{q}g_{\chi}} = 1$ and QCUT = 80 GeV + 300 GeV.  \comm{Last question: can you remind me where the ATLAS limits are quoted from? Just wondering about the lack of decimal points, if they round to integers for a reason, and if we should do the same. - Mia.} \textcolor{purple}{These values were given to me by Johanna and should, in theory, be discernible by eye - or graph reader - from the M$_{*}-M$ plot in the Exotics paper. I don't think it's really possible to get two decimal places as these values are already kind of sketchy.}}
+\caption{Comparison of the 95\% CL upper limits on $\Mstar$ from this work ($\Mstar^{\tiny 95}$) and from the ATLAS mono-jet analysis ($\Mstar^{\tiny \mathrm{ATLAS,95}}$) \cite{Aad:2015zva}. The values shown in the second and third columns are for the processes $pp \rightarrow j\chi\bar{\chi}$ and $pp \rightarrow jj\chi\bar{\chi}$ for the $s$-channel vector mediator model with $m_{\chi} = $ 50 GeV, $\Gamma = M/8\pi$, $\sqrt{g_{q}g_{\chi}} = 1$ and QCUT = 80 GeV.  \comm{Last question: can you remind me where the ATLAS limits are quoted from? Just wondering about the lack of decimal points, if they round to integers for a reason, and if we should do the same. - Mia.} \textcolor{purple}{These values were given to me by Johanna and should, in theory, be discernible by eye - or graph reader - from the M$_{*}-M$ plot in the Exotics paper. I don't think it's really possible to get two decimal places as these values are already kind of sketchy.}}
 \label{M_star_limits_monojet}
 \end{table}
 
