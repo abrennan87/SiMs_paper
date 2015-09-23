@@ -42,6 +42,25 @@ where the sum is over the three $Q_L$ doublets (\comm{does this make sense?}), $
 
 \fi
 
+\subsection{Mass and Coupling Points}  % Moved from section 3
+We choose to study a representative set of dark matter and mediator masses, shown in Table \ref{Mass_coup_points}. All $m_{\chi}-M_{\mathrm{med}}$ combinations are permitted in the sV and sA models; in the tS model $M_{\mathrm{med}}$ should be greater than $m_{\chi}$, to ensure stability of the DM particle. The couplings, $g_{q}$ and $g_{q\chi}$, are set to unity while the DM-mediator coupling, $g_{\chi}$, is allowed to vary from this by up to a factor of five for the $s$-channel models. In all cases, a point in phase space is disregarded if it leads to a mediator width greater than 50\% of the mediator mass, as will be further discussed below. The mediator masses were chosen to cover a broad range of parameter space and to coincide with predominantly three regimes: (near-)degenerate ($M\approx m_{\chi}$), kinematically allowed ($M \geq 2m_{\chi}$), and EFT-like ($\sqrt{\hat{s}} << M$)\footnote{A recent study by Alves et al. found that EFT results do not apply to mediators with a mass less than 2.5 TeV at the LHC during Run I \cite{Alves:2011wf}.}. We also allow for the possibility of a light mediator/heavy WIMP scenario (M $<m_{\chi}$).
+
+\begin{table}
+\centering
+\begin{tabular}{C{3cm} | C{3cm} | C{1.5cm}  C{1.5cm} | C{3cm}}
+\hline
+\hline
+\multirow{2}{*}{$m_{\chi}$ [GeV]} & \multirow{2}{*}{$M_{\mathrm{med}}$ [GeV]} & \multicolumn{2}{c|} {$s$-channel} & $t$-channel \T \B \\ %\cline{3-5}
+& & $g_q$ & $g_{\chi}$ & $g_{q \chi}$ \T \B\\
+\hline
+1, 10, 100, 1000 & 1, 2, 10, 20,  100, 200, 1000, 2000, 20000 & 1 & 0.2, 0.5, 1, 2, 5 & 1 \T \B  \\
+\hline
+\hline
+\end{tabular}
+\caption{Mass and coupling points chosen for the analysis of simplified dark matter models. The mediator masses are primarily representative of three regimes: (near-)degenerate ($M\approx m_{\chi}$), kinematically allowed ($M \geq 2m_{\chi}$), and EFT-like ($\sqrt{\hat{s}} << M$). Coupling values that give a mediator width such that $\Gamma_{\mathrm{med}} > 0.8 \times M_{\mathrm{med}}$ are not considered. For the $t$-channel model, $M_{\mathrm{med}} > m_{\chi}$ is also required.}
+\label{Mass_coup_points}
+\end{table}
+
 \subsection{Width effects}
 
 An important factor when considering simplified models is to ensure the mediator width is treated appropriately, as it impacts both the cross-section calculation and, in some cases, the kinematic behaviour of the model. In previous analyses (ref) it has been common to consider mediators of a fixed width such as $\Gamma = M/8 \pi$  (the minimal width possible with only a single quark helicity coupling to the mediator with $g_q$ = 1), to take advantage of the enhancement in cross section as the width becomes small and on-shell.
@@ -90,7 +109,7 @@ For the sV and sA models in both analysis channels, and the tS model in the mono
 %\end{equation}
 %where uncertainties are ignored for now. This approximation also relies on the kinematic behaviour of the model to remain relatively stable as the coupling varies, where any variation is introduced by the width. To be more explicit about this: the shape of, say, the MET distribution leads fairly directly to an acceptance, which is then converted into a limit on the visible cross section, and then converted to a limit on the coupling, which may be quite different from the coupling value that was used to estimate the MET distribution. If the MET distribution is stable, we could expect similar acceptances for different coupling values, and the process and eq \ref{Xsec_sim_coupling4} are valid. On the other hand, if the MET distribution is heavily dependent on the width/coupling, the limiting value of the coupling as calculated above would produce a quite different MET distribution to that used to calculate the limit, invalidating the equation. The required process then is to create samples with varied couplings and calculate the limit in each case, and repeat until the generated value and the calculated limit converge.
 
-\begin{figure}[!h]
+\begin{figure}[t!]
 \begin{center}
 \includegraphics[width=0.45\textwidth]{figures/SVD_MET.pdf}
 \includegraphics[width=0.45\textwidth]{figures/TSD_MET.pdf}
@@ -98,7 +117,6 @@ For the sV and sA models in both analysis channels, and the tS model in the mono
 \label{MET_SVD_monoZ}
 \end{center}
 \end{figure}
-
 
 %\textcolor{magenta}{This section should include:}
 %\begin{enumerate}
