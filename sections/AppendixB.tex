@@ -1,4 +1,4 @@
-In this appendix we present a summary of the procedure employed to calculate the 95\% confidence level limits on $\Mstar$, \st{$\sigma(pp \rightarrow X + \chi\bar{\chi})$} and $\sqrt{g_{q}g_{\chi}}$ (in the $tS$ model, $\sqrt{g_{q}g_{\chi}}$ becomes $g_{q \chi}$. Note that the following formulae are presented for the observed limits but also apply to the expected limits.
+In this appendix we present a summary of the procedure employed to calculate the 95\% confidence level (CL) limits on the coupling parameter $\sqrt{g_{q}g_{\chi}}$, where this parameter can be replaced with $g_{q \chi}$ for the tS model, and $\Mstar$ in the validation of the mono-jet analysis. \st{Note that the following formulae are presented for the observed limits but also apply to the expected limits.}
 
 \subsection{Nominal Values}
 For each simplified model, the nominal value for the observed limit on the cross-section for the process $pp \rightarrow \mathrm{X} + \chi\bar{\chi}$ is calculated using the formula:
@@ -7,31 +7,39 @@ For each simplified model, the nominal value for the observed limit on the cross
 \label{sigma_nom}
 \sigma_{obs}^{lim}(pp \rightarrow \mathrm{X} + \chi\bar{\chi}) = \frac{N_{obs}}{\mathcal{L}\times\mathcal{A}\times\epsilon}
 \end{equation}
-
-where $N_{obs}$ is \comm{a calculated 95\% CL upper limit on} the number of \st{observed} signal events in the channel and signal region of interest (a model-independent quantity), $\mathcal{L}$ is the integrated luminosity, $\mathcal{A}$ is the acceptance (the fraction of signal events passing the channel/SR-specific selection criteria) and $\epsilon$ is the efficiency of the ATLAS detector for selecting channel/SR-specific signal events. For both X $= (0 + 1 + 2)j$ and X $=Z$, $\mathcal{L}=20.3$ fb$^{-1}$ and $\mathcal{A}\times\epsilon$ is regarded as a single variable.
+where $N_{obs}$ is a calculated 95\% CL upper limit on the number of signal events in the channel and signal region of interest (a model-independent quantity), $\mathcal{L}$ is the integrated luminosity, $\mathcal{A}$ is the acceptance (the fraction of signal events passing the channel/SR-specific selection criteria) and $\epsilon$ is the efficiency of the ATLAS detector for selecting channel/SR-specific signal events. For both X $= (0 + 1 + 2)j$ (\fg{Is this consistent with the 1+2j from earlier??}) and X $=Z$, the total luminosity is 20.3 fb$^{-1}$ and $\mathcal{A}\times\epsilon$ is regarded as a single variable.
 %\bigskip
 
-The nominal value for the observed limit on the suppression scale is then calculated using the equation:
+\comm{Hmm, can we replace $N_{obs}$ with $N_{lim}$ now, if we drop the obs/exp distinction? I think it's a bit misleading.}
+
+The nominal value for the observed limit $Y$, where $Y$ is the suppression scale $\Mstar$ in the validation of the mono-jet analysis, \emph{or} the coupling values $\sqrt{g_q g_{\chi}}$ in the general case, is then calculated using
+
+%\begin{equation}
+%\label{M_*_nom}
+%M_{\star, obs}^{lim} = \Mstar^{gen}\left[\frac{\sigma_{gen}}{\sigma_{obs}^{lim}(pp \rightarrow \mathrm{X} + \chi\bar{\chi})}\right]^{1/4}
+%\end{equation}
 
 \begin{equation}
-\label{M_*_nom}
-M_{\star, obs}^{lim} = \Mstar^{gen}\left[\frac{\sigma_{gen}}{\sigma_{obs}^{lim}(pp \rightarrow \mathrm{X} + \chi\bar{\chi})}\right]^{1/4}
+\label{nom_lim}
+Y_{obs}^{lim} = Y^{gen} \left ( \frac{\sigma_{obs}^{lim}}{\sigma^{gen}} \right)^{\frac{1}{4}} \, \, .
 \end{equation}
 
-where $\Mstar^{gen}$ is the \st{theoretical} \comm{input} suppression scale and $\sigma_{gen}$ is the \st{theoretical} \comm{generated} cross-section.
+\comm{Do we need the obs? Maybe we can ditch the obs/exp discussion except for a line earlier about choosing SR where the best expected limit exists, where the expected limit is calculated assuming exactly the expected background is observed.}
+
+%where $\Mstar^{gen}$ is the \st{theoretical} \comm{input} suppression scale and $\sigma_{gen}$ is the \st{theoretical} \comm{generated} cross-section.
 %\bigskip
 
-Similarly, the nominal value for the limit on the observed coupling constants is calculated using the equation:
+%Similarly, the nominal value for the limit on the observed coupling constants is calculated using the equation:
 
-\begin{equation}
-\label{coupling_nom}
-(\sqrt{g_{q}g_{\chi}})_{obs}^{lim} = (\sqrt{g_{q}g_{\chi}})^{gen}\left[\frac{\sigma_{obs}^{lim}(pp \rightarrow \mathrm{X} + \chi\bar{\chi})}{\sigma_{gen}}\right]^{1/4}
-\end{equation}
+%\begin{equation}
+%\label{coupling_nom}
+%(\sqrt{g_{q}g_{\chi}})_{obs}^{lim} = (\sqrt{g_{q}g_{\chi}})^{gen}\left[\frac{\sigma_{obs}^{lim}(pp \rightarrow \mathrm{X} + \chi\bar{\chi})}{\sigma_{gen}}\right]^{1/4}
+%\end{equation}
 
-where $(\sqrt{g_{q}g_{\chi}})^{gen}$ is the product of the theoretical coupling constants. Note that $(\sqrt{g_{q}g_{\chi}})^{gen}$ is always equal to $1$ for the t-channel scalar mediator model.
+%where $(\sqrt{g_{q}g_{\chi}})^{gen}$ is the product of the theoretical coupling constants. Note that $(\sqrt{g_{q}g_{\chi}})^{gen}$ is always equal to $1$ for the t-channel scalar mediator model.
 
 \subsection{Uncertainty Estimation}
-Our nominal limits on $\Mstar$, $\sigma(pp \rightarrow{X} + \chi\bar{\chi})$ and $\sqrt{g_{q}g_{\chi}}$ rely on both $\sigma_{gen}$ and $\mathcal{A}\times\epsilon$ and so are subject to systematic uncertainties which derive from our choice of MC generation procedure. For our MC samples, there are three key sources of systematic uncertainty: the factorisation and renormalisation scales, the strong coupling constant ($\alpha_{s}$) and the parton distribution function (PDF). The uncertainty associated with these parameters is estimated as follows.
+Our nominal limits on $\Mstar$, $\sigma(pp \rightarrow{X} + \chi\bar{\chi})$ and $\sqrt{g_{q}g_{\chi}}$ rely on both $\sigma_{gen}$ and $\mathcal{A}\times\epsilon$ and so are subject to systematic uncertainties which derive from our choice of MC generation procedure. For our MC samples, there are three key sources of systematic uncertainty: the factorisation and renormalisation scales, the strong coupling constant ($\alpha_{s}$) and the parton distribution function (PDF). (\comm{Can we order these from largest effect to smallest? Also, should we say something about the actual choice of generator here? And what about LO vs NLO?}) The uncertainty associated with these parameters is estimated as follows.
 %\bigskip
 
 %first for the theoretical cross-section, $\sigma_{gen}$ and then for the acceptance, $\mathcal{A}$, which is defined as:
@@ -44,16 +52,7 @@ Our nominal limits on $\Mstar$, $\sigma(pp \rightarrow{X} + \chi\bar{\chi})$ and
 %The uncertainty on 
 %
 %\subsection{Theoretical cross-section, $\sigma_{gen}$}
-Firstly, the factorisation and renormalisation default scales are varied simultaneously by factors of 2 (`up') and 0.5 (`down'). The uncertainty on the theoretical cross-section, $\Delta \sigma_{gen}$, is then taken to be the average change in $\sigma_{gen}$ resulting from these up and down variations.
-%\bigskip
-
-The systematic effects of the strong coupling constant and the PDF are difficult to separate and so are treated in tandem. We assume that the systematic uncertainty introduced by $\alpha_{s}$ at matrix-element level is negligible when compared to the PDF uncertainties. \st{Similarly, we assume that the PDF effects are negligible when compared to the $\alpha_{s}$ systematic uncertainties at the parton-shower level.} (\comm{Not necessary to say this, since we do vary PDF + tune at Pythia level anyway.}) This approach is was demonstrated to be valid in Ref. \cite{CERN-THESIS-2015-038}. \st{While there is no way to change the value of $\alpha_{s}$ in \MG,} Pythia allows access to `tunes' which \comm{can be used to perform this function (better way to say this?)}. Hence we estimate the uncertainty on $\Delta \sigma_{gen}$ by changing the choice of PDF and tune simultaneously. The nominal choices of PDF and tune are varied `up' to NNPDF2.1LO PDF + Monash tune, and `down' to CTEQ6L1 PDF and ATLAS UE AU2-CTEQ6L1 tune.
-
-\comm{Put discussion of matching scale systematic here!}
-
-These systematic uncertainty sources are summarised in table~\ref{tab:syst_unc}. The uncertainty on some parameter $P$, arising from each systematic source, is denoted $\left ( \frac{\Delta P}{P} \right)_{\mathrm{source}}$ and is obtained by varying each source up and down and calculating the average difference from the nominal value of $P$.
-
-%\bigskip
+Firstly, the factorisation and renormalisation default scales are varied simultaneously by factors of 2 (`up') and 0.5 (`down'). The systematic effects of the strong coupling constant and the PDF are difficult to separate and so are treated in tandem. We assume that the systematic uncertainty introduced by $\alpha_{s}$ at matrix-element level is negligible when compared to the PDF uncertainties, as demonstrated to be valid in Ref. \cite{CERN-THESIS-2015-038}. The variation of $\alpha_{s}$ in conjunction with a PDF is done with the use of specific tunes in \PYTHIA, which we change simultaneously with the PDF choice to estimate the uncertainty on $\Delta \sigma_{gen}$. The nominal choices of PDF and tune are varied `up' to NNPDF2.1LO PDF + Monash tune, and `down' to CTEQ6L1 PDF and ATLAS UE AU2-CTEQ6L1 tune. \comm{Put discussion of matching scale systematic here!} These systematic uncertainty sources are summarised in table~\ref{tab:syst_unc}.
 
 \begin{table}
 \centering
@@ -71,28 +70,71 @@ sources & & renormalisation scales & (mono-jet only) \B \\
 \hline
 \hline
 \end{tabular}
-\caption{The sources of systematic uncertainty considered in this analysis. Each point in phase space is varied up or down by one of these sources, and the systematic uncertainty is taken to be the average difference in $\mathcal{A}'$ from the nominal value.}
+\caption{The sources of systematic uncertainty considered in this analysis. Each point in phase space is varied up or down by one of these sources, and the systematic uncertainty is taken to be the average difference in $\mathcal{A}'$ from the nominal value. \comm{How about including a line for the nominal here?}}
 \label{tab:syst_unc}
 \end{table}
 
+Following eqns. \ref{sigma_nom} and \ref{nom_lim}, the relative uncertainty in the limit on $\sqrt{g_q g_{\chi}}$ (or on $\Mstar$) is given by
 
-
-For $\sigma_{gen}$, the uncertainty is then calculated using the formula:
 \begin{equation}
-\label{uncertainty_sigma_gen}
-\left(\frac{\Delta \sigma_{gen}}{\sigma_{gen}}\right)^{2} = \left(\frac{\Delta \sigma_{gen}}{\sigma_{gen}}\right)_{\mbox{\footnotesize scale}}^{2} + \left(\frac{\Delta \sigma_{gen}}{\sigma_{gen}}\right)_{\mbox{\footnotesize PDF+tune}}^{2}
+\label{unc_lim}
+\frac{\Delta \sqrt{g_q g_{\chi}}}{\sqrt{g_q g_{\chi}}} = \frac{1}{4} \sqrt{\left( \frac{\Delta \sigma_{gen}}{\sigma_{gen}} \right)^2 + \left( \frac{\Delta (\mathcal{A} \times \epsilon)}{\mathcal{A} \times \epsilon} \right)^2 + \left( \frac{\Delta \mathcal{L}}{\mathcal{L}} \right)^2}
 \end{equation}
 
-where $\sigma_{gen}$ is the nominal theoretical cross-section, $(\Delta \sigma_{gen})_{\mbox{\footnotesize scale}}$ is the uncertainty on $\sigma_{gen}$ due to the factorisation and renormalisation scales and $(\Delta \sigma_{gen})_{\mbox{\footnotesize PDF+tune}}$ is the uncertainty on $\sigma_{gen}$ due to the PDF and strong coupling constant.
+For $P = \sigma_{gen}, \mathcal{A} \times \epsilon$, the relative error $\Delta P / P$ is found by summing in quadrature the separate sources of uncertainty, according to
+
+\begin{equation}
+\label{unc_P}
+\left ( \frac{\Delta P}{P} \right )^2_{\mathrm{total}} = \left ( \frac{\Delta P}{P} \right )^2_{\mathrm{scale}} + \left ( \frac{\Delta P}{P} \right )^2_{\mathrm{PDF+tune}} + \left ( \frac{\Delta P}{P} \right )^2_{\mathrm{matching}}
+\end{equation}
+where $\Delta P$ is taken as the average distance from the nominal value $P$ when the systematic source is varied up and down. The statistical uncertainty is taken into account rather conservatively by using the 95\%CL \emph{lower} limit on $\mathcal{A} \times \epsilon$ as calculated with the Wald approximation, i.e. $\mathcal{A} \times \epsilon \rightarrow (\mathcal{A} \times \epsilon) - \Delta(\mathcal{A} \times \epsilon)$. The uncertainty on the luminosity is less than 3\%, so is considered to be negligible in comparison to other systematic sources.
+
+\bigskip
+\bigskip
+
+\fg{OLD STUFF HERE}
+
+These systematic uncertainty sources are summarised in table~\ref{tab:syst_unc}. The uncertainty on some parameter $P$ (\comm{is `variable' a better word here?}), arising from each systematic source, is denoted $\left ( \frac{\Delta P}{P} \right)_{\mathrm{source}}$ and is obtained by varying each source up and down and calculating the average difference from the nominal value of $P$. The fractional uncertainty on $\sigma_{gen}$ is then calculated by summing in quadrature the fractional uncertainties from each systematic source.
+\comm{Actually, I'm not sure about this bit - I removed the equation cos I thought it isn't really necessary (ie can be explained in a simple sentence, and we've got several similar equations coming up), but then defining $P$ etc becomes obsolete.}
+
 %\bigskip
 
-\textcolor{magenta}{Should we say something here about using only leading order predictions? For example, should we comment on the uncertainty associated with not including NLO corrections to the cross-section?} %It is important to note that a complete examination of the uncertainties associated
+%\begin{table}
+%\centering
+%\begin{tabular}{c|c|c|c}
+%\hline
+%\hline
+%main systematic & \multirow{2}{*}{PDF/tune} & factorisation and & matching scale \T \\
+%sources & & renormalisation scales & (mono-jet only) \B \\
+%\hline
+%\multirow{2}{*}{variation `up'} & NNPDF2.1LO + & \multirow{2}{*}{2} & \multirow{2}{*}{??} \T \\
+%& Monash tune & & \B \\
+%& & & \\
+%\multirow{2}{*}{variation `down'} & CTEQ6L1 + & \multirow{2}{*}{0.5} & \multirow{2}{*}{??} \T \\
+%& ATLAS UE AU2-CTEQ6L1 & & \B \\
+%\hline
+%\hline
+%\end{tabular}
+%\caption{The sources of systematic uncertainty considered in this analysis. Each point in phase space is varied up or down by one of these sources, and the systematic uncertainty is taken to be the average difference in $\mathcal{A}'$ from the nominal value.}
+%\label{tab:syst_unc}
+%\end{table}
+
+%For $\sigma_{gen}$, the uncertainty is then calculated using the formula:
+%\begin{equation}
+%\label{uncertainty_sigma_gen}
+%\left(\frac{\Delta \sigma_{gen}}{\sigma_{gen}}\right)^{2} = \left(\frac{\Delta \sigma_{gen}}{\sigma_{gen}}\right)_{\mbox{\footnotesize scale}}^{2} + \left(\frac{\Delta \sigma_{gen}}{\sigma_{gen}}\right)_{\mbox{\footnotesize PDF+tune}}^{2}
+%\end{equation}
+
+%where $\sigma_{gen}$ is the nominal theoretical cross-section, $(\Delta \sigma_{gen})_{\mbox{\footnotesize scale}}$ is the uncertainty on $\sigma_{gen}$ due to the factorisation and renormalisation scales and $(\Delta \sigma_{gen})_{\mbox{\footnotesize PDF+tune}}$ is the uncertainty on $\sigma_{gen}$ due to the PDF and strong coupling constant.
+%\bigskip
+
+%\textcolor{magenta}{Should we say something here about using only leading order predictions? For example, should we comment on the uncertainty associated with not including NLO corrections to the cross-section?} %It is important to note that a complete examination of the uncertainties associated
 %with each simplified model and each mass and coupling combination was not necessary.
 
-\comm{Good question, can Thomas comment? Tom+Karl paper seems to suggest the impact is negligible? - Amelia}
+%\comm{Good question, can Thomas comment? Tom+Karl paper seems to suggest the impact is negligible? - Amelia}
 %\bigskip
 
-The uncertainty on the acceptance $\times$ efficiency is estimated using a similar approach but with two key differences. Firstly, the statistical uncertainty (taken to be the 95\% confidence interval on $\mathcal{A}\times\epsilon$ as calculated using the Wald approximation) is subtracted from the nominal value of $\mathcal{A}\times\epsilon$. Equation \ref{uncertainty_sigma_gen} is then applied to this new variable (denoted $\mathcal{A}'$). Secondly, the matching scale between \MG\mbox{ }and \PYTHIA is included when estimating the uncertainty on $\mathcal{A}'$ for the monojet channel. Following the approach utilised by the ATLAS group \cite{CERN-THESIS-2015-038}, conservative matching scale uncertainties of 10\% for events with $\met <$ 350 GeV and 60\% for events with $\met >$ 350 GeV were used for the validation (\comm{and for the results?}).
+The uncertainty on $\mathcal{A} \times \epsilon$ is estimated using a similar approach but with two key differences. Firstly, the statistical uncertainty (taken to be the 95\% confidence interval on $\mathcal{A}\times\epsilon$ as calculated using the Wald approximation) is subtracted from the nominal value. Equation \ref{uncertainty_sigma_gen} is then applied to this new variable (denoted $\mathcal{A}'$). Secondly, the matching scale between \MG\mbox{ }and \PYTHIA is included when estimating the uncertainty on $\mathcal{A}'$ for the monojet channel. Following the approach utilised by the ATLAS group \cite{CERN-THESIS-2015-038}, conservative matching scale uncertainties of 10\% for events with $\met <$ 350 GeV and 60\% for events with $\met >$ 350 GeV were used for the validation (\comm{and for the results?}).
  
 %As in the case of the factorisation and renormalisation scales, the matching scale uncertainty is determined by varying the value of the qcut up by a factor of two (to a value of $m_{\chi}/2$) and down by a factor of two (to a value of $m_{\chi}/8$). The uncertainty on $\mathcal{A}'$ is then quantified as the average change in $\mathcal{A}'$ resulting from these up and down variations. 
 \comm{The matching scale uncertainty is ignored at the theoretical cross-section level because...}
