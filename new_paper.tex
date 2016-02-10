@@ -14,6 +14,7 @@
 \usepackage{soul}		% for strikeouts, useful when editing TODO: can be removed from submitted manuscript
 \usepackage{array}      	% needed for defining new column type
 \usepackage{xcolor}
+\usepackage{amsmath}
 %\usepackage{parskip}		% used to remove paragraph indentation
 
 % tikz definitions
@@ -43,7 +44,7 @@ antifermion/.style={draw=black, postaction={decorate}, decoration={markings, mar
 \newcommand\B{\rule[-1.2ex]{0pt}{0pt}} 				% Bottom strut - see above
 \newcommand{\met}{E_{\mathrm{T}}^{\mathrm{miss}}}		% shorthand for missing ET
 \newcommand{\metvec}{\vec{E}_{\mathrm{T}}^{\mathrm{miss}}}	% shorthand for missing ET vector
-\newcommand{\mDM}{m_{\mathrm{DM}}}
+\newcommand{\mDM}{m_{\mathrm{DM}}}  % Should this be m_{\chi} instead??
 \newcommand{\Mmed}{M_{\mathrm{med}}}
 \newcommand{\Mstar}{M_{\star}}					% shorthand for M*
 
@@ -74,7 +75,7 @@ antifermion/.style={draw=black, postaction={decorate}, decoration={markings, mar
 
 \abstract{Abstract...}
 
-\begin{document} 
+\begin{document}
 \maketitle
 \flushbottom
 
@@ -94,27 +95,27 @@ Amelia, Johanna and Thomas: Anything in \textcolor{red}{red} (\textcolor{magenta
 \end{flushleft}
 \fi
 
-\section{Introduction} 
+\section{Introduction}
 \label{sec:sec1}
 \input{sections/Introduction.tex}
 
-\section{Simplified models of dark matter} 
+\section{Simplified models of dark matter}
 \label{sec:sec2}
 \input{sections/Models.tex}
 
-\section{Recasting mono-X constraints} 
+\section{Recasting mono-X constraints}
 \label{sec:sec3}
 \input{sections/Reanalysis.tex}
 
-\section{Limits on $\sigma(pp \rightarrow X + \chi\bar{\chi})$ and $\sqrt{g_{q}g_{\chi}}$} 
+\section{Limits on the coupling $\sqrt{g_{q}g_{\chi}}$}
 \label{sec:sec4}
-%\input{sections/Results.tex} % Commented out for now as repetitive plots are repetitive
+\input{sections/Results.tex} % Commented out for now as repetitive plots are repetitive
 
-\section{Conclusion} 
+\section{Conclusion}
 \label{sec:sec5}
 \input{sections/Conclusion.tex}
 
-\section{Acknowledgements} 
+\section{Acknowledgements}
 \label{sec:sec6}
 %\input{sections/Acknowledgements.tex} % Has this file been added to github?
 
@@ -172,7 +173,7 @@ Amelia, Johanna and Thomas: Anything in \textcolor{red}{red} (\textcolor{magenta
 % \DeclareMathOperator{\Sample}{Sample}
 %\let\vaccent=\v % rename builtin command \v{} to \vaccent{}
 %\renewcommand{\v}[1]{\ensuremath{\mathbf{#1}}} % for vectors
-%\newcommand{\gv}[1]{\ensuremath{\mbox{\boldmath$ #1 $}}} 
+%\newcommand{\gv}[1]{\ensuremath{\mbox{\boldmath$ #1 $}}}
 % for vectors of Greek letters
 %\newcommand{\e}[1]{\ensuremath{\times 10^{#1}}}
 %\newcommand{\uv}[1]{\ensuremath{\mathbf{\hat{#1}}}} % for unit vector
@@ -181,12 +182,12 @@ Amelia, Johanna and Thomas: Anything in \textcolor{red}{red} (\textcolor{magenta
 %\let\underdot=\d % rename builtin command \d{} to \underdot{}
 %\renewcommand{\d}[2]{\frac{d #1}{d #2}} % for derivatives
 %\newcommand{\dd}[2]{\frac{d^2 #1}{d #2^2}} % for double derivatives
-%\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}} 
+%\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
 % for partial derivatives
-%\newcommand{\pdd}[2]{\frac{\partial^2 #1}{\partial #2^2}} 
+%\newcommand{\pdd}[2]{\frac{\partial^2 #1}{\partial #2^2}}
 % for double partial derivatives
 %\newcommand{\pdn}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
-%\newcommand{\pdh}[1]{\frac{\partial}{\partial #1}}   %things like d/dt, 
+%\newcommand{\pdh}[1]{\frac{\partial}{\partial #1}}   %things like d/dt,
 %\newcommand{\eval}[1]{\left< #1 \right>}
 %\newcommand{\pdc}[3]{\left( \frac{\partial #1}{\partial #2}
 % \right)_{#3}} % for thermodynamic partial derivatives
