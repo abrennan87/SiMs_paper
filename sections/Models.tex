@@ -37,7 +37,9 @@ In this model, the mediator which we call $\phi$ necessarily has colour charge, 
 \label{L_int_tS}
 \mathcal{L}_{int} = \sum_{Q} g_{q \chi} \bar{Q} P_R \phi \chi + {\rm h.c.},
 \end{equation}
-where the sum is over the three $Q_L$ doublets (\comm{does this make sense?}), $g_{q \chi}$ is the scalar coupling of the incoming quark, $\phi$ and $\chi$, and $P_R$ is the usual chiral projection operator. \question{Have you included the projection operator in the code? - Tom}
+where the sum is over the three $Q_L$ doublets, $g_{q \chi}$ is the scalar coupling of the incoming quark, $\phi$ and $\chi$, and $P_R$ is the usual chiral projection operator.
+
+% THOMAS!! Do we need to rewrite the Lagrangian for TSD? ie is this consistent with our UFO?
 
 \iffalse
 \hspace{1cm}\textcolor{blue}{\st{When constraining the above models using the collider production cross-section for the process }$\cancel{pp \rightarrow X + \bar{\chi}\chi}$\st{ it is also important to consider the impact of the mediator decay width, }$\cancel{\Gamma}$ \cite{}\st{. The reason being that }$\cancel{\sigma\left(pp \rightarrow X + \bar{\chi}\chi\right)}$\st{ scales as:}}
@@ -60,7 +62,7 @@ We choose to study a representative set of dark matter and mediator masses, show
 \multirow{2}{*}{$m_{\chi}$ [GeV]} & \multirow{2}{*}{$M_{\mathrm{med}}$ [GeV]} & \multicolumn{2}{c|} {$s$-channel} & $t$-channel \T \B \\ %\cline{3-5}
 & & $g_q$ & $g_{\chi}$ & $g_{q \chi}$ \T \B\\
 \hline
-1, (3), 10, (30), 100, (300), 1000 & 1, 2, 10, 20,  100, 200, 1000, 2000 & 1 & 0.2, 0.5, 1, 2, 5 & 1 \T \B  \\
+1, (3), 10, (30), 100, (300), 1000 & 1, 2, 10, 20,  100, 200, 1000, 2000, 20 000 & 1 & 0.2, 0.5, 1, 2, 5 & 1 \T \B  \\
 \hline
 \hline
 \end{tabular}
@@ -100,7 +102,7 @@ The expressions for width above are valid where that width is smaller than the m
 \begin{equation}
   \sigma \propto
   \begin{cases}
-      g_q^2 g_{\chi}^2 / \Gamma & \mathrm{ if } \Mmed > 2 \mDM\\
+      g_q^2 g_{\chi}^2 / \Gamma & \mathrm{ if } \Mmed \geq 2 \mDM\\
       g_q^2 g_{\chi}^2 & \mathrm{ if } \Mmed < 2 \mDM
   \end{cases}
   \label{eq:sigma_propto_couplings_schan}
@@ -114,7 +116,7 @@ in the sV and sA models, and
 in the tS model. We find that this requirement fails for a subset of the phase space in the sV and sA models\footnote{Note that the $t$-channel widths are consistently narrower than their $s$-channel counterparts,  as there are six independent mediators compared to the single $s$-channel model mediator.}, and therefore do not include such points in this work.
 The impact of varying the mediator width is demonstrated in Fig~\ref{MET_SVD_monoZ}. For the sV and tS models, we plot a simplified $\met$ distribution, as a proxy for the full selection in each analysis, for two and three demonstrative mass points and couplings respectively.  The strength of the coupling directly impacts the width of the mediator in each case. In the mono-$Z$ channel\footnote{In this discussion, the mono-$W/Z$ channel can be assumed to follow the same logic as for the mono-$Z$ channel.}, the $\met$ distribution is predominantly independent of the mediator width, and this is also true for the sV model in the mono-jet channel. However, there is a clear variation in kinematic behaviour in the tS model in the mono-jet channel, which can be attributed to additional diagrams with a gluon in the initial state, accessible in the mono-jet channel, which allow the mediator to go on-shell. In this scenario, when the resulting quark and DM particle are both small compared to the mediator mass, they share equally its energy leading to a peak in the $\met$ distribution at approximately half the mediator mass.
 
-In the cases where the model behaviour is independent of the width, we can greatly simplify the calculations by assuming the effect of selection cuts in each channel is constant for each masspoint; that is, independent of the couplings. In this case, a simple rearrangement of eqns.~\ref{eq:sigma_propto_couplings_schan} and \ref{eq:sigma_propto_couplings_tchan} allows us to obtain upper limits on the model couplings (see App.~\ref{AppendixB} for further details of this calculation).
+In the cases where the model behaviour is independent of the width, we can greatly simplify the calculations by assuming the effect of selection cuts in each channel is constant for each masspoint; that is, independent of the couplings. In this case, a simple rearrangement of eqns.~\ref{eq:sigma_propto_couplings_schan} and \ref{eq:sigma_propto_couplings_tchan} allows us to obtain upper limits on the model couplings (see App.~\ref{Appendix_limitsetting} for further details of this calculation).
 
 Studies of the tS model within the mono-jet channel, where scaling the coupling can lead to changed kinematic behaviour, have been performed elsewhere [Papucci], and require the use of iterating the couplings during sample generation. This, combined with the challenges of including differing orders of $\alpha_s$ in the mono-jet channel, make the generation process highly computationally expensive compared to the mono-$Z$ and mono-$W/Z$ channels, and so we do not consider that particular case here.
 
