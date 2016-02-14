@@ -1,8 +1,8 @@
-The mono-X + $\met$ (abbreviated mono-X) signal is a popular collider signal in the search for new physics, particularly in the search for dark matter. Since WIMPs are not expected to interact with detector material, they appear as missing transverse momentum, $\vec{p}_{\mathrm{T}}^{\mathrm{miss}}$, when balanced against a visible object that is radiated from the initial or intermediate state. 
-%\st{It is predicted by an assorted collection of new physics models, including unparticle physics models }\cite{CMS-PAS-EXO-12-048}\st{ and the Arkani-Hamed, Dimopoulos, and Dvali (ADD) model of large extra spatial dimensions }\cite{ATLAS-CONF-2012-147}. 
-For the $s$-channel simplified models discussed in Section \ref{sec:sec2}, a SM particle, X, is emitted from one of a pair of intial-state partons (shown in Figure \ref{schannel_sig_phen}). The case where X is radiated from the mediator - a process known as virtual internal Bremsstrahlung - is only possible if the SM-dark matter interaction occurs via the $t$-channel (as shown in Figure \ref{tchannel_sig_phen}). 
+The mono-X + $\met$ (abbreviated mono-X) signal is a popular collider signal in the search for new physics, particularly in the search for dark matter. Since WIMPs are not expected to interact with detector material, they appear as missing transverse momentum, $\vec{p}_{\mathrm{T}}^{\mathrm{miss}}$, when balanced against a visible object that is radiated from the initial or intermediate state.
+%\st{It is predicted by an assorted collection of new physics models, including unparticle physics models }\cite{CMS-PAS-EXO-12-048}\st{ and the Arkani-Hamed, Dimopoulos, and Dvali (ADD) model of large extra spatial dimensions }\cite{ATLAS-CONF-2012-147}.
+For the $s$-channel simplified models discussed in Section \ref{sec:sec2}, a SM particle, X, is emitted from one of a pair of intial-state partons (shown in Figure \ref{schannel_sig_phen}). The case where X is radiated from the mediator - a process known as virtual internal Bremsstrahlung - is only possible if the SM-dark matter interaction occurs via the $t$-channel (as shown in Figure \ref{tchannel_sig_phen}).
 %\st{In both cases, the parton and Z boson are the SM particles most likely to be emitted \question{is Pr(W)$>$Pr(Z)?}}\cite{Kumar:2013iva}. \st{Hence, this paper will focus on thre detection channels: monojet, mono-Z and mono-W.}
-For all models, emission of a parton is the most likely scenario at the LHC owing to the strength of the strong coupling. Hence we focus on the mono-jet channel as it is expected to provide the strongest limits. Emission of $Z$ and $W$ bosons or photons is also possible however, and may be chosen for study over jet processes to take advantage of the relative simplicity/cleanliness (\comm{better word??}) of leptons compared to jets. As such, we also include the mono-$Z(\rightarrow \ell^+ \ell^-)$ channel for comparison.
+For all models, emission of a parton is the most likely scenario at the LHC owing to the strength of the strong coupling. Hence we focus on the mono-jet channel as it is expected to provide the strongest limits. Emission of $Z$ and $W$ bosons or photons is also possible however, and may be chosen for study over jet processes to take advantage of the relative simplicity of leptons compared to jets. As such, we also include the mono-$Z(\rightarrow \ell^+ \ell^-)$ channel for comparison. Finally, we extend this work by including the hadronically-decaying mono-$W/Z$ channel for comparison.
 
 %previously had a footnote: It is worth noting here that the mono-$W$ channel has previously been chosen for its apparent ability to distinguish a case where $u$- and $d$-type quarks couple with opposite sign to the new physics sector \cite{}\comm{(Tait)}. However, during the preparation of this paper this has been shown to be an unphysical scenario \cite{}\comm{(Bell, Leane)}
 
@@ -10,313 +10,118 @@ For all models, emission of a parton is the most likely scenario at the LHC owin
 %, which may then enhance the limit in combination with monojet processes.}
 %\bigskip
 
-The procedure for recasting existing mono-X constraints as simplified model constraints is straightforward. Firstly, signal events are simulated as described in Section \ref{signal_generation}. The event selection criteria of the mono-X analysis of interest is then reproduced and applied to the simulated signal samples. Events surviving the selection criteria are counted to determine both the likelihood of a dark matter event occurring (refered to as the acceptance, $\mathcal{A}$) and the probability of detecting said event (refered to as the efficiency, $\epsilon$). These quantities are then used in combination with channel-specific model-independent limits on new physics events to exclude a given model, masspoint and/or coupling. For a comprehensive description of the recasting procedure, see appendix \ref{AppendixB}.
+The procedure for recasting existing mono-X constraints as simplified model constraints is straightforward. Firstly, signal events are simulated as described in Section \ref{signal_generation}. The event selection criteria of the mono-X analysis of interest is then reproduced and applied to the simulated signal samples. Events surviving the selection criteria are counted to determine both the likelihood of a dark matter event occurring (referred to as the acceptance, $\mathcal{A}$) and the probability of detecting said event (refered to as the efficiency, $\epsilon$). These quantities are then used in combination with channel-specific model-independent limits on new physics events to limit the parameter phase space of a given model.
+For a comprehensive description of the recasting procedure, see appendix \ref{Appendix_limitsetting}.
 %\bigskip
 
-In this paper, monojet constraints are derived from a search for new phenomena conducted by the ATLAS Collaboration using $pp$ collisions at $\sqrt{s}=$ 8 TeV as described in Ref. \cite{Aad:2015zva}. Similarly, the mono-$Z$ constraints are derived from an ATLAS dark matter search originally optimised for the D1, D5 and D9 effective operators \cite{Aad:2014monoZlep}. These analyses are described in further detail in Sections \ref{monojet_constraints} and \ref{monoZ_constraints} respectively.
+In this paper, mono-jet constraints are derived from a search for new phenomena conducted by the ATLAS Collaboration using $pp$ collisions at $\sqrt{s}=$ 8 TeV as described in Ref. \cite{Aad:2015zva}. Similarly, the leptonic mono-$Z$ and hadronic mono-$W/Z$ constraints are derived from ATLAS dark matter searches originally optimised for the D1, D5 and D9 effective operators \cite{Aad:2014monoZlep, ATLASmonoWZ}. These analyses are described in further detail in Sections \ref{monojet_constraints}, \ref{monoZ_constraints} and \ref{monoWZ_constraints} respectively.
 
 %\comm{We should put references to all the papers here! - Amelia}
 
-\begin{figure}[ht!]
-\begin{center}
-\begin{subfigure}[b]{0.45\textwidth}
-\centering
-\begin{tikzpicture}
-\draw[fermion] (-1.5,1.5)node[left]{$q$} --(-0.75,0.75);
-%\draw[dashed] (-0.75,0.75) -- (0,1.5)node[right]{$j$}; %\draw[dashed] (-0.75,0.75) -- (0,1.5)node[right]{X};
-\draw[gluon] (-0.75,0.75) -- (0,1.5)node[right]{$g$};
-\draw[fermion] (-0.75,0.75) -- (0,0);
-\draw[antifermion] (-1.5,-1.5)node[left]{$\bar{q}$} --(0,0);
-\draw[fill] (0,0) circle [radius=0.0]node[left]{$g_{q}\mbox{ }$};
-\draw[photon] (0,0) --node[above]{$\xi$} (2,0);
-\draw[fermion] (2,0) -- (3.5,1.5)node[right]{$\chi$};
-\draw[antifermion] (2,0) --(3.5,-1.5)node[right]{$\bar{\chi}$};
-\draw[fill] (2,0) circle [radius=0.0]node[right]{$\mbox{ }g_{\chi}$};
-\end{tikzpicture}
-\caption{}
-\label{Signal_phen_sa}
-\end{subfigure} \hspace{0.1cm}
-%\begin{subfigure}[b]{0.45\textwidth}		%% removed this as I think the incoming quark should be a gluon, and this turns into fig (d)
-%\centering
-%\begin{tikzpicture}
-%\draw[fermion] (-1.5,1.5)node[left]{$q$} --(0,0);
-%\draw[antifermion] (-1.5,-1.5)node[left]{$\bar{q}$} --(0,0);
-%\draw[fill] (0,0) circle [radius=0.05]node[left]{$g_{q'}\mbox{ }$};
-%\draw[fermion] (0,0) --node[above]{$q$} (2,0);
-%\draw[dashed] (2,0) -- node[above]{$\xi\mbox{\textcolor{white}{m}}$}(2.75,0.75);
-%\draw[fermion] (2.75,0.75) -- (3.5,1.5)node[right]{$\chi$};
-%\draw[antifermion] (2.75,0.75) --(3.5,0)node[right]{$\bar{\chi}$};
-%\draw[fill] (2,0) circle [radius=0.05]node[right]{$\mbox{ }g_{q}$};
-%\draw[antifermion] (2,0) --(3.5,-1.5)node[right]{$q$};
-%\draw[fill] (2.75,0.75) circle [radius=0.05]node[right]{$\mbox{\textcolor{white}{\tiny m}}g_{\chi}$};
-%\end{tikzpicture}
-%\caption{}
-%\label{Signal_phen_sb}
-%\end{subfigure}
-%\begin{subfigure}[b]{0.5\textwidth}
-%\centering
-%\begin{tikzpicture}
-%\draw[fermion] (-1.5,1.5)node[left]{$q$} --(-0.75,0.75);
-%\draw[dashed] (-0.75,0.75) -- (0,1.5)node[right]{X};
-%\draw[fermion] (-0.75,0.75) -- (0,0);
-%\draw[fermion] (-1.5,-1.5)node[left]{$\bar{q}'$} --(0,0);
-%\draw[fill] (0,0) circle [radius=0.05]node[left]{$g_{q'}\mbox{ }$};
-%\draw[dashed] (0,0) --node[above]{$\eta$} (2,0);
-%\draw[fermion] (2,0) -- (3.5,1.5)node[right]{$\chi$};
-%\draw[fermion] (2,0) --(3.5,-1.5)node[right]{$\bar{\chi}$};
-%\draw[fill] (2,0) circle [radius=0.05]node[right]{$\mbox{ }g_{\chi}$};
-%\end{tikzpicture}
-%\caption{}
-%\label{Signal_phen_b}
-%\end{subfigure}\vspace{0.2cm}
-%\centering
-%\begin{subfigure}[b]{0.45\textwidth}		%% removed as the mediator shouldn't couple to a pair of gluons
-%\centering
-%\begin{tikzpicture}
-%\draw[gluon] (-1.5,1.5)node[left]{$g$} --(0,0); %-0.75,0.75);
-%\draw[dashed] (-0.75,0.75) -- (0,1.5)node[right]{$j$};
-%%\draw[gluon] (-0.75,0.75) -- (0,0);
-%\draw[gluon] (-1.5,-1.5)node[left]{$g$} --(0,0);
-%\draw[fill] (0,0) circle [radius=0.05]node[left]{$g_{q'}\mbox{ }$};
-%\draw[photon] (0,0) --node[above]{$\xi$} (2,0);
-%\draw[fermion] (2,0) -- (3.5,1.5)node[right]{$\chi$};
-%\draw[antifermion] (2,0) --(3.5,-1.5)node[right]{$\bar{\chi}$};
-%\draw[fill] (2,0) circle [radius=0.05]node[right]{$\mbox{ }g_{\chi}$};
-%\end{tikzpicture}
-%\caption{}
-%\label{Signal_phen_sc}
-%\end{subfigure} \hspace{0.1cm}
-\begin{subfigure}[b]{0.45\textwidth}
-\centering
-\begin{tikzpicture}
-\draw[fermion] (-1.5,1.5)node[left]{$q$} --(0,0);
-\draw[gluon] (-1.5,-1.5)node[left]{$g$} --(0,0);
-%\draw[fill] (0,0) circle [radius=0.05]node[left]{$g_{q'}\mbox{ }$};
-\draw[fill] (0,0) circle [radius=0.0]node[left]{$\mbox{ }$};
-\draw[fermion] (0,0) --node[above]{$q$} (2,0);
-\draw[photon] (2,0) -- node[above]{$\xi\mbox{\textcolor{white}{m}}$}(2.75,0.75);
-\draw[fermion] (2.75,0.75) -- (3.5,1.5)node[right]{$\chi$};
-\draw[antifermion] (2.75,0.75) --(3.5,0)node[right]{$\bar{\chi}$};
-\draw[fill] (2,0) circle [radius=0.0]node[below]{$g_{q}\mbox{ }$};
-\draw[fermion] (2,0) --(3.5,-1.5)node[right]{$q$};
-\draw[fill] (2.75,0.75) circle [radius=0.0]node[right]{$\mbox{\textcolor{white}{\tiny m}}g_{\chi}$};
-\end{tikzpicture}
-\caption{}
-\label{Signal_phen_sd}
-\end{subfigure}
-\begin{subfigure}[b]{0.55\textwidth}
-\centering
-\begin{tikzpicture}
-\draw[fermion] (-1.5,1.5)node[left]{$q$} --(-0.75,0.75);
-\draw[photon] (-0.75,0.75) -- (0,1.5)node[right]{$Z$}; %\draw[dashed] (-0.75,0.75) -- (0,1.5)node[right]{X};
-\draw[fermion] (-0.75,0.75) -- (0,0);
-\draw[antifermion] (-1.5,-1.5)node[left]{$\bar{q}$} --(0,0);
-\draw[fill] (0,0) circle [radius=0.0]node[left]{$g_{q}\mbox{ }$};
-\draw[photon] (0,0) --node[above]{$\xi$} (2,0);
-\draw[fermion] (2,0) -- (3.5,1.5)node[right]{$\chi$};
-\draw[antifermion] (2,0) --(3.5,-1.5)node[right]{$\bar{\chi}$};
-\draw[fill] (2,0) circle [radius=0.0]node[right]{$\mbox{ }g_{\chi}$};
-\end{tikzpicture}
-\caption{}
-\label{Signal_phen_se}
-\end{subfigure}
-\caption{Dark matter pair-production processes with a parton or $Z$ boson in the final state for the $s$-channel vector/axial-vector mediator models. }
-\label{schannel_sig_phen}
-\end{center}
+% Note for figure: putting spaces between the \end{subfig} and the next begin{subfig} leads to the figures stacking rather than sitting side-by-side, don't want this!
+% Also, have deliberately set TSD plots to width = 0.4, with horizontal space in the middle, to get the relative sizes of the figures looking correct.
+\begin{figure}[t]
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \centering
+    \resizebox{\linewidth}{!}{
+      \begin{tikzpicture}
+        \draw[fermion] (-1.5,1.5)node[left]{$q$} --(-0.75,0.75);
+        %\draw[dashed] (-0.75,0.75) -- (0,1.5)node[right]{$j$}; %\draw[dashed] (-0.75,0.75) --  (0,1.5)node[right]{X};
+        \draw[gluon] (-0.75,0.75) -- (0,1.5)node[right]{$g$};
+        \draw[fermion] (-0.75,0.75) -- (0,0);
+        \draw[antifermion] (-1.5,-1.5)node[left]{$\bar{q}$} --(0,0);
+        \draw[fill] (0,0) circle [radius=0.0]node[left]{$g_{q}\mbox{ }$};
+        \draw[photon] (0,0) --node[above]{$\xi$} (2,0);
+        \draw[fermion] (2,0) -- (3.5,1.5)node[right]{$\chi$};
+        \draw[antifermion] (2,0) --(3.5,-1.5)node[right]{$\bar{\chi}$};
+        \draw[fill] (2,0) circle [radius=0.0]node[right]{$\mbox{ }g_{\chi}$};
+      \end{tikzpicture}
+    }
+    \caption{}
+    %\label{Signal_phen_sa}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.45\textwidth}
+    \centering
+    \resizebox{\linewidth}{!}{
+      \begin{tikzpicture}
+        \draw[fermion] (-1.5,1.5)node[left]{$q$} --(-0.75,0.75);
+        \draw[photon] (-0.75,0.75) -- (0,1.5)node[right]{$W/Z$}; %\draw[dashed] (-0.75,0.75) -- (0,1.5)node[right]{X};
+        \draw[fermion] (-0.75,0.75) -- (0,0);
+        \draw[antifermion] (-1.5,-1.5)node[left]{$\bar{q}$} --(0,0);
+        \draw[fill] (0,0) circle [radius=0.0]node[left]{$g_{q}\mbox{ }$};
+        \draw[photon] (0,0) --node[above]{$\xi$} (2,0);
+        \draw[fermion] (2,0) -- (3.5,1.5)node[right]{$\chi$};
+        \draw[antifermion] (2,0) --(3.5,-1.5)node[right]{$\bar{\chi}$};
+        \draw[fill] (2,0) circle [radius=0.0]node[right]{$\mbox{ }g_{\chi}$};
+      \end{tikzpicture}
+    }
+    \caption{}
+    %\label{Signal_phen_se}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \resizebox{\linewidth}{!}{
+      \begin{tikzpicture}
+        \draw[fermion] (-2,1.)node[left]{$q$} --(-1,1.);
+        \draw[fermion] (-1,1.) --(0,1.);
+        \draw[gluon] (-1,1.) --(0,2.)node[right]{$g$};
+        \draw[antifermion] (-2,-1)node[left]{$\bar{q}$} --(0,-1);
+        \draw[fill] (0,1.) circle [radius=0.0]node[above]{$g_{q \chi}$};
+        \draw[dashed] (0,1.) -- node[left]{$\phi_{q}$}(0,-1);
+        \draw[fermion] (0,1.) -- (2,1.)node[right]{$\chi$};
+        \draw[antifermion] (0,-1) --(2,-1)node[right]{$\bar{\chi}$};
+        \draw[fill] (0,-1) circle [radius=0.0]node[below]{$g_{q \chi}$};
+      \end{tikzpicture}
+    }
+    \caption{}
+    %\label{Signal_phen_tf}
+  \end{subfigure}
+  \hspace{1cm}
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \resizebox{\linewidth}{!}{
+      \begin{tikzpicture}
+        \draw[fermion] (-2,1.)node[left]{$q$} --(0,1.);
+        \draw[antifermion] (-2,-1)node[left]{$\bar{q}'$} --(0,-1);
+        \draw[fill] (0,1.) circle [radius=0.0]node[above]{$g_{q \chi}$};
+        \draw[dashed] (0,1.) -- node[left]{$\phi_{q}$}(0,0.25);
+        \draw[photon] (0,0.) -- (1.5, 0.)node[right]{$W/Z$};
+        \draw[dashed] (0,0.) -- node[left]{$\phi_{q'}$}(0,-1);
+        \draw[fermion] (0,1.) -- (2,1.)node[right]{$\chi$};
+        \draw[antifermion] (0,-1) --(2,-1)node[right]{$\bar{\chi}$};
+        \draw[fill] (0,-1) circle [radius=0.0]node[below]{$g_{q \chi}$};
+      \end{tikzpicture}
+    }
+    \caption{}
+    %\label{Signal_phen_tg}
+  \end{subfigure}
+  \caption{Representative dark matter pair-production processes with a gluon or a $W$ or $Z$ boson in the final state for the $s$-channel (a,b) and $t$-channel (c,d) models.}
+  \label{allchannel_sig_phen}
 \end{figure}
-
-
-\begin{figure}[ht!]
-\begin{center}
-\begin{subfigure}[b]{0.45\textwidth}
-\centering
-\begin{tikzpicture}
-\draw[fermion] (-2,2.25)node[left]{$q$} --(-1,2.25);
-\draw[gluon] (-1,2.25) -- (0,3.25)node[right]{$g$};
-\draw[fermion] (-1,2.25) --(0,2.25);
-\draw[antifermion] (-2,0.25)node[left]{$\bar{q}$} --(0,0.25);
-\draw[fill] (0,2.25) circle [radius=0.0]node[above]{$g_{q \chi}$};
-\draw[dashed] (0,2.25) -- node[left]{$\phi_{q}$}(0,0.25);
-\draw[antifermion] (0,0.25) -- (2, 0.25)node[right]{$\bar{\chi}$};
-\draw[fermion] (0,2.25) -- (2,2.25)node[right]{$\chi$};
-\draw[fill] (0,0.25) circle [radius=0.0]node[below]{$g_{q \chi}$};
-\end{tikzpicture}
-\caption{}
-\label{Signal_phen_ta}
-\end{subfigure} \hspace{0.1cm}
-\begin{subfigure}[b]{0.45\textwidth}
-\centering
-\begin{tikzpicture}
-\draw[gluon] (-2,2.25)node[left]{$g$} --(0,2.25);
-%\draw[dashed] (-1,2.25) -- (0,3)node[right]{$j$};
-\draw[fermion] (-2,0.25)node[left]{$q$} --(0,0.25);
-\draw[fill] (0,2.25) circle [radius=0.0]node[above]{$g_{q \chi}$};
-\draw[dashed] (0,2.25) -- node[left]{$\phi_{q}$}(0,0.25);
-\draw[fermion] (0,0.25) -- (2, 0.25)node[right]{$\chi$};
-\draw[dashed] (0,2.25) -- node[below]{$\phi_{q}$}(1,2.25);
-\draw[fermion] (1,2.25) -- (2,3)node[right]{$q$};
-\draw[antifermion] (1,2.25) -- (2,1.5)node[right]{$\bar{\chi}$};
-\draw[fill] (1,2.25) circle [radius=0.0]node[right]{$\textcolor{white}{\tiny m}g_{q \chi}$};
-\draw[fill] (0,0.25) circle [radius=0.0]node[below]{$g_{q \chi}$};
-\end{tikzpicture}
-\caption{}
-\label{Signal_phen_tb}
-\end{subfigure}
-
-\begin{subfigure}[b]{0.45\textwidth}
-\centering
-\begin{tikzpicture}
-\draw[fermion] (-1.5,1.5)node[left]{$q$} --(0,0);
-\draw[gluon] (-1.5,-1.5)node[left]{$g$} --(0,0);
-\draw[fill] (0,0) circle [radius=0.0]node[left]{$\mbox{\textcolor{white}{\tiny m}}$};
-\draw[fermion] (0,0) --node[above]{$q$} (2,0);
-\draw[dashed] (2,0) -- node[above]{$\phi_q\mbox{\textcolor{white}{m}}$}(2.75,0.75);
-\draw[fermion] (2.75,0.75) -- (3.5,1.5)node[right]{$q$};
-\draw[antifermion] (2.75,0.75) --(3.5,0)node[right]{$\bar{\chi}$};
-\draw[fill] (2,0) circle [radius=0.0]node[below]{$g_{q \chi}\mbox{ }$};
-\draw[fermion] (2,0) --(3.5,-1.5)node[right]{$\chi$};
-\draw[fill] (2.75,0.75) circle [radius=0.0]node[right]{$\mbox{\textcolor{white}{\tiny i}}g_{q \chi}$};
-\end{tikzpicture}
-\caption{}
-\label{Signal_phen_tc}
-\end{subfigure} \hspace{0.1cm}
-\begin{subfigure}[b]{0.45\textwidth}
-\centering
-\begin{tikzpicture}
-\draw[fermion] (-2,1.5)node[left]{$q$} --(0,1.5);
-\draw[gluon] (-2,-1)node[left]{$g$} --(0,-1);
-\draw[fill] (0,1.5) circle [radius=0.0]node[above]{$g_{q \chi}$};
-\draw[dashed] (0,1.5) -- node[left]{$\phi_{q}$}(0,0.25);
-\draw[antifermion] (0,0.25) -- (2, 0.25)node[right]{$\bar{\chi}$};
-\draw[fill] (0,0.25) circle [radius=0.0]node[left]{$g_{q \chi}$};
-\draw[fermion] (0,0.25) -- node[left]{$q$}(0,-1);
-\draw[fermion] (0,1.5) -- (2,1.5)node[right]{$\chi$};
-\draw[fermion] (0,-1) --(2,-1)node[right]{$q$};
-\draw[fill] (0,-1) circle [radius=0.0];
-\end{tikzpicture}
-\caption{}
-\label{Signal_phen_td}
-\end{subfigure}
-
-\begin{subfigure}[b]{0.45\textwidth}
-\centering
-\begin{tikzpicture}
-\draw[fermion] (-2,1.5)node[left]{$q$} --(0,1.5);
-\draw[antifermion] (-2,-1)node[left]{$\bar{q}$} --(0,-1);
-\draw[fill] (0,1.5) circle [radius=0.0]node[above]{$g_{q \chi}$};
-\draw[dashed] (0,1.5) -- node[left]{$\phi_{q}$}(0,0.25);
-\draw[gluon] (0,0.25) -- (2, 0.25)node[right]{$g$};
-\draw[dashed] (0,0.25) -- node[left]{$\phi_{q}$}(0,-1);
-\draw[fermion] (0,1.5) -- (2,1.5)node[right]{$\chi$};
-\draw[antifermion] (0,-1) --(2,-1)node[right]{$\bar{\chi}$};
-\draw[fill] (0,-1) circle [radius=0.0]node[below]{$g_{q \chi}$};
-\end{tikzpicture}
-\caption{}
-\label{Signal_phen_te}
-\end{subfigure}
-\begin{subfigure}[b]{0.45\textwidth}
-\centering
-\begin{tikzpicture}
-\draw[fermion] (-2,2.25)node[left]{$q$} --(-1,2.25);
-\draw[photon] (-1,2.25) -- (0,3)node[right]{$Z$};
-\draw[fermion] (-1,2.25) --(0,2.25);
-\draw[antifermion] (-2,0.25)node[left]{$\bar{q}$} --(0,0.25);
-\draw[fill] (0,2.25) circle [radius=0.0]node[above]{$g_{q \chi}$};
-\draw[dashed] (0,2.25) -- node[left]{$\phi_{q}$}(0,0.25);
-\draw[antifermion] (0,0.25) -- (2, 0.25)node[right]{$\bar{\chi}$};
-\draw[fermion] (0,2.25) -- (2,2.25)node[right]{$\chi$};
-\draw[fill] (0,0.25) circle [radius=0.0]node[below]{$g_{q \chi}$};
-\end{tikzpicture}
-\caption{}
-\label{Signal_phen_tf}
-\end{subfigure}
-
-\begin{subfigure}[b]{0.45\textwidth}
-\centering
-\begin{tikzpicture}
-\draw[fermion] (-2,1.5)node[left]{$q$} --(0,1.5);
-\draw[antifermion] (-2,-1)node[left]{$\bar{q}$} --(0,-1);
-\draw[fill] (0,1.5) circle [radius=0.0]node[above]{$g_{q \chi}$};
-\draw[dashed] (0,1.5) -- node[left]{$\phi_{q}$}(0,0.25);
-\draw[photon] (0,0.25) -- (2, 0.25)node[right]{$Z$};
-\draw[dashed] (0,0.25) -- node[left]{$\phi_{q}$}(0,-1);
-\draw[fermion] (0,1.5) -- (2,1.5)node[right]{$\chi$};
-\draw[antifermion] (0,-1) --(2,-1)node[right]{$\bar{\chi}$};
-\draw[fill] (0,-1) circle [radius=0.0]node[below]{$g_{q \chi}$};
-\end{tikzpicture}
-\caption{}
-\label{Signal_phen_tg}
-\end{subfigure}
-\caption{Dark matter pair-production processes with a parton or $Z$ boson in the final state for the $t$-channel scalar mediator model.}
-\label{tchannel_sig_phen}
-\end{center}
-\end{figure}
-
 
 \subsection{Signal Simulation}
 \label{signal_generation}
-Signal samples for each channel and for each simplified model discussed in Section \ref{sec:sec2} were generated in the following manner. Firstly, leading order matrix elements for the process $pp \rightarrow \mathrm{X} + \chi\bar{\chi}$ (where X is either one or two jets\footnote{For the monojet channel, jets are seeded by any parton excluding the (anti-)top quark.} or a $Z$ boson) were modelled using \MG$\_${\footnotesize A}MC$@$NLO v2.2.2 \cite{MG_aMCNLO2014} with the PDF MSTW2008lo68cl \cite{MSTW}. The default renormalisation and factorisation scales were also used and set to the sum of $\sqrt{m^{2} + p_{T}^{2}}$ for all particles in the final state. Showering and hadronisation were then performed by \PYTHIA  8.201 with the appropriate PDF and using the ATLAS UE Tune AU2-MSTW2008LO~\cite{AUtune}. The detector response was approximated by applying a gaussian smearing to the $p_{\mathrm{T}}$ of the leptons and jets.
+Signal samples for each channel and for each simplified model discussed in Section \ref{sec:sec2} were generated in the following manner. Firstly, leading order matrix elements for the process $pp \rightarrow \mathrm{X} + \chi\bar{\chi}$ (where X is either one or two jets\footnote{For the monojet channel, jets are seeded by any parton excluding the (anti-)top quark.}, a $Z(\rightarrow \ell^+ \ell^-)$ boson or a $W/Z(\rightarrow$ jets) boson) were modelled using \MG$\_${\footnotesize A}MC$@$NLO v2.2.2 \cite{MG_aMCNLO2014} with the PDF MSTW2008lo68cl \cite{MSTW}. The default renormalisation and factorisation scales were also used and set to the sum of $\sqrt{m^{2} + p_{T}^{2}}$ for all particles in the final state. Showering and hadronisation were then performed by \PYTHIA  8.201 with the appropriate PDF and using the ATLAS UE Tune AU2-MSTW2008LO~\cite{AUtune}. The detector response was approximated by applying a gaussian smearing to the $p_{\mathrm{T}}$ of the leptons and jets. FastJet \ref{} was used to reconstruct small-radius jets (anti-kT algorithm with $R$ = 0.4) for the mono-jet channel, and large-radius jets (Cambridge-Aachen algorithm with $R$ = 1.2) for the mono-$W/Z$ channel; the latter also uses a mass-drop filtering procedure as discussed at ref.~\ref{}, with $\mu$ = 0.67 and $y$ = 0.16.
 
 \subsubsection{Parton Matching Scheme}
 \label{matching_procedure}
-\comm{Make explicit the choice of $(0+1+2)j$ vs $(1+2)j$ here. Also refer to the Papucci paper, and why we don't split the sample. Do we think this is still necessary?}
-For the mono-jet channel, matching of partons generated in \MG$\mbox{ }$ to jets generated in \PYTHIA is performed using the MLM scheme, with a single matching scale (known as the QCUT). The use of a single matching scale initially seems problematic as the choice of QCUT can influence somewhat the distributions of $p_{\mathrm{T}}$ and $\met$. In particular, it leads to increased uncertainty in the case where the mediator mass is significantly larger that the QCUT value, due to the resulting lack of statistics. The ATLAS mono-jet analysis attempts to mitigate this effect with the creation of two subsamples, with different QCUT values, and merging these with a cut on the leading jet $p_{\mathrm{T}}$ to avoid double-counting. However, we found that use of a single QCUT value at 80 GeV was able to adequately reproduce the results of the ATLAS mono-jet analysis for the masses of interest, while substantially reducing both the complexity and computational expense of the mono-jet channel MC generation and systematic uncertainty estimation procedures (see section \ref{monojet_validation}). 
+%\comm{Make explicit the choice of $(0+1+2)j$ vs $(1+2)j$ here.}
+%\comm{Also refer to the Papucci paper, and why we don't split the sample. Do we think this is still necessary?}
+For the mono-jet channel, matching of partons generated in \MG$\mbox{ }$ to jets generated in \PYTHIA is performed using the MLM scheme, with a single matching scale (known as the QCUT). The use of a single matching scale initially seems problematic as the choice of QCUT can influence somewhat the distributions of $p_{\mathrm{T}}$ and $\met$. In particular, it leads to increased uncertainty in the case where the mediator mass is significantly larger that the QCUT value, due to the resulting lack of statistics. The ATLAS mono-jet analysis attempts to mitigate this effect with the creation of two subsamples, with different QCUT values, and merging these with a cut on the leading jet $p_{\mathrm{T}}$ to avoid double-counting. However, we found that use of a single QCUT value at 80 GeV was able to adequately reproduce the results of the ATLAS mono-jet analysis for the masses of interest, while substantially reducing both the complexity and computational expense of the mono-jet channel MC generation and systematic uncertainty estimation procedures (see section \ref{monojet_validation}).
 
-% A proper implementation of this scheme would require the creation of multiple subsamples per mass and coupling point, with each subsample possessing a different matching scale (QCUT). The specific values taken by the QCUT are chosen to ensure that the kinematics of both off- and on-shell mediator production are well simulated for each masspoint and that sufficient events are created to survive the ATLAS $\met$ trigger \question{or to probe the high $\met$ regime?}. To prevent double-counting, the subsamples are then merged according to the $p_{T}$ of the leading parton in each event. Indeed, the ATLAS mono-jet analysis (discussed in Section \ref{monojet_constraints}) uses MC samples which consist of events from a QCUT = 80 (300) GeV subsample with a leading jet with $p_{T} <$ 350 GeV ($p_{T} \geq$ 350 GeV).
-%The systematic uncertainty associated with this matching procedure is then estimated as described in Ref. \cite{CERN-THESIS-2015-038}.
-
-%For this analysis, we instead perform parton matching between \MG$\mbox{ }$and \PYTHIA using only a single matching scale of 80 GeV \comm{per mass and coupling point}. This approach has the advantage of substantially reducing both the complexity and computational expense of the mono-jet channel MC generation and systematic uncertainty estimation procedures. While the specific matching scale of 80 GeV ensures that we have enough statistics to derive physical limits for low-$m_{\chi}$/low-$\Mmed$ masspoints, it necessarily equates to an increased uncertainty on the higher-$\Mmed$ limits (due to mismodelling of the $\met$ distribution). We deem this trade-off acceptable however as the 80 GeV, single-QCUT approach has been shown to adequately reproduce the results of the ATLAS mono-jet analysis for the masspoints of interest (see Section \ref{monojet_validation}).
-%For this analysis, we instead perform parton matching between \MG$\mbox{ }$and \PYTHIA using only a single matching scale per mass and coupling point. Specifically, for mediator masses below 320 GeV we use a matching scale of 80 GeV while for masspoints above the 320 GeV threshold we use a matching scale of $\Mmed/4$. In analogy with the logic above, the 80 GeV matching scale ensures that we have enough statistics to derive physical limits for low-$m_{\chi}$/low-$\Mmed$ masspoints. The $m_{M}/4$ matching scale then ensures that $m_{\chi}$/high-$\Mmed$ limits aren't dominated by mismodelled $\met$ uncertainties. This two-stage approach has been shown to adequately reproduce the results of the ATLAS mono-jet analysis for the masspoints of interest (see Section \ref{monojet_validation}). In addition, this approach substantially reduces both the complexity and computational expense of the mono-jet channel MC generation and systematic uncertainty estimation procedures.
-
-%For this analysis, we instead perform parton matching between \MG$\mbox{ }$and \PYTHIA using only a single matching scale of 80 GeV. This approach is favoured as it substantially reduces both the complexity and computational expense of the mono-jet channel MC generation and systematic uncertainty estimation procedures. In addition, it was observed that a single matching scale of 80 GeV suitably reproduces the results of the ATLAS mono-jet analysis for the masspoints of interest (see Section \ref{monojet_validation}).
-%\comm{Make explicit the choice of $(0+1+2)j$ vs $(1+2)j$ here. Also refer to the Papucci paper, and why we don't split the sample.}
-%For the monojet channel, parton matching between \MG$\mbox{ }$and \PYTHIA was done using the MLM scheme with matching scales of 80 GeV and 300 GeV. Samples made with the latter matching scale are included both to increase statistics in the high $\met$ region and to account for the shape bias introduced by the 80 GeV matching scale. To avoid double-counting, events from the 80 (300) GeV monojet samples are required to have a leading jet with $p_{T} <$ 350 GeV ($p_{T} \geq$ 350 GeV).
-
-
-%\subsubsection{Mass and Coupling Points} % I moved this to earlier in the paper, as the width discussion kind of refers to the masses used.
-%Following the above procedure, signal samples were generated for a representative set of dark matter and mediator masses, shown in Table \ref{Mass_coup_points}. All $m_{\chi}-M_{\mathrm{med}}$ combinations are permitted in the sV and sA models; in the tS model $M_{\mathrm{med}}$ should be greater than $m_{\chi}$, to ensure stability of the DM particle. The couplings, $g_{q}$ and $g_{q\chi}$, are set to unity while the DM-mediator coupling, $g_{\chi}$, is allowed to vary from this up by a factor of five for the $s$-channel models. In all cases, a point in phase space is disregarded if it leads to a mediator width greater than 50\% of the mediator mass. This ensures that we remain within the narrow width approximation (NWA) utilised by \MG. The mediator masses were chosen to cover a broad range of parameter space and to coincide with predominantly three regimes: (near-)degenerate ($M\approx m_{\chi}$), kinematically allowed ($M \geq 2m_{\chi}$), and EFT-like ($\sqrt{\hat{s}} << M$)\footnote{A recent study by Alves et al. found that EFT results do not apply to mediators with a mass less than 2.5 TeV at the LHC during Run I \cite{Alves:2011wf}.}. We also allow for the possibility of a light mediator/heavy WIMP scenario (M $<m_{\chi}$).
-%Rows one to three of Table \ref{Mass_coup_points} cover the case where the dark matter mass is small and the mediator mass is either degenerate, low or sufficiently large so as to be in the EFT regime of validity\footnote{A recent study by Alves et al. found that EFT results do not apply to mediators with a mass less than 2.5 TeV at the LHC during Run I \cite{Alves:2011wf}.}. Rows four and five cover the case where the dark matter particle has a medium mass and the mediator is either near-degenerate or larger. Rows six and seven (eight and nine) cover the case where the dark matter particle is a few GeV (TeV) and the mediator is either near-degenerate or again sufficiently large so as to be in the EFT regime of validity.
-
-%\begin{table}[!htbp]
-%\centering
-%\begin{tabular}{l|l}
-%\hline
-%\hline
-% \rule{0pt}{2.2ex}$m_{\chi}$ [GeV] & $M$ [GeV]\\
-%\hline
-% \rule{0pt}{2.2ex} 1 & 1, 2, 10, 20, 100, 200, 1000, 2000, 20000 \\
-%% 10 & 1, 2, 10, 20, 100, 200, 1000, 2000, 20000 \\
-%% 100 & 1, 2, 10, 20, 100, 200, 1000, 2000, 20000 \\
-%% 1000 & 1, 2, 10, 20, 100, 200, 1000, 2000, 20000 \\
-% 1 & 10 & 10\\
-% 2 & 10 & 200\\
-% 3 & 10 & 25000\\
-% 4 & 100 & 200\\
-% 5 & 100 & 2000\\
-% 6 & 500 & 600\\
-% 7 & 500 & 25000\\
-% 8 & 1000 & 2000\\
-% 9 & 1000 & 25000\\
-% \hline
-% \hline
-%\end{tabular}
-%\caption{Mass points chosen for the analysis of simplified dark matter models. The mediator masses are primarily representative of three regimes: (near-)degenerate ($M\approx m_{\chi}$), kinematically allowed ($M \geq 2m_{\chi}$), and EFT-like ($\sqrt{\hat{s}} << M$).}
-%\label{Mass_coup_points}
-%\end{table}
-
-%signal production was modelled with \MG$\_$aMC 2.2.2 \comm{(references needed throughout this section!)}. Showering and hadronisation was then performed by \PYTHIA  8.201 using the default tune (ATLAS UE Tune AU2-MSTW2008LO). Using the MSTW2008lo68 PDF set (currently the benchmark for ATLAS analyses \cite{}. \question{Is this still true?}) and the default \MG factorization and renormalization scales\footnote{In \FNMG5 2.2.2 the default scale, $\mu$ is defined as the sum of $\sqrt{m_{\chi}^{2} + p_{T}^{2}}$ for all dark matter particles in the final state.}, samples were produced for a representative set of of dark matter and mediator masses, shown in Table \ref{Mass_coup_points}. \textcolor{magenta}{Something about the coupling strength, $f$, being set to a value of 1? Maybe leave out - we'll vary the value.} Note that rows one to three of Table \ref{Mass_coup_points} cover the case where the dark matter mass is small and the mediator has either a mass that is degenerate, low or sufficiently large so as to be in the EFT regime of validity\footnote{A recent study by Alves et al. found that EFT results do not apply to mediators with a mass less than 2.5 TeV at the LHC during Run I \cite{Alves:2011wf}.}. Rows four and five cover the case where the dark matter particle has a medium mass and the mediator is either near-degenerate or larger. Rows six and seven (eight and nine) cover the case where the dark matter particle is a few GeV (TeV) and the mediator is either near-degenerate or again sufficiently large so as to be in the EFT regime of validity. \comm{Comment on the masspoints being dictated by the narrow width approximation used by MG?}
-
-%\fg{We now move to a discussion of each of the mono-X channels separately.}
+\bigskip
+We now move to a discussion of each of the mono-X channels separately.
 
 \subsection{Monojet Constraints}
 \label{monojet_constraints}
 The ATLAS mono-jet plus missing transverse energy search \cite{Aad:2015zva} was originally designed to set limits on three new physics scenarios\comm{,}
 %\st{: the production of light grativinos in association with gluinos or scalar quarks in a gauge-mediated supersymmetric model, the production of graviton modes in the Arkani-Hamed, Dimopoulos, and Dvali model for large extra spatial dimensions, and}
-the most relevant of which is the production of WIMP DM within the context of seven \comm{(?)} effective operators. The analysis also includes a brief study of a Z' DM model which is analogous to our sV model.
+the most relevant of which is the production of WIMP DM within the context of seven \comm{(?)} effective operators. The analysis also includes a brief study of a $Z'$ DM model which is analogous to our sV model.
 %\bigskip
 
-Signal selection is carried out based on at least one hard jet recoiling against missing energy. To ensure that the correct back-to-back jet + $\met$ topology is selected events are required to have a leading jet, $j_{1}$, with $p_{T} >$ 120 GeV and $|\eta| <$ 2.0 satisfying $p_{T}^{j_{1}}/\met >$ 0.5. Surviving events must then satisfy $|\Delta\phi(j,\metvec)|>1.0$, where $j$ is any jet with $p_{T} >$ 30 GeV and $|\eta| <$ 4.5. This criterion reduces the multijet background contribution where the large $\met$ originates mainly from jet energy mismeasurement. Note that there is no upper limit placed on the number of jets per event. The contribution from the dominant background processes, $W/Z+$jets (\question{Do I want to be more specific here? Eg. $W (\rightarrow \ell \nu)+$jets, $Z(\rightarrow \nu\bar{\nu})+$jets, $Z/\gamma^{*}(\rightarrow \ell^{+}\ell^{-})+$jets?}), is managed with a veto on events containing muons or electrons with $p_{T}>$ 7 GeV. \comm{A further veto is placed on events containing isolated tracks\footnote{A track is considered isolated when no additional track with $p_{T} >$ 3 GeV lies within a cone of radius 0.4 around it.} with $p_{T}>$ 10 GeV and $|\eta| <$ 2.5. This reduces the contribution from non-identified leptons ($e$, $\mu$ or $\tau$) in the final state.} Lastly, nine separate signal regions are defined with increasing lower thresholds on $\met$, which range from 150 GeV to 700 GeV as shown in Table \ref{monojet_SRs}.
-%\st{initially, events are required to have $\met>$ 150 GeV and at least one jet with $p_{T} >$ 30 GeV and $|\eta| <$ 4.5} (\comm{My logic here is that these cuts are for trigger, or pre-selection - they are overwritten by later cuts, right? So I think not worth including.}). we require $|\Delta\phi(\mathrm{j},\metvec)|>1.0$, where j is any jet with $p_{T} >$ 30 GeV and $|\eta| <$ 4.5.  have a leading jet (\comm{Is this the dominant background? If so, include `dominant', if not, this cut is maybe better understood as implementing back-to-backness. Is there an upper limit on $N_{jets}$?}). \comm{Note to self: include lepton veto criteria here.}  
+Signal selection is carried out based on at least one hard jet recoiling against missing energy. To ensure that the correct back-to-back jet + $\met$ topology is selected events are required to have a leading jet, $j_{1}$, with $p_{T} >$ 120 GeV and $|\eta| <$ 2.0 satisfying $p_{T}^{j_{1}}/\met >$ 0.5. Surviving events must then satisfy $|\Delta\phi(j,\metvec)|>1.0$, where $j$ is any jet with $p_{T} >$ 30 GeV and $|\eta| <$ 4.5. This criterion reduces the multijet background contribution where the large $\met$ originates mainly from jet energy mismeasurement. Note that there is no upper limit placed on the number of jets per event. The contribution from the dominant background processes, $W/Z+$jets (\footnote{Do I want to be more specific here? Eg. $W (\rightarrow \ell \nu)+$jets, $Z(\rightarrow \nu\bar{\nu})+$jets, $Z/\gamma^{*}(\rightarrow \ell^{+}\ell^{-})+$jets?}), is managed with a veto on events containing muons or electrons with $p_{T}>$ 7 GeV. A further veto is placed on events containing isolated tracks\footnote{A track is considered isolated when no additional track with $p_{T} >$ 3 GeV lies within a cone of radius 0.4 around it.} with $p_{T}>$ 10 GeV and $|\eta| <$ 2.5. This reduces the contribution from non-identified leptons ($e$, $\mu$ or $\tau$) in the final state. Lastly, nine separate signal regions are defined with increasing lower thresholds on $\met$, which range from 150 GeV to 700 GeV as shown in Table \ref{monojet_SRs}.
+%\st{initially, events are required to have $\met>$ 150 GeV and at least one jet with $p_{T} >$ 30 GeV and $|\eta| <$ 4.5} (\comm{My logic here is that these cuts are for trigger, or pre-selection - they are overwritten by later cuts, right? So I think not worth including.}). we require $|\Delta\phi(\mathrm{j},\metvec)|>1.0$, where j is any jet with $p_{T} >$ 30 GeV and $|\eta| <$ 4.5.  have a leading jet (\comm{Is this the dominant background? If so, include `dominant', if not, this cut is maybe better understood as implementing back-to-backness. Is there an upper limit on $N_{jets}$?}). \comm{Note to self: include lepton veto criteria here.}
 %\bigskip
 
 The ATLAS mono-jet analysis revealed no significant deviation of observed events from the expected SM backgrounds in the Run 1 8 TeV dataset. Subsequently, limits on new physics signatures were derived in terms of the visible cross-section, $\sigma\times\mathcal{A}\times\epsilon$, using the HistFitter package \cite{}. These model-independent limits are shown in Table \ref{monojet_SRs} and correspond to the 95\% confidence level.
@@ -340,32 +145,31 @@ The ATLAS mono-jet analysis revealed no significant deviation of observed events
  \hline
  \hline
 \end{tabular}
-\caption{The ATLAS mono-jet $\met$ signal regions and \comm{associated} observed (expected) model-independent upper limits on $\sigma \times \mathcal{A} \times \epsilon$ at 95\% confidence level. Adapted from Ref. \cite{Aad:2015zva}.
-%The ATLAS model-independent upper limits on the number of observed (expected) signal events, $N_{obs}$ ($N_{exp}$), at 95\% confidence level for the monojet channel signal regions. 
+\caption{The ATLAS mono-jet $\met$ signal regions and corresponding observed (expected) model-independent upper limits on $\sigma \times \mathcal{A} \times \epsilon$ at 95\% confidence level. Adapted from Ref. \cite{Aad:2015zva}.
+%The ATLAS model-independent upper limits on the number of observed (expected) signal events, $N_{obs}$ ($N_{exp}$), at 95\% confidence level for the monojet channel signal regions.
 %\comm{Since this table is adapted from the mono-jet paper, I think we should reproduce exactly what they show, ie the limit on $\sigma \times \mathcal{A} \times \epsilon$. Part of the reason is that if you multiply their values by the lumi, this is ignoring the uncertainty on that lumi that they've already included. More importantly, I don't think there is any advantage in showing the limits on $N$, since to obtain limits on $\sigma$ we divide immediately by $\mathcal{L}$ again anyway, plus the audience may be more familiar with the limit on $\sigma \times \mathcal{A} \times \epsilon$.}
 }
 \label{monojet_SRs}
 \end{table}
 
-%Monojet signal samples for each of the simplified models discussed in Section \ref{sec:sec2} and for each of the masspoints listed in Table \ref{Mass_coup_points} were generated following a similar procedure to that employed in the ATLAS analysis. Firstly, leading order matrix elements for the processes $pp \rightarrow j\chi\bar{\chi}$ and $pp \rightarrow jj\chi\bar{\chi}$ (where $j$ is a final state jet\footnote{In this analysis a jet is seeded by any parton excluding the (anti-)top quark.}) were generated using \MG$\_$aMC$@$NLO v2.2.2 with the default PDF (MSTW2008lo68). The default renormalisation and factorisation scales, $\mu_{R,F}$, which correspond to \comm{the geometric average of $m_{\chi}^{2} + p_{T, \chi}^{2}$}, were also used. Next, showering and hadronisation of the matrix elements was done using \PYTHIA \comm{8.185} with the default tune (ATLAS UE AU2-MSTW2008LO). Matching between \MG$\mbox{ }$and \PYTHIA was performed using the MLM scheme with matching scales of 80 GeV and 300 GeV. Samples made with the latter matching scale are included both to increase statistics in the high $\met$ region and to account for the shape bias introduced by the 80 GeV matching scale. To avoid double-counting, events from the 80 (300) GeV samples are required to have a leading jet with $p_{T} <$ ($\geq$) 350 GeV.
-%\bigskip
+The Monte Carlo (MC) generation and event selection procedures discussed above were validated for the mono-jet channel via reproduction of ATLAS limits on the suppression scale, $\Mstar \equiv M_{\mathrm{med}} / \sqrt{g_q g_{\chi}}$, for the $Z'$ model. The details of this process are contained in appendix \ref{monojet_validation}. Importantly, we observe agreement within $\sim$23\% for all samples.
 
-The Monte Carlo (MC) generation and event selection procedures discussed above were validated for the mono-jet channel via reproduction of ATLAS limits on the suppression scale, $\Mstar \equiv \frac{M_{\mathrm{med}}}{\sqrt{g_q g_{\chi}}}$, for the $Z'$ model. The details of this process are contained in appendix \ref{monojet_validation}. Importantly, we observe agreement within $\sim$23\% for all samples. 
-\st{Note that we only calculate limits on M$_{*}$ for this aspect of the analysis. Although it is customary to present constraints on dark matter models in the form of limits on M$_{*}$, we shall hereafter present constraints in the form of limits on the cross-section. This is done to better facilitate the comparison of collider and direct detection results, where $\sigma(pp \rightarrow X + \chi\bar{\chi})$ and $\sigma(N\chi \rightarrow N\chi)$ are related by a Fierz transformation in the simplified model framework} \cite{PJFox, NBellDent}. (\comm{I think we're ditching the limits on $\sigma$ now, and I'll add something earlier on that specifies we put limits on the couplings everywhere. We should also define $\Mstar$ somewhere (actually maybe in teh validation section, and we can just refer to the suppression scale here or something).}) 
+%\st{Note that we only calculate limits on M$_{*}$ for this aspect of the analysis. Although it is customary to present constraints on dark matter models in the form of limits on M$_{*}$, we shall hereafter present constraints in the form of limits on the cross-section. This is done to better facilitate the comparison of collider and direct detection results, where $\sigma(pp \rightarrow X + \chi\bar{\chi})$ and $\sigma(N\chi \rightarrow N\chi)$ are related by a Fierz transformation in the simplified model framework} \cite{PJFox, NBellDent}.
+
 %\draft{While the signal samples used by the ATLAS group (and for validation) correspond to the processes $pp \rightarrow j\chi\bar{\chi}$ and $pp \rightarrow jj\chi\bar{\chi}$ where $j$ is a final state jet, monojet constraints on the simplified models studied in this paper were set using signal samples with zero, one and two jets in the final state.} \comm{This deviation from the ATLAS analysis is motivated by the observation that the limits on $M_{*}$ are improved with the addition of the process $pp \rightarrow \chi\bar{\chi}$.}
 %However, while the ATLAS MC samples are generated for only two matching scale values (80 GeV and 300 GeV), we use a sliding value of $m_{\chi}/4$. \comm{This ensures that all jet-related kinematic distributions are smoothly connected across all dark matter masspoints.}
 
 \subsection{Mono-$Z$ Constraints}
 \label{monoZ_constraints}
-The signature of the ATLAS mono-$Z(\rightarrow \ell^+ \ell^-)$ analysis \cite{Aad:2014monoZlep} is a pair of opposite-sign same-flavour leptons balanced against a large amount of missing transverse momentum. The analysis is designed to search for a set of EFT models of DM, where a $Z$ boson is radiated from an initial state quark. Leptons are in general much cleaner and simpler than jets, so this channel is included here to investigate whether reduction in uncertainties from cleaner channel can provide quick results that are comparable (?) to the more complicated mono-jet channel (\comm{reword}). 
+The signature of the ATLAS mono-$Z(\rightarrow \ell^+ \ell^-)$ analysis \cite{Aad:2014monoZlep} is a pair of opposite-sign same-flavour leptons balanced against a large amount of missing transverse momentum. The analysis is designed to search for a set of EFT models of DM, where a $Z$ boson is radiated from an initial state quark. Leptons are in general much cleaner and simpler than jets, so this channel is included here to investigate whether the reduction in systematic uncertainties can provide easily-obtained results that are comparable to the more complicated mono-jet channel.
 
 The analysis also includes a short study of a $t$-channel simplified model similar to that discussed here. This model is used to validate our results in this channel; see the details in sec.~\ref{monoZ_validation}.
 
-The selection is summarised as follows (see the paper for a full description). Electrons (muons) are required to have a $p_{\mathrm{T}}$ greater than 20 GeV, and $|\eta|$ less than 2.47 (2.5). Two opposite-sign, same-flavour leptons are selected, and required to have invariant mass and pseudorapidity such that $m_{\ell \ell} \in [76, 106]$ GeV and $|\eta^{\ell \ell}| < 2.5$. The reconstructed $Z$ boson should be approximately back-to-back and balanced against the $\met$, ensured with the selections $\Delta \phi (\metvec, p_{\mathrm{T}}^{\ell \ell}) > 2.5$ and $| p_{\mathrm{T}}^{\ell \ell} - \met | \, /  \, p_{\mathrm{T}}^{\ell \ell} < 0.5$. Jets are reconstructed with the anti-$k_t$ algorithm, with radius parameter 0.4; events containing a jet with $p_{\mathrm{T}}>$ 25 GeV and $|\eta|< $ 2.5 are vetoed. Events are also vetoed if they contain a third lepton with $p_{\mathrm{T}}>$ 7 GeV. The signal regions are defined by increasing lower $\met$ thresholds: $\met >$ 150, 250, 350, 450 GeV. 
+The selection is summarised as follows (see the paper for a full description). Electrons (muons) are required to have a $p_{\mathrm{T}}$ greater than 20 GeV, and $|\eta|$ less than 2.47 (2.5). Two opposite-sign, same-flavour leptons are selected, and required to have invariant mass and pseudorapidity such that $m_{\ell \ell} \in [76, 106]$ GeV and $|\eta^{\ell \ell}| < 2.5$. The reconstructed $Z$ boson should be approximately back-to-back and balanced against the $\met$, ensured with the selections $\Delta \phi (\metvec, p_{\mathrm{T}}^{\ell \ell}) > 2.5$ and $| p_{\mathrm{T}}^{\ell \ell} - \met | \, /  \, p_{\mathrm{T}}^{\ell \ell} < 0.5$. Jets are reconstructed with the anti-$k_t$ algorithm, with radius parameter 0.4; events containing a jet with $p_{\mathrm{T}}>$ 25 GeV and $|\eta|< $ 2.5 are vetoed. Events are also vetoed if they contain a third lepton with $p_{\mathrm{T}}>$ 7 GeV. The signal regions are defined by increasing lower $\met$ thresholds: $\met >$ 150, 250, 350, 450 GeV.
 
 % Note: I haven't included any info on the overlap removal here.
 
-The dominant background in this analysis is the irreducible $ZZ \rightarrow \ell^+ \ell^- \bar{\nu} \nu$ process, which has a softer $\met$ distribution that the DM signal. The background is estimated with MC simulation, and has a systematic uncertainty in the range 36-46$\%$ across the four signal regions. 
+The dominant background in this analysis is the irreducible $ZZ \rightarrow \ell^+ \ell^- \bar{\nu} \nu$ process, which has a softer $\met$ distribution that the DM signal. The background is estimated with MC simulation, and has a systematic uncertainty in the range 36-46$\%$ across the four signal regions.
 
 A cut-and-count strategy is used, and the total numbers of expected and observed events, along with total uncertainties, are reported for each signal region. The published result unfortunately does not give upper limits on the number of new physics events, so we calculate these ourselves: we obtain upper limits on $N_{exp,obs}$ (see eq.~\ref{sigma_nom}) with a simple implementation of HistFitter that uses a frequentist calculator and a one-sided profile likelihood test statistic (the LHC default), giving the model-independent upper limits shown in table~\ref{tab:Nlim_monoZ}. Note that we use signal regions 1 and 2 only, as this simplified HistFitter approach was deemed inappropriate for the very low statistics of signal regions 3 and 4. These upper limits are also used for our validation procedure (see sec.~\ref{monoZ_validation}).
 
@@ -387,8 +191,7 @@ $N_{\mathrm{sig}}^{\mathrm{obs}}$ & 32.2 & 5.9 \B \\
 \caption{The expected and observed upper limits on the number of new physics events in the ATLAS mono-$Z$ analysis, calculated with HistFitter using the results of \cite{Aad:2014monoZlep}.}
 \end{table}
 
-
-\subsection{Mono-W Constraints}
+\subsection{Mono-WZ Constraints}
 \comm{Note to Johanna: Here you should discuss the original intention of the mono-W analysis. Also comment on any validation you did in order to confirm that you could use the results of the analysis. Lastly, discuss or list the cuts used in the analysis and the uncertainties associated with the results. This will inevitably include details of the background estimation and the detector performance.}
 
 The analysis focusing on fully-hadronic decays of the bosons in the mono-W/Z channel performed by ATLAS on the 8 TeV dataset was considered especially interesting, since a constructive interference in the mono-W channel for the vector operator in EFT models was assumed possible, leading to limits even stronger than the ones from monojet searches in this case. By now, studies have revealed that such a scenario would violate unitarity and this interpretation is not emphasised in this work due to these concerns.
@@ -418,3 +221,4 @@ From the published number of expected and observed events in the signal region a
 \end{enumerate}
 
 \fi
+
