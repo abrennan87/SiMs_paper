@@ -260,4 +260,32 @@ $N_{\mathrm{sig}}^{\mathrm{obs}}$ & 32.2 & 5.9 \B \\
 
 \subsection{Mono-WZ Constraints}
 \label{monoWZ_constraints}
-\comm{Note to Johanna: Here you should discuss the original intention of the \monoWZ analysis. Also comment on any validation you did in order to confirm that you could use the results of the analysis - the bulk of this should go into the \monoWZ section of App. A. Lastly, discuss or list the cuts used in the analysis and the uncertainties associated with the results. See \monojet and \monoZ or \monojet or \monoWZ sections above.}
+\comm{Note to Johanna: Here you should discuss the original intention of the mono-W analysis. Also comment on any validation you did in order to confirm that you could use the results of the analysis. Lastly, discuss or list the cuts used in the analysis and the uncertainties associated with the results. This will inevitably include details of the background estimation and the detector performance.}
+
+The analysis focusing on fully-hadronic decays of the bosons in the mono-W/Z channel performed by ATLAS on the 8 TeV dataset was considered especially interesting, since a constructive interference in the mono-W channel for the vector operator in EFT models was assumed possible, leading to limits even stronger than the ones from monojet searches in this case. By now, studies have revealed that such a scenario would violate unitarity and this interpretation is not emphasised in this work due to these concerns.
+
+Nevertheless, this channel is an interesting addition, since it exploits the large branching fraction of hadronic boson decays. Also, the experimental techniques applied are significant different, the selection is based on large-R jets that are consistent with the hypothesis of coming from an EW boson. In addition, large missing ET is required, as for all monoX searches.
+
+The applied event selection is summarised in the following: electrons, muons and photons are vetoed if their $p_{\mathrm{T}}$ is larger than 10 GeV and they are within $|\eta|$ < 2.47 (electrons), 2.5 (muons), 2.37 (photons).
+Large radius jets are jets reconstructed with the Cambridge-Aachen algorithm using $R = 1.2$. A mass drop filter is applied and $\sqrt{y}>0.4$\footnote{momentum balance of the two leading subjets, $\sqrt{y} = min(p_{\mathrm{T}1},p_{\mathrm{T}2})\Delta R / m_{jet}$} is required in order to suppress non-W/Z processes.
+Events with at least one large radius jet with $p_{\mathrm{T}}$ > 250 GeV, $|\eta|$ < 1.2 and with a mass in a window around the W/Z mass, between 50 and 120 GeV, are selected.
+To reduce ttbar and QCD background, events containing small-R jets (anti-$k_T$, R = 0.4) with $\Delta\phi(jet,\met)< 0.4$ or more than one jet ($p_{\mathrm{T}}$ > 40 GeV, $|\eta|$ < 4.5) with $\Delta R(jet,large-R jet)>0.9$ are vetoed. The original analysis considers two signal regions: $\met > 250 GeV$ and $\met > 500 GeV$. We consider in the following only the signal region with $\met > 500 GeV$.
+
+The main background is coming from $Z \rightarrow \bar{\nu} \nu$ events that have additional jets coming from initial state radiation. Further important backgrounds from W/Z+jets events, in which W/Z decays leptonically, enter the selection if the lepton(s) is missed due to being out of acceptance or failing ID requirements, or in case it is a hadronically decaying tau. All these backgrounds are estimated in dedicated control regions.
+
+Whereas the ATLAS analysis uses a shape fit of the mass distribution of the large radius jet, we just regard the number of events in the signal region, since the data points of the $m_{\rm jet}$ distribution were not published. \comm{check!!!}
+
+From the published number of expected and observed events in the signal region and their uncertainties, we calculate the upper limit on the number of new physics events as described above for the mono-Z channel (see eq.~\ref{sigma_nom}). We obtain the following numbers:  $N_{exp} = 27.2$, $N_{obs} = 27.4$.
+
+\iffalse
+
+
+\textcolor{magenta}{This section should include:}
+\begin{enumerate}
+\item \textcolor{magenta}{A description of the general process employed to reinterpret monojet, mono-W and mono-Z limits. This should cover MC signal generation, the cuts used in each mono-X channel and validation of the procedure(s) used to generate the results.}
+\item \textcolor{magenta}{Monojet specifics: motivation for why the SUSY results were used instead of the monojet+MET results.}
+\item \textcolor{magenta}{A description of the assessment of the systematics.}
+\item \textcolor{magenta}{The limit setting strategy (?).}
+\end{enumerate}
+
+\fi

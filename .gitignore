@@ -1,3 +1,8 @@
+*.bbl
+
+*.toc
+
+new_paper.synctex.gz
 
 *.out
 
