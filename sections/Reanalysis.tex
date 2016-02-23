@@ -1,8 +1,8 @@
-The \monoX + $\met$ (abbreviated \monoX) signal is a popular collider signal in the search for new physics, particularly in the search for dark matter. Since WIMPs are not expected to interact with detector material, they appear as missing transverse momentum, $\vec{p}_{\mathrm{T}}^{\mathrm{miss}}$, when balanced against a visible object that is radiated from the initial or intermediate state.
+The \monoX + $\met$ (abbreviated \monoX) signal is a popular collider signal in the search for new physics, particularly in the search for dark matter. Since WIMPs are not expected to interact with detector material, they appear as missing transverse energy, $\vec{E}_{\mathrm{T}}^{\mathrm{miss}}$, when balanced against a visible object that is radiated from the initial or intermediate state \cite{some MET definition/discussion paper}.
 %\st{It is predicted by an assorted collection of new physics models, including unparticle physics models }\cite{CMS-PAS-EXO-12-048}\st{ and the Arkani-Hamed, Dimopoulos, and Dvali (ADD) model of large extra spatial dimensions }\cite{ATLAS-CONF-2012-147}.
-For the $s$-channel simplified models discussed in Section \ref{sec:sec2}, a SM particle, X, is emitted from one of a pair of intial-state partons (shown in Figure \ref{schannel_sig_phen}). The case where X is radiated from the mediator - a process known as virtual internal Bremsstrahlung - is only possible if the SM-dark matter interaction occurs via the $t$-channel (as shown in Figure \ref{tchannel_sig_phen}).
+For the simplified models discussed in Section \ref{sec:sec2}, the visible particle, X, is emitted from one of a pair of intial-state partons, as shown in Figure \ref{allchannel_sig_phen}. The case where X is radiated from the mediator - a process known as virtual internal Bremsstrahlung - is only possible if the SM-DM interaction occurs via the $t$-channel.
 %\st{In both cases, the parton and Z boson are the SM particles most likely to be emitted \question{is Pr(W)$>$Pr(Z)?}}\cite{Kumar:2013iva}. \st{Hence, this paper will focus on thre detection channels: \monojet, \monoZ and mono-$W$.}
-For all models, emission of a parton is the most likely scenario at the LHC owing to the strength of the strong coupling. Hence we focus on the \monojet channel as it is expected to provide the strongest limits. Emission of $Z$ and $W$ bosons or photons is also possible however, and may be chosen for study over jet processes to take advantage of the relative simplicity of leptons compared to jets. As such, we also include the mono-$Z(\rightarrow \ell^+ \ell^-)$ channel for comparison. Finally, we extend this work by including the hadronically-decaying \monoWZ channel for comparison.
+To fully exploit the potential of the ATLAS detector to record and identify a vast array of particle types, we consider three cases: 1). X is a parton which hadronises to form a jet, 2.) X is a Z boson which decays into an $\ell^+ \ell^-$ pair, and 3.) X is a hadronically-decaying W or Z boson. In the context of DM searches, these signatures are referred to as \monojet, mono-$Z$, and mono-$W/Z$ respectively. Note that the \monojet scenario is the most likely scenario at the LHC owing to the strength of the strong coupling yet the mono-$Z$ channel has the advantage of a relative simple and clean signature. \textcolor{magenta}{Do we want to include this last sentence? In fact, does it even make sense to introduce and discuss the mono-X channels following the comments made in the last paragraph of the previous section which assume prior knowledge of the mono-X channels anyway? - MM}
 
 %previously had a footnote: It is worth noting here that the mono-$W$ channel has previously been chosen for its apparent ability to distinguish a case where $u$- and $d$-type quarks couple with opposite sign to the new physics sector \cite{}\comm{(Tait)}. However, during the preparation of this paper this has been shown to be an unphysical scenario \cite{}\comm{(Bell, Leane)}
 
@@ -10,7 +10,7 @@ For all models, emission of a parton is the most likely scenario at the LHC owin
 %, which may then enhance the limit in combination with monojet processes.}
 %\bigskip
 
-The procedure for recasting existing \monoX constraints as simplified model constraints is straightforward. Firstly, signal events are simulated as described in Section \ref{signal_generation}. The event selection criteria of the \monoX analysis of interest is then reproduced and applied to the simulated signal samples. Events surviving the selection criteria are counted to determine both the likelihood of a dark matter event occurring (referred to as the acceptance, $\mathcal{A}$) and the probability of detecting said event (refered to as the efficiency, $\epsilon$). These quantities are then used in combination with channel-specific model-independent limits on new physics events to limit the parameter phase space of a given model.
+The procedure for recasting existing \monoX constraints as simplified model constraints follows a simple 'cut and count' methodology. Firstly, signal events are simulated as described in Section \ref{signal_generation}. The event selection criteria of the \monoX analysis of interest is then reproduced and applied to the simulated signal samples. Events surviving the selection criteria are counted to determine both the likelihood of a dark matter event occurring (referred to as the acceptance, $\mathcal{A}$) and the probability of detecting said event (refered to as the efficiency, $\epsilon$). These quantities are then used in combination with channel-specific model-independent limits on new physics events to limit the parameter phase space of a given model.
 For a comprehensive description of the recasting procedure, see appendix \ref{Appendix_limitsetting}.
 %\bigskip
 
@@ -96,86 +96,86 @@ In this paper, \monojet constraints are derived from a search for new phenomena 
     \caption{}
     %\label{Signal_phen_tg}
   \end{subfigure}
-  \begin{subfigure}[b]{0.45\textwidth}
-    \centering
-    \begin{tikzpicture}
-      \draw[fermion] (-1.5,1.5)node[left]{$q$} --(0,0);
-      \draw[gluon] (-1.5,-1.5)node[left]{$g$} --(0,0);
-      %\draw[fill] (0,0) circle [radius=0.05]node[left]{$g_{q'}\mbox{ }$};
-      \draw[fill] (0,0) circle [radius=0.0]node[left]{$\mbox{ }$};
-      \draw[fermion] (0,0) --node[above]{$q$} (2,0);
-      \draw[photon] (2,0) -- node[above]{$\xi\mbox{\textcolor{white}{m}}$}(2.75,0.75);
-      \draw[fermion] (2.75,0.75) -- (3.5,1.5)node[right]{$\chi$};
-      \draw[antifermion] (2.75,0.75) --(3.5,0)node[right]{$\bar{\chi}$};
-      \draw[fill] (2,0) circle [radius=0.0]node[below]{$\gq\mbox{ }$};
-      \draw[fermion] (2,0) --(3.5,-1.5)node[right]{$q$};
-      \draw[fill] (2.75,0.75) circle [radius=0.0]node[right]{$\mbox{\textcolor{white}{\tiny m}}\gX$};
-    \end{tikzpicture}
-    \caption{}
-    \label{Signal_phen_sd}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.45\textwidth}
-    \centering
-    \begin{tikzpicture}
-      \draw[gluon] (-1.5,1.5)node[left]{$g$} --(0,0);
-      \draw[gluon] (-1.5,-1.5)node[left]{$g$} --(0,0);
-      %\draw[fill] (0,0) circle [radius=0.05]node[left]{$g_{q'}\mbox{ }$};
-      \draw[fill] (0,0) circle [radius=0.0]node[left]{$\mbox{ }$};
-      \draw[gluon] (0,0) -- (1,0);
-      \draw[antifermion] (1,0) -- node[above]{$\bar{q}\mbox{\textcolor{white}{m}}$}(1.75,0.75);
-      \draw[photon] (1.75,0.75) -- node[above]{$\xi\mbox{\textcolor{white}{m}}$}(2.5,1.5);
-      \draw[fermion] (2.5, 1.5) -- (3.25, 2.25)node[right]{$\chi$};
-      \draw[antifermion] (2.5, 1.5) -- (3.25, 0.75)node[right]{$\bar{\chi}$};
-      \draw[antifermion] (1.75,0.75) --(2.5,0)node[right]{$\bar{q}$};
-      %\draw[fill] (2,0) circle [radius=0.0]node[below]{$\gq\mbox{ }$};
-      \draw[fermion] (1,0) --(2.5,-1.5)node[right]{$q$};
-      \draw[fill] (1.75,0.75) circle [radius=0.0]node[right]{$\mbox{\textcolor{white}{\tiny m}}\gq$};
-      \draw[fill] (2.5,1.5) circle [radius=0.0]node[right]{$\mbox{\textcolor{white}{\tiny m}}\gX$};
-    \end{tikzpicture}
-    \caption{}
-    \label{Signal_phen_sd}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.4\textwidth}
-    \centering
-    \resizebox{\linewidth}{!}{
-      \begin{tikzpicture}
-        \draw[fermion] (-2,1.)node[left]{$q$} --(0,1.);
-        \draw[antifermion] (-2,-1)node[left]{$\bar{q}$} --(0,-1);
-        \draw[dashed] (0,1.) -- (0,-1);
-        \draw[fermion] (0,1.) -- (2,1.)node[right]{$\chi$};
-        \draw[antifermion] (0,-1) --(2,-1)node[right]{$\bar{\chi}$};
-      \end{tikzpicture}
-    }
-    \caption{}
-    %\label{Signal_phen_tg}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.4\textwidth}
-    \centering
-    \resizebox{\linewidth}{!}{
-      \begin{tikzpicture}
-        \draw[fermion] (-1.5,1.5)node[left]{$q$} --(0,0);
-        \draw[antifermion] (-1.5,-1.5)node[left]{$\bar{q}$} --(0,0);
-        \draw[dashed] (0,0) -- (2,0);
-        \draw[fermion] (2,0) --(3.5,1.5)node[right]{$\chi$};
-        \draw[antifermion] (2,0) --(3.5, -1.5)node[right]{$\bar{\chi}$};
-      \end{tikzpicture}
-    }
-    \caption{}
-    %\label{Signal_phen_tg}
-  \end{subfigure}
-  \caption{Representative dark matter pair-production processes with a gluon or a $W$ or $Z$ boson in the final state for the $s$-channel (a,b) and $t$-channel (c,d) models.}
+%  \begin{subfigure}[b]{0.45\textwidth}
+%    \centering
+%    \begin{tikzpicture}
+%      \draw[fermion] (-1.5,1.5)node[left]{$q$} --(0,0);
+%      \draw[gluon] (-1.5,-1.5)node[left]{$g$} --(0,0);
+%      %\draw[fill] (0,0) circle [radius=0.05]node[left]{$g_{q'}\mbox{ }$};
+%      \draw[fill] (0,0) circle [radius=0.0]node[left]{$\mbox{ }$};
+%      \draw[fermion] (0,0) --node[above]{$q$} (2,0);
+%      \draw[photon] (2,0) -- node[above]{$\xi\mbox{\textcolor{white}{m}}$}(2.75,0.75);
+%      \draw[fermion] (2.75,0.75) -- (3.5,1.5)node[right]{$\chi$};
+%      \draw[antifermion] (2.75,0.75) --(3.5,0)node[right]{$\bar{\chi}$};
+%      \draw[fill] (2,0) circle [radius=0.0]node[below]{$\gq\mbox{ }$};
+%      \draw[fermion] (2,0) --(3.5,-1.5)node[right]{$q$};
+%      \draw[fill] (2.75,0.75) circle [radius=0.0]node[right]{$\mbox{\textcolor{white}{\tiny m}}\gX$};
+%    \end{tikzpicture}
+%    \caption{}
+%    \label{Signal_phen_sd}
+%  \end{subfigure}
+%  \begin{subfigure}[b]{0.45\textwidth}
+%    \centering
+%    \begin{tikzpicture}
+%      \draw[gluon] (-1.5,1.5)node[left]{$g$} --(0,0);
+%      \draw[gluon] (-1.5,-1.5)node[left]{$g$} --(0,0);
+%      %\draw[fill] (0,0) circle [radius=0.05]node[left]{$g_{q'}\mbox{ }$};
+%      \draw[fill] (0,0) circle [radius=0.0]node[left]{$\mbox{ }$};
+%      \draw[gluon] (0,0) -- (1,0);
+%      \draw[antifermion] (1,0) -- node[above]{$\bar{q}\mbox{\textcolor{white}{m}}$}(1.75,0.75);
+%      \draw[photon] (1.75,0.75) -- node[above]{$\xi\mbox{\textcolor{white}{m}}$}(2.5,1.5);
+%      \draw[fermion] (2.5, 1.5) -- (3.25, 2.25)node[right]{$\chi$};
+%      \draw[antifermion] (2.5, 1.5) -- (3.25, 0.75)node[right]{$\bar{\chi}$};
+%      \draw[antifermion] (1.75,0.75) --(2.5,0)node[right]{$\bar{q}$};
+%      %\draw[fill] (2,0) circle [radius=0.0]node[below]{$\gq\mbox{ }$};
+%      \draw[fermion] (1,0) --(2.5,-1.5)node[right]{$q$};
+%      \draw[fill] (1.75,0.75) circle [radius=0.0]node[right]{$\mbox{\textcolor{white}{\tiny m}}\gq$};
+%      \draw[fill] (2.5,1.5) circle [radius=0.0]node[right]{$\mbox{\textcolor{white}{\tiny m}}\gX$};
+%    \end{tikzpicture}
+%    \caption{}
+%    \label{Signal_phen_sd}
+%  \end{subfigure}
+%  \begin{subfigure}[b]{0.4\textwidth}
+%    \centering
+%    \resizebox{\linewidth}{!}{
+%      \begin{tikzpicture}
+%        \draw[fermion] (-2,1.)node[left]{$q$} --(0,1.);
+%        \draw[antifermion] (-2,-1)node[left]{$\bar{q}$} --(0,-1);
+%        \draw[dashed] (0,1.) -- (0,-1);
+%        \draw[fermion] (0,1.) -- (2,1.)node[right]{$\chi$};
+%        \draw[antifermion] (0,-1) --(2,-1)node[right]{$\bar{\chi}$};
+%      \end{tikzpicture}
+%    }
+%    \caption{}
+%    %\label{Signal_phen_tg}
+%  \end{subfigure}
+%  \begin{subfigure}[b]{0.4\textwidth}
+%    \centering
+%    \resizebox{\linewidth}{!}{
+%      \begin{tikzpicture}
+%        \draw[fermion] (-1.5,1.5)node[left]{$q$} --(0,0);
+%        \draw[antifermion] (-1.5,-1.5)node[left]{$\bar{q}$} --(0,0);
+%        \draw[dashed] (0,0) -- (2,0);
+%        \draw[fermion] (2,0) --(3.5,1.5)node[right]{$\chi$};
+%        \draw[antifermion] (2,0) --(3.5, -1.5)node[right]{$\bar{\chi}$};
+%      \end{tikzpicture}
+%    }
+%    \caption{}
+%    %\label{Signal_phen_tg}
+%  \end{subfigure}
+  \caption{Representative dark matter pair-production processes with a gluon, or $W/Z$ boson in the final state for the $s$-channel (a,b) and $t$-channel (c,d) models.}
   \label{allchannel_sig_phen}
 \end{figure}
 
 \subsection{Signal Simulation}
 \label{signal_generation}
-Signal samples for each channel and for each simplified model discussed in Section \ref{sec:sec2} were generated in the following manner. Firstly, leading order matrix elements for the process $pp \rightarrow \mathrm{X} + \chi\bar{\chi}$ (where X is either one or two jets\footnote{For the \monojet channel, jets are seeded by any parton excluding the (anti-)top quark.}, a $Z(\rightarrow \ell^+ \ell^-)$ boson or a $W/Z(\rightarrow$ jets) boson) were modelled using \MG$\_${\footnotesize A}MC$@$NLO v2.2.2 \cite{MG_aMCNLO2014} with the PDF MSTW2008lo68cl \cite{MSTW}. The default renormalisation and factorisation scales were also used and set to the sum of $\sqrt{m^{2} + p_{T}^{2}}$ for all particles in the final state. Showering and hadronisation were then performed by \PYTHIA  8.201 with the appropriate PDF and using the ATLAS UE Tune AU2-MSTW2008LO~\cite{AUtune}. The detector response was approximated by applying a gaussian smearing to the $p_{\mathrm{T}}$ of the leptons and jets. FastJet \ref{} was used to reconstruct small-radius jets (anti-kT algorithm with $R$ = 0.4) for the \monojet channel, and large-radius jets (Cambridge-Aachen algorithm with $R$ = 1.2) for the \monoWZ channel; the latter also uses a mass-drop filtering procedure as discussed at ref.~\ref{}, with $\mu$ = 0.67 and $y$ = 0.16.
+Signal samples for each channel and for each simplified model were generated as follows. Leading order matrix elements for the process $pp \rightarrow \mathrm{X} + \chi\bar{\chi}$ (where X is specifically one or two jets\footnote{For the \monojet channel, jets are seeded by any parton excluding the (anti-)top quark.}, a $Z(\rightarrow \ell^+ \ell^-)$ boson or a $W/Z(\rightarrow$ jets) boson) were first modelled using \MG$\_${\footnotesize A}MC$@$NLO v2.2.2 \cite{MG_aMCNLO2014} with the MSTW2008lo68cl PDF\cite{MSTW}. During this stage, the renormalisation and factorisation scales were set to the default sum of $\sqrt{m^{2} + p_{T}^{2}}$ for all particles in the final state. Showering and hadronisation were then performed by \PYTHIA  8.201 with the appropriate PDF and using the ATLAS UE Tune AU2-MSTW2008LO~\cite{AUtune}. Reconstruction of small-radius jets for the \monojet channel was performed by FastJet \cite{} using the anti-kT algorithm with a distance parameter $R$ = 0.4. Similarly, reconstruction of large-radius jets for the \monoWZ channel was performed using the Cambridge-Aachen algorithm with $R$ = 1.2. The latter channel also includes a mass-drop filtering procedure with $\mu$ = 0.67 and $y$ = 0.16 (see ref.~\cite{} for further details). Lastly, the detector response was approximated by applying a Gaussian smearing factor to the $p_{\mathrm{T}}$ of all leptons and jets. 
 
 \subsubsection{Parton Matching Scheme}
 \label{matching_procedure}
 %\comm{Make explicit the choice of $(0+1+2)j$ vs $(1+2)j$ here.}
 %\comm{Also refer to the Papucci paper, and why we don't split the sample. Do we think this is still necessary?}
-For the \monojet channel, matching of partons generated in \MG$\mbox{ }$ to jets generated in \PYTHIA is performed using the MLM scheme, with a single matching scale (known as the QCUT). The use of a single matching scale initially seems problematic as the choice of QCUT can influence somewhat the distributions of $p_{\mathrm{T}}$ and $\met$. In particular, it leads to increased uncertainty in the case where the mediator mass is significantly larger that the QCUT value, due to the resulting lack of statistics. The ATLAS \monojet analysis attempts to mitigate this effect with the creation of two subsamples, with different QCUT values, and merging these with a cut on the leading jet $p_{\mathrm{T}}$ to avoid double-counting. However, we found that use of a single QCUT value at 80 GeV was able to adequately reproduce the results of the ATLAS \monojet analysis for the masses of interest, while substantially reducing both the complexity and computational expense of the \monojet channel MC generation and systematic uncertainty estimation procedures (see section \ref{monojet_validation}).
+In the ATLAS \monojet analysis, matching of partons generated in \MG$\mbox{\tiny }$ to jets generated in \PYTHIA is performed using the MLM scheme, with two matching scales, or `QCUTs', per mass/coupling point. The QCUT values span a broad kinematic range in combination with a cut placed on the leading jet $p_{\mathrm{T}}$ per event to avoid double-counting. This treatment aims to mitigate the impact of the matching scale on the shape of the $p_{\mathrm{T}}$ and $\met$ distributions; that is, to reduce the uncertainty in those areas of phase space where the mediator mass is significantly larger or smaller that the QCUT value. For the analysis of simplified models, we use instead a single matching scale of 80 GeV. Though not idyllic, this approach suitably reproduces the results of the ATLAS \monojet analysis for the masses of interest (see Sec. \ref{monojet_validation}). Importantly, it also reduces the complexity and computational expense involved in estimating limits for the \monojet channel.
 
 \bigskip
 We now move to a discussion of each of the \monoX channels separately.
@@ -219,7 +219,7 @@ The ATLAS \monojet analysis revealed no significant deviation of observed events
 \label{monojet_SRs}
 \end{table}
 
-The Monte Carlo (MC) generation and event selection procedures discussed above were validated for the \monojet channel via reproduction of ATLAS limits on the suppression scale, $\Mstar \equiv \Mmed / \sqrtgqgX$, for the $Z'$ model. The details of this process are contained in appendix \ref{monojet_validation}. Importantly, we observe agreement within $\sim$23\% for all samples.
+The signal simulation procedure outlined in sec. \ref{signal_generation} and implementation of the selection criteria discussed above were validated for the \monojet channel via reproduction of ATLAS limits on the suppression scale, $\Mstar \equiv \Mmed / \sqrtgqgX$, for the $Z'$ model. The details of this process are contained in appendix \ref{monojet_validation}. Importantly, we observe agreement within $\sim$12\% for all samples.
 
 %\st{Note that we only calculate limits on M$_{*}$ for this aspect of the analysis. Although it is customary to present constraints on dark matter models in the form of limits on M$_{*}$, we shall hereafter present constraints in the form of limits on the cross-section. This is done to better facilitate the comparison of collider and direct detection results, where $\sigma(pp \rightarrow X + \chi\bar{\chi})$ and $\sigma(N\chi \rightarrow N\chi)$ are related by a Fierz transformation in the simplified model framework} \cite{PJFox, NBellDent}.
 
@@ -228,7 +228,7 @@ The Monte Carlo (MC) generation and event selection procedures discussed above w
 
 \subsection{Mono-$Z$ Constraints}
 \label{monoZ_constraints}
-The signature of the ATLAS mono-$Z(\rightarrow \ell^+ \ell^-)$ analysis \cite{Aad:2014monoZlep} is a pair of opposite-sign same-flavour leptons balanced against a large amount of missing transverse momentum. The analysis is designed to search for a set of EFT models of DM, where a $Z$ boson is radiated from an initial state quark. Leptons are in general much cleaner and simpler than jets, so this channel is included here to investigate whether the reduction in systematic uncertainties can provide easily-obtained results that are comparable to the more complicated \monojet channel.
+The signature of the ATLAS mono-$Z(\rightarrow \ell^+ \ell^-)$ analysis \cite{Aad:2014monoZlep} is a pair of opposite-sign same-flavour leptons balanced against a large amount of missing transverse momentum. The analysis is designed to search for a set of EFT models of DM, where a $Z$ boson is radiated from an initial state quark. Leptons are in general much cleaner and simpler than jets, so this channel is included here to investigate whether the reduction in systematic uncertainties can provide easily-obtained results that are comparable to the more complicated \monojet channel. \textcolor{magenta}{Is this last sentence a repeat of what is written at the beginning of this chapter? If so, how should we reword/re-organise the chapter to avoid this? - MM}
 
 The analysis also includes a short study of a $t$-channel simplified model similar to that discussed here. This model is used to validate our results in this channel; see the details in sec.~\ref{monoZ_validation}.
 
