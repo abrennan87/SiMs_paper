@@ -6,158 +6,9 @@ In this paper, \monojet constraints are derived from a search for new phenomena 
 
 %\comm{We should put references to all the papers here! - Amelia}
 
-% Note for figure: putting spaces between the \end{subfig} and the next begin{subfig} leads to the figures stacking rather than sitting side-by-side, don't want this!
-% Also, have deliberately set TSD plots to width = 0.4, with horizontal space in the middle, to get the relative sizes of the figures looking correct.
-\begin{figure}[t]
-  \centering
-  \begin{subfigure}[b]{0.45\textwidth}
-    \centering
-    \resizebox{\linewidth}{!}{
-      \begin{tikzpicture}
-        \draw[fermion] (-1.5,1.5)node[left]{$q$} --(-0.75,0.75);
-        %\draw[dashed] (-0.75,0.75) -- (0,1.5)node[right]{$j$}; %\draw[dashed] (-0.75,0.75) --  (0,1.5)node[right]{X};
-        \draw[gluon] (-0.75,0.75) -- (0,1.5)node[right]{$g$};
-        \draw[fermion] (-0.75,0.75) -- (0,0);
-        \draw[antifermion] (-1.5,-1.5)node[left]{$\bar{q}$} --(0,0);
-        \draw[fill] (0,0) circle [radius=0.0]node[left]{$\gq\mbox{ }$};
-        \draw[photon] (0,0) --node[above]{$\xi$} (2,0);
-        \draw[fermion] (2,0) -- (3.5,1.5)node[right]{$\chi$};
-        \draw[antifermion] (2,0) --(3.5,-1.5)node[right]{$\bar{\chi}$};
-        \draw[fill] (2,0) circle [radius=0.0]node[right]{$\mbox{ }\gX$};
-      \end{tikzpicture}
-    }
-    \caption{}
-    %\label{Signal_phen_sa}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.45\textwidth}
-    \centering
-    \resizebox{\linewidth}{!}{
-      \begin{tikzpicture}
-        \draw[fermion] (-1.5,1.5)node[left]{$q$} --(-0.75,0.75);
-        \draw[photon] (-0.75,0.75) -- (0,1.5)node[right]{$W/Z$}; %\draw[dashed] (-0.75,0.75) -- (0,1.5)node[right]{X};
-        \draw[fermion] (-0.75,0.75) -- (0,0);
-        \draw[antifermion] (-1.5,-1.5)node[left]{$\bar{q}$} --(0,0);
-        \draw[fill] (0,0) circle [radius=0.0]node[left]{$\gq\mbox{ }$};
-        \draw[photon] (0,0) --node[above]{$\xi$} (2,0);
-        \draw[fermion] (2,0) -- (3.5,1.5)node[right]{$\chi$};
-        \draw[antifermion] (2,0) --(3.5,-1.5)node[right]{$\bar{\chi}$};
-        \draw[fill] (2,0) circle [radius=0.0]node[right]{$\mbox{ }\gX$};
-      \end{tikzpicture}
-    }
-    \caption{}
-    %\label{Signal_phen_se}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.4\textwidth}
-    \centering
-    \resizebox{\linewidth}{!}{
-      \begin{tikzpicture}
-        \draw[fermion] (-2,1.)node[left]{$q$} --(-1,1.);
-        \draw[fermion] (-1,1.) --(0,1.);
-        \draw[gluon] (-1,1.) --(0,2.)node[right]{$g$};
-        \draw[antifermion] (-2,-1)node[left]{$\bar{q}$} --(0,-1);
-        \draw[fill] (0,1.) circle [radius=0.0]node[above]{$\gqX$};
-        \draw[dashed] (0,1.) -- node[left]{$\phi_{q}$}(0,-1);
-        \draw[fermion] (0,1.) -- (2,1.)node[right]{$\chi$};
-        \draw[antifermion] (0,-1) --(2,-1)node[right]{$\bar{\chi}$};
-        \draw[fill] (0,-1) circle [radius=0.0]node[below]{$\gqX$};
-      \end{tikzpicture}
-    }
-    \caption{}
-    %\label{Signal_phen_tf}
-  \end{subfigure}
-  \hspace{1cm}
-  \begin{subfigure}[b]{0.4\textwidth}
-    \centering
-    \resizebox{\linewidth}{!}{
-      \begin{tikzpicture}
-        \draw[fermion] (-2,1.)node[left]{$q$} --(0,1.);
-        \draw[antifermion] (-2,-1)node[left]{$\bar{q}'$} --(0,-1);
-        \draw[fill] (0,1.) circle [radius=0.0]node[above]{$\gqX$};
-        \draw[dashed] (0,1.) -- node[left]{$\phi_{q}$}(0,0.25);
-        \draw[photon] (0,0.) -- (1.5, 0.)node[right]{$W/Z$};
-        \draw[dashed] (0,0.) -- node[left]{$\phi_{q'}$}(0,-1);
-        \draw[fermion] (0,1.) -- (2,1.)node[right]{$\chi$};
-        \draw[antifermion] (0,-1) --(2,-1)node[right]{$\bar{\chi}$};
-        \draw[fill] (0,-1) circle [radius=0.0]node[below]{$\gqX$};
-      \end{tikzpicture}
-    }
-    \caption{}
-    %\label{Signal_phen_tg}
-  \end{subfigure}
-%  \begin{subfigure}[b]{0.45\textwidth}
-%    \centering
-%    \begin{tikzpicture}
-%      \draw[fermion] (-1.5,1.5)node[left]{$q$} --(0,0);
-%      \draw[gluon] (-1.5,-1.5)node[left]{$g$} --(0,0);
-%      %\draw[fill] (0,0) circle [radius=0.05]node[left]{$g_{q'}\mbox{ }$};
-%      \draw[fill] (0,0) circle [radius=0.0]node[left]{$\mbox{ }$};
-%      \draw[fermion] (0,0) --node[above]{$q$} (2,0);
-%      \draw[photon] (2,0) -- node[above]{$\xi\mbox{\textcolor{white}{m}}$}(2.75,0.75);
-%      \draw[fermion] (2.75,0.75) -- (3.5,1.5)node[right]{$\chi$};
-%      \draw[antifermion] (2.75,0.75) --(3.5,0)node[right]{$\bar{\chi}$};
-%      \draw[fill] (2,0) circle [radius=0.0]node[below]{$\gq\mbox{ }$};
-%      \draw[fermion] (2,0) --(3.5,-1.5)node[right]{$q$};
-%      \draw[fill] (2.75,0.75) circle [radius=0.0]node[right]{$\mbox{\textcolor{white}{\tiny m}}\gX$};
-%    \end{tikzpicture}
-%    \caption{}
-%    \label{Signal_phen_sd}
-%  \end{subfigure}
-%  \begin{subfigure}[b]{0.45\textwidth}
-%    \centering
-%    \begin{tikzpicture}
-%      \draw[gluon] (-1.5,1.5)node[left]{$g$} --(0,0);
-%      \draw[gluon] (-1.5,-1.5)node[left]{$g$} --(0,0);
-%      %\draw[fill] (0,0) circle [radius=0.05]node[left]{$g_{q'}\mbox{ }$};
-%      \draw[fill] (0,0) circle [radius=0.0]node[left]{$\mbox{ }$};
-%      \draw[gluon] (0,0) -- (1,0);
-%      \draw[antifermion] (1,0) -- node[above]{$\bar{q}\mbox{\textcolor{white}{m}}$}(1.75,0.75);
-%      \draw[photon] (1.75,0.75) -- node[above]{$\xi\mbox{\textcolor{white}{m}}$}(2.5,1.5);
-%      \draw[fermion] (2.5, 1.5) -- (3.25, 2.25)node[right]{$\chi$};
-%      \draw[antifermion] (2.5, 1.5) -- (3.25, 0.75)node[right]{$\bar{\chi}$};
-%      \draw[antifermion] (1.75,0.75) --(2.5,0)node[right]{$\bar{q}$};
-%      %\draw[fill] (2,0) circle [radius=0.0]node[below]{$\gq\mbox{ }$};
-%      \draw[fermion] (1,0) --(2.5,-1.5)node[right]{$q$};
-%      \draw[fill] (1.75,0.75) circle [radius=0.0]node[right]{$\mbox{\textcolor{white}{\tiny m}}\gq$};
-%      \draw[fill] (2.5,1.5) circle [radius=0.0]node[right]{$\mbox{\textcolor{white}{\tiny m}}\gX$};
-%    \end{tikzpicture}
-%    \caption{}
-%    \label{Signal_phen_sd}
-%  \end{subfigure}
-%  \begin{subfigure}[b]{0.4\textwidth}
-%    \centering
-%    \resizebox{\linewidth}{!}{
-%      \begin{tikzpicture}
-%        \draw[fermion] (-2,1.)node[left]{$q$} --(0,1.);
-%        \draw[antifermion] (-2,-1)node[left]{$\bar{q}$} --(0,-1);
-%        \draw[dashed] (0,1.) -- (0,-1);
-%        \draw[fermion] (0,1.) -- (2,1.)node[right]{$\chi$};
-%        \draw[antifermion] (0,-1) --(2,-1)node[right]{$\bar{\chi}$};
-%      \end{tikzpicture}
-%    }
-%    \caption{}
-%    %\label{Signal_phen_tg}
-%  \end{subfigure}
-%  \begin{subfigure}[b]{0.4\textwidth}
-%    \centering
-%    \resizebox{\linewidth}{!}{
-%      \begin{tikzpicture}
-%        \draw[fermion] (-1.5,1.5)node[left]{$q$} --(0,0);
-%        \draw[antifermion] (-1.5,-1.5)node[left]{$\bar{q}$} --(0,0);
-%        \draw[dashed] (0,0) -- (2,0);
-%        \draw[fermion] (2,0) --(3.5,1.5)node[right]{$\chi$};
-%        \draw[antifermion] (2,0) --(3.5, -1.5)node[right]{$\bar{\chi}$};
-%      \end{tikzpicture}
-%    }
-%    \caption{}
-%    %\label{Signal_phen_tg}
-%  \end{subfigure}
-  \caption{Representative dark matter pair-production processes with a gluon, or $W/Z$ boson in the final state for the $s$-channel (a,b) and $t$-channel (c,d) models.}
-  \label{allchannel_sig_phen}
-\end{figure}
-
 \subsection{Signal Simulation}
 \label{signal_generation}
-Signal samples for each channel and for each simplified model were generated as follows. Leading order matrix elements for the process $pp \rightarrow \mathrm{X} + \chi\bar{\chi}$ (where X is specifically one or two jets\footnote{For the \monojet channel, jets are seeded by any parton excluding the (anti-)top quark.}, a $Z(\rightarrow \ell^+ \ell^-)$ boson or a $W/Z(\rightarrow$ jets) boson) were first modelled using \MG$\_${\footnotesize A}MC$@$NLO v2.2.2 \cite{MG_aMCNLO2014} with the MSTW2008lo68cl PDF\cite{MSTW}. During this stage, the renormalisation and factorisation scales were set to the default sum of $\sqrt{m^{2} + p_{T}^{2}}$ for all particles in the final state. Showering and hadronisation were then performed by \PYTHIA  8.201 with the appropriate PDF and using the ATLAS UE Tune AU2-MSTW2008LO~\cite{AUtune}. Reconstruction of small-radius jets for the \monojet channel was performed by FastJet \cite{} using the anti-kT algorithm with a distance parameter $R$ = 0.4. Similarly, reconstruction of large-radius jets for the \monoWZ channel was performed using the Cambridge-Aachen algorithm with $R$ = 1.2. The latter channel also includes a mass-drop filtering procedure with $\mu$ = 0.67 and $y$ = 0.16 (see ref.~\cite{} for further details). Lastly, the detector response was approximated by applying a Gaussian smearing factor to the $p_{\mathrm{T}}$ of all leptons and jets. 
+Signal samples for each channel and for each simplified model were generated as follows. Leading order matrix elements for the process $pp \rightarrow \mathrm{X} + \chi\bar{\chi}$ (where X is specifically one or two jets\footnote{For the \monojet channel, jets are seeded by any parton excluding the (anti-)top quark.}, a $Z(\rightarrow \ell^+ \ell^-)$ boson or a $W/Z(\rightarrow$ jets) boson) were first modelled using \MG$\_${\footnotesize A}MC$@$NLO v2.2.2 \cite{MG_aMCNLO2014} with the MSTW2008lo68cl PDF\cite{MSTW}. During this stage, the renormalisation and factorisation scales were set to the default sum of $\sqrt{m^{2} + p_{T}^{2}}$ for all particles in the final state. Showering and hadronisation were then performed by \PYTHIA  8.201 with the appropriate PDF and using the ATLAS UE Tune AU2-MSTW2008LO~\cite{AUtune}. Reconstruction of small-radius jets for the \monojet channel was performed by FastJet \cite{} using the anti-kT algorithm with a radius parameter, $R$, of 0.4. Similarly, reconstruction of large-radius jets for the \monoWZ channel was performed using the Cambridge-Aachen algorithm with $R$ = 1.2. The latter channel also includes a mass-drop filtering procedure with $\mu$ = 0.67 and $y$ = 0.16 (see ref.~\cite{} for further details). Lastly, the detector response was approximated by applying a Gaussian smearing factor to the $p_{\mathrm{T}}$ of all leptons and jets. 
 
 \subsubsection{Parton Matching Scheme}
 \label{matching_procedure}
@@ -168,14 +19,16 @@ In the ATLAS \monojet analysis, matching of partons generated in \MG$\mbox{\tiny
 \bigskip
 We now move to a discussion of each of the \monoX channels separately.
 
-\subsection{Monojet Constraints}
+\subsection{Mono-jet Constraints}
 \label{monojet_constraints}
 The ATLAS \monojet + $\met$ \cite{Aad:2015zva} was originally designed to set limits on three new physics scenarios\comm{,}
 %\st{: the production of light grativinos in association with gluinos or scalar quarks in a gauge-mediated supersymmetric model, the production of graviton modes in the Arkani-Hamed, Dimopoulos, and Dvali model for large extra spatial dimensions, and}
 the most relevant of which is the production of WIMP DM within the context of seven \comm{(?)} effective operators. The analysis also includes a brief study of a $Z'$ DM model which is analogous to our sV model.
 %\bigskip
 
-Signal selection is carried out based on at least one hard jet recoiling against missing energy. To ensure that the correct back-to-back jet + $\met$ topology is selected events are required to have a leading jet\footnote{Note: all jets relevant to the ATLAS \monojet and \monoZ analyses are reconstructed with the anti-$k_t$ algorithm with radius parameter 0.4.}, $j_{1}$, with $p_{T} >$ 120 GeV and $|\eta| <$ 2.0 satisfying $p_{T}^{j_{1}}/\met >$ 0.5. Surviving events must then satisfy $|\Delta\phi(j,\metvec)|>1.0$, where $j$ is any jet with $p_{T} >$ 30 GeV and $|\eta| <$ 4.5. This criterion reduces the multijet background contribution where the large $\met$ originates mainly from jet energy mismeasurement. Note that there is no upper limit placed on the number of jets per event. The contribution from the dominant background processes, $W/Z+$jets (\footnote{Do I want to be more specific here? Eg. $W (\rightarrow \ell \nu)+$jets, $Z(\rightarrow \nu\bar{\nu})+$jets, $Z/\gamma^{*}(\rightarrow \ell^{+}\ell^{-})+$jets?}), is managed with a veto on events containing muons or electrons with $p_{T}>$ 7 GeV. A further veto is placed on events containing isolated tracks\footnote{A track is considered isolated when no additional track with $p_{T} >$ 3 GeV lies within a cone of radius 0.4 around it.} with $p_{T}>$ 10 GeV and $|\eta| <$ 2.5. This reduces the contribution from non-identified leptons ($e$, $\mu$ or $\tau$) in the final state. Lastly, nine separate signal regions are defined with increasing lower thresholds on $\met$, which range from 150 GeV to 700 GeV as shown in Table \ref{monojet_SRs}.
+Signal selection is carried out based on at least one hard jet recoiling against missing energy. To ensure that the correct back-to-back jet + $\met$ topology is selected events are required to have a leading jet\footnote{Note: all jets relevant to the ATLAS \monojet and \monoZ analyses are reconstructed with the anti-$k_t$ algorithm with radius parameter 0.4.}, $j_{1}$, with $p_{T} >$ 120 GeV and $|\eta| <$ 2.0 satisfying $p_{T}^{j_{1}}/\met >$ 0.5. Surviving events must then satisfy $|\Delta\phi(j,\metvec)|>1.0$, where $j$ is any jet with $p_{T} >$ 30 GeV and $|\eta| <$ 4.5. This criterion reduces the multijet background contribution where the large $\met$ originates mainly from jet energy mismeasurement. Note that there is no upper limit placed on the number of jets per event. The contribution from the dominant background processes, $W/Z+$jets 
+%(\footnote{Do I want to be more specific here? Eg. $W (\rightarrow \ell \nu)+$jets, $Z(\rightarrow \nu\bar{\nu})+$jets, $Z/\gamma^{*}(\rightarrow \ell^{+}\ell^{-})+$jets?})
+, is managed with a veto on events containing muons or electrons with $p_{T}>$ 7 GeV. A further veto is placed on events containing isolated tracks\footnote{A track is considered isolated when no additional track with $p_{T} >$ 3 GeV lies within a cone of radius 0.4 around it.} with $p_{T}>$ 10 GeV and $|\eta| <$ 2.5. This reduces the contribution from non-identified leptons ($e$, $\mu$ or $\tau$) in the final state. Lastly, nine separate signal regions are defined with increasing lower thresholds on $\met$, which range from 150 GeV to 700 GeV as shown in Table \ref{monojet_SRs}.
 %\st{initially, events are required to have $\met>$ 150 GeV and at least one jet with $p_{T} >$ 30 GeV and $|\eta| <$ 4.5} (\comm{My logic here is that these cuts are for trigger, or pre-selection - they are overwritten by later cuts, right? So I think not worth including.}). we require $|\Delta\phi(\mathrm{j},\metvec)|>1.0$, where j is any jet with $p_{T} >$ 30 GeV and $|\eta| <$ 4.5.  have a leading jet (\comm{Is this the dominant background? If so, include `dominant', if not, this cut is maybe better understood as implementing back-to-backness. Is there an upper limit on $N_{jets}$?}). \comm{Note to self: include lepton veto criteria here.}
 %\bigskip
 
@@ -216,15 +69,16 @@ The signal simulation procedure outlined in sec. \ref{signal_generation} and imp
 
 \subsection{Mono-$Z$ Constraints}
 \label{monoZ_constraints}
-The ATLAS mono-$Z(\rightarrow \ell^+ \ell^-)$ + $\met$ analysis \cite{Aad:2014monoZlep} was principally designed to constrain a set of EFT models of DM. As a secondary focus, it also includes a short study of a $t$-channel simplified model similar to our tS model. \textcolor{blue}{where the $Z$ boson is radiated from an initial state quark. Leptons are in general much cleaner and simpler than jets, so this channel is included here to investigate whether the reduction in systematic uncertainties can provide easily-obtained results that are comparable to the more complicated \monojet channel.} \textcolor{magenta}{Are these last few sentences a repeat of what is written at the beginning of this chapter? If so, how should we reword/re-organise the chapter to avoid this? - MM.} \textcolor{blue}{This model is used to validate our results in this channel; see the details in sec.~\ref{monoZ_validation}.} \comm{Can this go at the end of this subsection?}
+The ATLAS mono-$Z(\rightarrow \ell^+ \ell^-)$ + $\met$ analysis \cite{Aad:2014monoZlep} was principally designed to constrain a set of EFT models of DM. As a secondary focus, it also includes a short study of a $t$-channel simplified model similar to our tS model.
+%\textcolor{blue}{This model is used to validate our results in this channel; see the details in sec.~\ref{monoZ_validation}.} \comm{Can this go at the end of this subsection?}
 
 The selection criteria for this analysis are summarised as follows (see the paper for a full description). Electrons (muons) are required to have a $p_{\mathrm{T}}$ greater than 20 GeV, and $|\eta|$ less than 2.47 (2.5). Two opposite-sign, same-flavour leptons are selected, and required to have invariant mass and pseudorapidity such that $m_{\ell \ell} \in [76, 106]$ GeV and $|\eta^{\ell \ell}| < 2.5$. The reconstructed $Z$ boson should be approximately back-to-back and balanced against the $\met$, ensured with the selections $\Delta \phi (\metvec, p_{\mathrm{T}}^{\ell \ell}) > 2.5$ and $| p_{\mathrm{T}}^{\ell \ell} - \met | \, /  \, p_{\mathrm{T}}^{\ell \ell} < 0.5$. Events containing a jet with $p_{\mathrm{T}}>$ 25 GeV and $|\eta|< $ 2.5 are vetoed. Events are also vetoed if they contain a third lepton with $p_{\mathrm{T}}>$ 7 GeV. The signal regions are defined by increasing lower $\met$ thresholds: $\met >$ 150, 250, 350, 450 GeV.
 
 % Note: I haven't included any info on the overlap removal here.
 
-The dominant background in this analysis is the irreducible $ZZ \rightarrow \ell^+ \ell^- \bar{\nu} \nu$ process, which has a softer $\met$ distribution that the DM signal. The background is estimated with MC simulation, and has a systematic uncertainty in the range 36-46$\%$ across the four signal regions.
+%The dominant background in this analysis is the irreducible $ZZ \rightarrow \ell^+ \ell^- \bar{\nu} \nu$ process, which has a softer $\met$ distribution that the DM signal. The background is estimated with MC simulation, and has a systematic uncertainty in the range 36-46$\%$ across the four signal regions.
 
-A cut-and-count strategy is used, and the total numbers of expected and observed events, along with total uncertainties, are reported for each signal region. The published result unfortunately does not give upper limits on the number of new physics events, so we calculate these ourselves: we obtain upper limits on $N_{exp,obs}$ (see eq.~\ref{sigma_nom}) with a simple implementation of HistFitter that uses a frequentist calculator and a one-sided profile likelihood test statistic (the LHC default), giving the model-independent upper limits shown in Table \ref{tab:Nlim_monoZ}. Note that we use signal regions 1 and 2 only, as this simplified HistFitter approach was deemed inappropriate for the very low statistics of signal regions 3 and 4. These upper limits are also used for our validation procedure (see sec.~\ref{monoZ_validation}).
+A cut-and-count strategy is used to estimate the total observed yields and expected SM backgrounds in each signal region. The statistical, systematic, and luminosity uncertainties are added in quadrature to give the total background estimate and uncertainty. We convert these into model-independent upper limits on the expected (observed) number of new physics events, $N^{\mathrm{exp}}_{\mathrm{sig}}$ ($N^{\mathrm{obs}}_{\mathrm{sig}}$), with a simple implementation of HistFitter that uses a frequentist calculator and a one-sided profile likelihood test statistic (the LHC default). The results of this process are presented in Table \ref{tab:Nlim_monoZ}. Note that we use signal regions 1 and 2 only, as our simplified HistFitter approach is inadequate to handle the very low statistics of signal regions 3 and 4. These upper limits are also used for the validation of the \monoZ signal generation and selection procedures (see sec.~\ref{monoZ_validation}).
 
 \begin{table}
 \begin{center}
