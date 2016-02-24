@@ -1,4 +1,5 @@
 % !TEX root = ../new_paper.tex
+\subsection{Model Descriptions}
 We begin with a short set of assumptions: that the DM particle, $\chi$, is a weakly interacting Dirac fermion, that it is a singlet under the SM, and that it is the lightest stable new particle. We also require minimal flavour violation (MVF) to hold wherever relevant.
 \iffalse
 (\comm{Not sure if this is relevant anymore, if we've ditched the scalar model. - Mia})
@@ -54,6 +55,165 @@ where the sum is over the three $Q_L$ doublets, $\gqX$ is the scalar coupling of
 
 \fi
 
+\subsection{The Mono-X + $\met$ Signature}
+The \monoX plus missing transverse energy signal (abbreviated \monoX + $\met$ or, simply, mono-$X$) is a popular collider signal in the search for new physics, particularly in the search for dark matter. Since WIMPs are not expected to interact with detector material, they appear as missing transverse energy, $\met = |\vec{p}_{\mathrm{T}}^{\mathrm{miss}}|$\footnote{Specifically, $\met = \sqrt{(E_{x}^{\mathrm{miss}})^{2} + (E_{y}^{\mathrm{miss}})^{2}}$ where $E_{x}^{\mathrm{miss}} = -\sum_{i=1}^{N_{\mathrm{cell}}} E_{i}\sin\theta_{i}\cos\phi_{i}$, $E_{x}^{\mathrm{miss}} = -\sum_{i=1}^{N_{\mathrm{cell}}} E_{i}\sin\theta_{i}\sin\phi_{i}$, and $N_{\mathrm{cell}}$ is the number of cells in the ATLAS calorimeter \cite{1742-6596-293-1-012064}.}, when balanced against a visible object, X, that is radiated from the initial or intermediate state \cite{some MET definition/discussion paper}. For the $s$-channel simplified models discussed above, only initial-state radiation is permitted, wherein the initial state consists of a pair of partons. For the tS model, intermediate state emission (virtual internal Bremsstrahlung) is also permitted, as shown in Fig. \ref{allchannel_sig_phen}.
+
+To fully exploit the potential of the ATLAS detector to record and identify a vast array of particle types, we consider for analysis three scenarios: 1). X is a parton which hadronises to form a jet, 2.) X is a Z boson which decays into an $\ell^+ \ell^-$ pair, and 3.) X is a hadronically-decaying W or Z boson. In the context of DM searches, these signatures are referred to as \monojet, mono-$Z$, and mono-$W/Z$ respectively. Note that the \monojet scenario is the most likely scenario at the LHC owing to the strength of the strong coupling yet the mono-$Z$ channel has the advantage of a relative simple and clean signature. \textcolor{magenta}{Also something about \monoZ being able to distinguish between up- and down-type quarks? Do we want to include this last bit? - MM}
+
+%, which may then enhance the limit in combination with monojet processes.}
+
+% Note for figure: putting spaces between the \end{subfig} and the next begin{subfig} leads to the figures stacking rather than sitting side-by-side, don't want this!
+% Also, have deliberately set TSD plots to width = 0.4, with horizontal space in the middle, to get the relative sizes of the figures looking correct.
+\begin{figure}[t]
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \centering
+    \resizebox{\linewidth}{!}{
+      \begin{tikzpicture}
+        \draw[fermion] (-1.5,1.5)node[left]{$q$} --(-0.75,0.75);
+        %\draw[dashed] (-0.75,0.75) -- (0,1.5)node[right]{$j$}; %\draw[dashed] (-0.75,0.75) --  (0,1.5)node[right]{X};
+        \draw[gluon] (-0.75,0.75) -- (0,1.5)node[right]{$g$};
+        \draw[fermion] (-0.75,0.75) -- (0,0);
+        \draw[antifermion] (-1.5,-1.5)node[left]{$\bar{q}$} --(0,0);
+        \draw[fill] (0,0) circle [radius=0.0]node[left]{$\gq\mbox{ }$};
+        \draw[photon] (0,0) --node[above]{$\xi$} (2,0);
+        \draw[fermion] (2,0) -- (3.5,1.5)node[right]{$\chi$};
+        \draw[antifermion] (2,0) --(3.5,-1.5)node[right]{$\bar{\chi}$};
+        \draw[fill] (2,0) circle [radius=0.0]node[right]{$\mbox{ }\gX$};
+      \end{tikzpicture}
+    }
+    \caption{}
+    %\label{Signal_phen_sa}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.45\textwidth}
+    \centering
+    \resizebox{\linewidth}{!}{
+      \begin{tikzpicture}
+        \draw[fermion] (-1.5,1.5)node[left]{$q$} --(-0.75,0.75);
+        \draw[photon] (-0.75,0.75) -- (0,1.5)node[right]{$W/Z$}; %\draw[dashed] (-0.75,0.75) -- (0,1.5)node[right]{X};
+        \draw[fermion] (-0.75,0.75) -- (0,0);
+        \draw[antifermion] (-1.5,-1.5)node[left]{$\bar{q}$} --(0,0);
+        \draw[fill] (0,0) circle [radius=0.0]node[left]{$\gq\mbox{ }$};
+        \draw[photon] (0,0) --node[above]{$\xi$} (2,0);
+        \draw[fermion] (2,0) -- (3.5,1.5)node[right]{$\chi$};
+        \draw[antifermion] (2,0) --(3.5,-1.5)node[right]{$\bar{\chi}$};
+        \draw[fill] (2,0) circle [radius=0.0]node[right]{$\mbox{ }\gX$};
+      \end{tikzpicture}
+    }
+    \caption{}
+    %\label{Signal_phen_se}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \resizebox{\linewidth}{!}{
+      \begin{tikzpicture}
+        \draw[fermion] (-2,1.)node[left]{$q$} --(-1,1.);
+        \draw[fermion] (-1,1.) --(0,1.);
+        \draw[gluon] (-1,1.) --(0,2.)node[right]{$g$};
+        \draw[antifermion] (-2,-1)node[left]{$\bar{q}$} --(0,-1);
+        \draw[fill] (0,1.) circle [radius=0.0]node[above]{$\gqX$};
+        \draw[dashed] (0,1.) -- node[left]{$\phi_{q}$}(0,-1);
+        \draw[fermion] (0,1.) -- (2,1.)node[right]{$\chi$};
+        \draw[antifermion] (0,-1) --(2,-1)node[right]{$\bar{\chi}$};
+        \draw[fill] (0,-1) circle [radius=0.0]node[below]{$\gqX$};
+      \end{tikzpicture}
+    }
+    \caption{}
+    %\label{Signal_phen_tf}
+  \end{subfigure}
+  \hspace{1cm}
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \resizebox{\linewidth}{!}{
+      \begin{tikzpicture}
+        \draw[fermion] (-2,1.)node[left]{$q$} --(0,1.);
+        \draw[antifermion] (-2,-1)node[left]{$\bar{q}'$} --(0,-1);
+        \draw[fill] (0,1.) circle [radius=0.0]node[above]{$\gqX$};
+        \draw[dashed] (0,1.) -- node[left]{$\phi_{q}$}(0,0.25);
+        \draw[photon] (0,0.) -- (1.5, 0.)node[right]{$W/Z$};
+        \draw[dashed] (0,0.) -- node[left]{$\phi_{q'}$}(0,-1);
+        \draw[fermion] (0,1.) -- (2,1.)node[right]{$\chi$};
+        \draw[antifermion] (0,-1) --(2,-1)node[right]{$\bar{\chi}$};
+        \draw[fill] (0,-1) circle [radius=0.0]node[below]{$\gqX$};
+      \end{tikzpicture}
+    }
+    \caption{}
+    %\label{Signal_phen_tg}
+  \end{subfigure}
+%  \begin{subfigure}[b]{0.45\textwidth}
+%    \centering
+%    \begin{tikzpicture}
+%      \draw[fermion] (-1.5,1.5)node[left]{$q$} --(0,0);
+%      \draw[gluon] (-1.5,-1.5)node[left]{$g$} --(0,0);
+%      %\draw[fill] (0,0) circle [radius=0.05]node[left]{$g_{q'}\mbox{ }$};
+%      \draw[fill] (0,0) circle [radius=0.0]node[left]{$\mbox{ }$};
+%      \draw[fermion] (0,0) --node[above]{$q$} (2,0);
+%      \draw[photon] (2,0) -- node[above]{$\xi\mbox{\textcolor{white}{m}}$}(2.75,0.75);
+%      \draw[fermion] (2.75,0.75) -- (3.5,1.5)node[right]{$\chi$};
+%      \draw[antifermion] (2.75,0.75) --(3.5,0)node[right]{$\bar{\chi}$};
+%      \draw[fill] (2,0) circle [radius=0.0]node[below]{$\gq\mbox{ }$};
+%      \draw[fermion] (2,0) --(3.5,-1.5)node[right]{$q$};
+%      \draw[fill] (2.75,0.75) circle [radius=0.0]node[right]{$\mbox{\textcolor{white}{\tiny m}}\gX$};
+%    \end{tikzpicture}
+%    \caption{}
+%    \label{Signal_phen_sd}
+%  \end{subfigure}
+%  \begin{subfigure}[b]{0.45\textwidth}
+%    \centering
+%    \begin{tikzpicture}
+%      \draw[gluon] (-1.5,1.5)node[left]{$g$} --(0,0);
+%      \draw[gluon] (-1.5,-1.5)node[left]{$g$} --(0,0);
+%      %\draw[fill] (0,0) circle [radius=0.05]node[left]{$g_{q'}\mbox{ }$};
+%      \draw[fill] (0,0) circle [radius=0.0]node[left]{$\mbox{ }$};
+%      \draw[gluon] (0,0) -- (1,0);
+%      \draw[antifermion] (1,0) -- node[above]{$\bar{q}\mbox{\textcolor{white}{m}}$}(1.75,0.75);
+%      \draw[photon] (1.75,0.75) -- node[above]{$\xi\mbox{\textcolor{white}{m}}$}(2.5,1.5);
+%      \draw[fermion] (2.5, 1.5) -- (3.25, 2.25)node[right]{$\chi$};
+%      \draw[antifermion] (2.5, 1.5) -- (3.25, 0.75)node[right]{$\bar{\chi}$};
+%      \draw[antifermion] (1.75,0.75) --(2.5,0)node[right]{$\bar{q}$};
+%      %\draw[fill] (2,0) circle [radius=0.0]node[below]{$\gq\mbox{ }$};
+%      \draw[fermion] (1,0) --(2.5,-1.5)node[right]{$q$};
+%      \draw[fill] (1.75,0.75) circle [radius=0.0]node[right]{$\mbox{\textcolor{white}{\tiny m}}\gq$};
+%      \draw[fill] (2.5,1.5) circle [radius=0.0]node[right]{$\mbox{\textcolor{white}{\tiny m}}\gX$};
+%    \end{tikzpicture}
+%    \caption{}
+%    \label{Signal_phen_sd}
+%  \end{subfigure}
+%  \begin{subfigure}[b]{0.4\textwidth}
+%    \centering
+%    \resizebox{\linewidth}{!}{
+%      \begin{tikzpicture}
+%        \draw[fermion] (-2,1.)node[left]{$q$} --(0,1.);
+%        \draw[antifermion] (-2,-1)node[left]{$\bar{q}$} --(0,-1);
+%        \draw[dashed] (0,1.) -- (0,-1);
+%        \draw[fermion] (0,1.) -- (2,1.)node[right]{$\chi$};
+%        \draw[antifermion] (0,-1) --(2,-1)node[right]{$\bar{\chi}$};
+%      \end{tikzpicture}
+%    }
+%    \caption{}
+%    %\label{Signal_phen_tg}
+%  \end{subfigure}
+%  \begin{subfigure}[b]{0.4\textwidth}
+%    \centering
+%    \resizebox{\linewidth}{!}{
+%      \begin{tikzpicture}
+%        \draw[fermion] (-1.5,1.5)node[left]{$q$} --(0,0);
+%        \draw[antifermion] (-1.5,-1.5)node[left]{$\bar{q}$} --(0,0);
+%        \draw[dashed] (0,0) -- (2,0);
+%        \draw[fermion] (2,0) --(3.5,1.5)node[right]{$\chi$};
+%        \draw[antifermion] (2,0) --(3.5, -1.5)node[right]{$\bar{\chi}$};
+%      \end{tikzpicture}
+%    }
+%    \caption{}
+%    %\label{Signal_phen_tg}
+%  \end{subfigure}
+  \caption{Representative dark matter pair-production processes with a gluon, or $W/Z$ boson in the final state for the $s$-channel (a,b) and $t$-channel (c,d) models.}
+  \label{allchannel_sig_phen}
+\end{figure}
+
+%previously had a footnote: It is worth noting here that the mono-$W$ channel has previously been chosen for its apparent ability to distinguish a case where $u$- and $d$-type quarks couple with opposite sign to the new physics sector \cite{}\comm{(Tait)}. However, during the preparation of this paper this has been shown to be an unphysical scenario \cite{}\comm{(Bell, Leane)}
+%\bigskip
+
 \subsection{Mass and Coupling Points}  % Moved from section 3
 A representative set of dark matter and mediator masses, listed in Table \ref{Mass_coup_points}, were chosen for study in each detection channel. DM masses of 3, 30 and 300 GeV were also included in the \monoZ channel. All $\mX-\Mmed$ combinations are permitted in the sV and sA models while in the tS model $\Mmed$ must be greater than $\mX$ to ensure stability of the DM particle. The couplings, $\gq$ and $\gqX$, were set to unity while the DM-mediator coupling, $\gX$, was varied from 0.2 to 5 for the $s$-channel models. In all cases, a point in phase space was disregarded if it lead to a mediator width greater than 50\% of the mediator mass, as discussed below. The mediator masses were chosen to cover a broad range of parameter space and to coincide with predominantly three regimes: (near-)degenerate ($\Mmed \approx \mX$), kinematically allowed ($\Mmed \geq 2 \mX$), and EFT-like ($\sqrt{\hat{s}} << \Mmed $) \footnote{A recent study by Alves et al. found that EFT results do not apply to mediators with a mass less than 2.5 TeV at the LHC during Run I \cite{Alves:2011wf}.}. We also allow for the possibility of a light mediator/heavy WIMP scenario ($\Mmed < \mX$) in the sV and sA models.
 
@@ -73,7 +233,7 @@ A representative set of dark matter and mediator masses, listed in Table \ref{Ma
 \label{Mass_coup_points}
 \end{table}
 
-\subsection{Width effects}
+\subsection{Width Effects}
 
 An important factor when considering simplified models is to ensure the mediator width is treated appropriately, as it impacts both the cross-section calculation and, in some cases, the kinematic behaviour of the model. In previous analyses (ref) it has been common to consider mediators of a fixed width such as $\Gamma = M/8 \pi$  (the minimal width possible with only a single quark helicity coupling to the mediator with $\gq$ = 1), to take advantage of the enhancement in cross section as the width becomes small and on-shell.
 
