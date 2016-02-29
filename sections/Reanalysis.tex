@@ -78,11 +78,9 @@ The selection criteria for this analysis are summarised as follows (see the pape
 
 %The dominant background in this analysis is the irreducible $ZZ \rightarrow \ell^+ \ell^- \bar{\nu} \nu$ process, which has a softer $\met$ distribution that the DM signal. The background is estimated with MC simulation, and has a systematic uncertainty in the range 36-46$\%$ across the four signal regions.
 
-A cut-and-count strategy is used to estimate the total observed yields and expected SM backgrounds in each signal region. The limits on $\sigma\times\mathcal{A}\times\epsilon$ are not publicly available, so we take the numbers of expected and observed events, along with the associated uncertainties, and convert these into model-dependent upper limits with a single implementation of the HistFitter package \cite{} using a frequentist calculator and a one-sided profile likelihood test statistic (the LHC default). The results of this process are displayed in table~\ref{tab:Nlim_monoZ}.
+A cut-and-count strategy is used to estimate the total observed yields and expected SM backgrounds in each signal region. The limits on $\sigma\times\mathcal{A}\times\epsilon$ are not publicly available, so we take the numbers of expected and observed events, along with the associated uncertainties, and convert these into model-dependent upper limits with a single implementation of the HistFitter framework \cite{HistFitter} using a frequentist calculator and a one-sided profile likelihood test statistic (the LHC default). The results of this process are displayed in table~\ref{tab:sigmalim_monoZ}. Note that we use signal regions 1 and 2 only, as our simplified HistFitter approach is inadequate to handle the very low statistics of signal regions 3 and 4. These upper limits are also used for the validation of the \monoZ signal generation and selection procedures (see app.~\ref{monoZ_validation}).
 
-
-The statistical, systematic, and luminosity uncertainties are added in quadrature to give the total background estimate and uncertainty. We convert these into model-independent upper limits on the expected (observed) number of new physics events, $N^{\mathrm{exp}}$ ($N^{\mathrm{obs}}$), with a simple implementation of HistFitter that uses a frequentist calculator and a one-sided profile likelihood test statistic (the LHC default). The results of this process are presented in Table \ref{tab:Nlim_monoZ}. Note that we use signal regions 1 and 2 only, as our simplified HistFitter approach is inadequate to handle the very low statistics of signal regions 3 and 4. These upper limits are also used for the validation of the \monoZ signal generation and selection procedures (see app.~\ref{monoZ_validation}).
-
+\iffalse
 \begin{table}
 \begin{center}
 \begin{tabular}{ c  c  c }
@@ -100,6 +98,24 @@ $N^{\mathrm{obs}}$ & 32.2 & 5.9 \B \\
 \label{tab:Nlim_monoZ}
 \caption{The expected and observed upper limits on the number of new physics events in the ATLAS \monoZ analysis, calculated with HistFitter using the results of \cite{Aad:2014monoZlep}.}
 \end{table}
+\fi
+
+\begin{table}[!htbp]
+  \begin{center}
+    \begin{tabular}{c|c|c}
+      \hline
+      \hline
+      Signal Region & $\met$ threshold [GeV] & $\sigma \times \mathcal{A} \times \epsilon$ [fb] \\
+      \hline
+      SR1 & 150 & 1.59 (1.71) \\
+      SR2 & 250 & 0.291 (0.335) \\
+      \hline
+      \hline
+    \end{tabular}
+  \end{center}
+  \caption{The ATLAS \monoZ $\met$ signal regions and corresponding observed (expected) model-independent upper limits on $\sigma \times \mathcal{A} \times \epsilon$ at 95\% confidence level. Adapted using HistFitter from ref.~\cite{Aad:2014monoZlep}.}
+  \label{tab:sigmalim_monoZ}
+\end{table}
 
 \subsection{Mono-$W/Z$ Constraints}
 \label{monoWZ_constraints}
@@ -113,5 +129,21 @@ The \monoWZ event selection is carried out as follows. Large-radius jets are sel
 
 %The main background is due to $Z \rightarrow \bar{\nu} \nu$ events with additional jets from initial state radiation. Further important backgrounds from $W/Z$+jets events, in which the boson decays leptonically, enter the selection if the lepton(s) is missed due to being out of the acceptance range or failing ID requirements, or in the case that it is a hadronically-decaying $\tau$ lepton. All these backgrounds are estimated by the original analysis in dedicated control regions.
 
-The ATLAS analysis used a shape-fit of the mass distribution of the large-$R$ jet to estimate the background yields in the two signal regions, along with the associated statistical and systematic uncertainties. As in the \monoZ case, we convert these values into upper limits on the expected and observed number of new physics events using the HistFitter package. For the $\met > 500$ GeV signal region, we obtain $N^{exp} = 27.2$ and $N^{obs} = 27.4$.
+The ATLAS analysis used a shape-fit of the mass distribution of the large-$R$ jet to estimate the background yields in the two signal regions, along with the associated statistical and systematic uncertainties. As in the \monoZ case, we convert these values into upper limits on the expected and observed number of new physics events using the HistFitter framework. For the $\met > 500$ GeV signal region, we obtain the limits shown in table~\ref{tab:sigmalim_monoWZ}.
 %, we simply regard the number of events in the signal region, since the data points of the $m_{\rm jet}$ distribution were not published. \comm{check!!!} From the published number of expected and observed events in the signal region and their uncertainties, we \comm{use HistFitter to} calculate the upper limit on the number of new physics events as described above for the \monoZ channel (see eq.~\ref{sigma_nom}). We obtain the following numbers: $N_{exp} = 27.2$, $N_{obs} = 27.4$.
+
+\begin{table}[!htbp]
+  \begin{center}
+    \begin{tabular}{c|c|c}
+      \hline
+      \hline
+      Signal Region & $\met$ threshold [GeV] & $\sigma \times \mathcal{A} \times \epsilon$ [fb] \\
+      \hline
+      SR2 & 500 & 1.35 (1.34) \\
+      \hline
+      \hline
+    \end{tabular}
+  \end{center}
+  \caption{The ATLAS \monoWZ $\met$ signal region considered in this work and corresponding observed (expected) model-independent upper limits on $\sigma \times \mathcal{A} \times \epsilon$ at 95\% confidence level. Adapted using HistFitter from ref.~\cite{}.}
+  \label{tab:sigmalim_monoWZ}
+\end{table}
