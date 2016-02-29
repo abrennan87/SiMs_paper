@@ -4,16 +4,16 @@ We begin with a short set of assumptions: that the DM particle, $\chi$, is a wea
 \iffalse
 (\comm{Not sure if this is relevant anymore, if we've ditched the scalar model. - Mia})
 \fi
-Additionally the new sector is assumed to couple only to the SM quarks; while possible coupling to SM leptons \cite{} or gluons \cite{} has been studied elsewhere, it is beyond the scope of this paper. The nature of the mediating particle then results from these assumptions: in the $s$-channel it is chosen to be a vector particle and so must also be a SM singlet, denoted $\xi$, while in the $t$-channel it is identified as scalar and is necessarily charged and coloured, and labelled $\phi$.
+Additionally the new sector is assumed to couple only to the SM quarks; while possible coupling to SM leptons e.g. \cite{1103.0240} or gluons e.g. \cite{1506.01408} has been studied elsewhere, it is beyond the scope of this paper. The nature of the mediating particle then results from these assumptions: in the $s$-channel it is chosen to be a vector particle and must also be a SM singlet, denoted $\xi$, while in the $t$-channel it is identified as scalar and is necessarily charged and coloured, and labelled $\phi$.
 
 The $s$-channel models chosen for analysis are characterised by vector ($sV$) or axial-vector ($sA$) couplings to both the dark and SM sectors. They are described by the following interaction Lagrangians:
 \begin{equation}
 \label{L_int_sV}
-\mathcal{L}_{sV} = - \xi_{\mu}\left[ \sum\limits_{q} \gq\bar{q}\gamma^{\mu}q - \gX\bar{\chi}\gamma^{\mu}\chi\right],
+\mathcal{L}_{sV} \supset - \xi_{\mu}\left[ \sum\limits_{q} \gq\bar{q}\gamma^{\mu}q - \gX\bar{\chi}\gamma^{\mu}\chi\right],
 \end{equation}
 \begin{equation}
 \label{L_int_sA}
-\mathcal{L}_{sA} =  \xi_{\mu}\left[\sum\limits_{q} \gq\bar{q}\gamma^{\mu}\gamma_{5}q - \gX\bar{\chi}\gamma^{\mu}\gamma_{5}\chi\right],
+\mathcal{L}_{sA} \supset  \xi_{\mu}\left[\sum\limits_{q} \gq\bar{q}\gamma^{\mu}\gamma_{5}q - \gX\bar{\chi}\gamma^{\mu}\gamma_{5}\chi\right],
 \end{equation}
 %\begin{equation}
 %\label{L_int_sS}
@@ -34,12 +34,12 @@ For the couplings $\gq$ and $\gX$ to remain within the perturbative regime, they
 The $t$-channel model considered in this paper (abbreviated $tS$) is characterised by a scalar mediator and is motivated by analogy with a common aspect of Supersymmetric models: neutralino DM interacting with the SM sector via $t$-channel exchange of a squark \cite{SUSYDM}. Note that in this Supersymmetric scenario the DM particle is a Majorana fermion. SiMs in which $\chi$ is of Majorana type are kinematically identical to the corresponding Dirac cases (requiring multiplication of the cross-section by a simple factor in order to compute limits) and so are not covered here\footnote{The exception being in the validation of the \monoZ channel, see Sec. \ref{monoZ_validation}.}. The exception to this rule is the $s$-channel vector mediator model, which vanishes if $\chi$ is a Majorana fermion \cite{METSig}.
 %\bigskip
 
-In the $tS$ model, the mediator is allowed to couple to either the left or right-handed quarks as an SU(2) doublet or singlet respectively. Since the LHC is insensitive to the chirality of the quarks, we assume for simplicity that $\phi$ couples to the left-handed quarks only, and is itself an SU(2) doublet, allowing radiation of a $W$ boson. To avoid coupling quarks of different generations, and to remain in step with the DM forum recommendations \cite{}, we include three generations of mediator $\phi$, with equal masses and couplings. The interaction Lagrangian for this model is then:
+In the $tS$ model, the mediator is allowed to couple to either the left or right-handed quarks as an SU(2) doublet or singlet respectively. Since the LHC is insensitive to the chirality of the quarks, we assume for simplicity that $\phi$ couples to the left-handed quarks only, and is itself an SU(2) doublet, allowing radiation of a $W$ boson. To avoid different couplings to quarks of different generations, and to remain in step with the DM forum recommendations \cite{}, we include three generations of mediator $\phi$, with equal masses and couplings. The interaction Lagrangian for this model is then:
 \begin{equation}
 \label{L_int_tS}
-\mathcal{L}_{tS} = \sum_{Q} \gqX \bar{Q} P_R \phi \chi + {\rm h.c.},
+\mathcal{L}_{tS} \supset \sum_{Q} \gqX \bar{Q} P_R \phi \chi + {\rm h.c.},
 \end{equation}
-where the sum is over the three $Q_L$ doublets, $\gqX$ is the scalar coupling of the incoming quark, $\phi$ and $\chi$, and $P_R$ is the usual chiral projection operator.
+where the sum is over the three quark doublets, $\gqX$ is the scalar coupling of the incoming quark, $\phi$ and $\chi$, and $P_R$ is the usual chiral projection operator.
 
 \subsection{The Mono-$X$ + $\met$ Signature}
 The \monoX + $\met$ (abbreviated to mono-$X$) is a popular collider signal in the search for new physics, particularly in the search for dark matter. Since DM particles are not expected to interact with detector material, they appear as missing transverse energy when balanced against a visible object, $X$, that is radiated from the initial or intermediate state (where the latter is permitted in the $t$-channel model). For the $s$-channel SiMs discussed above, only initial-state radiation is permitted; see figs.~\ref{fig:FD_sV_gluonISR} and \ref{fig:FD_sV_WZISR} for examples. For the $tS$ model, radiation of a gluon or electroweak (EW) boson is permitted both from initial state partons (fig.~\ref{fig:FD_tS_gluonISR}) or from the mediator (fig.~\ref{fig:FD_tS_WZmediator}).
@@ -203,7 +203,7 @@ NEW: The most likely scenario at the LHC is production of a jet alongside the in
 %\bigskip
 
 \subsection{Mass and Coupling Points}  % Moved from section 3
-A representative set of dark matter and mediator masses, listed in table \ref{Mass_coup_points}, are chosen for study in each detection channel. DM masses of 3, 30 and 300 GeV were also included in the \monoZ channel, where ease of production can afford higher granularity. All $(\mX, \Mmed)$ combinations are permitted in the $sV$ and $sA$ models, while in the $tS$ model $\Mmed$ must be greater than $\mX$ to ensure stability of the DM particle. The couplings $\gq$ and $\gqX$ are set to unity, while the DM-mediator coupling in the $s$-channel models, $\gX$, was varied from 0.2 to 5. The mediator masses are chosen to cover a broad range of parameter space and to coincide with predominantly three regimes: (near-)degenerate ($\Mmed \approx \mX$), on-shell ($\Mmed \geq 2 \mX$), and EFT-like ($\sqrt{\hat{s}} << \Mmed $) \footnote{A recent study by Alves et al. found that EFT results do not apply to mediators with a mass less than 2.5 TeV at the LHC during Run I \cite{Alves:2011wf}.}. We also allow for the possibility of a light mediator/heavy WIMP scenario ($\Mmed < \mX$) in the $sV$ and $sA$ models.
+A representative set of dark matter and mediator masses, listed in table \ref{Mass_coup_points}, are chosen for study in each detection channel. DM masses of 3, 30 and 300 GeV were also included in the \monoZ channel, where ease of production can afford higher granularity. All $(\mX, \Mmed)$ combinations are permitted in the $sV$ and $sA$ models, while in the $tS$ model $\Mmed$ must be greater than $\mX$ to ensure stability of the DM particle. The couplings $\gq$ and $\gqX$ are set to unity, while the DM-mediator coupling in the $s$-channel models, $\gX$, was varied from 0.2 to 5. The mediator masses are chosen to cover a broad range of parameter space and to coincide with predominantly three regimes: (near-)degenerate ($\Mmed \approx \mX$), on-shell ($\Mmed \geq 2 \mX$), and EFT-like ($\sqrt{\hat{s}} \ll \Mmed $) \footnote{A recent study by Alves et al. found that EFT results do not apply to mediators with a mass less than 2.5 TeV at the LHC during Run I \cite{Alves:2011wf}.\comm{I can't find this, could someone check? Maybe this is covered by the validity issues citation anyway}}. We also allow for the possibility of a light mediator/heavy WIMP scenario ($\Mmed < \mX$) in the $sV$ and $sA$ models.
 
 \begin{table}
 \centering
@@ -217,15 +217,16 @@ A representative set of dark matter and mediator masses, listed in table \ref{Ma
 \hline
 \hline
 \end{tabular}
-\caption{Mass and coupling points chosen for the analysis of simplified dark matter models. Values in brackets are only included in the \monoZ channel. The mediator masses are primarily representative of three regimes: (near-)degenerate ($\Mmed \approx \mX$), on-shell ($\Mmed \geq 2 \mX$), and EFT-like ($\sqrt{\hat{s}} << \Mmed$). For the $t$-channel model, $\Mmed > \mX$ is also required.}
+\caption{Mass and coupling points chosen for the analysis of simplified dark matter models. Values in brackets are only included in the \monoZ channel. The mediator masses are primarily representative of three regimes: (near-)degenerate ($\Mmed \approx \mX$), on-shell ($\Mmed \geq 2 \mX$), and EFT-like ($\sqrt{\hat{s}} \ll \Mmed$). For the $t$-channel model, $\Mmed > \mX$ is also required.}
 \label{Mass_coup_points}
 \end{table}
 
-\subsection{Width Effects}
+\subsection{Treatment of the width}
 
-An important factor when considering simplified models is to ensure the mediator width is treated appropriately, as it impacts both the cross-section calculation and, in some cases, the kinematic behaviour of the model. In previous analyses (ref) it has been common to consider mediators of a fixed width such as $\Gamma = M/8 \pi$  (the minimal width possible with only a single quark helicity coupling to the mediator with $\gq$ = 1), to take advantage of the enhancement in cross-section as the width becomes small and on-shell.
+An important factor when considering simplified models is to ensure the mediator width is treated appropriately, as it impacts both the cross-section calculation and, in some cases, the kinematic behaviour of the model. 
+%In previous analyses (ref) it has been common to consider mediators of a fixed width such as $\Gamma = M/8 \pi$  (the minimal width possible with only a single quark helicity coupling to the mediator with $\gq$ = 1), to take advantage of the enhancement in cross-section as the width becomes small and on-shell.
 
-In this work, the mediator widths are expanded to include coupling to all kinematically accessible quarks. We assume minimal flavour violation, which implies a universal coupling to all quark flavours. Following $[$(other minimum width papers)$]$, the minimum on-shell kinetic width for each model is given by:
+Following the DM Forum recommendations \cite{1507.00966}, we use the minimal width, allowing coupling to all kinematically accessible quarks. We assume minimal flavour violation, which implies a universal coupling to all quark flavours. The minimum  width for each model is given by:
 
 \begin{equation}
   \begin{split}
@@ -248,9 +249,8 @@ In this work, the mediator widths are expanded to include coupling to all kinema
   \end{split}
 \end{equation}
 
-The above expressions are valid where the width is smaller than the mass of the mediator.
-
-A recent paper [Tom+Karl, others?] demonstrated that the generator treatment of the mediator as a Breit-Wigner propagator, rather than a true kinetic propagator, is accurate only up to $\Gamma \lesssim M/2$. This was also shown to be a necessary requirement for the following approximations to hold:
+It is possible that the mediator may decay to other SM or BSM particles \cite{1411.0535}, but this is not expected to have a large effect on the kinematic distribution as long as the width remains relatively small \cite{1507.00966}.
+The generator treatment of the mediator as a Breit-Wigner propagator, rather than a true kinetic propagator, breaks down for large widths \cite{NordstromSVD}. This ref. also showed that for $\Gamma/M \lesssim 0.5$ the following scaling relations approximately hold:
 
 \begin{equation}
   \sigma \propto
@@ -266,7 +266,7 @@ in the $sV$ and $sA$ models, and
   \sigma \propto \gqX^4
   \label{eq:sigma_propto_couplings_tchan}
 \end{equation}
-in the tS model. When valid, these approximations allow us to greatly simplify our limit calculations.
+in the tS model. When valid, these approximations allow us to greatly simplify our limit calculations, and for this reason, we restrict our primary results to regions of parameter space where $\Gamma/M < 0.5$.
 
 To simplify the procedure further, we can take advantage of the fact that (with the notable exception of the $tS$ model in the \monojet channel) for each point in ($\mX$, $\Mmed$) phase space, the mediator width (and therefore the couplings) do not greatly affect each model's kinematic behaviour. This is demonstrated in fig.~\ref{fig:MET_dists}, where for the $sV$ (representing both the $sV$ and $sA$ models) and $tS$ models, we plot a simplified $\met$ distribution, as a proxy for the full selection in each analysis, for two mass points and a demonstrative set of couplings such that $\Gamma < \Mmed/2$. The $\met$ distribution is predominantly independent of the mediator width for the $s$-channel models in the \monojet channel, and all models in the \monoZ\footnote{In this discussion, the \monoWZ channel can be assumed to follow the same logic as for the \monoZ channel.} channel. However, there is a clear variation in the kinematic behaviour of the tS model in the \monojet channel, which can be attributed to additional diagrams (accessible only in this channel) featuring a gluon in the initial state and subsequently allowing the mediator to go on-shell. In this scenario, when the resulting quark and DM particle are both small compared to the mediator mass, they share equally its energy leading to a peak in the $\met$ distribution at approximately half the mediator mass.
 
