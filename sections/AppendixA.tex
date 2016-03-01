@@ -1,7 +1,7 @@
 In this appendix we present a summary of the procedure employed to calculate the 95\% confidence level (CL) limits on the coupling parameter $\sqrtgqgX$, where this parameter can be replaced with $\gqX$ for the $tS$ model, and $\Mstar$ in the validation of the \monojet analysis.
 
 \subsection{Nominal Values}
-For each SiM, the nominal limit is calculated by taking the model-independent upper limit on $\sigma \times \mathcal{A} \times \epsilon$ from each analysis, dividing by the value of $\mathcal{A} \times \epsilon$ (which is taken as a single parameter for each point) to obtain the limiting cross section $\sigma_{\mathrm{lim}}$, and rearranging eq.~\ref{eq:sigma_propto_couplings_schan} to convert to a limit on the couplings. In the $s$-channel, on-shell case, the width can be expressed as a function of $\gq$ and the ratio $\gX / \gq$, which simplifies the calculation. We arrive at
+For each SiM, the nominal limit is calculated by taking the model-independent upper limit on $\sigma \times \mathcal{A} \times \epsilon$ from each analysis, dividing by the value of $\mathcal{A} \times \epsilon$ (which is taken as a single parameter for each point) to obtain the limiting cross section $\sigma_{\mathrm{lim}}$, and rearranging eq.~\ref{eq:sigma_propto_couplings_schan} to convert to a limit on the couplings. In the $s$-channel on-shell case, the width can be expressed as a function of $\gq$ and the ratio $\gX / \gq$, which simplifies the calculation. We arrive at
 
 \begin{equation}
   \sqrtgqgX_{\mathrm{lim}} =
@@ -11,9 +11,9 @@ For each SiM, the nominal limit is calculated by taking the model-independent up
   \end{cases}
   \label{eq:nominal_limit}
 \end{equation}
-where $\sqrtgqgX_{\mathrm{gen}}$ and $\sigma_{\mathrm{gen}}$ are the input couplings and resulting cross-section (taken from \PYTHIA), respectively.
+where $\sqrtgqgX_{\mathrm{gen}}$ and $\sigma_{\mathrm{gen}}$ are the input couplings and cross-section (taken from \PYTHIA), respectively.
 
-The signal region in each case is chosen based on where the best `expected' limit exists, where that limit is calculated assuming that exactly the expected SM background is observed.
+The signal region in each case is chosen based on where the best `expected' limit lies, where that limit is calculated assuming that exactly the expected SM background is observed.
 
 %where $\Mstar^{gen}$ is the \st{theoretical} \comm{input} suppression scale and $\sigma_{gen}$ is the \st{theoretical} \comm{generated} cross-section.
 %\bigskip
@@ -28,7 +28,7 @@ The signal region in each case is chosen based on where the best `expected' limi
 %where $(\sqrtgqgX)^{gen}$ is the product of the theoretical coupling constants. Note that $(\sqrtgqgX)^{gen}$ is always equal to $1$ for the t-channel scalar mediator model.
 
 \subsection{Uncertainty Estimation}
-Our nominal limits rely on both $\sigma_{gen}$ and $\mathcal{A}\times\epsilon$ and so are subject to systematic uncertainties which derive from our choice of MC generation procedure. For our MC samples, there are three key sources of systematic uncertainty: the factorisation and renormalisation scales, the strong coupling constant ($\alpha_{s}$) and the choice of parton distribution function (PDF).
+Our nominal limits rely on both $\sigma_{gen}$ and $\mathcal{A}\times\epsilon$ and so are subject to systematic uncertainties which derive from our choice of signal generation procedure. For our signal samples, there are three key sources of systematic uncertainty: the factorisation and renormalisation scales, the strong coupling constant ($\alpha_{s}$) and the choice of parton distribution function (PDF).
 \comm{Should we say something about the actual choice of generator here? And what about LO vs NLO?})
 % The uncertainty associated with these parameters is estimated as follows.
 %\bigskip
@@ -43,7 +43,7 @@ Our nominal limits rely on both $\sigma_{gen}$ and $\mathcal{A}\times\epsilon$ a
 %The uncertainty on
 %
 %\subsection{Theoretical cross-section, $\sigma_{gen}$}
-The factorisation and renormalisation default scales are straightforward to test in \MG where they varied simultaneously by factors of 2 (`up') and 0.5 (`down'). The systematic effects of the strong coupling constant and the PDF are difficult to separate and so are treated in tandem. We assume that the systematic uncertainty introduced by $\alpha_{s}$ at matrix-element level is negligible when compared to the PDF uncertainties, as demonstrated to be valid in ref. \cite{CERN-THESIS-2015-038}. The variation of $\alpha_{s}$ in conjunction with a PDF is done with the use of specific tunes in \PYTHIA, which we change simultaneously with the PDF choice to estimate the uncertainty on $\Delta \sigma_{gen}$. The nominal choices of PDF and tune are varied `up' to NNPDF2.1LO PDF + Monash tune, and `down' to CTEQ6L1 PDF and ATLAS UE AU2-CTEQ6L1 tune. \comm{Millie: put discussion of matching scale systematic here.} These systematic uncertainty sources are summarised in table~\ref{tab:syst_unc}.
+We asses the impact of the factorisation and renormalisation default scales in a straightforward manner; by varying them simultaneously by factors of 2 (`up') and 0.5 (`down'). The systematic effects of the strong coupling constant and PDF are difficult to separate and so are treated in tandem. We assume that the systematic uncertainty introduced by $\alpha_{s}$ at matrix-element level is negligible when compared to the PDF uncertainties, as demonstrated to be valid in ref. \cite{CERN-THESIS-2015-038}. The variation of $\alpha_{s}$ in conjunction with a change of PDF is done with the use of specific tunes in \PYTHIA, which we change simultaneously with the PDF choice to estimate the uncertainty on $\Delta \sigma_{gen}$. The nominal choices of PDF and tune are varied `up' to NNPDF2.1LO PDF + Monash tune, and `down' to CTEQ6L1 PDF and ATLAS UE AU2-CTEQ6L1 tune. For the \monojet channel, the impact of the matching scale (QCUT) is assessed in a manner similar to that of the factorisation and renormalisation scales. That is, we vary the QCUT by factors of 2 (`up' to 160 GeV) and 0.5 (`down' to 40 GeV). These systematic uncertainty sources are summarised in table~\ref{tab:syst_unc}.
 
 \begin{table}
 \centering
@@ -66,8 +66,8 @@ sources & & renormalisation scales & (\monojet only) \B \\
 \hline
 \hline
 \end{tabular}
-\caption{The sources of systematic uncertainty considered in this analysis. Each point in phase space is varied up or down by one of these sources, and the systematic uncertainty is taken to be the average difference in modified acceptance from the nominal value. }
+\caption{Reading left to right, the sources of systematic uncertainty considered in this analysis. Each point in phase space is varied up or down by one of these sources, and the systematic uncertainty is then taken from the resultant changes to the acceptance and cross-section in comparison to their nominal values.}
 \label{tab:syst_unc}
 \end{table}
 
-The average variation from the nominal value of $\sigma_{\mathrm{lim}}$, as a fraction of $\sigma_{\mathrm{lim}}$, resulting from each systematic source is added in quadrature and propagated to $\sqrtgqgX$ to obtain the total systematic uncertainty. This process is adjusted slightly to account for the inclusion of statistical uncertainties, which are estimated rather conservatively by taking the 95\% CL \emph{lower} limit on $\mathcal{A} \times \epsilon$ as calculated with the Wald approximation, i.e. $\mathcal{A}\times\epsilon \rightarrow (\mathcal{A}\times\epsilon) - \Delta(\mathcal{A}\times\epsilon)$. The uncertainty on the luminosity is less than 3\%, so is considered to be negligible in comparison to other systematic sources.
+The average variation in the nominal value of $\sigma_{\mathrm{lim}}$ (measured as a fraction of $\sigma_{\mathrm{lim}}$) resulting from each systematic source is added in quadrature and propagated to $\sqrtgqgX$ to obtain the total systematic uncertainty. This process is adjusted slightly to account for the inclusion of statistical uncertainties, which are estimated conservatively by taking the 95\% CL \emph{lower} limit on $\mathcal{A} \times \epsilon$ as calculated with the Wald approximation, i.e. $\mathcal{A}\times\epsilon \rightarrow (\mathcal{A}\times\epsilon) - \Delta(\mathcal{A}\times\epsilon)$. Note that the uncertainty on the luminosity is less than 3\%, so is considered to be negligible in comparison to other systematic sources.
