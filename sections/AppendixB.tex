@@ -1,6 +1,6 @@
 \subsection{Monojet Channel}
 \label{monojet_validation}
-The MC generation and signal selection procedures for the \monojet channel are validated via reproduction of the ATLAS limits on $\Mstar \equiv \Mmed / \sqrtgqgX$, for the $s$-channel vector simplified model. A comparison of SR7 limits for a representative sample of mediator masses with $\mX = $ 50 GeV, $\Gamma = M/8\pi$ and $\sqrtgqgX = 1$ is presented in Table \ref{M_star_limits_monojet}. In general, good agreement is observed between the ATLAS and reproduced limits, with a maximum difference (with respect to the ATLAS limit) of $<$23\%. We note that a discrepancy of a few percent is expected and allowed for three reasons. Firstly, the MC generation procedure employed in this analysis does not include a full simulation of the ATLAS detector. Instead, reconstruction effects are simulated by applying a Gaussian smearing of the jet $p_{\mathrm{T}}$ by a conservative factor of 5\%. Next, the matching procedure employed in this analysis (and discussed in detail in Section \ref{matching_procedure}) is largely simplified. This introduces a substantial uncertainty when compared to the matching procedure utilised by the ATLAS \monojet group. For example, where the ATLAS group observe a maximum matching scale uncertainty of 5\% for events with $\met$ above 350 GeV, we observe an uncertainty of $\sim30$\%. Lastly, the 95\% CL uncertainties on $\Mstar$ for this work are estimated in a non-identical fashion to that used in the ATLAS analysis. In particular, where the ATLAS limits are estimated using the HistFitter package, we use the approach described in appendix \ref{Appendix_limitsetting}. As our results are consistently more conservative than those of the ATLAS analysis, we consider this approach acceptable.
+The MC generation and signal selection procedures for the \monojet channel are validated via reproduction of the ATLAS limits on $\Mstar \equiv \Mmed / \sqrtgqgX$, for the $s$-channel vector simplified model. A comparison of SR7 limits for a representative sample of mediator masses with $\mX = $ 50 GeV, $\Gamma = M/8\pi$ and $\sqrtgqgX = 1$ is presented in table \ref{M_star_limits_monojet}. In general, good agreement is observed between the ATLAS and reproduced limits, with a maximum difference (with respect to the ATLAS limit) of $<$23\%. We note that a discrepancy such as this is expected and allowed for three reasons. Firstly, the MC generation procedure employed in this analysis does not include a full simulation of the ATLAS detector. Instead, reconstruction effects are simulated by applying a Gaussian smearing of the jet $p_{\mathrm{T}}$. Secondly, the matching procedure employed in this analysis (and discussed in detail in Section \ref{matching_procedure}) is largely simplified. This introduces a substantial uncertainty when compared to the matching procedure utilised by the ATLAS \monojet group. For example, where the ATLAS group observe a maximum matching scale uncertainty of 5\% for events with $\met$ above 350 GeV, we observe an uncertainty of $\sim30$\%. Lastly, the 95\% CL uncertainties on $\Mstar$ for this work are estimated as described in appendix~\ref{Appendix_limitsetting}, while the ATLAS analysis used a more complex HistFitter treatment \comm{(confirm)}. As our results are consistently more conservative than those of the ATLAS analysis, we consider this approach acceptable.
 
 %In general, our approach  results in more conservative limits on M$_{*}$ but ultimately removes the hassle of a full histFitter analysis. Importantly, agreement between M$_{*}^{\mbox{\tiny ATLAS,95}}$ and the reproduced nominal\footnote{Nominal in this case explicitly refers to a quantity which does not yet include statistical or systematic uncertainties.} M$_{*}$ values (denoted M$_{*}^{\mbox{\tiny R,N}}$ in Table \ref{M_star_limits_monojet}) is still reasonably high - within \comm{something percent} - validating our signal selection and MC generation procedures.}
 
@@ -34,7 +34,8 @@ The MC generation and signal selection procedures for the \monojet channel are v
 \begin{tabular}{c|c|c|c}
  \hline
  \hline
- $M$ [TeV] & $\Mstar^{\tiny \mathrm{ATLAS9}5}$ [GeV] & $\Mstar^{\tiny 95}$ [GeV] & Difference [\%] \\
+ $M$ & $\Mstar^{\tiny 95}$ [GeV] & $\Mstar^{\tiny 95}$ [GeV] & Difference \\
+ $[$TeV$]$ & (ATLAS) & (this work) & $[\%]$ \\
  \hline
 %QCUT = 80 GeV and 350 GeV leading jet cut
 % 0.05 & 91 & 84.20 & 7.47 \\%$-$8.08 \\
@@ -82,17 +83,14 @@ The MC generation and signal selection procedures for the \monojet channel are v
  \hline
  \hline
 \end{tabular}
-\caption{Comparison of the 95\% CL upper limits on $\Mstar$ from this work ($\Mstar^{\tiny 95}$) and from the ATLAS \monojet analysis ($\Mstar^{\tiny \mathrm{ATLAS,95}}$) \cite{Aad:2015zva}. The values shown in the second and third columns are for the processes $pp \rightarrow j\chi\bar{\chi}$ and $pp \rightarrow jj\chi\bar{\chi}$ for the $s$-channel vector mediator model with $\mX = $ 50 GeV, $\Gamma = M/8\pi$, $\sqrtgqgX = 1$ and QCUT = 80 GeV.  }
-%\comm{Last question: can you remind me where the ATLAS limits are quoted from? Just wondering about the lack of decimal points, if they round to integers for a reason, and if we should do the same. - Mia.} \textcolor{purple}{These values were given to me by Johanna and should, in theory, be discernible by eye - or graph reader - from the M$_{*}-M$ plot in the Exotics paper. I don't think it's really possible to get two decimal places as these values are already kind of sketchy.}}
+\caption{Comparison of the 95\% CL upper limits on $\Mstar$ from this work and from the ATLAS \monojet analysis \cite{Aad:2015zva}. The limits are compared for an $s$-channel model with $\mX = $ 50 GeV and $\Gamma$ set to a fixed width of $\Mmed/8\pi$, for the process $pp \rightarrow \chi \bar{\chi} + 1, 2j$ with QCUT = 80 GeV.}
 \label{M_star_limits_monojet}
 \end{table}
 
 \subsection{Mono-Z Channel}
 \label{monoZ_validation}
 
-%\bigskip
-
-The ATLAS \monoZ analysis result includes an upper limit on the coupling $\gqX$ for a $t$-channel simplified model that is very similar to the model investigated here, and so is used for validating our signal generation and selection procedure. The most significant differences are in the number of mediating particles --- the ATLAS model includes just two mediators ($up$- and $down$-type) compared to our six --- and in the nature of the DM particle, which is taken to be Majorana. This latter choice does not impact the kinematic behaviour, but does scale the cross section by a simple factor. Additionally, while we use a universal coupling $\gqX$ to all three quark generations, the analysis used a model which set $g_{t,b \chi}$ = 0.
+The ATLAS \monoZ analysis result includes an upper limit on the coupling $\gqX$ for a $t$-channel simplified model that is very similar to the $tS$ model investigated here, and so is used for validating our signal generation and selection procedure. The most significant differences are in the number of mediating particles --- the ATLAS model includes just two mediators ($up$- and $down$-type) compared to our six --- and in the nature of the DM particle, which is taken to be Majorana. Additionally, while we use a universal coupling $\gqX$ to all three quark generations, the analysis used a model which set $g_{t,b \chi}$ = 0.
 
 \begin{table}
 \begin{center}
@@ -121,8 +119,26 @@ $[$GeV$]$ & $[$GeV$]$ & (ATLAS) & (this work) & $[\%]$ \B \\
 \label{tab:monoZvalidation}
 \end{table}
 
-Table \ref{tab:monoZvalidation} shows the 95\% CL upper limits on $\gqX$ that we calculate using the same $t$-channel model and our own generation procedure (using the values in table~\ref{tab:Nlim_monoZ}), compared with the limits on this same variable taken from the ATLAS analysis. The difference as a percentage of the ATLAS limit is also shown in the table. We see reasonable agreement; most of the 11 points in parameter space are within 10\% of the ATLAS limits, and all are within 26\%. Additionally, our results are consistently more conservative, which is to be expected due to the less sophisticated nature of our generation procedure. Similarly to the \monojet validation, the dominant effects are due to the use of $p_{\mathrm{T}}$ smearing applied to the leptons, rather than considering the full reconstruction effects, and the simple systematic treatment that was used with HistFitter.
+Table \ref{tab:monoZvalidation} shows the 95\% CL upper limits on $\gqX$ that we calculate using the same $t$-channel model and our own generation procedure (using the values in table~\ref{tab:sigmalim_monoZ}), compared with the limits on this same variable taken from the ATLAS analysis. The difference as a percentage of the ATLAS limit is also shown in the table. We see reasonable agreement; most of the 11 points in parameter space are within 10\% of the ATLAS limits, and all are within 26\%. Additionally, our results are consistently more conservative, which is to be expected due to the less sophisticated nature of our generation procedure. Similarly to the \monojet validation, the dominant effects are due to the use of $p_{\mathrm{T}}$ smearing applied to the leptons, rather than considering the full reconstruction effects, and the simplified treatment of systematics; we also obtained $\sigma \times \mathcal{A} \times \epsilon$ independently.
 
 \subsection{Mono-W/Z Channel}
 \label{monoWZ_validation}
-\comm{Johanna, please put your validation results here.}
+
+The signal generation and event selection for the \monoWZ channel are validated by reproducing the published limit on $\Mstar$ for the D5 EFT operator with $\mX = $ 1 GeV. We see agreement within 12.5\%, where our limit is slightly more conservative. This is to be expected for the following reasons: the D5 limits are only published for the low-$\met$ signal region, whereas we use only the high-$\met$ signal region in this recast; the ATLAS analysis uses a shape fit to extract the limit on the number of new physics events, whereas we use a cut-and-count approach; and the ATLAS limit is quoted at 90\% CL, while ours is calculated at 95\% CL.
+
+\begin{table}
+\begin{center}
+\begin{tabular}{ c | c | c | c }
+\hline
+\hline
+$\mX$ & $\Mstar^{90\%\mathrm{CL}}$ $[$GeV$]$ & $\Mstar^{95\%\mathrm{CL}}$ $[$GeV$]$  & Difference \T \\
+$[$GeV$]$ & (ATLAS) & (this work) & $[\%]$ \B \\
+\hline
+1 & 570 & 499 & 12.5 \\
+\hline
+\hline
+\end{tabular}
+\end{center}
+\caption{Comparison of the upper limit on $\Mstar$ from the ATLAS \monoWZ analysis \cite{Aad:2013monoWZ} and this work.}
+\label{tab:monoWZvalidation}
+\end{table}
