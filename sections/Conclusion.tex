@@ -1,54 +1,60 @@
 % !TEX root = ../new_paper.tex
 %\begin{flushleft}
 
-\iffalse
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Comparison with Relic Density Constraints}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In this paper we have recast constraints from ATLAS missing energy searches onto a set of three simplified models. We compare the constraints from searches for monojet + \met, $Z(\rightarrow \bar l l) + \met$, and $W^\pm/Z (\rightarrow$ hadrons) + \met, finding that ...
 
-%\comm{Copied from my paper with Karl, so I'll have to rewrite - Tom.}
+Rather than placing a constraint in the $\Mmed - \mDM$ plane for a fixed value of the coupling strength, we constrain the coupling strength as a function of both $\Mmed$ and $\mDM$ in a 3D plane. Whilst this does necessitate the introduction of some approximations, it allows us to see the full dependence of the DM production cross-section on the free parameters of the models.
 
-In Figs.~\ref{} we show lines where the constraint on the coupling corresponds to the coupling strength that would reproduce the correct DM density if DM is a thermal relic of the early universe. For points diagonally above and to the left of the dashed line, the LHC constraints naively rule out the couplings leading to the correct relic density. Below and to the right of this line the relic density coupling is still allowed.
+We also compare these constraints to constraints from direct detection and the relic abundance. Although each search has a different set of assumptions, this allows us to see that each technique is complementary and offers strong constraints in certain regions of parameter space.
 
- In this scenario, the measured abundance is approximately related to the unknown self-annihilation cross-section via
+
+%\iffalse
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Comparison with Relic Density Constraints}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\begin{equation}
-  \Omega_{\rm DM}h^2\simeq \frac{2\times2.4\times 10^{-10}\,{\rm GeV}^{-2}}{\langle\sigma v\rangle_{\rm ann}}.
-  \label{simplerelic}
-\end{equation}
+%%\comm{Copied from my paper with Karl, so I'll have to rewrite - Tom.}
 %
-This is used with measurements of the DM abundance by Planck, $\Omega_{\rm DM}^{\rm obs}h^2=0.1199\pm0.0027$ \cite{Ade:2013zuv}, to find $\sigv_{\rm ann}\simeq 4.0\times 10^{-9}\,{\rm GeV}^{-2}$ for thermal relic DM.
+%In Figs.~\ref{} we show lines where the constraint on the coupling corresponds to the coupling strength that would reproduce the correct DM density if DM is a thermal relic of the early universe. For points diagonally above and to the left of the dashed line, the LHC constraints naively rule out the couplings leading to the correct relic density. Below and to the right of this line the relic density coupling is still allowed.
 %
-This relation is only approximately accurate, and so we use the Micromegas code \cite{Belanger:2014vza} to determine the coupling strength leading to the correct relic density for each model. We verified this technique against the semi-analytic technique outlined in e.g. Ref.~\cite{Busoni:2014gta}.
-
-If the DM mass lies at the electroweak scale, the thermal relic scenario provides a natural explanation for the observed DM density, and so the coupling strengths leading to the correct relic density are a natural  benchmark with which to compare constraints from other DM searches, indicating the scale at which we expect the couplings may lie. However the relic density couplings should by no means be treated as a constraint. If the DM was not produced thermally or if there is some unknown effect which modifies the evolution of the density with temperature, then these relations break down. Further, even if DM is a thermal relic, then the relationship no longer holds if there are other annihilation channels not taken into account, or if there are other beyond-SM particles contributing to the DM abundance.
-
+% In this scenario, the measured abundance is approximately related to the unknown self-annihilation cross-section via
+%%
+%\begin{equation}
+%  \Omega_{\rm DM}h^2\simeq \frac{2\times2.4\times 10^{-10}\,{\rm GeV}^{-2}}{\langle\sigma v\rangle_{\rm ann}}.
+%  \label{simplerelic}
+%\end{equation}
+%%
+%This is used with measurements of the DM abundance by Planck, $\Omega_{\rm DM}^{\rm obs}h^2=0.1199\pm0.0027$ \cite{Ade:2013zuv}, to find $\sigv_{\rm ann}\simeq 4.0\times 10^{-9}\,{\rm GeV}^{-2}$ for thermal relic DM.
+%%
+%This relation is only approximately accurate, and so we use the Micromegas code \cite{Belanger:2014vza} to determine the coupling strength leading to the correct relic density for each model. We verified this technique against the semi-analytic technique outlined in e.g. Ref.~\cite{Busoni:2014gta}.
+%
+%If the DM mass lies at the electroweak scale, the thermal relic scenario provides a natural explanation for the observed DM density, and so the coupling strengths leading to the correct relic density are a natural  benchmark with which to compare constraints from other DM searches, indicating the scale at which we expect the couplings may lie. However the relic density couplings should by no means be treated as a constraint. If the DM was not produced thermally or if there is some unknown effect which modifies the evolution of the density with temperature, then these relations break down. Further, even if DM is a thermal relic, then the relationship no longer holds if there are other annihilation channels not taken into account, or if there are other beyond-SM particles contributing to the DM abundance.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Comparison with Direct Detection Constraints}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%In Figs.~\ref{} we also show the intercept line where constraints from  direct detection experiments are equally as strong as the LHC constraint. Below and to the right of the dotted line, direct detection constraints are stronger than the LHC constraint, while above and to the left, the LHC gives the stronger constraint. We use the toolset from Ref.~\cite{1307.5955} to convert the strongest available direct detection constraints, which are from the LUX 2013 dataset ~\cite{1309.3259}, onto constraints on our models.
+%
+%Compared to direct detection, the LHC performs relatively better for the SAD model than for the SVD model. This is because the axial-vector coupling leads to a suppressed scattering rate in direct detection experiments while the LHC is relatively insensitive to the difference between the vector and axial-vector couplings. In the non-relativistic limit, the TSD model leads to a mix of both suppressed and unsuppressed operators.
+%
+%The direct detection constraints assume that the DM candidate under consideration contributes 100\% of the local DM density, while the LHC constraints make no assumptions about either the local DM density or overall abundance. In this sense the LHC constraints remain useful even in the region where they are not as strong as those from direct detection.
+%
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Comparison with Direct Detection Constraints}
+%\subsection{Discussion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\begin{itemize}
+%
+%\item Comparison to direct mediator searches: dijet gives strongest constraints on mediator especially for small r. Missing ET still good for large M but in this region EFT is fine
+%
+%\item Comparison to non-grid searches, e.g. McCullough et al
+%
+%\item Comparison to grid searches e.g. Zurek et al, Jacques and Nordstrom
+%
+%\end{itemize}
+%
+%\fi
 
-In Figs.~\ref{} we also show the intercept line where constraints from  direct detection experiments are equally as strong as the LHC constraint. Below and to the right of the dotted line, direct detection constraints are stronger than the LHC constraint, while above and to the left, the LHC gives the stronger constraint. We use the toolset from Ref.~\cite{1307.5955} to convert the strongest available direct detection constraints, which are from the LUX 2013 dataset ~\cite{1309.3259}, onto constraints on our models.
-
-Compared to direct detection, the LHC performs relatively better for the SAD model than for the SVD model. This is because the axial-vector coupling leads to a suppressed scattering rate in direct detection experiments while the LHC is relatively insensitive to the difference between the vector and axial-vector couplings. In the non-relativistic limit, the TSD model leads to a mix of both suppressed and unsuppressed operators.
-
-The direct detection constraints assume that the DM candidate under consideration contributes 100\% of the local DM density, while the LHC constraints make no assumptions about either the local DM density or overall abundance. In this sense the LHC constraints remain useful even in the region where they are not as strong as those from direct detection.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Discussion}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{itemize}
-
-\item Comparison to direct mediator searches: dijet gives strongest constraints on mediator especially for small r. Missing ET still good for large M but in this region EFT is fine
-
-\item Comparison to non-grid searches, e.g. McCullough et al
-
-\item Comparison to grid searches e.g. Zurek et al, Jacques and Nordstrom
-
-\end{itemize}
-
-\fi
-
-MonoX searches dominate.
 %\end{flushleft}

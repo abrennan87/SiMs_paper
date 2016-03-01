@@ -34,12 +34,12 @@ For the couplings $\gq$ and $\gX$ to remain within the perturbative regime, they
 The $t$-channel model considered in this paper (abbreviated $tS$) is characterised by a scalar mediator and is motivated by analogy with a common aspect of Supersymmetric models: neutralino DM interacting with the SM sector via $t$-channel exchange of a squark \cite{SUSYDM}. Note that in this Supersymmetric scenario the DM particle is a Majorana fermion. The collider phenomenology of SiMs in which $\chi$ is of Majorana type is kinematically identical to the corresponding Dirac cases (requiring multiplication of the cross-section by a simple factor in order to compute limits) and so are not covered here\footnote{The exception being in the validation of the \monoZ channel, see Sec. \ref{monoZ_validation}.}. The exception to this rule is the $s$-channel vector mediator model, which vanishes if $\chi$ is a Majorana fermion \cite{METSig}.
 %\bigskip
 
-In the $tS$ model, the mediator is allowed to couple to either the left or right-handed quarks as an SU(2) doublet or singlet respectively. Since the LHC is insensitive to the chirality of the quarks, we assume for simplicity that $\phi$ couples to the left-handed quarks only, and is itself an SU(2) doublet, allowing radiation of a $W$ boson. To avoid different couplings to quarks of different generations, and to remain in step with the DM forum recommendations \cite{DMForumReport}, we include three generations of mediator $\phi$, with equal masses and couplings. The interaction Lagrangian for this model is then:
+In the $tS$ model, the mediator is allowed to couple to either the left or right-handed quarks as an SU(2) doublet or singlet respectively. Since the LHC is insensitive to the chirality of the quarks, we assume for simplicity that $\phi$ couples to the left-handed quarks only, and is itself an SU(2) doublet, allowing radiation of a $W$ boson. To avoid different couplings to quarks of different generations, and to remain in step with the DM forum recommendations \cite{DMForumReport}, we include three generations of mediator doublets $\phi_i$, with equal masses and couplings. The interaction Lagrangian for this model is then:
 \begin{equation}
 \label{L_int_tS}
-\mathcal{L}_{tS} \supset \sum_{Q} \gqX \bar{Q} P_R \phi \chi + {\rm h.c.},
+\mathcal{L}_{tS} \supset \sum_{i} \gqX \bar{Q_i} P_R \phi_i \chi + {\rm h.c.},
 \end{equation}
-where the sum is over the three quark doublets, $\gqX$ is the scalar coupling of the incoming quark, $\phi$ and $\chi$, and $P_R$ is the usual chiral projection operator. \comm{Should $\phi$ have a subscript $Q$ here?}
+where the sum is over the three quark doublets, $\gqX$ is the DM-quark coupling (equal for each generation), and $P_R$ is the usual chiral projection operator. 
 
 \subsection{The Mono-$X$ + $\met$ Signature}
 The \monoX + $\met$ (abbreviated to mono-$X$) is a popular collider signal in the search for new physics, particularly in the search for dark matter. Since DM particles are not expected to interact with detector material, they appear as missing transverse energy when balanced against a visible object, $X$, that is radiated from the initial or intermediate state (where the latter is permitted in the $t$-channel model). For the $s$-channel SiMs discussed above, only initial-state radiation is permitted; see figs.~\ref{fig:FD_sV_gluonISR} and \ref{fig:FD_sV_WZISR} for examples. For the $tS$ model, radiation of a gluon or electroweak (EW) boson is permitted both from initial state partons (fig.~\ref{fig:FD_tS_gluonISR}) or from the mediator (fig.~\ref{fig:FD_tS_WZmediator}).
@@ -226,33 +226,22 @@ An important factor when considering SiMs is to ensure the mediator width is tre
 
 Following the DM Forum recommendations \cite{DMForumReport}, we use the minimal width, allowing coupling to all kinematically accessible quarks. We assume minimal flavour violation, which implies a universal coupling to all quark flavours. The minimum  width for each model is given by:
 
-\begin{equation}
-  \begin{split}
-    \Gamma_{sV} \, = \, & \frac{\gX^2 M}{12\pi}\left(1 + \frac{2 \mX^{2}}{M^{2}}\right)\left(1 - \frac{4 \mX^{2}}{M^{2}}\right)^{\frac{1}{2}} \Theta(M-2 \mX) \\
-                  & + \sum_{\substack{q}}\frac{\gq^2M}{4\pi}\left(1 + \frac{2m_{q}^{2}}{M^{2}}\right)\left(1 - \frac{4m_{q}^{2}}{M^{2}}\right)^{\frac{1}{2}} \Theta(M-2m_q)
-  \end{split}
-\end{equation}
+\begin{eqnarray}
+    \Gamma_{sV} \, &=& \,  \frac{\gX^2 M}{12\pi}\left(1 + \frac{2 \mX^{2}}{M^{2}}\right)\left(1 - \frac{4 \mX^{2}}{M^{2}}\right)^{\frac{1}{2}} \Theta(M-2 \mX) \nonumber\\
+                  && + \sum_{\substack{q}}\frac{\gq^2M}{4\pi}\left(1 + \frac{2m_{q}^{2}}{M^{2}}\right)\left(1 - \frac{4m_{q}^{2}}{M^{2}}\right)^{\frac{1}{2}} \Theta(M-2m_q)\\
+    \Gamma_{sA} \, &=& \,  \frac{\gX^2 M}{12\pi}\left(1 - \frac{4 \mX^{2}}{M^{2}}\right)^{\frac{3}{2}} \Theta(M-2 \mX) \nonumber\\
+                  && + \sum_{\substack{q}}\frac{\gq^2 M}{4\pi}\left(1 - \frac{4m_{q}^{2}}{M^{2}}\right)^{\frac{3}{2}} \Theta(M-2m_q) \\
+    \Gamma_{tS} \, &=& \,  \sum_{\substack{q}} \frac{\gqX^2M}{16\pi}\left(1 - \frac{m_{q}^{2}}{M^{2}} - \frac{\mX^{2}}{M^{2}}\right) \nonumber\\
+                  && \times \sqrt{\left(1 - \frac{m_{q}^{2}}{M^{2}} + \frac{\mX^{2}}{M^{2}}\right)^{2} - 4\frac{\mX^{2}}{M^{2}}} \,\, \Theta(M-m_q- \mX) 
+\end{eqnarray}
 
-\begin{equation}
-  \begin{split}
-    \Gamma_{sA} \, = \, & \frac{\gX^2 M}{12\pi}\left(1 - \frac{4 \mX^{2}}{M^{2}}\right)^{\frac{3}{2}} \Theta(M-2 \mX) \\
-                  & + \sum_{\substack{q}}\frac{\gq^2 M}{4\pi}\left(1 - \frac{4m_{q}^{2}}{M^{2}}\right)^{\frac{3}{2}} \Theta(M-2m_q) \\
-  \end{split}
-\end{equation}
-
-\begin{equation}
-  \begin{split}
-    \Gamma_{tS} \, = \, & \sum_{\substack{q}} \frac{\gqX^2M}{16\pi}\left(1 - \frac{m_{q}^{2}}{M^{2}} - \frac{\mX^{2}}{M^{2}}\right) \\
-                  & \times \sqrt{\left(1 - \frac{m_{q}^{2}}{M^{2}} + \frac{\mX^{2}}{M^{2}}\right)^{2} - 4\frac{\mX^{2}}{M^{2}}} \,\, \Theta(M-m_q- \mX) \\
-  \end{split}
-\end{equation}
 
 It is possible that the mediator may decay to other SM or BSM particles \cite{Harris:2014hga}, but this is not expected to have a large effect on the kinematic distribution as long as the width remains relatively small \cite{DMForumReport}.
-The generator treatment of the mediator as a Breit-Wigner propagator, rather than a true kinetic propagator, breaks down for large widths \cite{NordstromSVD}.
+The generator treatment of the mediator as a Breit-Wigner propagator, rather than a true kinetic propagator, breaks down for large widths \cite{1202.2894,NordstromSVD}.
 
 To simplify the procedure, we can take advantage of the fact that (with the notable exception of the $tS$ model in the \monojet channel) for each point in ($\mX$, $\Mmed$) phase space, the mediator width (and therefore the couplings) do not greatly affect each model's kinematic behaviour. This is demonstrated in fig.~\ref{fig:MET_dists}, where for the $sV$ (representing both the $sV$ and $sA$ models) and $tS$ models, we plot a simplified $\met$ distribution, as a proxy for the full selection in each analysis, for two mass points and a demonstrative set of couplings such that $\Gamma < \Mmed/2$. The $\met$ distribution is predominantly independent of the mediator width for the $s$-channel models in the \monojet channel, and all models in the \monoZ\footnote{In this discussion, the \monoWZ channel can be assumed to follow the same logic as for the \monoZ channel.} channel. However, there is a clear variation in the kinematic behaviour of the tS model in the \monojet channel, which can be attributed to additional diagrams (accessible only in this channel) featuring a gluon in the initial state and subsequently allowing the mediator to go on-shell. In this scenario, when the resulting quark and DM particle are both small compared to the mediator mass, they share equally its energy leading to a peak in the $\met$ distribution at approximately half the mediator mass.
 
-In the cases where the model behaviour is independent of the width, we can greatly simplify the calculations by assuming the impact of the selection cuts in each channel is unchanged by the couplings. In this case, the following relations hold \cite{NordstromSVD}:
+In the cases where the kinematic distribution is independent of the width, we can greatly simplify the calculations by assuming the impact of the selection cuts in each channel is unchanged by the couplings. In this case, the following relations approximately hold:
 
 \begin{equation}
   \sigma \propto
@@ -262,7 +251,7 @@ In the cases where the model behaviour is independent of the width, we can great
   \end{cases}
   \label{eq:sigma_propto_couplings_schan}
 \end{equation}
-in the $sV$ and $sA$ models, and
+in the $sV$ and $sA$ models  \cite{NordstromSVD}, and
 
 \begin{equation}
   \sigma \propto \gqX^4
@@ -270,7 +259,9 @@ in the $sV$ and $sA$ models, and
 \end{equation}
 in the tS model. When valid, these approximations allow us to greatly simplify our limit calculations, and for this reason, we restrict our primary results to regions of parameter space where $\Gamma/M < 0.5$. See app.~\ref{Appendix_limitsetting} for further details of the limit-setting calculation.
 
-A proper study of the $tS$ model within the \monojet channel, where altering the coupling can lead to changed kinematic behaviour, has been performed elsewhere \cite{Zurek:tchannel}, and requires the production of individual samples for each coupling point. This, combined with the challenges associated with including differing orders of $\alpha_s$, make the generation process computationally expensive compared to the \monoZ and \monoWZ channels. We therefore exclude an analysis of the $tS$ model in the \monojet channel in this work.
+More problematically,  it was noted by  Refs.~\cite{NordstromSVD,1202.2894} that the Breit-Wigner propagator breaks down in the $\mDM \gg \Mmed$ region even if $\Gamma/M$ is small. To correct for this we follow Ref.~\cite{NordstromSVD}, and rescale the cross section in the $\mDM > \Mmed$ region by a factor which takes into account the error introduced by using the Breit-Wigner propagator in the generator. The factor is found by convolving the PDF with both the kinetic and Breit-Wigner propagators in turn and taking the ratio at each mass point. We approximate the kinetic propagator by making the substitution $M \Gamma(M) \rightarrow s \Gamma(\sqrt{s}) / M$ in the Breit-Wigner propagator. 
+
+A full study of the $tS$ model within the \monojet channel, where altering the coupling can lead to changed kinematic behaviour, has been performed elsewhere \cite{Zurek:tchannel}, and requires the production of individual samples for each coupling point. This, combined with the challenges associated with including differing orders of $\alpha_s$, make the generation process computationally expensive compared to the \monoZ and \monoWZ channels. We therefore exclude an analysis of the $tS$ model in the \monojet channel in this work.
 
 %In previous analyses it has been customary to consider mediators of fixed width ranging from $\Gamma = M/8\pi$ to $\Gamma = M/3$ \cite{METSig, Fox:2012ee} \footnote{\textcolor{magenta}{Also add a reference for the recent \monojet paper.}}. This approach is motivated by the observation that, where the mediator is exchanged in the $s$-channel and produced on-shell, $\sigma\left(pp \rightarrow X + \bar{\chi}\chi\right)$ is maximally enhanced when $\Gamma$ is small\footnote{For a more in depth discussion see Ref. \cite{METSig}.}. The smallest width, $\Gamma = M/8\pi$, corresponds to a mediator which couples only to one helicity and flavour of quark with $\gq = 1$ \cite{METSig}. In this paper, the mediator widths are expanded to include coupling to all kinematically accessible quark flavours. We also allow for flavour-blind coupling (when not restricted by MFV), so our definition of the minimum width must change to reflect this. Following $[$(other minimum width papers)$]$, the minimum width for each model is given by:
 
