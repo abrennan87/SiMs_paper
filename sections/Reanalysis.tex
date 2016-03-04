@@ -1,4 +1,4 @@
-The procedure for recasting existing \monoX analyses to obtain SiM constraints follows a simple cut-and-count methodology. Firstly, signal events are simulated (described below in section \ref{signal_generation}) with object $p_{\mathrm{T}}$ smearing applied to approximate the detection efficiency of the ATLAS detector, $\epsilon$. The event selection criteria of the \monoX analysis of interest is then applied to the simulated signal samples. Events surviving the selection criteria are counted to determine the likelihood of a dark matter event being observed (referred to as the acceptance, $\mathcal{A}$), which is then used in combination with channel-specific model-independent limits on new physics events to limit the parameter phase space of a given model.
+The procedure for recasting existing \monoX analyses to obtain SiM constraints follows a simple cut-and-count methodology. Firstly, signal events are simulated (described below in section \ref{signal_generation}) with object $p_{\mathrm{T}}$ smearing applied to approximate the detection efficiency of the ATLAS detector, $\epsilon$. The event selection criteria of the \monoX analysis of interest is then applied to the simulated signal samples. Events surviving the selection criteria are counted to determine the likelihood of a dark matter event being observed (referred to as the acceptance, $\mathcal{A}$), which is then used in combination with channel-specific model-independent limits on new physics events to limit the parameter space of a given model.
 For a comprehensive description of the recasting procedure, see appendix \ref{Appendix_limitsetting}.
 %\bigskip
 
@@ -6,11 +6,11 @@ In this paper, \monojet constraints are derived from a search for new phenomena 
 
 %\comm{We should put references to all the papers here! - Amelia}
 
-\subsection{Signal Simulation}
+\subsection{Signal simulation}
 \label{signal_generation}
-Monte Carlo simulated event samples are used to model the expected signal for each channel and for each SiM. Leading order matrix elements for the process $pp \rightarrow \mathrm{X} + \chi\bar{\chi}$ (where $X$ is specifically one or two jets\footnote{Jets are seeded by any parton excluding the (anti-)top quark.}, a $Z(\rightarrow \ell^+ \ell^-)$ boson or a $W/Z(\rightarrow$ $jj$) boson) are first simulated using \MGnospace$\_$aMC$@$NLO v2.2.2 \cite{MG_aMCNLO2014} with the MSTW2008lo68cl PDF \cite{MSTW}. During this stage, the renormalisation and factorisation scales are set to the default sum of $\sqrt{m^{2} + p_{T}^{2}}$ for all particles in the final state. Showering and hadronisation are then performed by \PYTHIA.201 \cite{pythia8} with the appropriate PDF and using the ATLAS UE Tune AU2-MSTW2008LO~\cite{AUtune}. Reconstruction of small-radius jets (hereon referred to just as `jets') for the \monojet channel is performed by \FASTJET~\cite{FastJet} using the anti-$k_{\mathrm{T}}$ algorithm with radius parameter $R$ = 0.4. Similarly, reconstruction of large-radius jets for the \monoWZ channel is performed using the Cambridge-Aachen algorithm with $R$ = 1.2. The latter channel also includes a mass-drop filtering procedure with $\mu$ = 0.67 and $\sqrt{y}$\footnote{$\sqrt{y} = \mathrm{min}(p_{\mathrm{T}_{j1}},p_{\mathrm{T}_{j2}})\Delta R / m_{jet}$ is the momentum balance of the two leading subjets.} = 0.4 (see ref.~\cite{massdrop} for further details), which favours large-$R$ jets with two balanced subjets, consistent with the decay of an EW boson to a (potentially-boosted) dijet pair. Lastly, the detector response is approximated by applying a Gaussian smearing factor to the $p_{\mathrm{T}}$ of all leptons and jets.
+Monte Carlo simulated event samples are used to model the expected signal for each channel and for each SiM. Leading order matrix elements for the process $pp \rightarrow \mathrm{X} + \chi\bar{\chi}$ (where $X$ is specifically one or two jets\footnote{Jets are seeded by any parton excluding the (anti-)top quark.}, a $Z(\rightarrow \ell^+ \ell^-)$ boson or a $W/Z(\rightarrow$ $jj$) boson) are first simulated using \MGnospace$\_$aMC$@$NLO v2.2.2 \cite{MG_aMCNLO2014} with the MSTW2008lo68cl PDF \cite{MSTW}. During this stage, the renormalisation and factorisation scales are set to the default sum of $\sqrt{m^{2} + p_{T}^{2}}$ for all particles in the final state. Showering and hadronisation are then performed by \PYTHIA.201 \cite{pythia8} with the appropriate PDF and using the ATLAS UE Tune AU2-MSTW2008LO~\cite{AUtune}. Reconstruction of small-radius jets (hereon referred to just as `jets') for the \monojet channel is performed by \FASTJET~\cite{FastJet} using the anti-$k_{\mathrm{T}}$ algorithm with radius parameter $R$ = 0.4. Similarly, reconstruction of large-radius jets for the \monoWZ channel is performed using the Cambridge-Aachen algorithm with $R$ = 1.2. The latter channel also includes a mass-drop filtering procedure with $\mu$ = 0.67 and $\sqrt{y}$\footnote{$\sqrt{y} = \mathrm{min}(p_{\mathrm{T}_{j1}},p_{\mathrm{T}_{j2}})\Delta R / m_{jet}$ is the momentum balance of the two leading subjets.} = 0.4 (see ref.~\cite{massdrop} for further details), which favours large-$R$ jets with two balanced subjets, consistent with the decay of an EW boson to a (potentially boosted) dijet pair. Lastly, the detector response is approximated by applying a Gaussian smearing factor to the $p_{\mathrm{T}}$ of all leptons and jets.
 
-\subsubsection{Parton Matching Scheme}
+\subsubsection{Parton matching scheme}
 \label{matching_procedure}
 %\comm{Make explicit the choice of $(0+1+2)j$ vs $(1+2)j$ here.}
 %\comm{Also refer to the Papucci paper, and why we don't split the sample. Do we think this is still necessary?}
@@ -19,20 +19,20 @@ In the ATLAS \monojet analysis, matching of partons generated in \MG$\mbox{\tiny
 \bigskip
 We now move to a discussion of each of the \monoX channels separately.
 
-\subsection{Mono-jet Constraints}
+\subsection{Mono-jet constraints}
 \label{monojet_constraints}
 The ATLAS \monojet + $\met$ analysis \cite{Aad:2015zva} was originally designed to set limits on three new physics scenarios,
 %\st{: the production of light grativinos in association with gluinos or scalar quarks in a gauge-mediated supersymmetric model, the production of graviton modes in the Arkani-Hamed, Dimopoulos, and Dvali model for large extra spatial dimensions, and}
-the most relevant of which is the production of WIMP DM within the context of a set of effective operators. The analysis also includes a brief study of a $Z'$ DM model which is analogous to our $sV$ model.
+the most relevant of which is the production of WIMP DM within the context of a set of effective operators. The analysis also includes a brief study of a $Z'$ DM model which is analogous to our $sV$ model. \comm{mention third signal scenario? or not mention it before?}
 %\bigskip
 
-Signal selection is carried out based on at least one hard jet recoiling against missing energy. To ensure that the correct back-to-back jet + $\met$ topology is selected events are required to have a leading jet, $j_{1}$, with $p_{T} >$ 120 GeV and $|\eta| <$ 2.0 satisfying $p_{T}^{j_{1}}/\met >$ 0.5. Surviving events must then satisfy $|\Delta\phi(j,\metvec)|>1.0$, where $j$ is any jet with $p_{T} >$ 30 GeV and $|\eta| <$ 4.5. This criterion reduces the multijet background contribution where the large $\met$ originates mainly from jet energy mismeasurement. Note that there is no upper limit placed on the number of jets per event. The contribution from the dominant background processes, $W/Z+$jets
+Signal selection is carried out based on at least one hard jet recoiling against missing energy. To ensure that the correct back-to-back jet + $\met$ topology is selected events are required to have a leading jet, $j_{1}$, with $p_{T} >$ 120 GeV and $|\eta| <$ 2.0 satisfying $p_{T}^{j_{1}}/\met >$ 0.5. Surviving events must then fulfill $|\Delta\phi(j,\metvec)|>1.0$, where $j$ is any jet with $p_{T} >$ 30 GeV and $|\eta| <$ 4.5. This criterion reduces the multijet background contribution where the large $\met$ originates mainly from jet energy mismeasurements. Note that there is no upper limit placed on the number of jets per event. The contribution from the dominant background processes, $W/Z+$jets
 %(\footnote{Do I want to be more specific here? Eg. $W (\rightarrow \ell \nu)+$jets, $Z(\rightarrow \nu\bar{\nu})+$jets, $Z/\gamma^{*}(\rightarrow \ell^{+}\ell^{-})+$jets?})
 , is managed with a veto on events containing muons or electrons with $p_{T}>$ 7 GeV. Lastly, nine separate signal regions are defined with increasing lower thresholds on $\met$, which range from 150 GeV to 700 GeV as shown in table \ref{monojet_SRs}.
 %\st{initially, events are required to have $\met>$ 150 GeV and at least one jet with $p_{T} >$ 30 GeV and $|\eta| <$ 4.5} (\comm{My logic here is that these cuts are for trigger, or pre-selection - they are overwritten by later cuts, right? So I think not worth including.}). we require $|\Delta\phi(\mathrm{j},\metvec)|>1.0$, where j is any jet with $p_{T} >$ 30 GeV and $|\eta| <$ 4.5.  have a leading jet (\comm{Is this the dominant background? If so, include `dominant', if not, this cut is maybe better understood as implementing back-to-backness. Is there an upper limit on $N_{jets}$?}). \comm{Note to self: include lepton veto criteria here.}
 %\bigskip
 
-The ATLAS \monojet analysis revealed no significant deviation of observed events from the expected SM backgrounds in the Run 1 8 TeV dataset. Subsequently, model-independent limits on new physics signatures were provided in terms of the visible cross-section, $\sigma\times\mathcal{A}\times\epsilon$; these are listed in table \ref{monojet_SRs}.
+The ATLAS \monojet analysis revealed no significant deviation of observed events from the expected SM backgrounds in the 8 TeV dataset of Run I. Subsequently, model-independent limits on new physics signatures were provided in terms of the visible cross-section, $\sigma\times\mathcal{A}\times\epsilon$; these are listed in table \ref{monojet_SRs}.
 
 \begin{table}[!htbp]
 \centering
@@ -67,9 +67,9 @@ The signal simulation procedure outlined in sec. \ref{signal_generation} and imp
 %\draft{While the signal samples used by the ATLAS group (and for validation) correspond to the processes $pp \rightarrow j\chi\bar{\chi}$ and $pp \rightarrow jj\chi\bar{\chi}$ where $j$ is a final state jet, \monojet constraints on the simplified models studied in this paper were set using signal samples with zero, one and two jets in the final state.} \comm{This deviation from the ATLAS analysis is motivated by the observation that the limits on $\Mstar$ are improved with the addition of the process $pp \rightarrow \chi\bar{\chi}$.}
 %However, while the ATLAS MC samples are generated for only two matching scale values (80 GeV and 300 GeV), we use a sliding value of $\mX/4$. \comm{This ensures that all jet-related kinematic distributions are smoothly connected across all dark matter masspoints.}
 
-\subsection{Mono-$Z$(lep) Constraints}
+\subsection{Mono-$Z$(lep) constraints}
 \label{monoZ_constraints}
-The ATLAS mono-$Z(\rightarrow \ell^+ \ell^-)$ + $\met$ analysis \cite{Aad:2014monoZlep} was principally designed to constrain a set of EFT models of DM. As a secondary focus, it also includes a short study of a $t$-channel SiM similar to our $tS$ model.
+The ATLAS mono-$Z(lep)$ + $\met$ analysis \cite{Aad:2014monoZlep} was principally designed to constrain a set of EFT models of DM. As a secondary focus, it also includes a short study of a $t$-channel SiM similar to our $tS$ model.
 %\textcolor{blue}{This model is used to validate our results in this channel; see the details in sec.~\ref{monoZ_validation}.} \comm{Can this go at the end of this subsection?}
 
 The selection criteria for this analysis are summarised as follows (see the paper for a full description). Electrons (muons) are required to have a $p_{\mathrm{T}}$ greater than 20 GeV, and $|\eta|$ less than 2.47 (2.5). Two opposite-sign, same-flavour leptons are selected, and required to have invariant mass and pseudorapidity such that $m_{\ell \ell} \in [76, 106]$ GeV and $|\eta^{\ell \ell}| < 2.5$. The reconstructed $Z$ boson should be approximately back-to-back and balanced against the $\met$, ensured with the selections $\Delta \phi (\metvec, p_{\mathrm{T}}^{\ell \ell}) > 2.5$ and $| p_{\mathrm{T}}^{\ell \ell} - \met | \, /  \, p_{\mathrm{T}}^{\ell \ell} < 0.5$. Events containing a jet with $p_{\mathrm{T}}>$ 25 GeV and $|\eta|< $ 2.5 are vetoed. Events are also vetoed if they contain a third lepton with $p_{\mathrm{T}}>$ 7 GeV. The signal regions are defined by increasing lower $\met$ thresholds: $\met >$ 150, 250, 350, 450 GeV.
@@ -113,11 +113,11 @@ $N^{\mathrm{obs}}$ & 32.2 & 5.9 \B \\
       \hline
     \end{tabular}
   \end{center}
-  \caption{The ATLAS \monoZ $\met$ signal regions and corresponding observed (expected) model-independent upper limits on $\sigma \times \mathcal{A} \times \epsilon$ at 95\% confidence level. Adapted using HistFitter from ref.~\cite{Aad:2014monoZlep}.}
+  \caption{The ATLAS \monoZ + $\met$ signal regions and corresponding observed (expected) model-independent upper limits on $\sigma \times \mathcal{A} \times \epsilon$ at 95\% confidence level. Adapted using HistFitter from ref.~\cite{Aad:2014monoZlep}.}
   \label{tab:sigmalim_monoZ}
 \end{table}
 
-\subsection{Mono-$W/Z$(had) Constraints}
+\subsection{Mono-$W/Z$(had) constraints}
 \label{monoWZ_constraints}
 
 The ATLAS \monoWZ + $\met$ search \cite{Aad:2013monoWZ} was aimed at constraining the spin-independent effective operators C1, D1, and D5, and the spin-dependent operator D9. The search was originally designed to exploit the constructive interference of $W$ boson emission from opposite-sign up-type and down-type quarks, leading to DM production wherein the mono-$W$ channel is dominant. Recent studies \cite{Bell:gaugeInv} have revealed this scenario to violate gauge invariance and so we ignore it in this analysis.
